@@ -1,516 +1,89 @@
 # FounderHQ — Description Fondatrice
 
-## Définition
+## Qu'est-ce que FounderHQ ?
 
-FounderHQ est un système cognitif portable destiné à un entrepreneur.
+FounderHQ est un système d'intelligence entrepreneuriale portable.
 
-Son objectif est de préserver, organiser, accumuler et exploiter l'intelligence entrepreneuriale au fil du temps, indépendamment :
+Son but est de permettre à un entrepreneur de conserver, organiser, accumuler et exploiter son intelligence au fil du temps, indépendamment :
 
 * du LLM utilisé,
-* du logiciel utilisé,
+* de l'IDE utilisé,
 * du runtime utilisé,
-* du système d'exploitation utilisé,
-* de la structure de fichiers utilisée.
+* de la plateforme utilisée.
 
-FounderHQ n'est pas un assistant.
+FounderHQ considère que les outils changent, mais que l'intelligence accumulée doit survivre.
 
-FounderHQ n'est pas un agent.
+Le système est construit autour d'une idée simple :
 
-FounderHQ n'est pas un logiciel.
-
-FounderHQ est un protocole d'organisation de l'intelligence entrepreneuriale.
-
-Le LLM n'est qu'un processeur temporaire chargé d'interpréter FounderHQ.
-
-Le système doit survivre au remplacement du LLM.
+> Les modèles d'IA sont remplaçables.
+>
+> L'intelligence de l'entrepreneur ne doit pas l'être.
 
 ---
 
-# Objectif principal
+## Architecture
 
-Permettre à un entrepreneur d'accumuler de l'intelligence composée :
+FounderHQ sépare l'intelligence entrepreneuriale en plusieurs dimensions :
 
-* décisions,
-* expériences,
-* connaissances,
-* projets,
-* résultats,
-* erreurs,
-* playbooks,
+### 1. Concepts (Ce qui est vrai)
 
-sans perdre cette intelligence lorsqu'il change :
+Les Concepts représentent la mémoire permanente du système.
 
-* d'outil,
-* de modèle,
-* de plateforme,
-* de machine.
-
-FounderHQ doit devenir plus intelligent au fil des années.
+* **MISSION** : Vision et objectifs.
+* **MEMORY** : Contexte opérationnel actuel.
+* **KNOWLEDGE** : Vérités validées et leçons apprises.
+* **TIMELINE** : Historique des événements et décisions.
+* **PROJECT** : Unités d'exécution actives.
+* **WORKFLOW** : Procédures reproductibles.
+* **ASSET** : Ressources et actifs.
+* **PLAYBOOK** : Stratégies prouvées par l'expérience.
 
 ---
 
-# Philosophie
+### 2. Protocols (Comment opérer)
 
-FounderHQ repose sur une séparation stricte entre :
+Les Protocols définissent les règles de fonctionnement et le comportement attendu.
 
-## Ce que l'on sait
-
-Connaissance.
-
-## Comment on opère
-
-Protocoles.
-
-## Comment on réfléchit
-
-Frameworks.
-
-## Ce que l'on fait maintenant
-
-État opérationnel.
-
-## Où cela s'exécute
-
-Runtime.
-
-Cette séparation est fondamentale.
+* **FounderOS Protocol** : Séquence de démarrage et de gestion de session.
+* **Decision Gates** : Cadre de prise de décision.
+* **Temporal Awareness** : Gestion de la fraîcheur de l'information.
+* **Source Of Truth** : Règle de non-duplication de l'information.
+* **Prioritization Protocol** : Détermination de l'action la plus importante.
 
 ---
 
-# Architecture
+### 3. Frameworks (Comment réfléchir)
 
-FounderHQ est composé de 6 couches.
+Les Frameworks sont des lentilles mentales spécialisées pour analyser des problèmes.
 
----
-
-# Couche 1 — Concepts
-
-Les Concepts représentent la mémoire permanente de l'entreprise.
-
-Ils décrivent la réalité.
-
-Ils ne contiennent aucune logique d'exécution.
-
-Ils répondent à la question :
-
-> "Qu'est-ce qui est vrai ?"
-
-Les Concepts sont divisés en deux groupes.
+* **CAOS** : Analyse financière (Cash, Allocation, Survie).
+* **CEOS** : Analyse de contenu (Conversion, Audience, Distribution).
+* **PSOS** : Analyse produit (Offre, Positionnement, Valeur).
+* **FAOS** : Analyse d'acquisition (Funnel, Croissance, Trafic).
+* **SAOS** : Analyse systémique (Bottlenecks, Coût de suppression).
 
 ---
 
-## A1 — Identité
+### 4. State (Le présent)
 
-Ces concepts définissent l'existence même de FounderHQ.
+La situation actuelle, temporaire et opérationnelle.
 
-Sans eux, FounderHQ cesse d'exister.
-
-### Mission
-
-Décrit :
-
-* vision,
-* direction,
-* objectifs,
-* principes.
-
-Question :
-
-> Pourquoi faisons-nous ce que nous faisons ?
+* Priorité du moment.
+* Principal blocage (Bottleneck).
+* Contexte opérationnel immédiat.
 
 ---
 
-### Memory
+### 5. Runtime (L'exécution)
 
-Décrit :
-
-* contexte historique,
-* décisions importantes,
-* préférences,
-* contraintes durables.
-
-Question :
-
-> Que devons-nous nous rappeler ?
+L'environnement qui interprète et exécute FounderHQ. Le système est conçu pour être indépendant du runtime (ChatGPT, Claude, Gemini, Cursor, OpenCode, etc.).
 
 ---
 
-### Knowledge
+## L'objectif final
 
-Décrit :
+Transformer les années d'expérience, de décisions, d'erreurs et de résultats d'un entrepreneur en un système cumulatif.
 
-* vérités validées,
-* leçons apprises,
-* patterns confirmés.
+Chaque projet génère des événements, des décisions, des résultats, des connaissances et des playbooks. Avec le temps, FounderHQ devient une représentation structurée de l'intelligence de son fondateur.
 
-Question :
-
-> Qu'avons-nous appris ?
-
----
-
-### Timeline
-
-Décrit :
-
-* événements,
-* décisions,
-* résultats.
-
-Format :
-
-Event → Decision → Outcome
-
-Question :
-
-> Que s'est-il passé ?
-
----
-
-## A2 — Exécution
-
-Ces concepts permettent d'agir.
-
-Sans eux FounderHQ survit mais devient incapable d'exécuter efficacement.
-
-### Project
-
-Travail en cours.
-
-Question :
-
-> Que construisons-nous ?
-
----
-
-### Workflow
-
-Processus reproductibles.
-
-Question :
-
-> Comment exécuter une tâche ?
-
----
-
-### Asset
-
-Actifs.
-
-Question :
-
-> Que possédons-nous ?
-
-Exemples :
-
-* produits,
-* marques,
-* domaines,
-* bases de données,
-* audiences.
-
----
-
-### Playbook
-
-Méthodes validées.
-
-Condition :
-
-Doit être démontré plusieurs fois dans plusieurs contextes.
-
-Question :
-
-> Qu'est-ce qui fonctionne de façon fiable ?
-
----
-
-### System
-
-Documentation du fonctionnement interne de FounderHQ.
-
-Question :
-
-> Comment FounderHQ fonctionne-t-il ?
-
----
-
-# Couche 2 — Protocols
-
-Les Protocols définissent le comportement attendu.
-
-Ils répondent à la question :
-
-> Comment FounderHQ doit-il fonctionner ?
-
----
-
-## FounderOS Protocol
-
-Séquence de démarrage.
-
-Boot.
-
-Chargement.
-
-Ordre des opérations.
-
----
-
-## Decision Gates
-
-Détermine :
-
-* quel type de décision est demandé,
-* quels concepts doivent être consultés,
-* quels frameworks doivent être chargés.
-
----
-
-## Temporal Awareness
-
-Gère :
-
-* temps,
-* fraîcheur,
-* âge des informations.
-
-Chaque décision doit être consciente du temps.
-
----
-
-## Relationship Model
-
-Décrit :
-
-* dépendances,
-* relations,
-* liens.
-
-Entre tous les concepts.
-
----
-
-## Source Of Truth
-
-Règle fondamentale.
-
-Chaque vérité possède un unique propriétaire.
-
-Aucune duplication.
-
----
-
-## Prioritization Protocol
-
-Détermine :
-
-> Quelle est la prochaine action la plus importante ?
-
----
-
-# Couche 3 — Frameworks
-
-Les Frameworks sont des lentilles de réflexion.
-
-Ils ne stockent aucune donnée.
-
-Ils ne sont pas des concepts.
-
-Ils ne sont pas des protocoles.
-
-Ils répondent à la question :
-
-> Comment analyser ce problème ?
-
-Ils peuvent être remplacés sans détruire FounderHQ.
-
----
-
-## Core Frameworks
-
-### CAOS
-
-Analyse financière.
-
-Cash.
-
-Allocation.
-
-Survie.
-
----
-
-### CEOS
-
-Analyse contenu.
-
-Conversion.
-
-Audience.
-
-Distribution.
-
----
-
-### PSOS
-
-Analyse produit.
-
-Offre.
-
-Positionnement.
-
-Valeur.
-
----
-
-### FAOS
-
-Analyse acquisition.
-
-Funnel.
-
-Croissance.
-
-Trafic.
-
----
-
-### SAOS
-
-Analyse systémique.
-
-Composants.
-
-Frontières.
-
-Bottlenecks.
-
-Coût de suppression.
-
-Reconstruction.
-
----
-
-# Couche 4 — State
-
-Le présent.
-
-Photographie actuelle.
-
-Contient :
-
-* priorité actuelle,
-* principal bottleneck,
-* contexte immédiat,
-* état opérationnel.
-
-Cette couche est temporaire.
-
-Elle peut être supprimée puis reconstruite.
-
----
-
-# Couche 5 — Runtime
-
-Le moteur d'exécution.
-
-Exemples :
-
-* OpenCode,
-* Cursor,
-* Claude Code,
-* ChatGPT,
-* Gemini,
-* futur système.
-
-FounderHQ ne dépend d'aucun runtime particulier.
-
-Le runtime implémente simplement l'interface attendue.
-
----
-
-# Couche 6 — Archive
-
-Historique.
-
-Versions précédentes.
-
-Anciens frameworks.
-
-Décisions anciennes.
-
-Jamais source de vérité active.
-
----
-
-# Règle Fondamentale
-
-Chaque information possède exactement un propriétaire.
-
-Exemple :
-
-Prix produit :
-
-Asset.
-
-Pas ailleurs.
-
-Cash :
-
-State.
-
-Pas ailleurs.
-
-Leçon validée :
-
-Knowledge.
-
-Pas ailleurs.
-
-Événement :
-
-Timeline.
-
-Pas ailleurs.
-
-Toute duplication constitue une violation.
-
----
-
-# Reconstruction
-
-Si tous les fichiers sont perdus :
-
-Un LLM doit pouvoir reconstruire FounderHQ à partir de cette description.
-
-Les éléments obligatoires à reconstruire sont :
-
-* Concepts,
-* Protocols,
-* Frameworks,
-* State,
-* Runtime Interface,
-* Archive.
-
-Les noms exacts des fichiers peuvent changer.
-
-La structure exacte des dossiers peut changer.
-
-Les concepts ne doivent jamais changer.
-
----
-
-# Critère de réussite
-
-FounderHQ est réussi lorsque :
-
-* les connaissances s'accumulent,
-* les décisions s'améliorent,
-* les playbooks émergent,
-* les projets avancent,
-* les résultats sont traçables,
-* le système survit au remplacement du LLM.
-
-Le système doit devenir plus intelligent chaque année même si tous les outils changent.
+> FounderHQ est un quartier général entrepreneurial portable capable de survivre au remplacement des outils, des modèles et des plateformes.
