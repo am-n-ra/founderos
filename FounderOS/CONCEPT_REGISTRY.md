@@ -209,6 +209,22 @@ An asset is anything of value that can be reused across projects, missions or ti
 
 System contains the rules that govern FounderHQ itself.
 
+**What system holds:**
+- The manifest (FOUNDERHQ_MANIFEST.md)
+- The concept registry (CONCEPT_REGISTRY.md)
+- The protocol (Protocols/FOUNDEROS_PROTOCOL.md)
+- The temporal awareness rules (Protocols/TEMPORAL_AWARENESS.md)
+- Quality gates
+- Decision-making frameworks
+- Governance and escalation rules
+
+**Properties:**
+- System rules may change, but changes must be documented
+- System rules must be loadable by any LLM without prior training
+- System rules should be minimal (no rule without a clear purpose)
+
+**Invariant truth:** Without system, FounderHQ has no governance. It cannot self-correct or evolve intentionally.
+
 ---
 
 ## Concept 10: DISTRIBUTION MEMORY
@@ -226,22 +242,6 @@ DISTRIBUTION MEMORY contains recorded strategy and results from every distributi
 - Empty state is valid (no campaigns yet)
 
 **Invariant truth:** Without distribution memory, every campaign starts from zero. Distribution intelligence cannot compound.
-
-**What system holds:**
-- The manifest (FOUNDERHQ_MANIFEST.md)
-- The concept registry (CONCEPT_REGISTRY.md)
-- The protocol (Protocols/FOUNDEROS_PROTOCOL.md)
-- The temporal awareness rules (Protocols/TEMPORAL_AWARENESS.md)
-- Quality gates
-- Decision-making frameworks
-- Governance and escalation rules
-
-**Properties:**
-- System rules may change, but changes must be documented
-- System rules must be loadable by any LLM without prior training
-- System rules should be minimal (no rule without a clear purpose)
-
-**Invariant truth:** Without system, FounderHQ has no governance. It cannot self-correct or evolve intentionally.
 
 ---
 
