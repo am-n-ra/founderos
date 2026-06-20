@@ -64,7 +64,7 @@ AI_VIDEO_MASTER_DOMAIN produces: Script → Scenes → Frames → Video → Loca
 ## Relation with Existing Modules
 
 - MOS → feeds DIOS with mission priorities
-- CAOS → feeds DIOS with pricing/cash constraints
+- CAOS (FounderOS/Frameworks/Core/CAOS.md) → feeds DIOS with pricing/cash constraints
 - FAOS → feeds DIOS with funnel/conversion models
 - CEOS → receives DIOS strategy, produces content
 - AI_VIDEO_MASTER_DOMAIN → receives CEOS specs, produces video + distribution package
@@ -282,4 +282,4 @@ Then the system becomes smarter than yesterday.
 | OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | CEOS.md, AI_VIDEO_MASTER_DOMAIN.md, MOS.md, CAOS.md, FAOS.md, concepts/DISTRIBUTION_MEMORY.md, concepts/KNOWLEDGE.md |
+| Dependencies | CEOS.md, AI_VIDEO_MASTER_DOMAIN.md, MOS.md, Frameworks/Core/CAOS.md, FAOS.md, concepts/DISTRIBUTION_MEMORY.md, concepts/KNOWLEDGE.md |
