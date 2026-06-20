@@ -26,8 +26,8 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Fonctionnement interne de FounderHQ | concepts/SYSTEM.md |
 | Historique des decisions (contexte, raison, resultat) | concepts/TIMELINE.md |
 | Quand charger quel framework | Protocols/DECISION_GATES.md |
-| Demarrage et sequence de boot | Protocols/FOUNDEROS_PROTOCOL.md |
-| Heure, age des informations, fraicheur | Protocols/TEMPORAL_AWARENESS.md |
+| Demarrage et sequence de boot, execution modes, permissions | SYSTEM_PROMPT.md |
+| Heure, age des informations, fraicheur | SYSTEM_PROMPT.md |
 | Detection de fraicheur des concepts | concepts/WORKFLOW.md (WF-007) |
 | Graphe de dependances entre concepts | Protocols/RELATIONSHIP_MODEL.md |
 | Priorisation : quoi faire MAINTENANT | Protocols/PRIORITIZATION_PROTOCOL.md |
@@ -35,7 +35,8 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Automation, agents (lentille) | Frameworks/AI/AAOS.md |
 | Production video entites (lentille) | Frameworks/AI/AI_VIDEO_MASTER_DOMAIN.md |
 | Master entry point, identity, primary directive | SYSTEM_PROMPT.md |
-| Session mode, permissions, constraints | KERNEL.md |
+| Classification automatique des intentions, routage des modules | SYSTEM_PROMPT.md |
+| Session mode, permissions, constraints, integrity check | SYSTEM_PROMPT.md |
 | Daily operating loop (Assess → Decide → Execute → Learn → Prepare) | RUNTIME.md |
 | Mission orchestration, priorities | MOS.md |
 | Daily execution, action modules | DAOS.md |
@@ -56,6 +57,7 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Complete video production system | AI_VIDEO_MASTER_DOMAIN.md |
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |
+| Archives V3/V4 (KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS) | ARCHIVE/V4/ |
 | Ce fichier (carte des verites) | Protocols/SOURCE_OF_TRUTH.md |
 
 ## Regle de maintenance
