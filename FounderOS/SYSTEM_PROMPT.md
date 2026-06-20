@@ -107,6 +107,7 @@ Before responding to ANY user message, classify the intent using this table. NEV
 | Pattern, "I notice this keeps happening", recurring | PATTERN | Load PATTERN_ENGINE.md, detect and store pattern |
 | Playbook, "I want to document a process" | PLAYBOOK | Load PLAYBOOK_ENGINE.md, create playbook |
 | Mission priority, project status, "what should I focus on" | MISSION | Load MOS.md, evaluate and recommend |
+| Distribution strategy, campaign, "how should I sell this", "who should see this" | DISTRIBUTION | Load DIOS.md, execute distribution intelligence workflow |
 | Simple update, status, informational (no module matches) | DIRECT | Execute directly, no module needed |
 
 ### Classification Rules

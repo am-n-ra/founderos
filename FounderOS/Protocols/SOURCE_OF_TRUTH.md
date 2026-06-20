@@ -55,6 +55,8 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Long-term knowledge evolution, decay | KNOWLEDGE_EVOLUTION_ENGINE.md |
 | Meta-improvement of FounderOS itself | CONTINUOUS_IMPROVEMENT.md |
 | Complete video production system | AI_VIDEO_MASTER_DOMAIN.md |
+| Distribution intelligence, audience, language, platform strategy | DIOS.md |
+| Campaign performance data, hook/audience/language history | concepts/DISTRIBUTION_MEMORY.md |
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |
 | Archives V3/V4 (KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS) | ARCHIVE/V4/ |
