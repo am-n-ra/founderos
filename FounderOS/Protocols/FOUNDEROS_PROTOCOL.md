@@ -38,6 +38,24 @@ Your primary objective is to advance the mission(s) stored within FounderHQ.
 
 When you are asked to operate within FounderHQ:
 
+### Step 0: Read SYSTEM_PROMPT.md
+
+Read `SYSTEM_PROMPT.md`.
+
+This is the master entry point for FounderOS V3. It loads the OS identity, architecture overview, and primary directive.
+
+### Step 0b: Load KERNEL.md
+
+Read `KERNEL.md`.
+
+Establish session mode, permissions, constraints, and run integrity checks.
+
+### Step 0c: Load RUNTIME.md
+
+Read `RUNTIME.md`.
+
+Establish the daily operating loop framework (Assess → Decide → Execute → Learn → Prepare).
+
 ### Step 1: Load DECISION_GATES
 
 Read `Protocols/DECISION_GATES.md`.
@@ -114,15 +132,39 @@ Confirm:
 
 ---
 
-## Framework Loading
+## Module Loading
 
 After the boot sequence, when you classify an action via DECISION_GATES:
 
-1. If the gate lists an Optional Framework, load it from `Frameworks/Core/[NAME].md`
-2. Apply the lens questions to the current context
-3. Generate your response with the lens applied
+1. If the action falls under a V3 module's domain, load that module from `[MODULE].md` (e.g., MOS.md for mission orchestration, CEOS.md for content engineering, DAOS.md for daily execution)
+2. Apply the module's framework to the current context
+3. Generate your response with the module's guidance applied
 
-Frameworks are specialized thinking tools. They are not mandatory. They are loaded on demand.
+V3 modules are specialist subsystems. They are loaded on demand when their domain is relevant.
+
+Available V3 modules:
+- `MOS.md` — Mission Orchestrator (what to do, priorities)
+- `DAOS.md` — Daily Autonomous OS (how to do it today)
+- `VEAOS.md` — Strategic Vision Engine (long-term thinking)
+- `CEOS.md` — Content Engineering OS (content production)
+- `ASTRA.md` — Astro-Reflective Assistant (reflection, clarity)
+- `KMOS.md` — Knowledge Management OS (knowledge hygiene)
+- `LEOS.md` — Learning Engineering OS (learning pipeline)
+- `RIOS.md` — Research Intelligence OS (external research)
+- `FAOS.md` — Fundraising & Alliance OS (revenue, partnerships)
+- `SOS.md` — Self Operating System (founder wellbeing)
+- `AOS.md` — Architecture Operating System (OS integrity)
+
+## Engine Loading
+
+Cross-cutting engines are loaded for specialized analysis:
+
+- `DECISION_ENGINE.md` — Structured decision-making (PROACT framework)
+- `PATTERN_ENGINE.md` — Pattern detection across actions and outcomes
+- `PLAYBOOK_ENGINE.md` — Playbook creation and validation
+- `KNOWLEDGE_EVOLUTION_ENGINE.md` — Long-term knowledge evolution
+- `CONTINUOUS_IMPROVEMENT.md` — Meta-improvement of FounderOS itself
+- `AI_VIDEO_MASTER_DOMAIN.md` — Complete video production system
 
 ---
 

@@ -34,6 +34,28 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Marketing, campagne (lentille) | Frameworks/Content/MAOS.md |
 | Automation, agents (lentille) | Frameworks/AI/AAOS.md |
 | Production video entites (lentille) | Frameworks/AI/AI_VIDEO_MASTER_DOMAIN.md |
+| Master entry point, identity, primary directive | SYSTEM_PROMPT.md |
+| Session mode, permissions, constraints | KERNEL.md |
+| Daily operating loop (Assess → Decide → Execute → Learn → Prepare) | RUNTIME.md |
+| Mission orchestration, priorities | MOS.md |
+| Daily execution, action modules | DAOS.md |
+| Strategic vision, long-term thinking | VEAOS.md |
+| Content engineering, video production | CEOS.md |
+| Reflection, clarity, pattern awareness | ASTRA.md |
+| Knowledge management, hygiene | KMOS.md |
+| Learning pipeline, knowledge gaps | LEOS.md |
+| External research, intelligence | RIOS.md |
+| Fundraising, revenue, alliances | FAOS.md |
+| Founder wellbeing, energy, mindset | SOS.md |
+| OS architecture, coherence, audits | AOS.md |
+| Structured decision-making (PROACT) | DECISION_ENGINE.md |
+| Pattern detection across actions/outcomes | PATTERN_ENGINE.md |
+| Playbook creation, validation, evolution | PLAYBOOK_ENGINE.md |
+| Long-term knowledge evolution, decay | KNOWLEDGE_EVOLUTION_ENGINE.md |
+| Meta-improvement of FounderOS itself | CONTINUOUS_IMPROVEMENT.md |
+| Complete video production system | AI_VIDEO_MASTER_DOMAIN.md |
+| First-time setup procedure | GENESIS.md |
+| Installation guide, troubleshooting | INSTALL.md |
 | Ce fichier (carte des verites) | Protocols/SOURCE_OF_TRUTH.md |
 
 ## Regle de maintenance
