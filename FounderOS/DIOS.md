@@ -224,7 +224,7 @@ DIOS queries DISTRIBUTION_MEMORY before every new campaign to find:
 - Which platform distributed furthest?
 - Which CTA drove action?
 
-DISTRIBUTION_MEMORY is stored as a concept at concepts/DISTRIBUTION_MEMORY.md.
+DISTRIBUTION_MEMORY is stored as a concept at `concepts/DISTRIBUTION_MEMORY.md`.
 
 Each campaign entry captures: hook, audience, language, platform, views, engagement, conversions, revenue, ROI, learnings.
 
@@ -282,4 +282,4 @@ Then the system becomes smarter than yesterday.
 | OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | CEOS.md, AI_VIDEO_MASTER_DOMAIN.md, DISTRIBUTION_MEMORY.md |
+| Dependencies | CEOS.md, AI_VIDEO_MASTER_DOMAIN.md, MOS.md, CAOS.md, FAOS.md, concepts/DISTRIBUTION_MEMORY.md, concepts/KNOWLEDGE.md |
