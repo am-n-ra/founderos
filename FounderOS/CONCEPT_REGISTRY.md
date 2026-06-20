@@ -209,6 +209,24 @@ An asset is anything of value that can be reused across projects, missions or ti
 
 System contains the rules that govern FounderHQ itself.
 
+---
+
+## Concept 10: DISTRIBUTION MEMORY
+
+**Layer:** Concept — A2 (Execution)
+
+**Purpose:** Store campaign performance data.
+
+DISTRIBUTION MEMORY contains recorded strategy and results from every distribution campaign.
+
+**Properties:**
+- Each entry captures an entire campaign (hook, audience, language, platform, performance)
+- DIOS queries DISTRIBUTION MEMORY before generating new campaign strategies
+- Memory accumulates over time — each campaign makes the system smarter
+- Empty state is valid (no campaigns yet)
+
+**Invariant truth:** Without distribution memory, every campaign starts from zero. Distribution intelligence cannot compound.
+
 **What system holds:**
 - The manifest (FOUNDERHQ_MANIFEST.md)
 - The concept registry (CONCEPT_REGISTRY.md)
