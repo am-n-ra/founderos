@@ -87,6 +87,30 @@ Analysis and lessons belong in KNOWLEDGE.
 - PROJECT.md mis à jour: SN-002 → Completed (hypothesis invalidated), SN-003 → Active (hook layer rework).
 - WORKFLOW.md WF-001 mis à jour: step 1 = choose audio/visual disruptor BEFORE script.
 
+**2026-06-19 (Session — ~2h)**
+- Bancalisation concept developpe et formalise avec le founder
+- SOURCE_OF_TRUTH.md audite — Regle 0 expliquee et comprise
+- TEMPORAL_AWARENESS conformite corrigee : Get-Date systematique avant chaque reponse
+- Nouveaux fournisseurs soja trouves : Ste SODJA (96 68 43 65), SCOOPS AKPENE (91 58 84 56), SOYCAIN (91 73 66 83), CIFS (91 11 44 40), MAMAN SOJA (92 62 64 68), AGROKOM (90 01 44 41)
+- Levier financier local analyse : Assilassimé Coup de Pouce (0%, 5-20k FCFA), COCEC (jusqua 15M FCFA), FUCEC, Mutuelle Dignité Humaine
+- FounderOS pousse sur GitHub : kellykheir/founderos
+- Master prompt doodle YouTube (long-form) sauvegarde dans KnowledgeAssets/
+- Shorts viral master prompt (9:16, <60s) cree et sauvegarde
+- Chaine DoodleMind creee : niche psycho/histoire/cerveau, cible US/AU, anglais
+- Premier Short "Why Your Brain Forgets Your Dreams" : script + 30 prompts image + metadata TikTok/YouTube generes
+- KNOWLEDGE.md mis a jour : doodle YouTube pipeline + Shorts pipeline
+
+**2026-06-20 (Session — OS Audit & Repair — ~2h)**
+- OS audit conducted: 11+ issues identified across MEMORY, PROJECT, TIMELINE, ASSET, CURRENT_STATE, SOURCE_OF_TRUTH
+- MEMORY.md complete rewrite: priorities updated (soya > DoodleMind > Stop Nuisibles), blockers documented (cash, TikTok US, Short #1 images), recent decisions from 2026-06-19 added
+- PROJECT.md repaired: DM-001 (DoodleMind) and SS-001 (Soya Sourcing) added, FO-001 marked Completed, FO-002 archived as duplicate of FHQ-001
+- TIMELINE.md: 2026-06-20 entries added, footer date corrected
+- ASSET.md: DoodleMind channel and soya supplier contacts added
+- CURRENT_STATE.md: Session Objective and Top Priority updated
+- SOURCE_OF_TRUTH.md: DoodleMind and soya entries added to truth map
+- Staleness detection workflow created in WORKFLOW.md (WF-007)
+- CONCEPT_AUDIT.md: current audit findings appended
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback
@@ -96,7 +120,7 @@ Analysis and lessons belong in KNOWLEDGE.
 
 ## Footer
 
-Last updated: 2026-06-18
+Last updated: 2026-06-20 (added: 2026-06-20 session entries; fixed: footer date)
 
 Timeline is append-only.
 

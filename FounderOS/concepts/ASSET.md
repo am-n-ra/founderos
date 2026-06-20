@@ -102,6 +102,60 @@ Each asset entry should include:
 
 ---
 
+**ASSET_ID:** A-009
+
+**NAME:** DoodleMind YouTube Channel
+
+**TYPE:** Relationship (platform account)
+
+**LOCATION:** YouTube — DoodleMind channel (English, niche psycho/histoire/cerveau)
+
+**STATUS:** Available (0 subscribers, 0 videos published)
+
+**PROJECT_ORIGIN:** DM-001 (DoodleMind Channel Launch)
+
+**PROJECTS_USING:** DM-001
+
+**NOTES:** Channel created 2026-06-19. Short #1 script and 30 image prompts in KnowledgeAssets/. Target audience US/AU. Format: 9:16 hand-drawn doodle, 30-60s. YouTube Short #1 analytics from cross-post: 335 views, 72.8% retention, 87.5% like rate, 28.6% CTR.
+
+---
+
+**ASSET_ID:** A-010
+
+**NAME:** Soya Supplier Contacts
+
+**TYPE:** Relationship (supplier)
+
+**LOCATION:** Phone numbers in MEMORY.md (Recent Decisions)
+
+**STATUS:** Available (not yet contacted)
+
+**PROJECT_ORIGIN:** SS-001 (Soya Supplier Sourcing)
+
+**PROJECTS_USING:** SS-001
+
+**NOTES:** 7 suppliers found 2026-06-19: Ste SODJA (96 68 43 65), SCOOPS AKPENE SOJA (91 58 84 56), SOYCAIN (91 73 66 83), CIFS TOGO (91 11 44 40), AGROKOM TOGO (90 01 44 41), MAMAN SOJA (92 62 64 68), SOCMEL (99 46 89 34). Existing suppliers from earlier research: AGROTRADE, TOGO SOJA, IVEMA. Need to call to confirm: price per bol, minimum order, delivery terms, payment terms.
+
+---
+
+**ASSET_ID:** A-011
+
+**NAME:** DoodleMind Short #1 Assets
+
+**TYPE:** Content
+
+**LOCATION:** concepts/KnowledgeAssets/short_why_your_brain_forgets_dreams.txt, concepts/KnowledgeAssets/prompts_why_your_brain_forgets_dreams.txt
+
+**STATUS:** Available (not yet used)
+
+**PROJECT_ORIGIN:** DM-001 (DoodleMind Channel Launch)
+
+**PROJECTS_USING:** DM-001
+
+**NOTES:** Script + 30 image prompts + metadata (title, description, tags) for "Why Your Brain Forgets Your Dreams." Images not yet generated. Video not yet published.
+
+---
+
 **ASSET_ID:** A-004
 
 **NAME:** WhatsApp Business Account
@@ -256,7 +310,7 @@ For video production and creative assets, use these subtypes under the TYPE fiel
 
 ## Footer
 
-Last updated: 2026-06-18 (added: brand identity, story/series bible templates, content subtypes, reuse rule, continuity gate)
+Last updated: 2026-06-20 (added: A-009 DoodleMind YouTube channel, A-010 Soya supplier contacts, A-011 DoodleMind Short #1 assets)
 
 Assets compound over time.
 

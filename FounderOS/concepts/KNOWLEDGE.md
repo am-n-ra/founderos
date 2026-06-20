@@ -139,9 +139,60 @@ Every completed project triggers improvement review. The lessons are stored here
 
 ---
 
+---
+
+## Doodle Animation YouTube Pipeline (Master Prompt — saved 2026-06-19)
+
+**Full prompt sauvegarde dans :** `KnowledgeAssets/doodle_youtube_master_prompt.txt`
+
+### Shorts Viral Pipeline (saved 2026-06-19)
+
+**Full prompt :** `KnowledgeAssets/shorts_viral_master_prompt.txt`
+
+- Format: 30-60s vertical (9:16), hand-drawn doodle
+- One idea per Short. Hook in first 1-2s.
+- 5-8 scenes per Short, fast cuts (2-5s per scene)
+- Text overlay mandatory (90% watch first loop on mute)
+- Loopable ending → first frame
+- Sound: trending audio + voiceover on top
+
+### Channel DNA
+
+- **Niche:** Human history, evolution, anthropology, psychology
+- **Format:** 10-14 min educational explainer, 2nd-person narration, hand-drawn doodle 2D animation
+- **Hook formula:** Relatable modern moment → "but the real answer is far stranger" → reframe
+- **Script rhythm:** Short sentence. Short sentence. Longer sentence. Short sentence. Question.
+- **Narrative arc:** Hook → Reframe → Deep Dive → Counterintuitive Twist → Modern Mirror → Echo close
+
+### Visual DNA
+
+- Hand-drawn 2D doodle, flat colors, bold black outlines, sketchy marker lines
+- Characters: Stick figures, large circular heads, dot eyes, thick brow lines
+- Backgrounds: Flat solid color blocks only — no gradients, no shadows, no textures
+- Text: Bold ALL CAPS, marker font, RED/BLACK/YELLOW, top of frame
+- Color palette: Orange #F5820D · Cobalt #2D5FBF · Green #3A9E3A · Yellow #F5C518 · Red #D94040 · Brown #8B5E3C · Blue #6EB5E8 · Tan #C4965A · White #FFFFFF
+- Aspect ratio: Always 16:9
+
+### Production Stages
+
+1. Generate 5 viral topic ideas → user selects
+2. Generate 1,800-2,500 word narration script → delivered as `.txt` file
+3. Generate image prompts (1 per timestamp) → delivered in batches of 20 → combine into `.txt` file on request
+4. Generate viral metadata (title, description, tags) → ready to paste into YouTube
+
+### Key Rules
+
+- Never skip stages. Always wait for user input.
+- Script = plain text only (no markdown, no stage directions, no headers inside file)
+- One timestamp = one image prompt. Hold scenes across consecutive timestamps.
+- All prompts begin with style anchor, end with style lock.
+- Metadata = 3 separate copyable code blocks (title, description, tags).
+
+---
+
 ## Footer
 
-Last updated: 2026-06-18 (added: continuous improvement pattern, redirected pricing to ASSET)
+Last updated: 2026-06-19 (added: doodle animation YouTube pipeline, soya supplier contacts)
 
 Knowledge should be reviewed quarterly.
 

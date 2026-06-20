@@ -16,9 +16,10 @@ If something has been true for more than 30 days, it belongs in KNOWLEDGE.
 
 ## Current Priorities
 
-1. Monitor Variation #2 analytics — wait for >100 views before SN-003 decision
-2. Engage any WhatsApp inquiries from Variation #2
-3. Update State/CURRENT_STATE.md after each action
+1. Call soya suppliers — priority: Ste SODJA (96 68 43 65) for price/terms at ≤ 700 FCFA/bol
+2. Generate images for Short #1 and publish on DoodleMind
+3. Design SN-003 with audio/visual frame-1 disruptor (not text-only)
+4. Update OS files after each session (MEMORY, TIMELINE, CURRENT_STATE)
 
 ---
 
@@ -30,34 +31,47 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Recent Decisions
 
-- 2026-06-18: FounderOS architecture audited. Result: 42 specs replaced by concept-based system.
-- 2026-06-18: Four foundation documents written (MANIFEST, CONCEPT_REGISTRY, PROTOCOL, TEMPORAL_AWARENESS).
-- 2026-06-18: CONCEPT_BOUNDARIES.md written.
-- 2026-06-18: Global deep fix — 107 legacy files archived, DECISION_GATES + CURRENT_SESSION created, patterns migrated, TEMPORAL_AWARENESS operationalized.
-- 2026-06-18: Variation #2 posted by founder with "PEST" giveaway + price anchoring (8,500 vs 5,900).
-- 2026-06-17: Video 1 posted on TikTok @stopnuisibles228.
-- 2026-06-17: Zoclo Livraison mission archived.
+- 2026-06-20: OS audit conducted — 11+ issues found in concept files, full repair in progress
+- 2026-06-19: Bancalisation concept formalized with founder
+- 2026-06-19: SOURCE_OF_TRUTH.md audited — Regle 0 explained and understood
+- 2026-06-19: TEMPORAL_AWARENESS compliance fixed: Get-Date systematique before each response
+- 2026-06-19: 7 soya suppliers found with phone numbers: Ste SODJA (96 68 43 65), SCOOPS AKPENE (91 58 84 56), SOYCAIN (91 73 66 83), CIFS (91 11 44 40), MAMAN SOJA (92 62 64 68), AGROKOM (90 01 44 41), SOCMEL (99 46 89 34)
+- 2026-06-19: Financial leverage options analyzed: Assilassime Coup de Pouce (0%, 5-20k FCFA), COCEC (up to 15M FCFA)
+- 2026-06-19: FounderOS pushed to GitHub: kellykheir/founderos
+- 2026-06-19: Master prompts saved (doodle YouTube long-form + Shorts viral) to KnowledgeAssets/
+- 2026-06-19: DoodleMind channel created: niche psycho/histoire/cerveau, target US/AU, English content
+- 2026-06-19: First Short "Why Your Brain Forgets Your Dreams": script + 30 image prompts + metadata generated
+- 2026-06-19: YouTube Short #1 analytics: 335 views, 72.8% retention, 87.5% like rate, 28.6% CTR
+- 2026-06-19: KNOWLEDGE.md updated with both doodle pipelines
+- 2026-06-18: Hook Layer Priority validated (audio > visual > text) across 2 videos with same 0:03 drop
+- 2026-06-18: FounderOS V2 architecture complete: 9 concepts, 6 protocols, 8 frameworks, State/Runtime/Archive
+- 2026-06-18: Variation #2 analytics: 91 views, 0 comments, same 0:03 drop → text-only fix invalidated
 
 ---
 
 ## Open Questions
 
-None — all current decisions made.
+- Will Ste SODJA accept direct-delivery payment (no upfront cash)?
+- Can TikTok US distribution be forced without local SIM in target market?
+- What is the optimal posting frequency for DoodleMind Shorts (24h vs 48h)?
 
 ---
 
 ## Active Concerns
 
-- 5 TikTok followers — zero social proof, low conversion probability without incentive.
-- Video 1 analytics: 380 views, 98.8% For You, 11.69s avg, 12.2% full watch, 13 likes, 0 comments, 2 shares, 6 saves, 4 new followers, drop at 0:03
-- Facebook: 227 views, 4s avg, 0 interactions, 0 link clicks
-- Cash position: see State/CURRENT_STATE.md (single source of truth)
+- Cash = 1,118 FCFA, 0 revenue — SURVIVAL mode. Every action must generate or enable revenue.
+- Stop Nuisibles: 5 TikTok followers, zero social proof. SN-003 pending audio/visual hook rework. Facebook 227 views, 0 interactions.
+- DoodleMind: YouTube Short #1 analytics excellent (72.8% retention, 87.5% like rate) but channel has 0 subscribers. TikTok distribution stuck in Togo/Africa/France — US not reached despite VPN + Private Relay attempt.
+- Soya: 2 dames confirmed (~60 bols/week at 900-1,000 FCFA). At 700 FCFA/bol cost, margin = 14,300 FCFA/week. But cannot buy stock without cash.
+- MEMORY.md was stale for 2 days (last updated 2026-06-18) — OS files drift when not updated per session.
 
 ---
 
 ## Blockers
 
-- None — waiting on Variation #2 analytics to determine next action.
+- Cash: cannot buy soya stock (1,118 FCFA, need ~28,000 FCFA for 1 sac) without supplier trust for post-delivery payment
+- TikTok US distribution: TikTok distributes by local SIM/IP/language — US audience not reachable without US SIM or different strategy
+- YouTube Short #1: 30 image prompts generated but images not yet created, video not published
 
 ---
 
@@ -101,7 +115,7 @@ Metrics to track: Lessons Count, Patterns Count, Playbooks Count, Workflow Succe
 
 ## Footer
 
-Last updated: 2026-06-18 (added: scope notice, state synchronization, review cadence)
+Last updated: 2026-06-20 (full rewrite — priorities, decisions, concerns, blockers for current state)
 
 Memory should be reviewed and pruned at the start of each session.
 

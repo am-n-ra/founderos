@@ -48,7 +48,13 @@ This is the most important document. It tells you what concepts to load before a
 
 Read `Protocols/TEMPORAL_AWARENESS.md`.
 
-Establish current time, timezone, DST status (Lome UTC+0). Compute age of all loaded concepts.
+Establish current time, timezone, DST status (Lome UTC+0).
+
+### Step 2b: Run WF-007 Freshness Check
+
+Execute `WORKFLOW.md` WF-007 — scan all concept footers, compute ages, flag stale files.
+
+Do not proceed to Step 3 until freshness is known.
 
 ### Step 3: Load State/CURRENT_STATE.md
 
@@ -250,6 +256,10 @@ When state is corrupted or missing:
 3. Scan for any existing concept implementations
 4. Reconstruct missing concepts from what remains
 5. Report what was lost and what was rebuilt
+
+### Mid-Session Reboot
+
+If the user says "reboot" or "applique" during a session, execute WF-008 (Cold Reboot Protocol) from WORKFLOW.md. This re-reads modified concept files, detects deltas, and rebuilds the world model without closing the session.
 
 ---
 

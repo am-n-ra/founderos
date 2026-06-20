@@ -321,9 +321,98 @@ Each workflow must define:
 
 ---
 
+**WORKFLOW_ID:** WF-007
+
+**NAME:** Session Boot — Concept Freshness Check
+
+**TRIGGER:** Every session start, after loading FOUNDEROS_PROTOCOL Step 1-2
+
+**INPUT:** Current date/time (Lomé UTC+0) + last-updated dates from all concept files
+
+**STEPS:**
+
+1. **Read system clock** — Get-Date, verify Lomé UTC+0
+2. **Read last-updated dates** — Scan footers of: MEMORY.md, PROJECT.md, TIMELINE.md, KNOWLEDGE.md, ASSET.md, WORKFLOW.md, PLAYBOOK.md, CURRENT_STATE.md
+3. **Compute age** — For each file: age = current_date - last_updated_date
+4. **Flag stale concepts** — For each file exceeding its max age:
+   - MEMORY.md > 1 session → FLAG
+   - CURRENT_STATE.md > 1 session → FLAG
+   - PROJECT.md > 7 days → FLAG
+   - KNOWLEDGE.md > 14 days → FLAG
+   - TIMELINE.md > 14 days → FLAG
+   - ASSET.md > 30 days → FLAG
+   - WORKFLOW.md > 30 days → FLAG
+   - PLAYBOOK.md > 30 days → FLAG
+5. **Report** — Generate concise freshness report: "MEMORY: 2 days (STALE). PROJECT: 2 days (OK). All others fresh."
+6. **Prompt update** — If any concept is flagged, recommend update before proceeding with session goals
+
+**OUTPUT:** Freshness report displayed to founder. Stale concepts flagged before any action.
+
+**ERROR HANDLING:** If a file has no "Last updated" field, treat as maximally stale (> 90 days). If file cannot be read, flag as MISSING and consult SOURCE_OF_TRUTH.md for expected location.
+
+---
+
+**WORKFLOW_ID:** WF-008
+
+**NAME:** Cold Reboot Protocol
+
+**TRIGGER:** User says "reboot" or "applique" in any message
+
+**INPUT:** Current session context (stale) + files on disk (fresh) + git history
+
+**STEPS:**
+
+1. **Freeze context** — Announce: "Rebooting — applying OS updates." Note current action to resume later if needed.
+
+2. **Git change scan** — Run:
+   ```
+   git log --oneline -5
+   git diff HEAD~1 --name-only
+   ```
+   If `git` not found: `git init` in FounderHQ root, then `git add . && git commit -m "founderos: initial state"`, then proceed to step 4 (full re-read).
+
+3. **Identify changed files** — Parse `git diff HEAD~1 --name-only` output. Match against known concept files: `concepts/MEMORY.md`, `concepts/PROJECT.md`, `concepts/TIMELINE.md`, `concepts/ASSET.md`, `State/CURRENT_STATE.md`, `concepts/WORKFLOW.md`, `concepts/PLAYBOOK.md`, `concepts/KNOWLEDGE.md`.
+
+4. **Re-read modified files** — Read each file identified in step 3. If no git history (first commit just made or fallback), re-read all active concept files from step 3's list.
+
+5. **Detect deltas** — Compare new content against remembered old content. For each file, list what changed:
+   ```
+   Δ MEMORY — Priorities changed: old → new
+   Δ PROJECT — Added: DM-001. FO-001 → Completed.
+   ```
+
+6. **Rebuild world model** — Synthesize: what exists, what matters, what changed, what's blocked, what's emerging, what should happen next. If deltas contradict each other (e.g., two files disagree on cash), flag the contradiction.
+
+7. **Verify consistency** — File version wins over session memory. If a contradiction is found, report: "⚠️ Contradiction detected: MEMORY says X, CURRENT_STATE says Y. Using CURRENT_STATE (file wins)."
+
+8. **Report awareness** — Output:
+   ```
+   Reboot complete. 3 files re-loaded.
+
+   Δ MEMORY — priorities updated
+   Δ PROJECT — DM-001 added, FO-001 completed
+   Δ ASSET — A-009, A-010, A-011 added
+
+   World model: SURVIVAL mode. Cash 1,118 FCFA. Top priority: call soya suppliers. No contradictions.
+
+   Recommended next action: Call Ste SODJA (96 68 43 65) to confirm price and delivery terms.
+   ```
+
+**OUTPUT:** Fresh world model applied to session. Delta report displayed.
+
+**ERROR HANDLING:**
+- `git` not found → `git init`, first commit, full re-read. If user declines git init, use full re-read without git.
+- File modified but unreadable → Use old in-memory version, flag as ERROR.
+- Contradiction between old and new state → File version wins, flag contradiction.
+- Reboot during active workflow → Complete current step first, defer reboot to next natural break.
+
+**RELATED_KNOWLEDGE:** KNOWLEDGE — FounderOS Design Principles, TEMPORAL_AWARENESS.md
+
+---
+
 ## Footer
 
-Last updated: 2026-06-18 (added WF-004 AI Video Production, WF-005 Automation, WF-006 Event Processing; reordered WF-001 steps: audio/visual disruptor before script)
+Last updated: 2026-06-20 (added: WF-007 Session Boot Freshness Check, WF-008 Cold Reboot Protocol)
 
 Workflows are living documents.
 

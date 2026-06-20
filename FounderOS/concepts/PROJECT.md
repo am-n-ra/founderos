@@ -182,6 +182,70 @@ Each project entry must contain:
 
 ---
 
+**PROJECT_ID:** DM-001
+
+**NAME:** DoodleMind Channel Launch
+
+**PURPOSE:** Launch and grow DoodleMind YouTube channel to monetization (1,000 subscribers, 4,000 watch hours)
+
+**MISSION_LINK:** Financial Independence (MISSION)
+
+**STATUS:** Active
+
+**OWNER:** Founder
+
+**START_DATE:** 2026-06-19
+
+**TARGET_OUTCOME:** First Short published, channel established with consistent upload schedule, on track for monetization
+
+**NEXT_ACTION:** Generate images for Short #1 (30 image prompts ready in KnowledgeAssets/) and publish on DoodleMind
+
+**RELATED_MEMORY:** MEMORY — Current Priorities (item 2), Blockers (Short #1 not published)
+
+**RELATED_KNOWLEDGE:** KNOWLEDGE — Doodle Animation YouTube Pipeline, Shorts Viral Pipeline, Hook Layer Priority
+
+**RELATED_TIMELINE:** TIMELINE — 2026-06-19 entries
+
+**RELATED_WORKFLOWS:** KnowledgeAssets/shorts_viral_master_prompt.txt
+
+**RELATED_PLAYBOOKS:** None yet
+
+**RELATED_ASSETS:** KnowledgeAssets/ (short_why_your_brain_forgets_dreams.txt, shorts_viral_master_prompt.txt, prompts_why_your_brain_forgets_dreams.txt)
+
+---
+
+**PROJECT_ID:** SS-001
+
+**NAME:** Soya Supplier Sourcing
+
+**PURPOSE:** Find a soya supplier at ≤ 700 FCFA/bol with delivery to Lomé to serve 2 confirmed dames (~60 bols/week)
+
+**MISSION_LINK:** Financial Independence (MISSION)
+
+**STATUS:** Active
+
+**OWNER:** Founder
+
+**START_DATE:** 2026-06-19
+
+**TARGET_OUTCOME:** First soya delivery received, 2 dames supplied at 900-1,000 FCFA/bol, 14,300 FCFA/week margin achieved
+
+**NEXT_ACTION:** Call Ste SODJA (96 68 43 65) to confirm price, minimum order, and delivery/payment terms
+
+**RELATED_MEMORY:** MEMORY — Current Priorities (item 1), Blockers (cash, no stock), Active Concerns (soya margin)
+
+**RELATED_KNOWLEDGE:** KNOWLEDGE — Soya supplier contacts
+
+**RELATED_TIMELINE:** TIMELINE — 2026-06-19 entries
+
+**RELATED_WORKFLOWS:** None yet
+
+**RELATED_PLAYBOOKS:** None yet
+
+**RELATED_ASSETS:** Supplier phone numbers in MEMORY (Recent Decisions), soya supplier contacts to be added to ASSET.md
+
+---
+
 **PROJECT_ID:** FO-001
 
 **NAME:** FounderOS v2 Reconstruction
@@ -190,25 +254,29 @@ Each project entry must contain:
 
 **MISSION_LINK:** FounderHQ (MISSION)
 
-**STATUS:** Active
+**STATUS:** Completed
 
 **OWNER:** Founder + FounderOS Protocol
 
 **START_DATE:** 2026-06-18
 
+**END_DATE:** 2026-06-20
+
 **TARGET_OUTCOME:** All 9 concepts implemented with clean boundaries, old SYSTEM/ files archived
 
-**NEXT_ACTION:** Complete PROJECT.md, then WORKFLOW.md, PLAYBOOK.md, ASSET.md, SYSTEM.md
+**ACTUAL_OUTCOME:** All 9 concepts implemented (MISSION, PROJECT, MEMORY, KNOWLEDGE, TIMELINE, WORKFLOW, PLAYBOOK, ASSET, SYSTEM). 107 legacy files archived. 6 protocols, 8 frameworks operational.
 
-**RELATED_MEMORY:** MEMORY — Recent Decisions (architecture changes), Active Concerns
+**NEXT_ACTION:** N/A (completed)
+
+**RELATED_MEMORY:** MEMORY — Recent Decisions (architecture changes)
 
 **RELATED_KNOWLEDGE:** KNOWLEDGE — FounderOS Design Principles
 
-**RELATED_TIMELINE:** TIMELINE — 2026-06-18 entries
+**RELATED_TIMELINE:** TIMELINE — 2026-06-18 to 2026-06-20 entries
 
-**RELATED_WORKFLOWS:** None yet (WORKFLOW.md not yet created)
+**RELATED_WORKFLOWS:** None
 
-**RELATED_PLAYBOOKS:** None yet
+**RELATED_PLAYBOOKS:** None
 
 **RELATED_ASSETS:** FOUNDERHQ_MANIFEST.md, CONCEPT_REGISTRY.md, CONCEPT_BOUNDARIES.md, PROTOCOL, TEMPORAL_AWARENESS, concepts/ directory
 
@@ -250,31 +318,13 @@ Each project entry must contain:
 
 **NAME:** First Revenue
 
-**PURPOSE:** Generate the first sale from any product to validate the revenue loop
+**PURPOSE:** (MERGED INTO FHQ-001) Generate the first sale from any product to validate the revenue loop
 
-**MISSION_LINK:** Financial Independence (MISSION)
+**STATUS:** Archived — duplicate of FHQ-001
 
-**STATUS:** Active
+**ARCHIVE_REASON:** FHQ-001 (First Sale Documented) had identical purpose. Both targeted "at least 1 customer pays and receives delivery." FHQ-001 kept as canonical.
 
-**OWNER:** Founder
-
-**START_DATE:** 2026-06-16
-
-**TARGET_OUTCOME:** At least 1 customer pays for a product and receives delivery
-
-**NEXT_ACTION:** Unblock SN-002 by deciding hook direction, then produce and post
-
-**RELATED_MEMORY:** MEMORY — Current Priorities, Active Concerns (cash, followers, analytics), Blockers
-
-**RELATED_KNOWLEDGE:** KNOWLEDGE — Video Content Principles, Offer Design, Lomé Market Knowledge, Pest Repeller Product Knowledge
-
-**RELATED_TIMELINE:** TIMELINE — pending "First sale" entry
-
-**RELATED_WORKFLOWS:** None yet
-
-**RELATED_PLAYBOOKS:** None yet
-
-**RELATED_ASSETS:** Pest Repeller inventory (100 units), WhatsApp account, TikTok account @stopnuisibles228
+**NEXT_ACTION:** N/A (archived — see FHQ-001)
 
 ---
 
@@ -298,7 +348,7 @@ If the reference is too vague, the problem is not in PROJECT — the problem is 
 
 ## Footer
 
-Last updated: 2026-06-18
+Last updated: 2026-06-20 (added: DM-001 DoodleMind, SS-001 Soya Sourcing; FO-001 → Completed; FO-002 → Archived as duplicate of FHQ-001)
 
 A project's ACTIVE status means it has a NEXT_ACTION that can be executed.
 

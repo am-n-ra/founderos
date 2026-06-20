@@ -52,7 +52,7 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-18 — Lomé (UTC+0)
+**Date:** 2026-06-20 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash = 1,118 FCFA, zero revenue
 
@@ -60,14 +60,15 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 **Active Products:**
 - Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- Soya (Soja) — 0 stock, pre-vente a dame 2: 1 sac/semaine (40 bols), besoin fournisseur < 900 FCFA/bol
+- Soya (Soja) — 0 stock, pre-vente a 2 dames: ~60 bols/semaine, besoin fournisseur < 800 FCFA/bol
+- DoodleMind (YouTube Shorts) — nouvelle chaine, 0 abonnes, visee monetisation
 
-**Current Bottleneck:** Fournisseur soja — dame 2 prete a acheter 40 bols/semaine si prix < 900 FCFA. Il faut trouver un fournisseur moins cher (petite quantite 1 sac/100kg).
+**Current Bottleneck:** Cash = 1,118 FCFA. Can't buy stock, can't pay for image generation. Need either a supplier who accepts post-delivery payment or a zero-cash revenue channel (DoodleMind).
 
-**Top Priority:** FHQ-001 (premiere vente Stop Nuisibles) + trouver fournisseur soja (leverage: 4,000-8,000 FCFA/semaine potentiel avec 3 dames).
+**Top Priority:** Call soya suppliers (Ste SODJA priority) to find a ≤ 700 FCFA/bol deal with post-delivery payment. If impossible, pivot to publishing DoodleMind Short #1 as zero-cash path.
 
-**Session Objective:** Analyser l'opportunite soja, calculer l'unite economique, proposer strategie fournisseur, puis retourner sur les 3 concepts video.
+**Session Objective:** Complete OS audit — fix all stale files, add missing projects/assets, create staleness detection workflow.
 
-**Last Decision:** FounderHQ V2 architecture freeze. FHQ-001 launched. Sprint 30 jours : premiere vente → 5 ventes → pattern → playbook. Aucune modification architecturale pendant 30 jours.
+**Last Decision:** This session: full OS audit and repair. MEMORY, PROJECT, TIMELINE, ASSET, CURRENT_STATE, SOURCE_OF_TRUTH all updated.
 
-**Last Updated:** 2026-06-18 — Lomé UTC+0
+**Last Updated:** 2026-06-20 — Lomé UTC+0
