@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The AI_VIDEO_MASTER_DOMAIN is the complete video production system for DoodleMind. It covers ideation, scripting, production, optimization, and distribution.
+The AI_VIDEO_MASTER_DOMAIN is the complete video production system for DoodleMind. It covers scripting, production, optimization, and distribution packaging.
 
 ## Content Types
 
@@ -40,6 +40,19 @@ The AI_VIDEO_MASTER_DOMAIN is the complete video production system for DoodleMin
 4. **Tags**: Relevant keywords, niche + broad
 5. **Publish**: Schedule for optimal time
 
+### Distribution Package
+
+After post-production, AI_VIDEO_MASTER_DOMAIN produces a Distribution Package for each platform/language variant:
+
+1. **Localization**: Adapt script and captions per language (from DIOS Language Intelligence)
+2. **Platform Variations**: Adapt format per platform (vertical for TikTok, landscape for YouTube, image + text for Facebook)
+3. **Thumbnail Variants**: Per-platform thumbnail optimization
+4. **Title & Description**: Per-platform, per-language title with hook and keywords
+5. **Tags & Hashtags**: Platform-specific tag sets
+6. **Publishing Schedule**: Optimal time per platform per audience
+
+The Distribution Package is the final output that DIOS receives for distribution tracking.
+
 ### Analysis
 1. **First 24h**: Views, retention, engagement
 2. **Hook Analysis**: At what second do viewers drop? (YouTube Analytics)
@@ -75,4 +88,4 @@ Changing text alone produces minimal retention improvement (confirmed: 0:03 drop
 |-------|-------|
 | Last Verified | 2026-06-20 |
 | Owner | System (Content Domain) |
-| Dependencies | CEOS, ASSET.md, KNOWLEDGE.md |
+| Dependencies | CEOS, DIOS.md, ASSET.md, KNOWLEDGE.md |
