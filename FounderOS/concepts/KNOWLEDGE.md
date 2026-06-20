@@ -16,6 +16,29 @@ Nothing validated should be lost.
 
 ---
 
+## Distribution Intelligence
+
+### DIOS Pipeline (validated 2026-06-20)
+
+Distribution strategy must precede content production. The order is:
+1. DIOS decides (audience, language, platform, hook, angle, CTA)
+2. CEOS produces (story, script, direction, scene)
+3. AI_VIDEO_MASTER_DOMAIN executes (video, localization, platform variations, distribution package)
+4. DISTRIBUTION_MEMORY learns (campaign results → pattern detection)
+
+**Validated truth:** Producing content without first defining audience, language, and platform hook is guessing. DIOS eliminates the guesswork before CEOS spends production effort.
+
+### Language is Market-Derived (validated 2026-06-20)
+
+Languages are not hardcoded. They are derived from the target market/country. Example markets:
+- Togo: Francais, Ewe, Mina, Pidgin, Kabiye, Tem
+- Ghana: English, Twi, Ga, Ewe, Hausa, Pidgin
+- Nigeria: English, Pidgin, Yoruba, Hausa, Igbo, Efik
+
+### Concept Registration (validated 2026-06-20)
+
+New concepts must be registered in CONCEPT_REGISTRY.md with a Concept number, Layer, Purpose, Properties, and Invariant truth. New concept files must follow the established pattern: all-caps title, Concept section linking to registry, Role section, prose footer.
+
 ## Video Content Principles
 
 ### Hook Structure
@@ -192,7 +215,7 @@ Every completed project triggers improvement review. The lessons are stored here
 
 ## Footer
 
-Last updated: 2026-06-19 (added: doodle animation YouTube pipeline, soya supplier contacts)
+Last updated: 2026-06-20 (added: DIOS pipeline, language-market derivation, concept registration pattern)
 
 Knowledge should be reviewed quarterly.
 

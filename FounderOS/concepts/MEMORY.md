@@ -31,6 +31,10 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Recent Decisions
 
+- 2026-06-20: DIOS module created — 8 domains, 12-step workflow, commercial nervous system of FounderHQ
+- 2026-06-20: DISTRIBUTION_MEMORY concept created (Concept 10) — campaign performance YAML schema
+- 2026-06-20: CEOS refactored — pure production only, ideation/distribution/analysis moved to DIOS
+- 2026-06-20: V4 consolidation completed — KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS fully absorbed into SYSTEM_PROMPT.md (368 lines, 16 sections)
 - 2026-06-20: OS audit conducted — 11+ issues found in concept files, full repair in progress
 - 2026-06-19: Bancalisation concept formalized with founder
 - 2026-06-19: SOURCE_OF_TRUTH.md audited — Regle 0 explained and understood
@@ -115,7 +119,7 @@ Metrics to track: Lessons Count, Patterns Count, Playbooks Count, Workflow Succe
 
 ## Footer
 
-Last updated: 2026-06-20 (full rewrite — priorities, decisions, concerns, blockers for current state)
+Last updated: 2026-06-20 (added: DIOS, V4 completion, CEOS refactor decisions)
 
 Memory should be reviewed and pruned at the start of each session.
 
