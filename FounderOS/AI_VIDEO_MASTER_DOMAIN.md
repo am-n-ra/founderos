@@ -4,7 +4,29 @@
 
 The AI_VIDEO_MASTER_DOMAIN is the complete video production system for DoodleMind. It covers scripting, production, optimization, and distribution packaging.
 
-## Content Types
+## Position in FounderHQ
+
+AI_VIDEO_MASTER_DOMAIN is the specialized video production engine within the content supply chain. It is loaded when CEOS requires video content or when the founder asks to produce video. It feeds finished videos and performance data back to CEOS.
+
+## Inputs
+- `FounderOS/concepts/CEOS.md` — content briefs requiring video
+- Content Repository — brand assets, stock footage, music, templates
+- Platform specs — resolution, duration, format per platform
+
+## Outputs
+- Video assets — exported videos ready for distribution
+- Thumbnails and metadata — title, description, tags per platform
+- Performance data — views, retention, engagement by platform
+- Production templates — reusable workflows for similar videos
+
+## Relations
+- **CEOS** — receives briefs, returns finished videos and performance data
+- **CEOS** — receives distribution schedule for video publishing
+- **TIMELINE** — production milestones recorded
+
+## Workflow
+
+### Content Types
 
 ### 1. DoodleMind Long-Form (YouTube)
 - Educational entertainment doodle videos
@@ -18,7 +40,7 @@ The AI_VIDEO_MASTER_DOMAIN is the complete video production system for DoodleMin
 - Focus: hook retention, viral mechanics
 - Platform: YouTube Shorts, TikTok
 
-## Production Pipeline
+### Production Pipeline
 
 ### Pre-Production
 1. **Ideation**: 10 ideas → filter by production cost vs. audience interest → select 1
@@ -59,7 +81,7 @@ The Distribution Package is the final output that DIOS receives for distribution
 3. **Compare**: Against previous videos, against benchmarks
 4. **Learn**: Store in KNOWLEDGE.md
 
-## Hook Layer Priority
+### Hook Layer Priority
 
 When optimizing retention, prioritize in this order:
 1. **Audio** (voice tone, pacing, background music, sound effects) — strongest retention driver
@@ -68,7 +90,7 @@ When optimizing retention, prioritize in this order:
 
 Changing text alone produces minimal retention improvement (confirmed: 0:03 drop unchanged).
 
-## Equipment & Tools
+### Equipment & Tools
 
 - AI voice generation
 - AI image/animation generation
@@ -76,7 +98,7 @@ Changing text alone produces minimal retention improvement (confirmed: 0:03 drop
 - Audio editing software
 - Thumbnail design tool
 
-## Integration
+### Integration
 
 - AI_VIDEO_MASTER_DOMAIN is loaded by CEOS for video production
 - AI_VIDEO_MASTER_DOMAIN receives research from LEOS/RIOS
