@@ -121,6 +121,27 @@ Analysis and lessons belong in KNOWLEDGE.
 - V4 consolidation completee : Operational Principles, Integrity Check, Execution Constraints, State Preservation, Temporal Awareness (full) absorbes dans SYSTEM_PROMPT.md (217→368 lignes)
 - 7 verifications cross-reference : toutes OK
 
+**2026-06-20 (Session — Status Update — ~16:15 Lomé)**
+- Received 8,000 FCFA (5k uncle + 3k mom). Applied 50/30/20 rule — 20% set aside for growth.
+- Food supplies bought: huile, haricot, gari, endomi. Cash allocated for connectivity until Tuesday.
+- Soya: 40 bols pre-sold to dame 2 for tomorrow. Only supplier at 875 FCFA/bol = zero product margin. Delivery fee difference is only potential margin.
+- Meta ad account found restricted — cannot run pest repeller campaign. Growth budget (1,100 FCFA) blocked.
+- DoodleMind YouTube Short #1: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed, 40s avg view duration.
+- DoodleMind TikTok Short #1: 65 views, 10.43s avg, 2.8% full watch, 2 followers, drop at 0:02.
+- Decision: Keep 875 FCFA soya supplier as last resort for tomorrow's delivery. Continue searching for cheaper supplier for margin.
+
+**2026-06-20 (~19:29 Lomé UTC+0 — Résultats négo)**
+- Dame 1 confirmée : 975 FCFA/bol, argent demain 17h (5 bols = 4,875 FCFA).
+- Dame 2 : 950 FCFA jugé difficile (marché à 1,100-1,200). Va parler à sa seconde.
+- Envisage contre-proposition : 900 FCFA/bol si les 2 dames + seconde prennent 60 bols.
+- Renégociation fournisseur Atakpamé (360 FCFA/kg) en cours pour meilleur prix.
+- PRG framework fix appliqué : Get-Date systématique avant chaque réponse. Testé et confirmé.
+
+**2026-06-20 (~19:29 Lomé UTC+0 — Dame 2 = consignation)**
+- Dame 2 révèle son modèle : prend le soja, le vend, puis paie. Impossible pour le founder (pas de cash flow pour avancer).
+- Seule dame 1 reste confirmée : 5 bols × 975 FCFA, paiement demain 17h.
+- Plan soya redéfini : trouver acheteurs cash supplémentaires ou temporiser avec seulement 5 bols.
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback
@@ -130,7 +151,7 @@ Analysis and lessons belong in KNOWLEDGE.
 
 ## Footer
 
-Last updated: 2026-06-20 (added: DIOS session, V4 completion)
+Last updated: 2026-06-20 19:29 (added: dame 2 consignation, plan soya redéfini)
 
 Timeline is append-only.
 

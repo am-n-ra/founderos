@@ -198,19 +198,21 @@ Each project entry must contain:
 
 **TARGET_OUTCOME:** First Short published, channel established with consistent upload schedule, on track for monetization
 
-**NEXT_ACTION:** Generate images for Short #1 (30 image prompts ready in KnowledgeAssets/) and publish on DoodleMind
+**ACTUAL_OUTCOME:** Short #1 published. YouTube: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed, 40s avg duration. TikTok: 65 views, 10.43s avg, 2.8% full watch.
 
-**RELATED_MEMORY:** MEMORY — Current Priorities (item 2), Blockers (Short #1 not published)
+**NEXT_ACTION:** Create Short #2 — capitalise on YouTube Shorts feed algorithm (72.6% retention is strong). Use same psycho/cerveau niche.
+
+**RELATED_MEMORY:** MEMORY — Current Priorities (item 3), Active Concerns (DoodleMind analytics)
 
 **RELATED_KNOWLEDGE:** KNOWLEDGE — Doodle Animation YouTube Pipeline, Shorts Viral Pipeline, Hook Layer Priority
 
-**RELATED_TIMELINE:** TIMELINE — 2026-06-19 entries
+**RELATED_TIMELINE:** TIMELINE — 2026-06-19, 2026-06-20 entries
 
 **RELATED_WORKFLOWS:** KnowledgeAssets/shorts_viral_master_prompt.txt
 
 **RELATED_PLAYBOOKS:** None yet
 
-**RELATED_ASSETS:** KnowledgeAssets/ (short_why_your_brain_forgets_dreams.txt, shorts_viral_master_prompt.txt, prompts_why_your_brain_forgets_dreams.txt)
+**RELATED_ASSETS:** A-009 DoodleMind YouTube Channel, A-011 DoodleMind Short #1 Assets
 
 ---
 
@@ -230,19 +232,19 @@ Each project entry must contain:
 
 **TARGET_OUTCOME:** First soya delivery received, 2 dames supplied at 900-1,000 FCFA/bol, 14,300 FCFA/week margin achieved
 
-**NEXT_ACTION:** Call Ste SODJA (96 68 43 65) to confirm price, minimum order, and delivery/payment terms
+**NEXT_ACTION:** Trouver acheteurs cash pour soya. Dame 1 confirmée (5 bols × 975, demain 17h). Chercher d'autres dames au marché qui paient comptant. Renégocier Atakpamé pour prix < 360/kg.
 
-**RELATED_MEMORY:** MEMORY — Current Priorities (item 1), Blockers (cash, no stock), Active Concerns (soya margin)
+**RELATED_MEMORY:** MEMORY — Current Priorities (item 1), Blockers (only supplier at 875 FCFA), Active Concerns (soya margin, delivery tomorrow)
 
 **RELATED_KNOWLEDGE:** KNOWLEDGE — Soya supplier contacts
 
-**RELATED_TIMELINE:** TIMELINE — 2026-06-19 entries
+**RELATED_TIMELINE:** TIMELINE — 2026-06-19, 2026-06-20 entries
 
 **RELATED_WORKFLOWS:** None yet
 
 **RELATED_PLAYBOOKS:** None yet
 
-**RELATED_ASSETS:** Supplier phone numbers in MEMORY (Recent Decisions), soya supplier contacts to be added to ASSET.md
+**RELATED_ASSETS:** A-010 Soya Supplier Contacts, supplier phone numbers in MEMORY
 
 ---
 
@@ -348,7 +350,7 @@ If the reference is too vague, the problem is not in PROJECT — the problem is 
 
 ## Footer
 
-Last updated: 2026-06-20 (added: DM-001 DoodleMind, SS-001 Soya Sourcing; FO-001 → Completed; FO-002 → Archived as duplicate of FHQ-001)
+Last updated: 2026-06-20 19:29 (updated: SS-001 — dame 2 consignation, plan redirigé vers acheteurs cash)
 
 A project's ACTIVE status means it has a NEXT_ACTION that can be executed.
 

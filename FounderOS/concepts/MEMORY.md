@@ -16,10 +16,12 @@ If something has been true for more than 30 days, it belongs in KNOWLEDGE.
 
 ## Current Priorities
 
-1. Call soya suppliers — priority: Ste SODJA (96 68 43 65) for price/terms at ≤ 700 FCFA/bol
-2. Generate images for Short #1 and publish on DoodleMind
-3. Design SN-003 with audio/visual frame-1 disruptor (not text-only)
-4. Update OS files after each session (MEMORY, TIMELINE, CURRENT_STATE)
+1. Soya: dame 2 fonctionne en consignation (prend, vend, paie après) — impossible sans cash flow. Seulement dame 1 confirmée (5 bols × 975 = 4,875 FCFA demain 17h). Trouver acheteurs cash supplémentaires ou réduire la commande.
+2. Renégocier Atakpamé (360 FCFA/kg) — meilleur levier pour marge future
+3. Find alternative to Meta ads (ad account restricted) for pest repeller promotion
+4. DoodleMind Short #2 — capitaliser sur les 72.6% rétention YouTube
+5. Design SN-003 with audio/visual frame-1 disruptor
+6. Update OS files after each session
 
 ---
 
@@ -31,25 +33,23 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Recent Decisions
 
+- 2026-06-20: Dame 1 confirmée: 975 FCFA/bol, argent demain 17h (5 bols = 4,875 FCFA).
+- 2026-06-20: Dame 2: 950 FCFA jugé difficile (marché monté à 1,100-1,200 FCFA/bol). Va parler à sa seconde.
+- 2026-06-20: Envisage offre 900 FCFA/bol si dame 1 + dame 2 + seconde prennent 60 bols ensemble.
+- 2026-06-20: Renégocie fournisseur Atakpamé (360 FCFA/kg) pour meilleur prix.
+- 2026-06-20: Received 8,000 FCFA (5k uncle + 3k mom). Applied 50/30/20 rule.
+- 2026-06-20: Meta ad account found restricted — cannot run pest repeller campaign.
+- 2026-06-20: DoodleMind YouTube Short #1: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed.
 - 2026-06-20: DIOS module created — 8 domains, 12-step workflow, commercial nervous system of FounderHQ
 - 2026-06-20: DISTRIBUTION_MEMORY concept created (Concept 10) — campaign performance YAML schema
 - 2026-06-20: CEOS refactored — pure production only, ideation/distribution/analysis moved to DIOS
 - 2026-06-20: V4 consolidation completed — KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS fully absorbed into SYSTEM_PROMPT.md (368 lines, 16 sections)
-- 2026-06-20: OS audit conducted — 11+ issues found in concept files, full repair in progress
 - 2026-06-19: Bancalisation concept formalized with founder
-- 2026-06-19: SOURCE_OF_TRUTH.md audited — Regle 0 explained and understood
-- 2026-06-19: TEMPORAL_AWARENESS compliance fixed: Get-Date systematique before each response
 - 2026-06-19: 7 soya suppliers found with phone numbers: Ste SODJA (96 68 43 65), SCOOPS AKPENE (91 58 84 56), SOYCAIN (91 73 66 83), CIFS (91 11 44 40), MAMAN SOJA (92 62 64 68), AGROKOM (90 01 44 41), SOCMEL (99 46 89 34)
-- 2026-06-19: Financial leverage options analyzed: Assilassime Coup de Pouce (0%, 5-20k FCFA), COCEC (up to 15M FCFA)
-- 2026-06-19: FounderOS pushed to GitHub: kellykheir/founderos
-- 2026-06-19: Master prompts saved (doodle YouTube long-form + Shorts viral) to KnowledgeAssets/
 - 2026-06-19: DoodleMind channel created: niche psycho/histoire/cerveau, target US/AU, English content
 - 2026-06-19: First Short "Why Your Brain Forgets Your Dreams": script + 30 image prompts + metadata generated
 - 2026-06-19: YouTube Short #1 analytics: 335 views, 72.8% retention, 87.5% like rate, 28.6% CTR
-- 2026-06-19: KNOWLEDGE.md updated with both doodle pipelines
 - 2026-06-18: Hook Layer Priority validated (audio > visual > text) across 2 videos with same 0:03 drop
-- 2026-06-18: FounderOS V2 architecture complete: 9 concepts, 6 protocols, 8 frameworks, State/Runtime/Archive
-- 2026-06-18: Variation #2 analytics: 91 views, 0 comments, same 0:03 drop → text-only fix invalidated
 
 ---
 
@@ -63,19 +63,22 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Active Concerns
 
-- Cash = 1,118 FCFA, 0 revenue — SURVIVAL mode. Every action must generate or enable revenue.
-- Stop Nuisibles: 5 TikTok followers, zero social proof. SN-003 pending audio/visual hook rework. Facebook 227 views, 0 interactions.
-- DoodleMind: YouTube Short #1 analytics excellent (72.8% retention, 87.5% like rate) but channel has 0 subscribers. TikTok distribution stuck in Togo/Africa/France — US not reached despite VPN + Private Relay attempt.
-- Soya: 2 dames confirmed (~60 bols/week at 900-1,000 FCFA). At 700 FCFA/bol cost, margin = 14,300 FCFA/week. But cannot buy stock without cash.
-- MEMORY.md was stale for 2 days (last updated 2026-06-18) — OS files drift when not updated per session.
+- Cash ~2,679 FCFA accessible + 1,800 connectivity allocated. Received 8,000 FCFA (5k uncle + 3k mom), spent on food supplies, connectivity. SURVIVAL mode — every action must generate revenue.
+- Soya delivery tomorrow: 40 bols to dame 2. Only supplier at 875 FCFA/bol = zero margin if bought at that price. Dame 2 pays delivery (1,000-1,500 FCFA) — if delivery costs 500-1,000 FCFA, the difference is the only margin.
+- Meta ad account restricted — cannot run pest repeller ad campaign. Need alternative promotion strategy.
+- DoodleMind YouTube Short #1: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed — strong first video signal. TikTok: 65 views, drops at 0:02 — weaker.
+- Stop Nuisibles: SN-003 pending audio/visual hook rework.
+- MEMORY.md updated this session (2026-06-20).
 
 ---
 
 ## Blockers
 
-- Cash: cannot buy soya stock (1,118 FCFA, need ~28,000 FCFA for 1 sac) without supplier trust for post-delivery payment
-- TikTok US distribution: TikTok distributes by local SIM/IP/language — US audience not reachable without US SIM or different strategy
-- YouTube Short #1: 30 image prompts generated but images not yet created, video not published
+- Dame 2: fonctionne en consignation — prend le soja, vend, puis paie. Impossible sans cash flow. Seule dame 1 confirmée (5 bols × 975 FCFA, argent demain 17h).
+- Soya: fournisseur Lomé max 875/bol. Atakpamé à 360/kg (900/bol) — renégociation en cours.
+- Meta ad account restricted — cannot run pest repeller ad campaign.
+- Cash: ~2,679 FCFA accessible. 1,800 allocated for connectivity until Tuesday.
+- TikTok US distribution: distributes by local SIM/IP/language — US audience not reachable without US SIM or different strategy.
 
 ---
 
@@ -119,7 +122,7 @@ Metrics to track: Lessons Count, Patterns Count, Playbooks Count, Workflow Succe
 
 ## Footer
 
-Last updated: 2026-06-20 (added: DIOS, V4 completion, CEOS refactor decisions)
+Last updated: 2026-06-20 19:29 (added: dame 1 + dame 2 negotiation results, Atakpamé reneg)
 
 Memory should be reviewed and pruned at the start of each session.
 

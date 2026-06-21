@@ -116,7 +116,7 @@ Each asset entry should include:
 
 **PROJECTS_USING:** DM-001
 
-**NOTES:** Channel created 2026-06-19. Short #1 script and 30 image prompts in KnowledgeAssets/. Target audience US/AU. Format: 9:16 hand-drawn doodle, 30-60s. YouTube Short #1 analytics from cross-post: 335 views, 72.8% retention, 87.5% like rate, 28.6% CTR.
+**NOTES:** Channel created 2026-06-19. Short #1 published 2026-06-20. Target audience US/AU. Format: 9:16 hand-drawn doodle, 30-60s. YouTube Short #1 analytics: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed, 40s avg duration. TikTok: 65 views, 10.43s avg, 2.8% full watch.
 
 ---
 
@@ -152,7 +152,7 @@ Each asset entry should include:
 
 **PROJECTS_USING:** DM-001
 
-**NOTES:** Script + 30 image prompts + metadata (title, description, tags) for "Why Your Brain Forgets Your Dreams." Images not yet generated. Video not yet published.
+**NOTES:** Script + 30 image prompts + metadata for "Why Your Brain Forgets Your Dreams." Video published 2026-06-20. YouTube: 366 views, 72.6% retention. TikTok: 65 views, 2.8% full watch.
 
 ---
 
@@ -310,7 +310,7 @@ For video production and creative assets, use these subtypes under the TYPE fiel
 
 ## Footer
 
-Last updated: 2026-06-20 (added: A-009 DoodleMind YouTube channel, A-010 Soya supplier contacts, A-011 DoodleMind Short #1 assets)
+Last updated: 2026-06-20 16:15 (updated: A-009 and A-011 with Short #1 analytics)
 
 Assets compound over time.
 

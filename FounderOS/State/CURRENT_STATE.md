@@ -52,23 +52,23 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-20 — Lomé (UTC+0)
+**Date:** 2026-06-20 19:29 — Lomé (UTC+0)
 
-**Operating Mode:** SURVIVAL — cash = 1,118 FCFA, zero revenue
+**Operating Mode:** SURVIVAL — cash under 3,000 FCFA, zero revenue from sales
 
-**Cash (FCFA):** 1,118
+**Cash (FCFA):** ~2,679 accessible (1,229 account + 350 leftover + 1,100 growth set-aside). Plus 1,800 allocated for connectivity until Tuesday. Tomorrow: dame 1 paie 4,875 FCFA (5 bols × 975) à 17h.
 
 **Active Products:**
 - Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- Soya (Soja) — 0 stock, pre-vente a 2 dames: ~60 bols/semaine, besoin fournisseur < 800 FCFA/bol
-- DoodleMind (YouTube Shorts) — nouvelle chaine, 0 abonnes, visee monetisation
+- Soya (Soja) — 0 stock. Seule dame 1 confirmée (5 bols × 975 FCFA, demain 17h).
+- DoodleMind (YouTube Shorts) — Short #1 published, 366 views (YouTube) + 65 views (TikTok)
 
-**Current Bottleneck:** Cash = 1,118 FCFA. Can't buy stock, can't pay for image generation. Need either a supplier who accepts post-delivery payment or a zero-cash revenue channel (DoodleMind).
+**Current Bottleneck:** Dame 2 fonctionne en consignation (vend puis paie) — impossible sans cash flow. Seulement 5 bols confirmés (dame 1). Trouver acheteurs cash supplémentaires ou stocker.
 
-**Top Priority:** Call soya suppliers (Ste SODJA priority) to find a ≤ 700 FCFA/bol deal with post-delivery payment. If impossible, pivot to publishing DoodleMind Short #1 as zero-cash path.
+**Top Priority:** Sécuriser la vente des 5 bols à dame 1 demain 17h. Trouver d'autres acheteurs cash pour augmenter le volume. Renégocier Atakpamé.
 
-**Session Objective:** Implement DIOS module + complete V4 consolidation.
+**Session Objective:** Redéfinir la stratégie soya après l'échec du modèle consignation.
 
-**Last Decision:** DIOS cree comme systeme nerveux commercial. V4 consolidation completee — SYSTEM_PROMPT.md absorbe KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS. Prochaine action : appeler fournisseurs soja ou executer reboot test (WF-008).
+**Last Decision:** Dame 2 = consignation, pas viable. Seule dame 1 confirmée (5 bols, 975 FCFA, 17h). Recherche autres acheteurs cash.
 
-**Last Updated:** 2026-06-20 (DIOS + V4 session) — Lomé UTC+0
+**Last Updated:** 2026-06-20 19:29 — Lomé UTC+0
