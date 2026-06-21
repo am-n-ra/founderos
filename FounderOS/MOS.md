@@ -1,4 +1,4 @@
-# FounderOS V3 — MOS (Mission Orchestrator)
+# FounderOS V4 — MOS (Mission Orchestrator)
 
 ## Purpose
 
@@ -45,7 +45,7 @@ MOS decides what to do. DAOS decides how to do it today.
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | MISSION.md, PROJECT.md, CURRENT_STATE.md, ASSET.md |

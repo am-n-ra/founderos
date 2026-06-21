@@ -1,4 +1,4 @@
-# FounderOS V3 — PATTERN_ENGINE
+# FounderOS V4 — PATTERN_ENGINE
 
 ## Purpose
 
@@ -46,7 +46,7 @@ The PATTERN_ENGINE detects recurring structures across actions, outcomes, decisi
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | TIMELINE.md, KNOWLEDGE.md, RUNTIME |

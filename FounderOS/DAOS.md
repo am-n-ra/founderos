@@ -1,4 +1,4 @@
-# FounderOS V3 — DAOS (Daily Autonomous Operating System)
+# FounderOS V4 — DAOS (Daily Autonomous Operating System)
 
 ## Purpose
 
@@ -44,7 +44,7 @@ When invoked by RUNTIME Phase 2 (Decide):
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | MOS, CURRENT_STATE, PLAYBOOK.md, TIMELINE.md |

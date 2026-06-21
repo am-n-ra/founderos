@@ -1,4 +1,4 @@
-# FounderOS V3 — AOS (Architecture Operating System)
+# FounderOS V4 — AOS (Architecture Operating System)
 
 ## Purpose
 
@@ -51,7 +51,7 @@ AOS may recommend:
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | All OS files, SOURCE_OF_TRUTH.md |

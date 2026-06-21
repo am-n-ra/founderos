@@ -1,4 +1,4 @@
-# FounderOS V3 — LEOS (Learning Engineering OS)
+# FounderOS V4 — LEOS (Learning Engineering OS)
 
 ## Purpose
 
@@ -33,7 +33,7 @@ LEOS owns the learning pipeline — designing how new knowledge is acquired, str
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | KNOWLEDGE.md, TIMELINE.md |

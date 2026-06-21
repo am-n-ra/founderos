@@ -1,4 +1,4 @@
-# FounderOS V3 — DECISION_ENGINE
+# FounderOS V4 — DECISION_ENGINE
 
 ## Purpose
 
@@ -48,7 +48,7 @@ Every significant decision must be logged in TIMELINE.md:
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | TIMELINE.md, MOS, RUNTIME |

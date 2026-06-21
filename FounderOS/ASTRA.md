@@ -1,4 +1,4 @@
-# FounderOS V3 — ASTRA (Astro-Reflective Assistant)
+# FounderOS V4 — ASTRA (Astro-Reflective Assistant)
 
 ## Purpose
 
@@ -38,7 +38,7 @@ ASTRA is the reflective intelligence engine. It provides structured reflection, 
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | MEMORY.md, TIMELINE.md, KNOWLEDGE.md |

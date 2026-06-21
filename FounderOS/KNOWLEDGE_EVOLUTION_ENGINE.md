@@ -1,4 +1,4 @@
-# FounderOS V3 — KNOWLEDGE_EVOLUTION_ENGINE
+# FounderOS V4 — KNOWLEDGE_EVOLUTION_ENGINE
 
 ## Purpose
 
@@ -41,7 +41,7 @@ The KNOWLEDGE_EVOLUTION_ENGINE owns the long-term evolution of FounderHQ's knowl
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | KNOWLEDGE.md, PATTERN_ENGINE, LEOS |

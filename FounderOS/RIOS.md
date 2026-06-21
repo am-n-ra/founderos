@@ -1,4 +1,4 @@
-# FounderOS V3 — RIOS (Research Intelligence OS)
+# FounderOS V4 — RIOS (Research Intelligence OS)
 
 ## Purpose
 
@@ -37,7 +37,7 @@ RIOS owns external research — gathering, analyzing, and synthesizing informati
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | KNOWLEDGE.md, LEOS |

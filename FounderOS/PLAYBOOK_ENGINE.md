@@ -1,4 +1,4 @@
-# FounderOS V3 — PLAYBOOK_ENGINE
+# FounderOS V4 — PLAYBOOK_ENGINE
 
 ## Purpose
 
@@ -45,7 +45,7 @@ The PLAYBOOK_ENGINE manages the creation, validation, and evolution of playbooks
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | PLAYBOOK.md, PATTERN_ENGINE, DAOS |

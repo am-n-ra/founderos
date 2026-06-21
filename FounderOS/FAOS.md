@@ -1,4 +1,4 @@
-# FounderOS V3 — FAOS (Fundraising & Alliance OS)
+# FounderOS V4 — FAOS (Fundraising & Alliance OS)
 
 ## Purpose
 
@@ -45,7 +45,7 @@ FAOS owns all financial and alliance activity — fundraising, revenue generatio
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | MOS, CURRENT_STATE, ASSET.md |

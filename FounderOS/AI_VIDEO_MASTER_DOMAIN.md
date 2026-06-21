@@ -1,4 +1,4 @@
-# FounderOS V3 — AI_VIDEO_MASTER_DOMAIN
+# FounderOS V4 — AI_VIDEO_MASTER_DOMAIN
 
 ## Purpose
 
@@ -85,7 +85,7 @@ Changing text alone produces minimal retention improvement (confirmed: 0:03 drop
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
-| Owner | System (Content Domain) |
-| Dependencies | CEOS, DIOS.md, ASSET.md, KNOWLEDGE.md |
+| Owner | System |

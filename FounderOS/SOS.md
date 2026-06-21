@@ -1,4 +1,4 @@
-# FounderOS V3 — SOS (Self Operating System)
+# FounderOS V4 — SOS (Self Operating System)
 
 ## Purpose
 
@@ -36,7 +36,7 @@ When the user seems stuck, tired, or scattered:
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | RUNTIME, MEMORY.md |

@@ -1,4 +1,4 @@
-# FounderOS V3 — VEAOS (Strategic Vision Engine)
+# FounderOS V4 — VEAOS (Strategic Vision Engine)
 
 ## Purpose
 
@@ -35,7 +35,7 @@ VEAOS owns strategic thinking — the medium-to-long-term view that MOS (daily/w
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | MOS, CURRENT_STATE, ASSET.md |

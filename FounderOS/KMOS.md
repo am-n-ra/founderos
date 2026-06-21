@@ -1,4 +1,4 @@
-# FounderOS V3 — KMOS (Knowledge Management OS)
+# FounderOS V4 — KMOS (Knowledge Management OS)
 
 ## Purpose
 
@@ -38,7 +38,7 @@ KMOS delegates long-term knowledge evolution to KNOWLEDGE_EVOLUTION_ENGINE for:
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | KNOWLEDGE.md, MEMORY.md, ASSET.md, PLAYBOOK.md |

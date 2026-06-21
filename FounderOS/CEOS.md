@@ -1,4 +1,4 @@
-# FounderOS V3 — CEOS (Content Engineering OS)
+# FounderOS V4 — CEOS (Content Engineering OS)
 
 ## Purpose
 
@@ -28,7 +28,7 @@ CEOS owns content production engineering — designing, producing, and optimizin
 ## Footer
 
 | Field | Value |
-|-------|-------|
+|---|---|
+| OS Version | V4 |
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | DIOS.md, AI_VIDEO_MASTER_DOMAIN.md, ASSET.md, KNOWLEDGE.md |
