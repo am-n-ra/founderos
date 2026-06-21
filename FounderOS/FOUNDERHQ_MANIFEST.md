@@ -225,7 +225,7 @@ Sans eux, FounderHQ existe mais ne peut pas executer.
 
 #### Niveau B — Fonctionnement
 Sans eux, FounderHQ existe mais fonctionne mal.
-- DECISION_GATES, TEMPORAL_AWARENESS, FOUNDEROS_PROTOCOL, SOURCE_OF_TRUTH
+- DECISION_GATES, RUNTIME.md, SYSTEM_PROMPT.md, SOURCE_OF_TRUTH
 
 #### Niveau C — Optimisation
 Sans eux, FounderHQ existe et fonctionne.

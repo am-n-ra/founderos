@@ -212,7 +212,7 @@ System contains the rules that govern FounderHQ itself.
 **What system holds:**
 - The manifest (FOUNDERHQ_MANIFEST.md)
 - The concept registry (CONCEPT_REGISTRY.md)
-- The protocol (Protocols/FOUNDEROS_PROTOCOL.md)
+- The system prompt (SYSTEM_PROMPT.md)
 - The temporal awareness rules (Protocols/TEMPORAL_AWARENESS.md)
 - Quality gates
 - Decision-making frameworks
