@@ -52,23 +52,31 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-21 03:31 — Lomé (UTC+0)
+**Date:** 2026-06-21 06:50 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
-**Cash (FCFA):** ~2,679 accessible (1,229 account + 350 leftover + 1,100 growth set-aside). Plus 1,800 allocated for connectivity until Tuesday. Aujourd'hui 17h: encaissement 4,875 FCFA de dame 1 (mais cash va directement au fournisseur, pas à toi).
+**Cash (FCFA):** ~2,679 accessible. Aujourd'hui 17h: encaissement 4,875 FCFA de dame 1 (cash va au fournisseur, pas à toi).
 
 **Active Products:**
 - Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- Soya (Soja) — 0 stock. Dame 1 confirmée (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi. En attendant retour Atakpamé (360 FCFA/kg).
-- DoodleMind (YouTube Shorts) — Short #1 published, 366 views (YouTube) + 65 views (TikTok)
+- Soya (Soja) — Dame 1 confirmée (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi. Atakpamé (360 FCFA/kg) en attente.
+- DoodleMind (YouTube Shorts) — Short #1 published
+- **KORA Lab** — AI lab, pré-seed, documents complets, Herlog envoyé, ST Digital en attente
 
-**Current Bottleneck:** Modèle soya : cash va au fournisseur, pas à toi. Marge nulle ou minime. Trouver un modèle où tu gardes une marge.
+**KORA Status:**
+- Data Room: ✅ Complete (Vision → BP → Annexes, 20+ docs)
+- Herlog: Envoyé, retour en attente
+- ST Digital: Estimation compute envoyée, suivi demain
+- Phase: Pre-Seed Validation (Éwé)
+- Prochaine action: Relancer ST Digital demain
+
+**Current Bottleneck:** Modèle soya : cash va au fournisseur, pas à toi. Marge nulle ou minime.
 
 **Top Priority:** Aujourd'hui 17h — collecter 4,875 FCFA de dame 1 + confirmer fournisseur Lomé pour 5 bols lundi + attendre retour Atakpamé.
 
-**Session Objective:** Mettre à jour la stratégie soya après le nouveau plan.
+**Session Objective:** Migration complète de KORA dans FounderOS + mise à jour dossiers.
 
-**Last Decision:** Fournisseur Lomé passe de 40 à 5 bols (sample, lundi). Toi = 500 FCFA livraison. Cash client va au fournisseur. En attendant Atakpamé.
+**Last Decision:** Herlog envoyé. Suivi ST Digital demain. KORA docs migrés dans projects/KORA/.
 
-**Last Updated:** 2026-06-21 03:31 — Lomé UTC+0
+**Last Updated:** 2026-06-21 06:50 — Lomé UTC+0
