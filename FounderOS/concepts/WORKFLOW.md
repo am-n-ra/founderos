@@ -325,7 +325,7 @@ Each workflow must define:
 
 **NAME:** Session Boot — Concept Freshness Check
 
-**TRIGGER:** Every session start, after loading FOUNDEROS_PROTOCOL Step 1-2
+**TRIGGER:** Every session start, after Boot Sequence (SYSTEM_PROMPT.md)
 
 **INPUT:** Current date/time (Lomé UTC+0) + last-updated dates from all concept files
 

@@ -21,8 +21,8 @@ FounderHQ is defined by these documents, listed in load order:
 | FOUNDERHQ_MANIFEST.md | 9 invariants — what cannot be broken |
 | CONCEPT_REGISTRY.md | 9 concepts — what must exist |
 | CONCEPT_BOUNDARIES.md | frontiers — what each concept answers and does not answer |
-| Protocols/FOUNDEROS_PROTOCOL.md | execution protocol for any LLM |
-| Protocols/TEMPORAL_AWARENESS.md | time as a first-class dimension |
+| SYSTEM_PROMPT.md | master entry point — boot sequence, intent classification, PRG |
+| RUNTIME.md | operational reference — temporal awareness, principles, quality |
 | CONCEPT_AUDIT.md | audit record of concept purity |
 | RELATIONSHIP_MODEL.md | graph of concept relationships |
 
@@ -68,11 +68,12 @@ FounderHQ is defined by these documents, listed in load order:
 - A concept may not be deleted — its definition persists in the registry
 - If two concepts are merged, the merge must be documented with a migration note
 
-### FOUNDEROS_PROTOCOL.md
+### SYSTEM_PROMPT.md
 
-- The protocol may be updated as FounderHQ evolves
-- Protocol updates must not violate the invariants in FOUNDERHQ_MANIFEST.md
-- If a protocol update contradicts an invariant, the invariant wins
+- The system prompt is the master entry point for all sessions
+- It loads all modules, executes the boot sequence, and runs the Pre-Response Gate
+- Updates must not violate the invariants in FOUNDERHQ_MANIFEST.md
+- If an update contradicts an invariant, the invariant wins
 
 ### CONCEPT_BOUNDARIES.md
 

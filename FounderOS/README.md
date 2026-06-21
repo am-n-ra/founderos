@@ -1,4 +1,4 @@
-# FounderOS v1.0
+# FounderOS V4
 
 ## Structure
 ```

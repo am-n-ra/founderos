@@ -1,4 +1,4 @@
-# FounderOS V3 — INSTALL
+# FounderOS V4 — INSTALL
 
 ## Purpose
 
@@ -27,7 +27,7 @@ Ensure all OS files exist under FounderOS/. If any are missing, run GENESIS to r
 
 ### 3. Set Up Protocols
 
-Protocols/FOUNDEROS_PROTOCOL.md is the boot sequence. It must be loadable on first read. Ensure:
+SYSTEM_PROMPT.md is the boot sequence. It must be loadable on first read. Ensure:
 - All Protocol files exist
 - SOURCE_OF_TRUTH.md has entries for all files
 - DECISION_GATES.md references the correct frameworks
@@ -45,7 +45,7 @@ State/CURRENT_STATE.md must be updated with:
 
 Open a new session with the LLM. Provide SYSTEM_PROMPT.md as context or instruct the LLM to read it. The LLM will then:
 1. Read SYSTEM_PROMPT.md
-2. Execute KERNEL boot
+2. Execute Boot Sequence from SYSTEM_PROMPT.md
 3. Load all concepts
 4. Report awareness
 
@@ -86,4 +86,4 @@ It should work with any model that can:
 |-------|-------|
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | GENESIS.md, FOUNDEROS_PROTOCOL.md |
+| Dependencies | GENESIS.md, SYSTEM_PROMPT.md |

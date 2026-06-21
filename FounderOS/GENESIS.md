@@ -1,4 +1,4 @@
-# FounderOS V3 — GENESIS
+# FounderOS V4 — GENESIS
 
 ## Purpose
 
@@ -50,13 +50,11 @@ FounderHQ/
 
 The LLM reads SYSTEM_PROMPT.md. This is the entry point for all sessions.
 
-### Step 3: Execute KERNEL Boot
+### Step 3: Execute Boot Sequence
 
-1. Load Protocols/TEMPORAL_AWARENESS.md
-2. Run WF-007 freshness check
-3. Determine session mode
-4. Load Protocols/FOUNDEROS_PROTOCOL.md
-5. Build world model
+1. Run WF-007 freshness check
+2. Determine session mode
+3. Build world model
 
 ### Step 4: Load Concepts
 
@@ -83,7 +81,7 @@ git commit -m "genesis: FounderOS V3 initialized"
 After Genesis:
 - [ ] All 22+ OS files exist in FounderOS/
 - [ ] All concept files exist in concepts/
-- [ ] Protocols/FOUNDEROS_PROTOCOL.md loads without errors
+- [ ] SYSTEM_PROMPT.md loads without errors
 - [ ] Protocols/SOURCE_OF_TRUTH.md has entries for all files
 - [ ] State/CURRENT_STATE.md reflects current reality
 - [ ] Git repository initialized and committed
@@ -94,4 +92,4 @@ After Genesis:
 |-------|-------|
 | Last Verified | 2026-06-20 |
 | Owner | System |
-| Dependencies | INSTALL.md, FOUNDEROS_PROTOCOL.md |
+| Dependencies | INSTALL.md, SYSTEM_PROMPT.md |
