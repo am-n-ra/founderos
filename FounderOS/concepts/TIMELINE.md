@@ -142,6 +142,13 @@ Analysis and lessons belong in KNOWLEDGE.
 - Seule dame 1 reste confirmée : 5 bols × 975 FCFA, paiement demain 17h.
 - Plan soya redéfini : trouver acheteurs cash supplémentaires ou temporiser avec seulement 5 bols.
 
+**2026-06-21 (03:31 Lomé UTC+0 — Stratégie soya révisée)**
+- Plan soya redéfini : fournisseur Lomé passe de 40 à 5 bols (sample, livraison lundi)
+- 500 FCFA livraison à la charge du founder
+- Cash des ventes va directement au fournisseur — founder ne garde pas de marge
+- En attendant retour fournisseur Atakpamé (360 FCFA/kg)
+- Aujourd'hui 17h : dame 1 paie 4,875 FCFA (5 bols × 975)
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback

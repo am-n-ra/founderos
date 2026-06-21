@@ -52,23 +52,23 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-20 19:29 — Lomé (UTC+0)
+**Date:** 2026-06-21 03:31 — Lomé (UTC+0)
 
-**Operating Mode:** SURVIVAL — cash under 3,000 FCFA, zero revenue from sales
+**Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
-**Cash (FCFA):** ~2,679 accessible (1,229 account + 350 leftover + 1,100 growth set-aside). Plus 1,800 allocated for connectivity until Tuesday. Tomorrow: dame 1 paie 4,875 FCFA (5 bols × 975) à 17h.
+**Cash (FCFA):** ~2,679 accessible (1,229 account + 350 leftover + 1,100 growth set-aside). Plus 1,800 allocated for connectivity until Tuesday. Aujourd'hui 17h: encaissement 4,875 FCFA de dame 1 (mais cash va directement au fournisseur, pas à toi).
 
 **Active Products:**
 - Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- Soya (Soja) — 0 stock. Seule dame 1 confirmée (5 bols × 975 FCFA, demain 17h).
+- Soya (Soja) — 0 stock. Dame 1 confirmée (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi. En attendant retour Atakpamé (360 FCFA/kg).
 - DoodleMind (YouTube Shorts) — Short #1 published, 366 views (YouTube) + 65 views (TikTok)
 
-**Current Bottleneck:** Dame 2 fonctionne en consignation (vend puis paie) — impossible sans cash flow. Seulement 5 bols confirmés (dame 1). Trouver acheteurs cash supplémentaires ou stocker.
+**Current Bottleneck:** Modèle soya : cash va au fournisseur, pas à toi. Marge nulle ou minime. Trouver un modèle où tu gardes une marge.
 
-**Top Priority:** Sécuriser la vente des 5 bols à dame 1 demain 17h. Trouver d'autres acheteurs cash pour augmenter le volume. Renégocier Atakpamé.
+**Top Priority:** Aujourd'hui 17h — collecter 4,875 FCFA de dame 1 + confirmer fournisseur Lomé pour 5 bols lundi + attendre retour Atakpamé.
 
-**Session Objective:** Redéfinir la stratégie soya après l'échec du modèle consignation.
+**Session Objective:** Mettre à jour la stratégie soya après le nouveau plan.
 
-**Last Decision:** Dame 2 = consignation, pas viable. Seule dame 1 confirmée (5 bols, 975 FCFA, 17h). Recherche autres acheteurs cash.
+**Last Decision:** Fournisseur Lomé passe de 40 à 5 bols (sample, lundi). Toi = 500 FCFA livraison. Cash client va au fournisseur. En attendant Atakpamé.
 
-**Last Updated:** 2026-06-20 19:29 — Lomé UTC+0
+**Last Updated:** 2026-06-21 03:31 — Lomé UTC+0
