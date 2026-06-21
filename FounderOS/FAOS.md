@@ -6,23 +6,24 @@ FAOS owns all financial and alliance activity — fundraising, revenue generatio
 
 ## Position in FounderHQ
 
-FAOS manages the financial operations of FounderHQ — cash tracking, fundraising, expense management, and financial planning. It is loaded when MOS requires financial actions, or when DAOS delegates financial daily tasks. It feeds financial status into CURRENT_STATE and strategic options into DECISION_ENGINE.
+FAOS owns all financial and alliance operations — cash tracking, fundraising, revenue generation, expense management, partnerships, and resource acquisition. It is loaded when MOS requires financial or partnership actions, or when DAOS delegates financial daily tasks. It feeds financial status into CURRENT_STATE and strategic options into DECISION_ENGINE.
 
 ## Inputs
 - `State/CURRENT_STATE.md` — current cash position, burn rate, incoming payments
 - `concepts/MISSION.md` — financial requirements for each mission
-- `concepts/PLAYBOOK.md` — fundraising and expense playbooks
+- `concepts/PLAYBOOK.md` — fundraising, alliance, and expense playbooks
 
 ## Outputs
 - Cash reports — current balance, burn rate, runway
 - Fundraising actions — who to contact, what to ask, when to follow up
+- Alliance opportunities — partnership leads, terms, and activation plans
 - Expense recommendations — what to cut, what to fund
 - Financial projections — cash flow scenarios for next 30/60/90 days
 
 ## Relations
-- **MOS** — financial constraints shape priority setting
+- **MOS** — financial and alliance constraints shape priority setting
 - **DAOS** — financial daily tasks delegated by DAOS
-- **DECISION_ENGINE** — financial tradeoffs analyzed for decisions
+- **DECISION_ENGINE** — financial and partnership tradeoffs analyzed
 - **CURRENT_STATE** — financial status written to operational state
 
 ## Workflow

@@ -6,23 +6,24 @@ AOS owns the architecture of FounderOS itself — ensuring the OS remains cohere
 
 ## Position in FounderHQ
 
-AOS manages the operational assets of FounderHQ — tools, accounts, subscriptions, infrastructure, and legal documents. It is loaded when the founder needs to find, update, or audit an operational asset. It feeds asset status into CURRENT_STATE and maintenance needs into DAOS.
+AOS owns the architecture of FounderOS itself — ensuring the OS remains coherent, maintainable, and extensible as new modules are added. It is loaded when the founder needs to audit the OS structure, understand module dependencies, or decide how to evolve the system. It feeds architectural insights into CONTINUOUS_IMPROVEMENT and dependency context into DECISION_ENGINE.
 
 ## Inputs
-- `State/CURRENT_STATE.md` — current tooling and account status
-- `concepts/MISSION.md` — tooling requirements per mission
-- Founder request — what specific asset needs attention
+- All FounderOS module files — current structure, footers, declared dependencies
+- `concepts/SOURCE_OF_TRUTH.md` — registered truths and their owners
+- `State/CURRENT_STATE.md` — current OS version status
 
 ## Outputs
-- Asset inventory — current tools, accounts, subscriptions with status
-- Maintenance actions — renewals, cancellations, updates needed
-- Cost analysis — what each tool costs, what can be cut
-- Security recommendations — access control, backup, compliance gaps
+- Architecture audits — file structure, dependency violations, stale content
+- Evolution recommendations — split, merge, create, or deprecate modules
+- Interface contract compliance reports — missing Purpose, Footer, or undeclared dependencies
+- Coherence metrics — duplication detection, Regle 0 violations
 
 ## Relations
-- **DAOS** — asset maintenance tasks delegated for daily execution
-- **FAOS** — subscription costs feed into financial planning
-- **CURRENT_STATE** — asset status written to operational state
+- **CONTINUOUS_IMPROVEMENT** — architectural debt feeds improvement cycles
+- **DECISION_ENGINE** — structural tradeoffs analyzed for OS evolution
+- **ALL MODULES** — each module's footer and interface are subject to AOS audit
+- **SOURCE_OF_TRUTH** — AOS verifies and updates source-of-truth registry
 
 ## Workflow
 
