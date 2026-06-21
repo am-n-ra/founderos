@@ -4,6 +4,27 @@
 
 MOS is the mission orchestration engine. It owns the what and why — translating high-level mission into concrete objectives, projects, and daily priorities.
 
+## Position in FounderHQ
+
+MOS sits at the top of the execution stack. It is loaded when the agent needs to determine what to pursue. It feeds priorities to DAOS (daily execution) and context to PROJECT (project state).
+
+## Inputs
+- `concepts/MISSION.md` — mission definitions, hierarchy, active/paused/archived status
+- `State/CURRENT_STATE.md` — cash position, bottlenecks, current operating mode
+- `concepts/TIMELINE.md` — recent events that affect priorities
+
+## Outputs
+- Priority list — ranked actions serving the highest mission
+- Strategic recommendations — Stop/Pause/Accelerate/Delegate/Automate/Kill for each project
+- Drift detection — when projects consume resources without mission progress
+
+## Relations
+- **DAOS** — receives priorities and generates daily action modules
+- **PROJECT** — updates project status based on priority shifts
+- **DECISION_ENGINE** — called when tradeoffs between missions need structured analysis
+
+## Workflow
+
 ## Responsibilities
 
 1. Maintain mission coherence across all projects

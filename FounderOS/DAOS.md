@@ -4,6 +4,27 @@
 
 DAOS owns the how of daily execution. It takes MOS's priorities and produces concrete actions, scripts, schedules, and tools for the day.
 
+## Position in FounderHQ
+
+DAOS owns daily execution. It is loaded by RUNTIME Phase 2 (Decide) or when SURVIVAL Auto-Drive triggers. It receives priorities from MOS and produces concrete actions the founder can execute immediately.
+
+## Inputs
+- `concepts/MOS.md` — current top priority
+- `State/CURRENT_STATE.md` — cash, blockers, mode
+- `concepts/PLAYBOOK.md` — relevant playbooks for today's situation
+
+## Outputs
+- Action modules — scripts, timing, expected outcome, fallback for 1-3 actions
+- Execution context — what changed since yesterday, what is blocked, what is ready
+
+## Relations
+- **MOS** — receives top priority
+- **CEOS** — delegates content actions when applicable
+- **FAOS** — delegates financial actions when applicable
+- **TIMELINE** — writes execution outcomes after each action
+
+## Workflow
+
 ## Daily Outputs
 
 1. **Action List** — 1-3 concrete actions derived from MOS's top priority

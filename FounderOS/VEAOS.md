@@ -4,6 +4,27 @@
 
 VEAOS owns strategic thinking — the medium-to-long-term view that MOS (daily/weekly) cannot see.
 
+## Position in FounderHQ
+
+VEAOS handles long-term strategic thinking. It is loaded when the agent faces questions about direction, vision, or multi-month planning. It feeds strategic context into MOS (priority setting) and DECISION_ENGINE (long-term decisions).
+
+## Inputs
+- `concepts/MISSION.md` — long-term mission definitions
+- `concepts/TIMELINE.md` — historical patterns and trajectory
+- `State/CURRENT_STATE.md` — current constraints and resources
+
+## Outputs
+- Strategic scenarios — 3-5 year projections
+- Vision statements — refined mission language
+- Strategic recommendations — what to pursue, what to deprioritize over long horizon
+
+## Relations
+- **MOS** — strategic context informs priority setting
+- **DECISION_ENGINE** — strategic tradeoffs use PROACT framework
+- **TIMELINE** — strategic decisions recorded as timeline events
+
+## Workflow
+
 ## When to Invoke
 
 - User asks about strategy, vision, long-term direction
