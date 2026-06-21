@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kora Lab | One Pager</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--black:#0A0A0A;--dark:#1A1A1A;--gd:#3A3A3A;--gm:#6B6B6B;--gl:#ABABAB;--gp:#E8E8E8;--white:#FFFFFF}
+  body{font-family:'Inter','Helvetica Neue',Arial,sans-serif;background:var(--white);color:var(--black);max-width:940px;margin:0 auto;padding:52px 44px;font-size:13px;line-height:1.5}
+  .header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid var(--black);padding-bottom:20px;margin-bottom:32px}
+  .logo h1{font-size:46px;font-weight:900;letter-spacing:-2px;line-height:1}
+  .logo p{font-size:11px;color:var(--gm);margin-top:5px;letter-spacing:2.5px;text-transform:uppercase}
+  .meta{text-align:right;font-size:11px;color:var(--gm);line-height:2}
+  .lbl{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gm);margin-bottom:8px}
+  h2{font-size:18px;font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+  p{color:var(--gd);margin-bottom:6px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:28px}
+  .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:28px}
+  .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--black);margin-bottom:28px}
+  .card{background:var(--black);color:var(--white);padding:24px 22px}
+  .card-l{background:var(--gp);padding:20px}
+  .card h3,.card-l h3{font-size:12px;font-weight:700;margin-bottom:8px;letter-spacing:.4px}
+  .card p{font-size:11.5px;color:var(--gl);line-height:1.6;margin:0}
+  .card-l p{font-size:11.5px;color:var(--gd);line-height:1.6;margin:0}
+  .stat{background:var(--white);padding:18px 14px;text-align:center}
+  .stat .v{font-size:26px;font-weight:900;letter-spacing:-1px}
+  .stat .l{font-size:9.5px;color:var(--gm);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+  .axes{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--black);margin-bottom:28px}
+  .ax{padding:24px 22px}
+  .ax-d{background:var(--black)}
+  .ax-l{background:var(--white)}
+  .ax-n{font-size:34px;font-weight:900;color:var(--dark);line-height:1;margin-bottom:6px}
+  .ax h3{font-size:14px;font-weight:800;margin-bottom:10px}
+  .ax p{font-size:11.5px;line-height:1.6}
+  .ax-d h3,.ax-d p{color:var(--gl)}
+  .ax-l h3{color:var(--black)}
+  .ax-l p{color:var(--gd)}
+  .gov-row{display:grid;grid-template-columns:175px 1fr 92px;gap:14px;padding:11px 0;border-bottom:1px solid var(--gp);align-items:start}
+  .gov-row:last-child{border-bottom:none}
+  .gn{font-weight:700;font-size:11.5px}
+  .gd{font-size:11px;color:var(--gm);line-height:1.5}
+  .tag{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--black);color:var(--white);padding:3px 7px;display:inline-block;white-space:nowrap}
+  .tag-g{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:var(--gp);color:var(--gd);border:1px solid var(--gl);padding:3px 7px;display:inline-block;white-space:nowrap}
+  .founder{display:grid;grid-template-columns:155px 1fr;gap:28px;background:var(--gp);padding:26px;margin-bottom:28px}
+  .fn{font-size:24px;font-weight:900;line-height:1.1;margin-bottom:6px}
+  .fr{font-size:10px;color:var(--gm);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+  .fb{font-size:12px;color:var(--gd);line-height:1.7}
+  .ask-row{display:grid;grid-template-columns:155px 1fr 95px;gap:12px;padding:11px 0;border-bottom:1px solid var(--gp);align-items:start}
+  .ask-row:last-child{border-bottom:none}
+  .an{font-weight:700;font-size:11px}
+  .ad{font-size:11px;color:var(--gm)}
+  .footer{border-top:2.5px solid var(--black);padding-top:14px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--gm)}
+  .footer strong{color:var(--black);font-weight:800}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><h1>KORA LAB</h1><p>Africa's Sovereign AI Lab</p></div>
+  <div class="meta">Kheir Lissi / Founder<br>Lome, Togo / May 2026<br>kora-lab.com</div>
+</div>
+
+<div class="g2" style="margin-bottom:28px">
+  <div>
+    <div class="lbl">The Problem</div>
+    <h2>Africa Is Missing from the AI Race</h2>
+    <p>The world's most powerful AI systems are built, owned, and optimized for Western users. Africa has 1.5 billion people, 2,000+ languages, and the youngest population on Earth. It has no representation in frontier model training, no sovereign AI infrastructure, and insufficient access to AI tools adapted to its contexts.</p>
+    <p style="margin-top:10px">Governments across the continent have signed declarations. Billions have been pledged. The political will is real. What is missing is a technical lab capable of executing the vision. That is what Kora Lab is.</p>
+  </div>
+  <div class="card">
+    <div class="lbl" style="color:#6B6B6B">The Vision</div>
+    <h2 style="color:#fff;font-size:16px;margin-bottom:13px">One flag. One lab. All of Africa.</h2>
+    <p>Kora Lab is the technical execution arm of Africa's AI sovereignty movement. We make frontier AI accessible to African and global users, build sovereign models trained on African languages and contexts, and act as the builder that governments, funds, and institutions have been waiting for.</p>
+    <p style="margin-top:10px">We do not wait for technology transfer. We produce it.</p>
+  </div>
+</div>
+
+<div class="lbl">The Landscape</div>
+<div class="g4">
+  <div class="stat"><div class="v">54</div><div class="l">Nations Signed Kigali AI Declaration 2025</div></div>
+  <div class="stat"><div class="v">$60B</div><div class="l">Africa AI Fund Announced</div></div>
+  <div class="stat"><div class="v">$10B</div><div class="l">AfDB + UNDP AI Initiative</div></div>
+  <div class="stat"><div class="v">4%</div><div class="l">Africa's Share of Global AI Workforce</div></div>
+</div>
+
+<div class="lbl">Strategic Position</div>
+<h2 style="margin-bottom:14px">The Infrastructure Already Exists. Kora Connects It.</h2>
+<div style="margin-bottom:28px">
+  <div class="gov-row"><span class="gn">African Union</span><span class="gd">Continental AI Strategy Phase 1 active 2025-2026. Mandates governance, national strategies, and private sector AI solutions aligned with African priorities.</span><span class="tag">Active</span></div>
+  <div class="gov-row"><span class="gn">Smart Africa / Africa AI Council</span><span class="gd">40 Heads of State board. Launched to coordinate AI compute infrastructure, datasets, skills development, and market use cases across the continent.</span><span class="tag">Active</span></div>
+  <div class="gov-row"><span class="gn">AfDB + UNDP AI 10B Initiative</span><span class="gd">$10 billion mobilization target by 2035. 40 million jobs. Direct investment in AI startups, data infrastructure, and skills pipelines.</span><span class="tag">Active</span></div>
+  <div class="gov-row"><span class="gn">Togo MENTD + World Bank IDA</span><span class="gd">Digital Togo 2025-2030 backed by the World Bank. Active mandate to build an innovation ecosystem and position Togo as a regional digital hub.</span><span class="tag">Active</span></div>
+  <div class="gov-row"><span class="gn">AU + Google Partnership</span><span class="gd">Signed February 2026. Private sector commitment to build Africa's own AI capabilities, not simply import technology.</span><span class="tag-g">Partner</span></div>
+  <div class="gov-row"><span class="gn">Africa AI Fund ($60B)</span><span class="gd">Kigali 2025. Targets sovereign AI infrastructure, regional hubs, regulatory sandboxes, and African AI enterprise scaling. Governance in development.</span><span class="tag-g">Forming</span></div>
+</div>
+
+<div class="lbl">Our Approach</div>
+<div class="axes">
+  <div class="ax ax-d">
+    <div class="ax-n">01</div>
+    <h3>Accessibility Layer</h3>
+    <p>Making the latest AI from Anthropic, OpenAI, DeepMind, and others genuinely usable for African and global users. Culturally adapted, multilingual, no technical knowledge required. Products include AI agents, no-code interfaces, developer tooling, and data pipelines that generate real jobs across the continent.</p>
+  </div>
+  <div class="ax ax-l">
+    <div class="ax-n">02</div>
+    <h3>Sovereign Model Lab</h3>
+    <p>Building Africa's own large language and multimodal models. Trained on African languages, history, and contexts. This is the technical execution of what the Kigali Declaration committed to: sovereign data infrastructure, open African datasets, and continental AI research capacity. Africa owns its models.</p>
+  </div>
+</div>
+
+<div class="lbl" style="margin-bottom:12px">Revenue Model</div>
+<div class="g3">
+  <div class="card-l"><h3>AI Product Subscriptions</h3><p>SaaS and consumer plans for adapted AI tools and agents. African-first pricing.</p></div>
+  <div class="card-l"><h3>API and Developer Access</h3><p>Access to Kora's adapted and sovereign models via API for developers and enterprises.</p></div>
+  <div class="card-l"><h3>Data Labeling and Jobs</h3><p>Revenue-generating pipelines creating real employment: annotators, translators, validators.</p></div>
+  <div class="card-l"><h3>Government Contracts</h3><p>Public sector AI execution for national digital strategies and AU mandates.</p></div>
+  <div class="card-l"><h3>Research and Grant Funding</h3><p>Non-dilutive capital from AfDB, Google, Gates Foundation, Science for Africa, and IDRC.</p></div>
+  <div class="card-l"><h3>Accelerator Capital</h3><p>Google for Startups Africa, YC, MEST, and Antler for network, credits, and funding.</p></div>
+</div>
+
+<div class="lbl">The Founder</div>
+<div class="founder">
+  <div><div class="fn">Kheir<br>Lissi</div><div class="fr">Founder<br>Kora Lab</div></div>
+  <div class="fb">
+    I studied computer science with a specialization in AI and big data in college before making the deliberate decision to leave mid third year. The pace of academic training was incompatible with the speed at which the world was moving, and with the urgency of what I am building.
+    <br><br>
+    I identified early that Africa's greatest risk in the AI era is not a lack of talent, but a lack of infrastructure, ownership, and narrative. Rather than waiting for the system to produce what Africa needs, I chose to build it directly. I learn continuously through open resources and apply that knowledge to real product and research work.
+    <br><br>
+    I also founded <strong>edenvallie.com</strong>, an incubator for ADHD and neurodivergent entrepreneurs who have the vision but need the right ecosystem to execute. I operate at the intersection of technical ambition, product thinking, and a mission that is deeply personal. I am not waiting for permission. I am building.
+  </div>
+</div>
+
+<div class="lbl" style="margin-bottom:12px">What We Need</div>
+<div class="ask-row"><span class="an">Compute and API Credits</span><span class="ad">$25K to $100K across Anthropic, GCP, AWS, and Azure to build and run first AI products</span><span class="tag">Critical</span></div>
+<div class="ask-row"><span class="an">Seed Capital</span><span class="ad">$50K to $150K for first hires, infrastructure, and operational costs</span><span class="tag">Critical</span></div>
+<div class="ask-row"><span class="an">Accelerator Admission</span><span class="ad">Google for Startups Africa, YC, MEST AI Program, Antler</span><span class="tag">Strategic</span></div>
+<div class="ask-row"><span class="an">Government Partnership</span><span class="ad">MENTD Togo, Smart Africa, AfDB, AU Commission as first institutional partners</span><span class="tag">Strategic</span></div>
+<div class="ask-row"><span class="an">Technical Co-Builders</span><span class="ad">2 to 3 ML engineers, AI researchers, or senior advisors willing to co-create</span><span class="tag">Strategic</span></div>
+
+<div class="footer">
+  <div><strong>KORA LAB</strong> - Africa's Sovereign AI Lab</div>
+  <div>kora-lab.com / founder@kora-lab.com / Kheir Lissi / Lome, Togo</div>
+</div>
+</body>
+</html>
