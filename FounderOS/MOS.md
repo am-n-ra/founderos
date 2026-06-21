@@ -25,7 +25,7 @@ MOS sits at the top of the execution stack. It is loaded when the agent needs to
 
 ## Workflow
 
-## Responsibilities
+### Responsibilities
 
 1. Maintain mission coherence across all projects
 2. Map every project to a mission
@@ -33,7 +33,7 @@ MOS sits at the top of the execution stack. It is loaded when the agent needs to
 4. Prioritize projects by mission impact vs. resource cost
 5. Recommend when to start, pause, or kill a project
 
-## Mission Hierarchy
+### Mission Hierarchy
 
 ```
 FounderHQ (Venture)
@@ -42,26 +42,19 @@ FounderHQ (Venture)
 └── Mission 3: FounderOS (infrastructure → leverage)
 ```
 
-## Operating Principles
+### Operating Principles
 
 - **One mission at a time as top priority.** Currently: Mission 1 (cash constraints).
 - **Every project must answer:** What mission does this serve? If none, kill it.
 - **Mission can change.** When it does, update MISSION.md, TIMELINE.md, and all affected projects.
 - **Rescue missions** (survival) trump growth missions. Growth missions trump infrastructure.
 
-## Interface with DAOS
+### Interface with DAOS
 
 MOS decides what to do. DAOS decides how to do it today.
 
 - MOS: "Soya supply chain is top priority. We need to call supplier X."
 - DAOS: "Here is the call script. Here is what we learned from last call. Here is the optimal time to call."
-
-## Outputs
-
-- Updated priorities in CURRENT_STATE.md
-- Project status changes in PROJECT.md
-- Mission drift warnings
-- Go/kill/pause recommendations
 
 ## Footer
 

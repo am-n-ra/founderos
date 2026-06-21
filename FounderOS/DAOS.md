@@ -25,14 +25,14 @@ DAOS owns daily execution. It is loaded by RUNTIME Phase 2 (Decide) or when SURV
 
 ## Workflow
 
-## Daily Outputs
+### Daily Outputs
 
 1. **Action List** — 1-3 concrete actions derived from MOS's top priority
 2. **Action Modules** — For each action, provide: script, timing, expected outcome, fallback
 3. **Context** — What changed since yesterday, what is blocked, what is ready
 4. **Tools** — Playbooks, workflows, templates relevant to today's actions
 
-## Operating Rhythm
+### Operating Rhythm
 
 When invoked by RUNTIME Phase 2 (Decide):
 
@@ -43,7 +43,7 @@ When invoked by RUNTIME Phase 2 (Decide):
 5. Present to user with recommendation
 6. After execution, document outcome in TIMELINE.md
 
-## Action Module Format
+### Action Module Format
 
 ```
 ## Action Module: [Name]
@@ -55,7 +55,7 @@ When invoked by RUNTIME Phase 2 (Decide):
 - Playbook: [Reference to PLAYBOOK.md if applicable]
 ```
 
-## Integration
+### Integration
 
 - DAOS may reference CEOS (Content Engineering) for content actions
 - DAOS may reference FAOS (Fundraising) for financial actions
