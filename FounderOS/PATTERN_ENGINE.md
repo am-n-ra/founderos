@@ -4,7 +4,31 @@
 
 The PATTERN_ENGINE detects recurring structures across actions, outcomes, decisions, and behaviors — converting raw experience into actionable pattern awareness.
 
-## Pattern Types
+## Position in FounderHQ
+
+PATTERN_ENGINE identifies, validates, and tracks recurring patterns across FounderHQ operations. It is loaded when the founder or ASTRA suspects a pattern, or during routine analysis cycles. It feeds validated patterns into PLAYBOOK_ENGINE and KNOWLEDGE_EVOLUTION_ENGINE.
+
+## Inputs
+- `concepts/TIMELINE.md` — raw event stream for pattern scanning
+- `State/CURRENT_STATE.md` — current operational context
+- Pattern hypotheses — from ASTRA or founder observations
+- `concepts/MEMORY.md` — past pattern records for validation
+
+## Outputs
+- Pattern candidates — potential recurring behaviors, signals, or bottlenecks
+- Validated patterns — confirmed patterns with evidence and confidence level
+- Pattern refutations — disproven hypotheses with reasoning
+- Playbook triggers — validated patterns that suggest new playbooks
+
+## Relations
+- **ASTRA** — receives pattern hypotheses from reflective analysis
+- **PLAYBOOK_ENGINE** — validated patterns may produce new or updated playbooks
+- **KNOWLEDGE_EVOLUTION_ENGINE** — confirmed patterns stored as structured knowledge
+- **TIMELINE** — reads events, writes pattern discoveries
+
+## Workflow
+
+### Pattern Types
 
 1. **Behavioral Patterns** — How the user reacts to certain situations
 2. **Outcome Patterns** — What types of actions consistently succeed or fail
@@ -13,14 +37,14 @@ The PATTERN_ENGINE detects recurring structures across actions, outcomes, decisi
 5. **Decision Patterns** — How decisions are made and which approaches work
 6. **Market Patterns** — Recurring signals in the external environment
 
-## Detection Methods
+### Detection Methods
 
 1. **Timeline Analysis** — Scan TIMELINE.md for repeated Event → Decision → Outcome sequences
 2. **Knowledge Analysis** — Scan KNOWLEDGE.md for patterns already documented
 3. **Behavioral Observation** — Note recurring user behaviors (procrastination patterns, energy patterns, etc.)
 4. **External Signal Detection** — Market trends, platform changes, competitor moves
 
-## Pattern Format
+### Pattern Format
 
 ```
 ## Pattern: [Name]
@@ -30,18 +54,6 @@ The PATTERN_ENGINE detects recurring structures across actions, outcomes, decisi
 - Implication: [What this means for what we should do]
 - Action: [What to do about it]
 ```
-
-## Outputs
-
-- New patterns stored in KNOWLEDGE.md
-- Pattern-based recommendations to MOS and RUNTIME
-- Alerts when a known pattern is repeating
-
-## Integration
-
-- PATTERN_ENGINE is invoked by RUNTIME Phase 4 (Learn)
-- PATTERN_ENGINE feeds into PLAYBOOK_ENGINE for playbook creation
-- PATTERN_ENGINE feeds into KNOWLEDGE_EVOLUTION for knowledge refinement
 
 ## Footer
 
