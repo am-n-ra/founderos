@@ -40,6 +40,14 @@ LEOS manages the founder's learning ecosystem — tracking what needs to be lear
 2. YouTube content: hook retention mechanics, audience building
 3. FounderOS: what workflows need improvement, what concepts need refinement
 
+### Active Learning Programs
+
+1. **Financial Literacy**
+   - Status: Active
+   - Progress: 0/28 concepts
+   - Source: `LEARNING/FINANCIAL_LITERACY.md`
+   - Levels: Fundamentals → Startup Finance → Corporate Structures → SME Finance Africa → Macroeconomics
+
 ### Learning Formats
 
 - **Active**: Deliberate research, experiments, A/B testing
