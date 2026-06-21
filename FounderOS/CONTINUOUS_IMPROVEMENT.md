@@ -4,29 +4,54 @@
 
 CONTINUOUS_IMPROVEMENT owns the meta-layer — tracking how FounderOS itself performs and recommending systemic improvements.
 
-## Improvement Cycle
+## Position in FounderHQ
 
-### Every Session (Implicit)
+CONTINUOUS_IMPROVEMENT drives iterative improvement across FounderHQ — tracking metrics, identifying bottlenecks, running improvement cycles, and measuring progress over time. It is loaded during routine review cycles or when the founder asks "how can we improve?" It feeds improvement recommendations into MOS and DAOS.
+
+## Inputs
+- `State/CURRENT_STATE.md` — current operational metrics and bottlenecks
+- `concepts/TIMELINE.md` — historical data for trend analysis
+- Improvement signals — from any module (ASTRA, SOS, AOS, etc.)
+- `concepts/MEMORY.md` — past improvement efforts and outcomes
+
+## Outputs
+- Improvement cycles — structured Plan-Do-Check-Act per bottleneck
+- Metrics reports — key operational metrics and trends
+- Bottleneck analysis — what is blocking progress, ranked by impact
+- Experiment recommendations — small changes to test, with expected impact
+
+## Relations
+- **MOS** — improvement priorities fed into mission alignment
+- **DAOS** — improvement actions delegated for daily execution
+- **ASTRA** — reflective insights identify improvement opportunities
+- **SOS** — sustainability metrics track founder wellbeing improvement
+- **AOS** — architectural debt tracked as improvement item
+
+## Workflow
+
+### Improvement Cycle
+
+#### Every Session (Implicit)
 - Did the boot sequence complete without error?
 - Did the user have to correct a recommendation?
 - Was there a gap between what was needed and what was provided?
 - Log observations in MEMORY.md
 
-### Weekly (Explicit)
+#### Weekly (Explicit)
 1. Review last 7 days of TIMELINE.md
 2. Review user feedback patterns from MEMORY.md
 3. Identify top 3 friction points
 4. Recommend 1 improvement
 5. Track whether previous improvements produced results
 
-### Monthly (Deep)
+#### Monthly (Deep)
 1. Full OS performance review
 2. Audit: are all modules being used? Which are neglected?
 3. Survey: ask the user "What would make FounderOS more useful?"
 4. Roadmap: what should be improved next?
 5. Update: implement selected improvements
 
-## Improvement Types
+### Improvement Types
 
 1. **Content** — Better recommendations, more relevant output
 2. **Process** — Faster boot, fewer steps, better workflows
@@ -34,7 +59,7 @@ CONTINUOUS_IMPROVEMENT owns the meta-layer — tracking how FounderOS itself per
 4. **Experience** — More natural interaction, less friction
 5. **Leverage** — Actions that produce compounding returns
 
-## Feedback Processing
+### Feedback Processing
 
 When user gives feedback:
 1. Acknowledge it
@@ -43,7 +68,7 @@ When user gives feedback:
 4. If actionable, create an improvement recommendation
 5. Track whether it was implemented and what changed
 
-## Integration
+### Integration
 
 - CONTINUOUS_IMPROVEMENT receives data from all modules
 - CONTINUOUS_IMPROVEMENT recommends changes to AOS for architecture
