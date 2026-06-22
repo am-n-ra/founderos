@@ -132,10 +132,11 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 ### Classification Rules
 1. Classify before responding. Never reply before classification.
 2. Multiple matches: pick first in table (highest specificity first).
-3. Uncertain: pick most mission-critical interpretation.
-4. After classification, load module file and follow its protocol.
-5. **Before responding, execute PRG** — Temporal Check → Scan Mapping → Absorb Updates → Project Scan → Freshness Flag → SURVIVAL Auto-Drive.
-6. User should never name a module. Classification is automatic.
+3. **`fhq`, `boot`, `shutdown` in first position ALWAYS win.** If message starts with one of these keywords, classify as FHQ_MODE/BOOT/SHUTDOWN regardless of what follows. Execute the full classification cycle first, then address any specific question within the response.
+4. Uncertain: pick most mission-critical interpretation.
+5. After classification, load module file and follow its protocol.
+6. **Before responding, execute PRG** — Temporal Check → Scan Mapping → Absorb Updates → Project Scan → Freshness Flag → SURVIVAL Auto-Drive.
+7. User should never name a module. Classification is automatic.
 
 ## Execution Modes
 
