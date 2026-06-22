@@ -30,17 +30,34 @@ UPDATE
 
 ## Phase 1: BOOT
 
-Execute once per session, before any other phase.
+Execute at session start - triggered by user message starting with `boot` or first `fhq` of the day. If the session is already active (a prior `fhq` or `boot` was processed today), BOOT is skipped and the cycle starts at OBSERVE.
+
+### Full Boot (triggered by `boot` or first daily `fhq`):
 
 Operations:
 1. Load State/CURRENT_STATE.md
 2. Load State/PRIORITY_MATRIX.md
-3. Load State/WATCH_REGISTRY.md
-4. Compute datetime in Lomé UTC+0
-5. Scan all concept footers for staleness (>48h)
-6. Report: datetime, mode (SURVIVAL/GROWTH/SCALE), top priority, stale concepts
+3. Load State/CADENCE.md
+4. Load State/LIFECYCLE.md
+5. Load State/WATCH_REGISTRY.md
+6. Load State/ALERTS.md - read and clear
+7. Load State/WATCH_REPORT.md
+8. Compute datetime in Lome UTC+0
+9. Set Session Start timestamp in CADENCE.md (Day -> Session Start)
+10. Scan all concept footers for staleness (>48h)
+11. Report: datetime, mode (SURVIVAL/GROWTH/SCALE), cadence context, lifecycle phases, top priority, stale concepts, active alerts
 
 Output: Session awareness established.
+
+### Quick Boot (triggered by subsequent `fhq` same day):
+
+Operations:
+1. Re-read CURRENT_STATE.md (may have changed since last cycle)
+2. Re-read LIFECYCLE.md (project phases may have shifted)
+3. Compute current datetime, update CADENCE.md Hour section
+4. Check ALERTS.md for new entries from background scripts
+
+Output: Updated temporal awareness, skipping full initialization.
 
 ## Phase 2: OBSERVE
 
@@ -56,16 +73,19 @@ Output: Cleaned, classified input ready for orientation.
 
 ## Phase 3: ORIENT
 
-Understand what the input means in the current context.
+Understand what the input means in the current context. Cross-reference cadence, lifecycle, and active frameworks.
 
 Operations:
 1. Load relevant concepts for the classified action type
 2. Verify freshness of loaded concepts
-3. Scan all active projects in PRIORITY_MATRIX for data room completeness
-4. Flag any contradictions between files
-5. Check current constraints: cash, energy, time, blockers
+3. **Cross CADENCE x LIFECYCLE**: Determine current temporal position (week, month, quarter) and active project phases. Select frameworks matching lifecycle phase from LIFECYCLE.md phase-to-framework mapping.
+4. Scan all active projects in PRIORITY_MATRIX for data room completeness
+5. Flag any contradictions between files
+6. Check current constraints: cash, energy, time, blockers
+7. **Check ALERTS.md** for any background script notifications since last cycle
+8. **Check WATCH_REPORT.md** for any new veille findings
 
-Output: Situational awareness with flagged risks.
+Output: Situational awareness with flagged risks, cadence context, lifecycle-informed framework selection.
 
 ## Phase 4: DECIDE
 
