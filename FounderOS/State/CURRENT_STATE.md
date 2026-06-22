@@ -52,7 +52,7 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-21 06:50 — Lomé (UTC+0)
+**Date:** 2026-06-21 20:56 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
@@ -60,23 +60,35 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 **Active Products:**
 - Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- Soya (Soja) — Dame 1 confirmée (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi. Atakpamé (360 FCFA/kg) en attente.
+- **SOJACO** — Vente de céréales (soja, maïs). Paiement à la livraison.
+  - Soja : fournisseur Atakpamé 350 FCFA/kg. Client revend à 850-900, veut acheter à 750. Quantité : 5-10 sacs.
+  - Maïs : ami fournisseur 160 FCFA/kg, 50 tonnes dispo. Minimum 1 tonne.
+- Soya (Bolsoja) — Dame 1 (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi.
 - DoodleMind (YouTube Shorts) — Short #1 published
 - **KORA Lab** — AI lab, pré-seed, documents complets, Herlog envoyé, ST Digital en attente
+- **OMNI** — Index du commerce de proximité, MVP déployé (omni.sparkafrika.online). Djanta Tech Hub soumis (ID 272), email correction envoyé.
 
 **KORA Status:**
 - Data Room: ✅ Complete (Vision → BP → Annexes, 20+ docs)
 - Herlog: Envoyé, retour en attente
 - ST Digital: Estimation compute envoyée, suivi demain
 - Phase: Pre-Seed Validation (Éwé)
-- Prochaine action: Relancer ST Digital demain
+- Prochaine action: Relancer ST Digital
 
-**Current Bottleneck:** Modèle soya : cash va au fournisseur, pas à toi. Marge nulle ou minime.
+**OMNI Status:**
+- Strategic docs: ✅ Complete (Vision → Pitch Deck, 20 files)
+- MVP: ✅ Déployé (omni.sparkafrika.online)
+- Équipe: 6 personnes
+- Société: En cours de formalisation
+- Programme: Innov'Action — Djanta Tech Hub (soumis ID 272, email correction envoyé)
+- Prochaine action: Attendre réponse Djanta Tech Hub
 
-**Top Priority:** Aujourd'hui 17h — collecter 4,875 FCFA de dame 1 + confirmer fournisseur Lomé pour 5 bols lundi + attendre retour Atakpamé.
+**Current Bottleneck:** Cash insuffisant pour acheter stock soja/maïs en gros.
 
-**Session Objective:** Migration complète de KORA dans FounderOS + mise à jour dossiers.
+**Top Priority:** Valider modèle SOJACO — trouver l'avance pour 1er achat.
 
-**Last Decision:** Herlog envoyé. Suivi ST Digital demain. KORA docs migrés dans projects/KORA/.
+**Session Objective:** Boot — reprendre opérations.
 
-**Last Updated:** 2026-06-21 06:50 — Lomé UTC+0
+**Last Decision:** PRG Step 6 ajouté : SURVIVAL Auto-Drive verrouillé.
+
+**Last Updated:** 2026-06-21 20:56 — Lomé UTC+0

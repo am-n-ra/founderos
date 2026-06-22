@@ -157,10 +157,15 @@ YouTube
 - Structure: Value → Authority → Conversion
 - Key: Watch time, retention, deep explanation
 
-Kora
+Omni (ex-Kora naming)
 - Objective: Discovery commerce
-- Structure: To be defined as platform evolves
+- Structure: Index du commerce de proximité (carte interactive, disponibilité OUI/NON, Mobile Money escrow, crowd delivery)
 - Key: Payment + distribution in one interface
+
+SOJACO
+- Objective: Wholesale cereal distribution (soja, maize)
+- Structure: B2B — buy from Atakpamé/ami suppliers, sell to resellers by sac (100kg) or bol (2.5kg). Paiement à la livraison.
+- Key: Bulk pricing, logistics Atakpamé-Lomé, B2B trust
 
 DIOS selects platform(s) based on audience behavior, not preference.
 

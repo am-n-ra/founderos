@@ -55,7 +55,11 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Long-term knowledge evolution, decay | KNOWLEDGE_EVOLUTION_ENGINE.md |
 | Meta-improvement of FounderOS itself | CONTINUOUS_IMPROVEMENT.md |
 | Complete video production system | AI_VIDEO_MASTER_DOMAIN.md |
-| Distribution intelligence, audience, language, platform strategy | DIOS.md |
+| Distribution intelligence, audience, language, platform strategy | Frameworks/Specialized/Distribution/DIOS.md |
+| Distribution: audience segmentation and targeting | Frameworks/Specialized/Distribution/DIOS/AUDIENCE_INTELLIGENCE.md |
+| Distribution: language-market derivation and cultural adaptation | Frameworks/Specialized/Distribution/DIOS/LANGUAGE_INTELLIGENCE.md |
+| Distribution: platform selection by audience behavior | Frameworks/Specialized/Distribution/DIOS/PLATFORM_INTELLIGENCE.md |
+| Distribution: hook creation and testing | Frameworks/Specialized/Distribution/DIOS/HOOK_INTELLIGENCE.md |
 | Campaign performance data, hook/audience/language history | concepts/DISTRIBUTION_MEMORY.md |
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |

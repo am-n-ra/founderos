@@ -142,12 +142,24 @@ Analysis and lessons belong in KNOWLEDGE.
 - Seule dame 1 reste confirmée : 5 bols × 975 FCFA, paiement demain 17h.
 - Plan soya redéfini : trouver acheteurs cash supplémentaires ou temporiser avec seulement 5 bols.
 
+**2026-06-21 (20:00-20:35 Lomé UTC+0 — PRG Fix : SURVIVAL Auto-Drive verrouillé)**
+- Bug root cause: PRG n'avait pas d'étape vérifiant mode SURVIVAL + classification DIRECT → l'Auto-Drive était défini dans SYSTEM_PROMPT mais jamais exécuté
+- Fix: PRG Step 6 ajouté — "SURVIVAL Auto-Drive : If mode = SURVIVAL AND classification = DIRECT, load DAOS.md, generate 1 Action Module, append to response"
+- References PRG mises à jour dans Standard Session (5→6 steps) et Quick Session
+- Testé : fix en place
+
 **2026-06-21 (03:31 Lomé UTC+0 — Stratégie soya révisée)**
 - Plan soya redéfini : fournisseur Lomé passe de 40 à 5 bols (sample, livraison lundi)
 - 500 FCFA livraison à la charge du founder
 - Cash des ventes va directement au fournisseur — founder ne garde pas de marge
 - En attendant retour fournisseur Atakpamé (360 FCFA/kg)
 - Aujourd'hui 17h : dame 1 paie 4,875 FCFA (5 bols × 975)
+
+**2026-06-21 (20:56 Lomé UTC+0 — Boot + Recherche prix maïs)**
+- Boot sequence exécutée : tous les concepts frais, aucun stale
+- Recherche prix retail maïs Lomé : 500–750 FCFA/bol (200-300 FCFA/kg) — source TVT/TogoFirst
+- Pricing maïs viable : marge +25 à +275 FCFA/bol confirmée
+- Pricing doc SOJACO mis à jour avec données retail
 
 ## Pending Timeline Events
 - First sale (pending)
@@ -158,7 +170,7 @@ Analysis and lessons belong in KNOWLEDGE.
 
 ## Footer
 
-Last updated: 2026-06-20 19:29 (added: dame 2 consignation, plan soya redéfini)
+Last updated: 2026-06-21 20:35 (added: PRG Step 6 fix session)
 
 Timeline is append-only.
 

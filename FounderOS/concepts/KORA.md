@@ -36,8 +36,10 @@ All Annexes (A–A8) in `projects/KORA/annexes/`
 - **LEOS** — Financial Literacy Program active; KORA business concepts tracked as learning
 - **FAOS** — KORA fundraising strategy, survival planning
 - **PROJECT** — KORA is the founder's primary venture
+- **OMNI** — Parallel venture (commerce proximity index); same execution lean, same Lomé anchor; KORA business models inform Omni strategy
 - **DAOS** — Soya actions fund KORA survival; KORA milestones drive daily priorities
 - **RAPHAEL** (`Frameworks/KORA/RAPHAEL_PDCA.md`) — operating system for KORA execution
+- **SOJACO** — Cash flow project that could fund KORA development
 
 ## Footer
 
