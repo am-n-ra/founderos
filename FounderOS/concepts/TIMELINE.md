@@ -185,6 +185,14 @@ Analysis and lessons belong in KNOWLEDGE.
 - User a reçu notification bourse Harvard (Radcliffe) — PENDING, à revisiter
 - Décidé de réécrire KORA 01_VISION.md pour capturer la vraie vision : KORA = OpenAI/DeepSeek africain, compétition frontière, fermer les gaps tech de l'Afrique
 
+**2026-06-22 (21:25 Lomé UTC+0 — KORA Vision V3 consolidée)**
+- Vision finale écrite : 7 sections + questions ouvertes
+- Architecture clarifiée : ASR/TTS (multi/cross-lingual) + Omni (thinker-talker, toutes langues)
+- Pari voix-first explicitement marqué comme hypothèse à valider
+- AGI insight déplacé en "hypothèse à vérifier", plus présenté comme certitude
+- Questions ouvertes listées honnêtement
+- Ambition fondateur (milliardaire, Musk path, multi-ventures) intégrée
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback
