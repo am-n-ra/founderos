@@ -86,6 +86,11 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |
 | Archives V3/V4 (KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS) | ARCHIVE/V4/ |
+| Gist-based sync (pull/push/merge) | Runtime/engine/sync.py |
+| Portable markdown snapshot (no token) | Runtime/engine/snapshot.py |
+| Secrets (GitHub token — NEVER read by LLM) | .env |
+| First-run installation marker | .founderhq_installed |
+| Single-file distribution of all core files | FOUNDER_SEED.md |
 | Ce fichier (carte des verites) | Protocols/SOURCE_OF_TRUTH.md |
 
 ## Regle de maintenance

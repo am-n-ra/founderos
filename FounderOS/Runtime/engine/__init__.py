@@ -12,5 +12,7 @@ Modules:
     cadence_engine: Computes cadence context (week/month/quarter) and active frameworks per lifecycle phase
     watchtower: Scheduled script (6h) - checks WATCH_REGISTRY, runs websearch/webfetch
     timekeeper: Scheduled script (30min) - deadlines, SOS timer, toast notifications
-    installer: First-run setup - creates Windows Task Scheduler tasks
+    installer: First-run setup - creates .venv, .env, Task Scheduler tasks, .founderhq_installed
+    sync: Gist push/pull/merge for state synchronization across devices
+    snapshot: Portable markdown snapshot for token-less environments
 """
