@@ -88,7 +88,7 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 
 | # | Step | Action |
 |---|------|--------|
-| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. If message starts with `fhq`, `boot`, or `shutdown`: reload CADENCE.md current day section, compute elapsed time since session start or last `fhq`. State CURRENT_DATETIME as first line of response. |
+| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. Always reload CADENCE.md Day section, read `Last fhq`. If elapsed time since last `fhq` ≥ 30 min, auto-execute FHQ_MODE cycle (see Rule #8). If message starts with `fhq`, `boot`, or `shutdown`: compute elapsed time since session start or last `fhq`. State CURRENT_DATETIME as first line of response. |
 | 2 | Scan Last Message Against Mapping | Take the user's LAST message. For each row in INFO_CAPTURE_PROTOCOL.md mapping table, check if the message matches the pattern in "Type d'Information". If match → execute the "Action" column BEFORE proceeding. This is MANDATORY, not optional. Read the table row by row. |
 | 3 | Absorb Updates | If user provided operational data not covered by mapping, update affected files BEFORE responding. Do not ask "should I save this" — capture automatically. Record significant events in TIMELINE. |
 | 4 | Project Data Room Scan | Check ALL active projects in PRIORITY_MATRIX that have a `projects/<PROJECT>/` folder. Verify the folder contains the full strategic cascade (01-10 + annexes/). If ANY file is missing, flag it BEFORE responding. Do not proceed without acknowledging. |
@@ -133,10 +133,12 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 ### Classification Rules
 1. Classify before responding. Never reply before classification.
 2. Multiple matches: pick first in table (highest specificity first).
-3. Uncertain: pick most mission-critical interpretation.
-4. After classification, load module file and follow its protocol.
-5. **Before responding, execute PRG** — Temporal Check → Scan Mapping → Absorb Updates → Project Scan → Freshness Flag → SURVIVAL Auto-Drive.
-6. User should never name a module. Classification is automatic.
+3. **`fhq`, `boot`, `shutdown` in first position ALWAYS win.** If message starts with one of these keywords, classify as FHQ_MODE/BOOT/SHUTDOWN regardless of what follows. Execute the full classification cycle first, then address any specific question within the response.
+4. Uncertain: pick most mission-critical interpretation.
+5. After classification, load module file and follow its protocol.
+6. **Before responding, execute PRG** — Temporal Check → Scan Mapping → Absorb Updates → Project Scan → Freshness Flag → SURVIVAL Auto-Drive.
+7. User should never name a module. Classification is automatic.
+8. **Auto-FHQ.** If elapsed time since last `fhq` in session ≥ 30 minutes, auto-execute FHQ_MODE (OBSERVE→ORIENT→DECIDE→ACT→LEARN→UPDATE) before responding. Update `Last fhq` in CADENCE.md Day section. The 30-min counter resets at each `fhq` (manual or auto).
 
 ## Execution Modes
 
@@ -1310,9 +1312,15 @@ def create_venv(base_path: Path) -> bool:
 
 def install_deps(base_path: Path) -> bool:
     """Install Python dependencies in .venv."""
-    pip = base_path / ".venv" / "Scripts" / "pip"
-    if not pip.exists():
+    for name in ("pip.exe", "pip", "pip3"):
+        pip = base_path / ".venv" / "Scripts" / name
+        if pip.exists():
+            break
+    else:
         pip = base_path / ".venv" / "bin" / "pip"
+        if not pip.exists():
+            print("ERROR: pip not found in .venv")
+            return False
 
     deps = ["requests", "python-dotenv"]
     print(f"Installing dependencies: {', '.join(deps)}...")
@@ -1827,7 +1835,8 @@ def read_env() -> dict:
     if not ENV_PATH.exists():
         return {}
     env = {}
-    for line in ENV_PATH.read_text(encoding="utf-8").splitlines():
+    raw = ENV_PATH.read_text(encoding="utf-8-sig")
+    for line in raw.splitlines():
         line = line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
@@ -1894,8 +1903,17 @@ def _extract_field(text: str, pattern: str) -> str:
     return m.group(1).strip() if m else ""
 
 
+def _gist_api_url(url: str) -> str:
+    m = re.search(r"gist\.github\.com/[^/]+/([a-f0-9]+)", url)
+    if m:
+        return f"https://api.github.com/gists/{m.group(1)}"
+    if "api.github.com/gists/" in url:
+        return url
+    return url
+
+
 def cmd_pull(env: dict) -> str:
-    url = env.get("FHQ_GIST_URL", "")
+    url = _gist_api_url(env.get("FHQ_GIST_URL", ""))
     token = env.get("FHQ_GIST_TOKEN", "")
     if not url or not token:
         return "ERROR: FHQ_GIST_URL or FHQ_GIST_TOKEN not configured"
@@ -1930,7 +1948,7 @@ def cmd_pull(env: dict) -> str:
 
 
 def cmd_push(env: dict) -> str:
-    url = env.get("FHQ_GIST_URL", "")
+    url = _gist_api_url(env.get("FHQ_GIST_URL", ""))
     token = env.get("FHQ_GIST_TOKEN", "")
     if not url or not token:
         return "ERROR: FHQ_GIST_URL or FHQ_GIST_TOKEN not configured"
@@ -3569,9 +3587,10 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 > **Objectif:** [objectif du jour]
 
-**Session start:** [HH:MM - filled at boot]
+**Session start:** 16:28
 **Session end:** [HH:MM - filled at shutdown]
 **Duration:** [calculated]
+**Last fhq:** 19:13
 
 **Top 3 actions:**
 1. [action]
@@ -3582,7 +3601,7 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Hour (Heure) - Now
 
-> **Lome (UTC+0):** [dynamique - computed at every `fhq`]
+> **Lome (UTC+0):** 16:47
 
 **Next actionable:** [what to do in the next 60 min]
 
@@ -3590,9 +3609,9 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Sync
 
-> **Last Sync Pull:** [datetime - filled by sync.py pull at boot]
+> **Last Sync Pull:** 2026-06-22 16:28 UTC
 > **Last Sync Push:** [datetime - filled by sync.py push at shutdown]
-> **Sync Mode:** [Gist / Snapshot / Off]
+> **Sync Mode:** Gist
 
 ---
 
@@ -3661,7 +3680,7 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-21 20:56 — Lomé (UTC+0)
+**Date:** 2026-06-22 16:28 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
@@ -3700,7 +3719,7 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 **Last Decision:** PRG Step 6 ajouté : SURVIVAL Auto-Drive verrouillé.
 
-**Last Updated:** 2026-06-21 20:56 — Lomé UTC+0
+**Last Updated:** 2026-06-22 16:28 — Lomé UTC+0
 
 
 --- FILE: State/LIFECYCLE.md
@@ -3838,7 +3857,7 @@ Liste centralisée de tout ce que FounderOS surveille pour toi : deadlines, appe
 
 | Watch Item | Project | Source / Method | Frequency | Last Checked | Next Check | Last Result | Status |
 |------------|---------|----------------|-----------|-------------|------------|-------------|--------|
-| Djanta Tech Hub Innov'Action — deadlines, infos | OMNI | webfetch djantatechhub.gouv.tg | Daily | 2026-06-21 | 2026-06-22 | Deadline June 22, Pitch Day July 23 | 🔴 |
+| Djanta Tech Hub Innov'Action — deadlines, infos | OMNI | webfetch djantatechhub.gouv.tg | Daily | 2026-06-22 | 2026-06-23 | Challenges encore ouverts. Pitch Day July 23. Pas de changement. | 🟢 |
 | Appels à projets IA / African AI | KORA | websearch "AI grants Africa 2026 call" | Weekly | 2026-06-21 | 2026-06-28 | — | 🟢 |
 | ST Digital — compute partnership status | KORA | manual follow-up | Weekly | 2026-06-21 | 2026-06-28 | Estimation envoyée, en attente | 🟡 |
 | Herlog — response | KORA/FINANCE | manual follow-up | Weekly | 2026-06-21 | 2026-06-28 | Envoyé, en attente | 🟡 |
@@ -3884,6 +3903,18 @@ Formatted findings from watchtower.py runs. One section per watch that triggered
 | OS Version | V4 |
 | Created | 2026-06-22 |
 | Owner | watchtower.py |
+
+
+--- FILE: State/_SYNC_INBOX.md
+# SYNC INBOX
+
+> Pulled: 2026-06-22T16:29:22.115178+00:00
+
+```json
+{}
+
+
+```
 
 
 --- FILE: concepts/ASSET.md
@@ -8408,6 +8439,26 @@ Analysis and lessons belong in KNOWLEDGE.
 - Pricing maïs viable : marge +25 à +275 FCFA/bol confirmée
 - Pricing doc SOJACO mis à jour avec données retail
 
+**2026-06-22 (16:28 Lomé UTC+0 — Boot + Distribution & Sync déployé)**
+- Distribution & Sync system complet : sync.py (Gist), snapshot.py (fallback), FOUNDER_SEED.md, installer.py, .env
+- Gist public créé pour FOUNDER_SEED.md : 21915af1b5500627bb6abf8ec75d5d96
+- Gist privé créé pour sync state : a5b2acc68f84394992dbe53b187c9368
+- .env configuré avec token + Gist URL
+- Installer exécuté : .venv, dépendances, tâches planifiées, marker .founderhq_installed
+- 11/11 tests pass
+- sync.py bugs fixés : Gist URL → API URL conversion, BOM handling dans read_env
+
+**2026-06-22 (16:35 Lomé UTC+0 — Classification fix)**
+- Bug : réponse à `fhq` classifiée DIRECT au lieu de FHQ_MODE. Root cause : contenu après le mot-clé a court-circuité la classification.
+- Fix : Classification Rule #3 ajoutée — "fhq, boot, shutdown en première position gagnent TOUJOURS, peu importe ce qui suit"
+- Testé : message commençant par fhq → FHQ_MODE verrouillé
+
+**2026-06-22 (16:47 Lomé UTC+0 — BurntToast + Auto-FHQ)**
+- BurntToast installé : les notifications Windows pop-up marchent maintenant pour deadlines et SOS
+- Auto-FHQ ajouté (Rule #8) : si ≥ 30min depuis le dernier `fhq`, le cycle s'exécute automatiquement avant la prochaine réponse
+- PRG Step 1 mis à jour : lit `Last fhq` dans CADENCE.md et déclenche auto-FHQ si nécessaire
+- opencode.json : Auto-FHQ ajouté aux customInstructions
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback
@@ -9349,7 +9400,7 @@ Attention → Trust → Action → Sale → Learning
 
 
 --- FILE: Frameworks/Specialized/Distribution/DIOS/AUDIENCE_INTELLIGENCE.md
-# DIOS — AUDIENCE_INTELLIGENCE
+# DIOS � AUDIENCE_INTELLIGENCE
 
 ## Mission
 
@@ -9387,19 +9438,19 @@ Objection: [why they would say no]
 
 | Audience | Hook | Platform |
 |----------|------|----------|
-| Parents (enfants) | Protéger bébé des moustiques la nuit | TikTok, WhatsApp |
-| Femmes enceintes | Protéger la grossesse du paludisme | TikTok |
-| Commerçants | Protéger le stock, dormir pour bosser | Facebook, WhatsApp |
-| Hôtels | Confort client, avis Booking | Facebook |
-| Écoles | Concentration élèves, confiance parents | WhatsApp |
+| Parents (enfants) | Prot�ger b�b� des moustiques la nuit | TikTok, WhatsApp |
+| Femmes enceintes | Prot�ger la grossesse du paludisme | TikTok |
+| Commer�ants | Prot�ger le stock, dormir pour bosser | Facebook, WhatsApp |
+| H�tels | Confort client, avis Booking | Facebook |
+| �coles | Concentration �l�ves, confiance parents | WhatsApp |
 
 ## Example (Kit Solaire)
 
 | Audience | Hook | Platform |
 |----------|------|----------|
-| Parents | Enfant révise à la bougie depuis 3 mois | TikTok |
-| Petits commerçants | Perte de stock quand l'électricité part | Facebook |
-| Vendeurs de rue | Recharger téléphone pour les clients | TikTok, WhatsApp |
+| Parents | Enfant r�vise � la bougie depuis 3 mois | TikTok |
+| Petits commer�ants | Perte de stock quand l'�lectricit� part | Facebook |
+| Vendeurs de rue | Recharger t�l�phone pour les clients | TikTok, WhatsApp |
 
 ## Footer
 
@@ -9614,7 +9665,7 @@ These patterns are promoted to `concepts/KNOWLEDGE.md` as validated truths.
 
 
 --- FILE: Frameworks/Specialized/Distribution/DIOS/HOOK_INTELLIGENCE.md
-# DIOS — HOOK_INTELLIGENCE
+# DIOS � HOOK_INTELLIGENCE
 
 ## Mission
 
@@ -9623,9 +9674,9 @@ Understand why someone stops scrolling and create hooks that force them to stop.
 ## Core Rule
 
 Hook operates on 3 layers, in priority order:
-1. **AUDIO** — fastest to reach the brain (sound, buzz, scream, question)
-2. **VISUAL** — breaks scroll pattern (face zoom, movement, bright flash)
-3. **TEXT** — only works if audio AND visual already stopped the scroll
+1. **AUDIO** � fastest to reach the brain (sound, buzz, scream, question)
+2. **VISUAL** � breaks scroll pattern (face zoom, movement, bright flash)
+3. **TEXT** � only works if audio AND visual already stopped the scroll
 
 Validated truth: Text alone cannot fix a hook problem.
 
@@ -9634,14 +9685,14 @@ Validated truth: Text alone cannot fix a hook problem.
 | Source | Hook Angle |
 |--------|-----------|
 | Fear | "Si tu ne fais pas X, Y arrive" |
-| Curiosity | "Pourquoi X arrive ? La réponse est Y" |
+| Curiosity | "Pourquoi X arrive ? La r�ponse est Y" |
 | Desire | "Imagine ta vie avec X" |
-| Money | "Tu perds X FCFA par jour à cause de Y" |
-| Health | "X fait ça à ton corps sans que tu le saches" |
-| Family | "Tes enfants méritent X" |
+| Money | "Tu perds X FCFA par jour � cause de Y" |
+| Health | "X fait �a � ton corps sans que tu le saches" |
+| Family | "Tes enfants m�ritent X" |
 | Status | "Les gens qui ont X sont vus comme Y" |
-| Safety | "X te protège de Y" |
-| Opportunity | "X est disponible maintenant, après c'est fini" |
+| Safety | "X te prot�ge de Y" |
+| Opportunity | "X est disponible maintenant, apr�s c'est fini" |
 
 ## Hook Generation Dimensions
 
@@ -9661,9 +9712,9 @@ For each campaign, generate 10-50 hooks, then filter:
 
 ## Example (Kit Solaire, Audience: Parents)
 
-1. "Ton enfant révise à la bougie depuis janvier. Et si c'était la dernière fois ?"
+1. "Ton enfant r�vise � la bougie depuis janvier. Et si c'�tait la derni�re fois ?"
 2. "500 FCFA par jour d'essence. Chaque jour. Depuis 3 mois."
-3. "Ton voisin a déjà installé le sien. Tu attends quoi ?"
+3. "Ton voisin a d�j� install� le sien. Tu attends quoi ?"
 
 ## Footer
 
@@ -10130,7 +10181,7 @@ There is always ONE bottleneck. If you list more than one, the real bottleneck i
 
 
 --- FILE: Frameworks/Specialized/Venture/VAOS/MISSION_ENGINE.md
-# VAOS — MISSION_ENGINE
+# VAOS � MISSION_ENGINE
 
 ## Mission
 
@@ -10278,7 +10329,7 @@ Phase 2: [name]
 
 
 --- FILE: Frameworks/Specialized/Venture/VAOS/THEORY_OF_CHANGE.md
-# VAOS — THEORY_OF_CHANGE
+# VAOS � THEORY_OF_CHANGE
 
 ## Mission
 
@@ -10306,7 +10357,7 @@ because [this reason].
 
 ## Example (SOJACO)
 
-1. If we find buyers at >1,000 FCFA/bol soja and >500 FCFA/bol maïs, then we can secure first delivery because suppliers accept payment at delivery.
+1. If we find buyers at >1,000 FCFA/bol soja and >500 FCFA/bol ma�s, then we can secure first delivery because suppliers accept payment at delivery.
 
 2. If we execute 3 successful deliveries, then resellers trust us with larger orders because we've proven reliability.
 
@@ -10376,7 +10427,7 @@ If a venture is stuck despite good execution, the problem is structural. Tactica
 
 
 --- FILE: Frameworks/Specialized/Venture/VAOS/VISION_ENGINE.md
-# VAOS — VISION_ENGINE
+# VAOS � VISION_ENGINE
 
 ## Mission
 
@@ -10391,8 +10442,8 @@ A vision is not a goal. A vision describes the world AFTER the venture succeeds.
 `
 In [timeframe], [who] will [what] because [venture].
 
-Before: [current reality — the problem]
-After: [future reality — the solution]
+Before: [current reality � the problem]
+After: [future reality � the solution]
 `
 
 ## Example (Kora)
