@@ -28,17 +28,27 @@ Donc KORA prend un chemin différent.
 
 # 3. Notre Ambition
 
-KORA construit trois couches technologiques qui, ensemble, forment une infrastructure d'intelligence artificielle africaine :
+KORA construit trois familles de modèles qui, ensemble, forment une infrastructure d'intelligence artificielle africaine :
 
-**Couche 1 — Compréhension :** ASR, transcription, compréhension des langues africaines (orales et écrites)
-**Couche 2 — Expression :** TTS, synthèse vocale, génération multilingue
-**Couche 3 — Raisonnement :** Modèles Omni (thinker-talker) capables de raisonner, comprendre et communiquer dans les langues africaines
+**Famille 1 — ASR multilingue et cross-lingual :** Comprendre, transcrire et interpréter les langues africaines, quelle que soit la langue parlée en entrée, même dans un contexte multilingue où le locuteur alterne entre langues.
 
-Ces trois couches produisent un cercle vertueux : plus de données → meilleurs modèles → plus d'utilisateurs → plus de données.
+**Famille 2 — TTS multilingue et cross-lingual :** Synthétiser, générer et exprimer la parole dans les langues africaines avec naturel, en couvrant un maximum de langues à partir de données limitées.
+
+**Famille 3 — Omni (thinker-talker) :** Le modèle unifié, inspiré de l'approche Qwen thinker-talker, capable de raisonner, planifier et communiquer. Omni est backé par tout ce que l'ASR et le TTS ont déjà accompli — la couverture des langues africaines.
+
+**Pourquoi Omni raisonne dans TOUTES les langues, pas seulement africaines :** Si KORA réussit l'exploit de représenter des centaines de langues africaines — orales, peu documentées, multilingues par nature — alors couvrir le reste du monde (anglais, chinois, français, etc.) est plus facile. Ce sont les langues les mieux dotées en données, en recherche, en outils. Le problème le plus dur est africain. Une fois résolu, le reste suit.
+
+Le cercle vertueux : ASR/TTS couvrent les langues africaines → Omni raisonne dans ces langues → plus d'utilisateurs → plus de données → meilleure couverture → Omni raisonne dans toutes les langues.
 
 # 4. Course à l'ASI/AGI
 
-L'objectif ultime est l'Intelligence Générale puis l'Intelligence Superhumaine. Si d'autres y arrivent avant nous, KORA existe pour que l'Afrique ne soit pas laissée pour compte. Pour que les systèmes d'IA de demain comprennent les langues, les cultures et les réalités africaines non pas comme une option — mais comme une fondation.
+L'objectif ultime est l'Intelligence Générale puis l'Intelligence Superhumaine.
+
+**Un constat lucide :** dès que l'AGI naît, la tâche de "couvrir des langues" deviendra triviale. Une AGI capable d'apprendre et de raisonner n'aura pas besoin d'ASR/TTS spécialisés — elle les générera elle-même. Donc le travail de couverture linguistique que KORA fait aujourd'hui a une fenêtre. Passé l'AGI, ce n'est plus un avantage distinctif.
+
+**Conséquence :** KORA doit être à la frontière. Pas seulement un lab de "langues africaines" — un vrai lab frontière qui construit l'avantage asymétrique MAINTENANT (les données vocales africaines, la couverture multilingue) pour avoir un siège à la table quand l'AGI arrivera. Et une fois à table, compétir sur tout le reste.
+
+Si d'autres y arrivent avant nous, KORA existe pour que l'Afrique ne soit pas laissée pour compte. Pour que les systèmes d'IA de demain comprennent les langues, les cultures et les réalités africaines non pas comme une option — mais comme une fondation.
 
 Nous courons la même course. Pas pour "rattraper". Pour être dedans. Pour innover sur un chemin que nous seuls pouvons prendre.
 
@@ -64,7 +74,7 @@ KORA est portée par un fondateur unique — un entrepreneur africain qui constr
 # 7. Horizon de Réussite
 
 Nous considérerons que cette vision commence à se réaliser lorsque :
-- KORA publie des modèles compétitifs au niveau mondial sur des benchmarks multilingues et vocaux
+- KORA publie des modèles compétitifs au niveau mondial sur l'ensemble des benchmarks
 - Des chercheurs africains formés par KORA publient à la frontière
 - Les langues africaines sont représentées dans les systèmes d'IA utilisés quotidiennement
 - Un enfant éwé peut interagir avec l'IA dans sa langue maternelle aussi naturellement qu'un enfant américain en anglais
