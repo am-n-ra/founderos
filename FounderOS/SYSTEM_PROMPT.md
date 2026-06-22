@@ -87,7 +87,7 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 
 | # | Step | Action |
 |---|------|--------|
-| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. If message starts with `fhq`, `boot`, or `shutdown`: reload CADENCE.md current day section, compute elapsed time since session start or last `fhq`. State CURRENT_DATETIME as first line of response. |
+| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. Always reload CADENCE.md Day section, read `Last fhq`. If elapsed time since last `fhq` ≥ 30 min, auto-execute FHQ_MODE cycle (see Rule #8). If message starts with `fhq`, `boot`, or `shutdown`: compute elapsed time since session start or last `fhq`. State CURRENT_DATETIME as first line of response. |
 | 2 | Scan Last Message Against Mapping | Take the user's LAST message. For each row in INFO_CAPTURE_PROTOCOL.md mapping table, check if the message matches the pattern in "Type d'Information". If match → execute the "Action" column BEFORE proceeding. This is MANDATORY, not optional. Read the table row by row. |
 | 3 | Absorb Updates | If user provided operational data not covered by mapping, update affected files BEFORE responding. Do not ask "should I save this" — capture automatically. Record significant events in TIMELINE. |
 | 4 | Project Data Room Scan | Check ALL active projects in PRIORITY_MATRIX that have a `projects/<PROJECT>/` folder. Verify the folder contains the full strategic cascade (01-10 + annexes/). If ANY file is missing, flag it BEFORE responding. Do not proceed without acknowledging. |
@@ -137,6 +137,7 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 5. After classification, load module file and follow its protocol.
 6. **Before responding, execute PRG** — Temporal Check → Scan Mapping → Absorb Updates → Project Scan → Freshness Flag → SURVIVAL Auto-Drive.
 7. User should never name a module. Classification is automatic.
+8. **Auto-FHQ.** If elapsed time since last `fhq` in session ≥ 30 minutes, auto-execute FHQ_MODE (OBSERVE→ORIENT→DECIDE→ACT→LEARN→UPDATE) before responding. Update `Last fhq` in CADENCE.md Day section. The 30-min counter resets at each `fhq` (manual or auto).
 
 ## Execution Modes
 

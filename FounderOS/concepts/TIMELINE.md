@@ -161,6 +161,26 @@ Analysis and lessons belong in KNOWLEDGE.
 - Pricing maïs viable : marge +25 à +275 FCFA/bol confirmée
 - Pricing doc SOJACO mis à jour avec données retail
 
+**2026-06-22 (16:28 Lomé UTC+0 — Boot + Distribution & Sync déployé)**
+- Distribution & Sync system complet : sync.py (Gist), snapshot.py (fallback), FOUNDER_SEED.md, installer.py, .env
+- Gist public créé pour FOUNDER_SEED.md : 21915af1b5500627bb6abf8ec75d5d96
+- Gist privé créé pour sync state : a5b2acc68f84394992dbe53b187c9368
+- .env configuré avec token + Gist URL
+- Installer exécuté : .venv, dépendances, tâches planifiées, marker .founderhq_installed
+- 11/11 tests pass
+- sync.py bugs fixés : Gist URL → API URL conversion, BOM handling dans read_env
+
+**2026-06-22 (16:35 Lomé UTC+0 — Classification fix)**
+- Bug : réponse à `fhq` classifiée DIRECT au lieu de FHQ_MODE. Root cause : contenu après le mot-clé a court-circuité la classification.
+- Fix : Classification Rule #3 ajoutée — "fhq, boot, shutdown en première position gagnent TOUJOURS, peu importe ce qui suit"
+- Testé : message commençant par fhq → FHQ_MODE verrouillé
+
+**2026-06-22 (16:47 Lomé UTC+0 — BurntToast + Auto-FHQ)**
+- BurntToast installé : les notifications Windows pop-up marchent maintenant pour deadlines et SOS
+- Auto-FHQ ajouté (Rule #8) : si ≥ 30min depuis le dernier `fhq`, le cycle s'exécute automatiquement avant la prochaine réponse
+- PRG Step 1 mis à jour : lit `Last fhq` dans CADENCE.md et déclenche auto-FHQ si nécessaire
+- opencode.json : Auto-FHQ ajouté aux customInstructions
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback

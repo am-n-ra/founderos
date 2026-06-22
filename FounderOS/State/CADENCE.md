@@ -53,9 +53,10 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 > **Objectif:** [objectif du jour]
 
-**Session start:** [HH:MM - filled at boot]
+**Session start:** 16:28
 **Session end:** [HH:MM - filled at shutdown]
 **Duration:** [calculated]
+**Last fhq:** 16:47
 
 **Top 3 actions:**
 1. [action]
@@ -66,7 +67,7 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Hour (Heure) - Now
 
-> **Lome (UTC+0):** [dynamique - computed at every `fhq`]
+> **Lome (UTC+0):** 16:47
 
 **Next actionable:** [what to do in the next 60 min]
 
@@ -74,9 +75,9 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Sync
 
-> **Last Sync Pull:** [datetime - filled by sync.py pull at boot]
+> **Last Sync Pull:** 2026-06-22 16:28 UTC
 > **Last Sync Push:** [datetime - filled by sync.py push at shutdown]
-> **Sync Mode:** [Gist / Snapshot / Off]
+> **Sync Mode:** Gist
 
 ---
 

@@ -4,6 +4,7 @@
   "customInstructions": [
     "ALWAYS classify user intent before responding.",
     "If message starts with 'fhq', 'boot', or 'shutdown' → FHQ_MODE/BOOT/SHUTDOWN. This rule wins over any other classification.",
-    "FHQ_MODE: execute Get-Date, track session time, full kernel cycle (BOOT->OBSERVE->ORIENT->DECIDE->ACT->LEARN->UPDATE)."
+    "FHQ_MODE: execute Get-Date, track session time, full kernel cycle (BOOT->OBSERVE->ORIENT->DECIDE->ACT->LEARN->UPDATE).",
+    "Auto-FHQ: if ≥30 min since last fhq in session, auto-execute FHQ_MODE before next response. Track 'Last fhq' in CADENCE.md."
   ]
 }
