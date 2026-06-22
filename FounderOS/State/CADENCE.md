@@ -72,6 +72,14 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ---
 
+## Sync
+
+> **Last Sync Pull:** [datetime - filled by sync.py pull at boot]
+> **Last Sync Push:** [datetime - filled by sync.py push at shutdown]
+> **Sync Mode:** [Gist / Snapshot / Off]
+
+---
+
 ## Footer
 
 | Field | Value |

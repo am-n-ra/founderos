@@ -39,6 +39,7 @@ See RUNTIME.md for operational reference: temporal awareness, quality standards,
 ## Boot Sequence
 
 Execute at session start (triggered by `boot` or first `fhq` of the day):
+0. **First-Run Check** - Check if `.founderhq_installed` exists in FounderOS root. If absent, skip boot and execute **GENESIS**: ask user for GitHub token, create .venv, install dependencies, create .env, run installer.py, create `.founderhq_installed` marker. After GENESIS completes, proceed to step 1.
 1. **Load Protocols + FRE** - SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
 2. **Temporal Context** - Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md, CADENCE.md
 3. **Load Cadence + Lifecycle** - Load State/CADENCE.md, State/LIFECYCLE.md. Determine current temporal position and project phases.
@@ -52,6 +53,7 @@ Execute at session start (triggered by `boot` or first `fhq` of the day):
 11. **Report Awareness** - State: datetime, mode, top priority, cadence (week/month), lifecycle phases, watch results, what changed, stale concepts, PRG status. MUST state next action.
 12. **Integrity Check** - All critical files loaded? Temporal context established? No contradictions?
 13. **Daily Kickoff** - Execute RUNTIME Phase 1-2 (Assess cash/state -> Decide top action). State today's single most important action.
+14. **Sync Pull** - If `.env` exists with FHQ_GIST_TOKEN, run `python Runtime/engine/sync.py pull` to sync state from remote Gist. If sync fails, continue with local state.
 
 ## Intent Classification
 
@@ -60,7 +62,7 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 | Pattern | Classify as | Action |
 |---|---|---|---|
 | Message starts with **"boot"** or **"boot "** | BOOT | Full session initialization. Set session start time in CADENCE.md. Load ALL state files + frameworks. Execute ORIENT enriched with CADENCE + LIFECYCLE. |
-| Message starts with **"shutdown"** or **"shutdown "** | SHUTDOWN | End session. Log session duration to CADENCE.md (Day -> Session End). Save ALL state. Record TIMELINE entry. Do NOT continue after shutdown. |
+| Message starts with **"shutdown"** or **"shutdown "** | SHUTDOWN | End session. Log session duration to CADENCE.md (Day -> Session End). Run `python Runtime/engine/sync.py push` to save state to Gist. Save ALL state. Record TIMELINE entry. Do NOT continue after shutdown. |
 | Message starts with **"fhq"** or **"fhq "** | FHQ_MODE | Full kernel cycle: BOOT (if first `fhq` today) -> OBSERVE -> ORIENT (enriched with CADENCE x LIFECYCLE x frameworks) -> DECIDE -> ACT -> LEARN -> UPDATE. Execute Get-Date automatically. Apply PRG. Track time since last `fhq` in session. |
 | Strategy, vision, long-term | STRATEGIC | Load VEAOS.md. If venture creation/restructuring/BP -> also load Frameworks/VSOS.md |
 | Daily execution, task planning | EXECUTION | Load DAOS.md |
@@ -169,6 +171,7 @@ At session end:
 2. TIMELINE.md updated with Event → Decision → Outcome
 3. KNOWLEDGE.md updated with validated lessons
 4. ASSET.md updated with new or changed assets
+5. **Sync Push** - Run `python Runtime/engine/sync.py push` to sync state to remote Gist (if token configured)
 
 ## Footer
 

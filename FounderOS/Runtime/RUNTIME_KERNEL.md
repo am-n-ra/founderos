@@ -35,6 +35,7 @@ Execute at session start - triggered by user message starting with `boot` or fir
 ### Full Boot (triggered by `boot` or first daily `fhq`):
 
 Operations:
+0. **GENESIS Check** - Check if `.founderhq_installed` exists. If absent, execute GENESIS: ask user for GitHub token, create .venv, install dependencies, create .env, run installer, create `.founderhq_installed` marker.
 1. Load State/CURRENT_STATE.md
 2. Load State/PRIORITY_MATRIX.md
 3. Load State/CADENCE.md
@@ -46,6 +47,7 @@ Operations:
 9. Set Session Start timestamp in CADENCE.md (Day -> Session Start)
 10. Scan all concept footers for staleness (>48h)
 11. Report: datetime, mode (SURVIVAL/GROWTH/SCALE), cadence context, lifecycle phases, top priority, stale concepts, active alerts
+12. **Sync Pull** - If `.env` exists with FHQ_GIST_TOKEN, run `sync.py pull` to fetch remote state. On failure, continue with local state.
 
 Output: Session awareness established.
 
@@ -135,6 +137,7 @@ Operations:
 3. Update KNOWLEDGE.md with validated lessons
 4. Update affected concept files
 5. Save session objective and next-session priority
+6. **Sync Push** - If `.env` exists with FHQ_GIST_TOKEN, run `sync.py push` to persist state to remote Gist. On failure, state remains local.
 
 Output: State preserved for next session.
 
