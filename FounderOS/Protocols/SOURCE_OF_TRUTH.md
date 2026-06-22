@@ -55,6 +55,9 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Long-term knowledge evolution, decay | KNOWLEDGE_EVOLUTION_ENGINE.md |
 | Meta-improvement of FounderOS itself | CONTINUOUS_IMPROVEMENT.md |
 | Complete video production system | AI_VIDEO_MASTER_DOMAIN.md |
+| FRE: runtime constitution and system contracts | Runtime/FRE_SPEC.md |
+| FRE: universal execution cycle (BOOT → OBSERVE → ORIENT → DECIDE → ACT → LEARN → UPDATE) | Runtime/RUNTIME_KERNEL.md |
+| FRE: adapter interface contract (4 mandatory questions) | Runtime/ADAPTER_INTERFACE.md |
 | Distribution intelligence, audience, language, platform strategy | Frameworks/Specialized/Distribution/DIOS.md |
 | Distribution: audience segmentation and targeting | Frameworks/Specialized/Distribution/DIOS/AUDIENCE_INTELLIGENCE.md |
 | Distribution: language-market derivation and cultural adaptation | Frameworks/Specialized/Distribution/DIOS/LANGUAGE_INTELLIGENCE.md |
