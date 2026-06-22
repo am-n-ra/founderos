@@ -60,6 +60,10 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Distribution: language-market derivation and cultural adaptation | Frameworks/Specialized/Distribution/DIOS/LANGUAGE_INTELLIGENCE.md |
 | Distribution: platform selection by audience behavior | Frameworks/Specialized/Distribution/DIOS/PLATFORM_INTELLIGENCE.md |
 | Distribution: hook creation and testing | Frameworks/Specialized/Distribution/DIOS/HOOK_INTELLIGENCE.md |
+| Distribution: offer design and presentation | Frameworks/Specialized/Distribution/DIOS/OFFER_INTELLIGENCE.md |
+| Distribution: rhythm, cross-posting, campaign structure | Frameworks/Specialized/Distribution/DIOS/DISTRIBUTION_INTELLIGENCE.md |
+| Distribution: CTA design, objection handling, WhatsApp closing | Frameworks/Specialized/Distribution/DIOS/CONVERSION_INTELLIGENCE.md |
+| Distribution: campaign memory and learning loop | Frameworks/Specialized/Distribution/DIOS/DISTRIBUTION_MEMORY.md |
 | Campaign performance data, hook/audience/language history | concepts/DISTRIBUTION_MEMORY.md |
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |
