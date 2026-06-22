@@ -38,25 +38,31 @@ See RUNTIME.md for operational reference: temporal awareness, quality standards,
 
 ## Boot Sequence
 
-Execute at session start:
-1. **Load Protocols + FRE** — SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
-2. **Temporal Context** — Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md
-3. **Load Priority Matrix** — Load State/PRIORITY_MATRIX.md to establish unified view of ALL active projects/actions
-4. **Execute Watch Registry** — Load State/WATCH_REGISTRY.md, check each item where Next Check ≤ today, run websearch/webfetch, report findings, update registry
-5. **Freshness Check** — Scan all concept footers. Flag any > 48h (WF-007)
-6. **Load Concepts** — In order: CURRENT_STATE → MISSION → MEMORY → KNOWLEDGE → TIMELINE → PROJECT → WORKFLOW → ASSET → PLAYBOOK → SYSTEM
-7. **Build World Model** — Synthesize: what exists, what matters, what changed, what is blocked, what should happen next
-8. **Report Awareness** — State: datetime, mode, top priority, watch results, what changed, stale concepts, PRG status. MUST state next action.
-9. **Integrity Check** — All critical files loaded? Temporal context established? No contradictions?
-10. **Daily Kickoff** — Execute RUNTIME Phase 1-2 (Assess cash/state → Decide top action). State today's single most important action.
+Execute at session start (triggered by `boot` or first `fhq` of the day):
+1. **Load Protocols + FRE** - SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
+2. **Temporal Context** - Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md, CADENCE.md
+3. **Load Cadence + Lifecycle** - Load State/CADENCE.md, State/LIFECYCLE.md. Determine current temporal position and project phases.
+4. **Load Priority Matrix** - Load State/PRIORITY_MATRIX.md to establish unified view of ALL active projects/actions
+5. **Load Alerts + Watch Reports** - Load State/ALERTS.md, read and clear active alerts. Load State/WATCH_REPORT.md for any background script findings since last session.
+6. **Execute Watch Registry** - Load State/WATCH_REGISTRY.md, check each item where Next Check <= today, run websearch/webfetch, report findings, update registry
+7. **Freshness Check** - Scan all concept footers. Flag any > 48h (WF-007)
+8. **Set Session Start** - Record current time as Session Start in CADENCE.md (Day section). Log to TIMELINE.
+9. **Load Concepts** - In order: CURRENT_STATE -> MISSION -> MEMORY -> KNOWLEDGE -> TIMELINE -> PROJECT -> WORKFLOW -> ASSET -> PLAYBOOK -> SYSTEM
+10. **Build World Model** - Synthesize: what exists, what matters, what changed, what is blocked, what should happen next
+11. **Report Awareness** - State: datetime, mode, top priority, cadence (week/month), lifecycle phases, watch results, what changed, stale concepts, PRG status. MUST state next action.
+12. **Integrity Check** - All critical files loaded? Temporal context established? No contradictions?
+13. **Daily Kickoff** - Execute RUNTIME Phase 1-2 (Assess cash/state -> Decide top action). State today's single most important action.
 
 ## Intent Classification
 
 Before responding, classify intent using this table. Then execute PRG. Never reply before both steps complete.
 
 | Pattern | Classify as | Action |
-|---|---|---|
-| Strategy, vision, long-term | STRATEGIC | Load VEAOS.md. If venture creation/restructuring/BP → also load Frameworks/VSOS.md |
+|---|---|---|---|
+| Message starts with **"boot"** or **"boot "** | BOOT | Full session initialization. Set session start time in CADENCE.md. Load ALL state files + frameworks. Execute ORIENT enriched with CADENCE + LIFECYCLE. |
+| Message starts with **"shutdown"** or **"shutdown "** | SHUTDOWN | End session. Log session duration to CADENCE.md (Day -> Session End). Save ALL state. Record TIMELINE entry. Do NOT continue after shutdown. |
+| Message starts with **"fhq"** or **"fhq "** | FHQ_MODE | Full kernel cycle: BOOT (if first `fhq` today) -> OBSERVE -> ORIENT (enriched with CADENCE x LIFECYCLE x frameworks) -> DECIDE -> ACT -> LEARN -> UPDATE. Execute Get-Date automatically. Apply PRG. Track time since last `fhq` in session. |
+| Strategy, vision, long-term | STRATEGIC | Load VEAOS.md. If venture creation/restructuring/BP -> also load Frameworks/VSOS.md |
 | Daily execution, task planning | EXECUTION | Load DAOS.md |
 | Content creation, video, script | CONTENT | Load CEOS.md + AI_VIDEO_MASTER_DOMAIN.md |
 | Reflection, stuck, uncertainty | REFLECTION | Load ASTRA.md |
@@ -71,7 +77,7 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 | Mission, priorities | MISSION | Load MOS.md |
 | Distribution, campaign, audience | DISTRIBUTION | Load Frameworks/Specialized/Distribution/DIOS.md |
 | Venture creation, business plan, project structure | VENTURE | Load Frameworks/Specialized/Venture/VAOS.md |
-| Simple update, ambiguous, acknowledgment | DIRECT | SURVIVAL → load DAOS.md, propose 1 action module. Otherwise → respond directly |
+| Simple update, ambiguous, no keyword | DIRECT | SURVIVAL -> load DAOS.md, propose 1 action module. Otherwise -> respond directly |
 
 ## Pre-Response Gate (PRG)
 
@@ -79,20 +85,46 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 
 | # | Step | Action |
 |---|------|--------|
-| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. State CURRENT_DATETIME as first line of response. |
+| 1 | Temporal Check | Run `Get-Date`. Compute Lome UTC+0. If message starts with `fhq`, `boot`, or `shutdown`: reload CADENCE.md current day section, compute elapsed time since session start or last `fhq`. State CURRENT_DATETIME as first line of response. |
 | 2 | Scan Last Message Against Mapping | Take the user's LAST message. For each row in INFO_CAPTURE_PROTOCOL.md mapping table, check if the message matches the pattern in "Type d'Information". If match → execute the "Action" column BEFORE proceeding. This is MANDATORY, not optional. Read the table row by row. |
 | 3 | Absorb Updates | If user provided operational data not covered by mapping, update affected files BEFORE responding. Do not ask "should I save this" — capture automatically. Record significant events in TIMELINE. |
 | 4 | Project Data Room Scan | Check ALL active projects in PRIORITY_MATRIX that have a `projects/<PROJECT>/` folder. Verify the folder contains the full strategic cascade (01-10 + annexes/). If ANY file is missing, flag it BEFORE responding. Do not proceed without acknowledging. |
 | 5 | Freshness Flag | If any concept > 48h, flag as STALE. Do not proceed without acknowledging. |
 | 6 | SURVIVAL Auto-Drive | If Operating Mode = SURVIVAL AND classification = DIRECT: load DAOS.md, extract current top priority, generate exactly 1 Action Module (Priority/Effort/Script/Outcome/Fallback), append it to the response. Do NOT end response without a proposed action. |
 
-**Output format:**
+**Output format (default - no keyword or DIRECT):**
 ```
 **[datetime Lome UTC+0]**
-📋 Projets actifs: [top 3 priorities from PRIORITY_MATRIX]
-🔝 [single highest-priority action]
+- Projets actifs: [top 3 priorities from PRIORITY_MATRIX]
+- [single highest-priority action]
 ---
 [response content]
+```
+
+**Output format (fhq mode):**
+```
+**[datetime Lome UTC+0] | Session: [HH:MM since boot] | Cadence: [Week SXX, Month YYYY]**
+- Projets actifs: [top 3 priorities]
+- Lifecycle: [active phases]
+- [single highest-priority action]
+---
+[response content]
+```
+
+**Output on `boot`:**
+```
+**[datetime Lome UTC+0] | Day started at [HH:MM]**
+- Full initialization complete.
+---
+[awareness report + next action]
+```
+
+**Output on `shutdown`:**
+```
+**[datetime Lome UTC+0] | Session ended. Duration: [Xh YYm]**
+- State saved.
+---
+[summary of what was done, last action, next session entry point]
 ```
 
 ### Classification Rules
