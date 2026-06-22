@@ -14,6 +14,10 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Mission, vision, principes strategiques | concepts/MISSION.md |
 | Projets actifs, statut, outcome attendu | concepts/PROJECT.md |
 | Etat operationnel actuel | State/CURRENT_STATE.md |
+| Bridge file. Background script alerts read and cleared at boot. | State/Scripts->LLM/ALERTS.md |
+| Temporal hierarchy (life->year->month->week->day->hour). Session timestamps. | State/System/CADENCE.md |
+| Per-project lifecycle phase. Gates. Framework mapping. | State/System/LIFECYCLE.md |
+| Veille findings from watchtower, consumed at boot. | State/watchtower.py/WATCH_REPORT.md |
 | Prix, cout, stock, marques, audiences | concepts/ASSET.md |
 | Contacts fournisseurs (tel, email, termes) | concepts/ASSET.md |
 | Comptes reseaux sociaux, chaines YouTube | concepts/ASSET.md |
