@@ -1,98 +1,97 @@
 # KORA VISION
-## Version 2.0 — Frontier Edition
+## Version 3.0 — Consolidated
 
-### L'Afrique représentée à la frontière de l'intelligence artificielle
+### L'Afrique à la frontière de l'intelligence
 
 ---
 
-# 1. Vision Statement
+## Vision Résumée
 
-KORA est le laboratoire africain de référence en intelligence artificielle frontière.
+**KORA fait de l'Afrique un bâtisseur de la frontière IA.**
 
-Dans le monde où KORA a réussi, l'Afrique n'est plus un consommateur de technologies venues d'ailleurs. Elle est un bâtisseur, un compétiteur, un contributeur à la frontière même de l'IA. KORA est citée aux côtés de DeepSeek, Mistral, OpenAI et Anthropic — non pas comme un "équivalent africain", mais comme un laboratoire qui a pris un chemin que personne d'autre n'a pris, et qui a gagné.
+---
 
-L'Afrique a fermé les gaps créés par les révolutions industrielles et numériques. Non pas en les rattrapant — en participant à celle de l'IA dès le départ, avec une voix, une approche et une ambition qui lui sont propres.
+# 1. Le Monde Après KORA
+
+KORA est le laboratoire africain de référence à la frontière de l'intelligence artificielle. Il est cité aux côtés de DeepSeek, Mistral, OpenAI et Anthropic — non pas comme un "équivalent africain", mais comme un laboratoire qui a pris un chemin que personne d'autre n'a pris, et qui a gagné.
+
+L'Afrique ne rattrape pas les révolutions passées. Elle participe à celle de l'IA dès le départ, avec une approche qui lui est propre. Les gaps créés par les révolutions industrielles et numériques se ferment parce que l'Afrique est dans la course, pas parce qu'elle court après.
 
 # 2. Le Chemin
 
-L'approche occidentale de l'IA est texte-first, anglais-first, écran-first. Elle naît d'une culture de l'écrit, de l'éducation formelle, de l'anglais comme lingua franca.
+L'approche dominante de l'IA est texte-first, anglais-first, écran-first. Elle exclut naturellement les populations dont les langues sont absentes des données d'entraînement et dont la culture est orale.
 
-Ce chemin ne peut pas servir l'Afrique parce que :
-- **Les langues africaines sont invisibles** dans les données d'entraînement des LLMs actuels (anglais, chinois, français = la base)
-- **L'alphabétisation est un défi** dans beaucoup de régions — le texte exclut une grande partie de la population
-- **La transmission en Afrique est orale** — la voix, pas l'écrit, est l'infrastructure naturelle de communication
+**L'insight :** le problème le plus dur en représentation linguistique est africain — des centaines de langues orales, peu documentées, multilingues par nature. Si KORA résout ce problème, couvrir le reste du monde (anglais, chinois, français) est plus facile. Ce n'est pas un problème d'inclusion. C'est un avantage asymétrique : les données que personne d'autre ne collecte.
 
-Donc KORA prend un chemin différent.
+**Le pari :** la voie voix-first, multilingue par construction est le chemin le plus efficace pour arriver à la frontière depuis l'Afrique. C'est une hypothèse — elle sera validée ou invalidée par l'exécution.
 
-**Notre insight :** le chemin voix-first, multilingue par construction, n'est pas une mission d'inclusion. C'est le chemin technique le PLUS EFFICACE pour arriver à la frontière depuis l'Afrique. Les données vocales africaines, le multilingue natif, la communication orale — personne d'autre ne peut construire ça à notre place. C'est notre avantage asymétrique.
+# 3. Ce Que KORA Construit
 
-# 3. Notre Ambition
+KORA couvre trois familles de modèles qui forment une infrastructure complète :
 
-KORA construit trois familles de modèles qui, ensemble, forment une infrastructure d'intelligence artificielle africaine :
+**ASR multilingue/cross-lingual** — comprendre et transcrire les langues africaines
+**TTS multilingue/cross-lingual** — générer et exprimer la parole dans ces langues
+**Omni (thinker-talker)** — un modèle unifié qui raisonne, planifie et communique dans toutes les langues, backé par la couverture que l'ASR et le TTS ont bâtie
 
-**Famille 1 — ASR multilingue et cross-lingual :** Comprendre, transcrire et interpréter les langues africaines, quelle que soit la langue parlée en entrée, même dans un contexte multilingue où le locuteur alterne entre langues.
+Le cercle vertueux : ASR/TTS couvrent les langues → Omni raisonne dedans → plus d'utilisateurs → plus de données → meilleure couverture.
 
-**Famille 2 — TTS multilingue et cross-lingual :** Synthétiser, générer et exprimer la parole dans les langues africaines avec naturel, en couvrant un maximum de langues à partir de données limitées.
+# 4. Course à la Frontière
 
-**Famille 3 — Omni (thinker-talker) :** Le modèle unifié, inspiré de l'approche Qwen thinker-talker, capable de raisonner, planifier et communiquer. Omni est backé par tout ce que l'ASR et le TTS ont déjà accompli — la couverture des langues africaines.
+KORA est dans la course à l'Intelligence Générale et à l'Intelligence Superhumaine. Pas en spectateur — en participant.
 
-**Pourquoi Omni raisonne dans TOUTES les langues, pas seulement africaines :** Si KORA réussit l'exploit de représenter des centaines de langues africaines — orales, peu documentées, multilingues par nature — alors couvrir le reste du monde (anglais, chinois, français, etc.) est plus facile. Ce sont les langues les mieux dotées en données, en recherche, en outils. Le problème le plus dur est africain. Une fois résolu, le reste suit.
+**Hypothèse à vérifier :** il est possible que l'AGI rende triviale la tâche de couvrir des langues. Si c'est le cas, le travail de couverture linguistique de KORA a une fenêtre. Cette hypothèse n'est pas confirmée — elle guide la stratégie sans la définir. La collecte de données vocales réelles restera précieuse quoi qu'il arrive.
 
-Le cercle vertueux : ASR/TTS couvrent les langues africaines → Omni raisonne dans ces langues → plus d'utilisateurs → plus de données → meilleure couverture → Omni raisonne dans toutes les langues.
+Notre avantage aujourd'hui : des données que personne d'autre ne collecte, des communautés que personne d'autre ne sert, un chemin que personne d'autre ne prend.
 
-# 4. Course à l'ASI/AGI
+Notre avantage demain : un laboratoire africain à la frontière, capable de compétir sur tous les fronts.
 
-L'objectif ultime est l'Intelligence Générale puis l'Intelligence Superhumaine.
-
-**Un constat lucide :** dès que l'AGI naît, la tâche de "couvrir des langues" deviendra triviale. Une AGI capable d'apprendre et de raisonner n'aura pas besoin d'ASR/TTS spécialisés — elle les générera elle-même. Donc le travail de couverture linguistique que KORA fait aujourd'hui a une fenêtre. Passé l'AGI, ce n'est plus un avantage distinctif.
-
-**Conséquence :** KORA doit être à la frontière. Pas seulement un lab de "langues africaines" — un vrai lab frontière qui construit l'avantage asymétrique MAINTENANT (les données vocales africaines, la couverture multilingue) pour avoir un siège à la table quand l'AGI arrivera. Et une fois à table, compétir sur tout le reste.
-
-Si d'autres y arrivent avant nous, KORA existe pour que l'Afrique ne soit pas laissée pour compte. Pour que les systèmes d'IA de demain comprennent les langues, les cultures et les réalités africaines non pas comme une option — mais comme une fondation.
-
-Nous courons la même course. Pas pour "rattraper". Pour être dedans. Pour innover sur un chemin que nous seuls pouvons prendre.
-
-# 5. Impact Sociétal
+# 5. Impact
 
 En construisant ce chemin, KORA transforme le continent :
 
-**Éducation :** Chaque enfant peut apprendre dans sa langue maternelle, même sans maîtrise de l'écrit
-**Santé :** Information médicale accessible oralement dans les langues locales
-**Agriculture :** Savoir technique accessible aux agriculteurs peu alphabétisés
-**Économie :** Chaque génie, même le moins alphabétisé, peut innover, entreprendre, accéder à l'IA frontière
-**Culture :** Les patrimoines oraux africains sont préservés, numérisés et valorisés
-**Technologie :** L'Afrique dispose de ses propres infrastructures d'IA — données, modèles, talents
+**Éducation** — apprendre dans sa langue maternelle
+**Santé** — information médicale accessible oralement
+**Économie** — chaque génie, même sans alphabétisation formelle, peut innover
+**Culture** — les patrimoines oraux sont préservés et valorisés
+**Technologie** — l'Afrique possède ses propres infrastructures d'IA
 
-L'alphabétisation n'est pas un prérequis pour contribuer au monde de demain. KORA fait en sorte qu'elle ne le soit plus.
+L'alphabétisation cesse d'être un prérequis pour accéder à l'intelligence artificielle.
 
-# 6. Vision du Fondateur
+# 6. Le Fondateur
 
-KORA est portée par un fondateur unique — un entrepreneur africain qui construit KORA comme le vaisseau amiral d'un empire multi-ventures. KORA n'est pas une startup. C'est un laboratoire national de recherche en IA, construit depuis Lomé, compétitif au niveau mondial, et destiné à faire de son fondateur un leader technologique africain de stature internationale.
+KORA est portée par un fondateur unique. Construite depuis Lomé, solo, sans financement. Elle est le vaisseau-amiral d'un empire multi-ventures qui refera les gaps du continent, un par un.
 
-À terme, les fondations de KORA (données vocales africaines, modèles multilingues, talent formé) deviennent l'infrastructure sur laquelle d'autres ventures sont bâties. Chaque venture adresse un gap différent. KORA est la première.
+Le chemin est le même que celui de Musk, de Jobs, des bâtisseurs qui ont commencé seuls avec une vision que personne ne prenait au sérieux. La différence : KORA est africain, construit depuis Lomé, et personne ne fait ce qu'il fait.
 
-# 7. Horizon de Réussite
+# 7. Horizon
 
-Nous considérerons que cette vision commence à se réaliser lorsque :
-- KORA publie des modèles compétitifs au niveau mondial sur l'ensemble des benchmarks
+KORA réussit quand :
+- Ses modèles sont compétitifs sur l'ensemble des benchmarks mondiaux
 - Des chercheurs africains formés par KORA publient à la frontière
-- Les langues africaines sont représentées dans les systèmes d'IA utilisés quotidiennement
-- Un enfant éwé peut interagir avec l'IA dans sa langue maternelle aussi naturellement qu'un enfant américain en anglais
-- Le fondateur siège aux côtés des leaders mondiaux de l'IA comme représentant africain
+- Un enfant éwé interagit avec l'IA dans sa langue maternelle aussi naturellement qu'un enfant américain en anglais
+- Les langues africaines sont représentées dans les systèmes d'IA quotidiens
+- Le fondateur est reconnu comme leader technologique africain de stature mondiale, ayant bâti un empire multi-ventures qui transforme le continent
 
-## Vision Résumée
+**Horizon :** 10-20 ans. Le premier cap : valider que KORA peut représenter une langue africaine mieux que quiconque.
 
-**KORA existe pour que l'Afrique soit représentée à la frontière de l'IA — non pas en rattrapant, mais en construisant un chemin que personne d'autre ne peut prendre.**
+---
 
-## OODA Critique
+## Questions Ouvertes
 
-Cette vision est volontairement ambitieuse. Elle dépend des produits (ASR, TTS, Omni) comme moyens, pas comme fins. Elle survivra à plusieurs générations technologiques parce qu'elle ne parle pas de technologie — elle parle de représentation, de souveraineté et de fermeture des gaps. Les technologies changent. La mission reste.
+Ces questions ne sont pas résolues. Elles seront tranchées par l'exécution :
+
+1. Le chemin voix-first est-il vraiment le plus efficace ? C'est notre pari — il sera testé sur l'Éwé.
+2. L'AGI rendra-t-elle la couverture linguistique triviale ? Hypothèse non vérifiée.
+3. Comment financer la course à la frontière depuis une position pré-seed ? La capital roadmap existe, l'exécution est le défi.
+4. Le moat une fois l'AGI arrivée ? À construire.
+
+Une bonne vision n'a pas toutes les réponses. Elle a la bonne question.
 
 ## Footer
 | Field | Value |
 |---|---|
-| Document | KORA Vision V2 |
-| Version | 2.0 — Frontier Edition |
-| Horizon | 10–20 ans |
+| Document | KORA Vision V3 |
+| Version | 3.0 — Consolidated |
+| Horizon | 10-20 ans |
 | OS Version | V4 |
 | Owner | Founder |
