@@ -181,6 +181,10 @@ Analysis and lessons belong in KNOWLEDGE.
 - PRG Step 1 mis à jour : lit `Last fhq` dans CADENCE.md et déclenche auto-FHQ si nécessaire
 - opencode.json : Auto-FHQ ajouté aux customInstructions
 
+**2026-06-22 (19:55 Lomé UTC+0 — KORA Vision rewrite + Harvard notification)**
+- User a reçu notification bourse Harvard (Radcliffe) — PENDING, à revisiter
+- Décidé de réécrire KORA 01_VISION.md pour capturer la vraie vision : KORA = OpenAI/DeepSeek africain, compétition frontière, fermer les gaps tech de l'Afrique
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback

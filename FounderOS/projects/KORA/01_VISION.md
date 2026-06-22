@@ -1,79 +1,88 @@
 # KORA VISION
-## Version 1.0 — Institutional Edition (15–25 Year Horizon)
+## Version 2.0 — Frontier Edition
 
-### Une Afrique pleinement représentée dans l'ère de l'intelligence artificielle
+### L'Afrique représentée à la frontière de l'intelligence artificielle
 
 ---
 
 # 1. Vision Statement
 
-Nous imaginons un futur où chaque Africain peut accéder aux capacités les plus avancées de l'intelligence artificielle dans sa langue maternelle, indépendamment de son niveau d'alphabétisation, de son niveau de revenu ou de sa localisation géographique.
+KORA est le laboratoire africain de référence en intelligence artificielle frontière.
 
-Dans ce futur, les langues africaines ne sont plus absentes des systèmes numériques mondiaux. Elles deviennent des citoyens de première classe de l'écosystème technologique mondial. L'intelligence artificielle comprend, parle, traduit, enseigne et collabore naturellement dans les langues africaines. L'accès à la connaissance, aux services publics, à l'éducation, à la santé et aux opportunités économiques n'est plus limité par la langue.
+Dans le monde où KORA a réussi, l'Afrique n'est plus un consommateur de technologies venues d'ailleurs. Elle est un bâtisseur, un compétiteur, un contributeur à la frontière même de l'IA. KORA est citée aux côtés de DeepSeek, Mistral, OpenAI et Anthropic — non pas comme un "équivalent africain", mais comme un laboratoire qui a pris un chemin que personne d'autre n'a pris, et qui a gagné.
 
-# 2. Le Futur Que Nous Voulons Créer
+L'Afrique a fermé les gaps créés par les révolutions industrielles et numériques. Non pas en les rattrapant — en participant à celle de l'IA dès le départ, avec une voix, une approche et une ambition qui lui sont propres.
 
-Nous croyons que le XXIe siècle sera défini par l'intelligence artificielle comme le XXe siècle l'a été par l'électricité et Internet. Dans ce nouveau monde, la langue deviendra un facteur déterminant d'inclusion ou d'exclusion.
+# 2. Le Chemin
 
-Si les langues africaines ne sont pas représentées dans les modèles qui gouvernent l'accès à la connaissance et aux services numériques, des centaines de millions de personnes risquent d'être marginalisées dans l'économie de l'intelligence artificielle. Nous refusons ce futur.
+L'approche occidentale de l'IA est texte-first, anglais-first, écran-first. Elle naît d'une culture de l'écrit, de l'éducation formelle, de l'anglais comme lingua franca.
 
-Nous voulons contribuer à construire un monde dans lequel :
-- les langues africaines sont représentées dans les systèmes d'IA
-- les populations africaines participent activement à la création de ces systèmes
-- les bénéfices de l'intelligence artificielle sont accessibles à tous
-- les patrimoines linguistiques et culturels du continent sont préservés et valorisés
+Ce chemin ne peut pas servir l'Afrique parce que :
+- **Les langues africaines sont invisibles** dans les données d'entraînement des LLMs actuels (anglais, chinois, français = la base)
+- **L'alphabétisation est un défi** dans beaucoup de régions — le texte exclut une grande partie de la population
+- **La transmission en Afrique est orale** — la voix, pas l'écrit, est l'infrastructure naturelle de communication
 
-# 3. Notre Conviction Fondamentale
+Donc KORA prend un chemin différent.
 
-Nous croyons que la voix deviendra l'interface dominante de l'intelligence artificielle. Pour des milliards de personnes, parler est plus naturel qu'écrire. Cette réalité est particulièrement importante dans les régions où l'accès à l'éducation reste inégal, où l'alphabétisation demeure un défi, et où la transmission culturelle est historiquement orale.
+**Notre insight :** le chemin voix-first, multilingue par construction, n'est pas une mission d'inclusion. C'est le chemin technique le PLUS EFFICACE pour arriver à la frontière depuis l'Afrique. Les données vocales africaines, le multilingue natif, la communication orale — personne d'autre ne peut construire ça à notre place. C'est notre avantage asymétrique.
 
-L'avenir de l'IA ne sera pas uniquement textuel. Il sera vocal, multimodal, conversationnel et multilingue.
+# 3. Notre Ambition
 
-# 4. Notre Vision de l'Infrastructure Linguistique Africaine
+KORA construit trois couches technologiques qui, ensemble, forment une infrastructure d'intelligence artificielle africaine :
 
-Nous imaginons l'émergence d'une infrastructure linguistique africaine capable de comprendre, parler, et traduire les langues africaines, et de permettre à l'IA d'interagir naturellement avec leurs locuteurs.
+**Couche 1 — Compréhension :** ASR, transcription, compréhension des langues africaines (orales et écrites)
+**Couche 2 — Expression :** TTS, synthèse vocale, génération multilingue
+**Couche 3 — Raisonnement :** Modèles Omni (thinker-talker) capables de raisonner, comprendre et communiquer dans les langues africaines
 
-Cette infrastructure devra être scalable, interopérable, continuellement enrichie, et accessible aux développeurs, chercheurs, institutions et entreprises. À terme, elle constituera une couche fondamentale de l'économie numérique africaine.
+Ces trois couches produisent un cercle vertueux : plus de données → meilleurs modèles → plus d'utilisateurs → plus de données.
 
-# 5. Notre Vision de la Communication Humaine
+# 4. Course à l'ASI/AGI
 
-Nous imaginons un monde dans lequel deux personnes peuvent communiquer librement même lorsqu'elles ne partagent aucune langue commune. Un locuteur éwé pourra dialoguer avec un locuteur yoruba. Un locuteur wolof pourra collaborer avec un locuteur swahili. Un locuteur bambara pourra accéder à des connaissances produites en chinois, anglais ou français. Les barrières linguistiques deviendront progressivement invisibles.
+L'objectif ultime est l'Intelligence Générale puis l'Intelligence Superhumaine. Si d'autres y arrivent avant nous, KORA existe pour que l'Afrique ne soit pas laissée pour compte. Pour que les systèmes d'IA de demain comprennent les langues, les cultures et les réalités africaines non pas comme une option — mais comme une fondation.
 
-# 6. Notre Vision de l'Intelligence Artificielle
+Nous courons la même course. Pas pour "rattraper". Pour être dedans. Pour innover sur un chemin que nous seuls pouvons prendre.
 
-Nous pensons que les futurs systèmes d'IA seront capables d'écouter, comprendre, raisonner, mémoriser, agir et communiquer. Ils interagiront naturellement par la voix, comprendront simultanément plusieurs langues, s'adapteront aux contextes culturels locaux, et assisteront les individus dans leur vie quotidienne. Notre ambition est de rendre ces capacités accessibles aux populations africaines dans leurs propres langues.
+# 5. Impact Sociétal
 
-# 7. Notre Vision de l'Impact Sociétal
+En construisant ce chemin, KORA transforme le continent :
 
-**Éducation:** Permettre à chaque enfant d'apprendre dans sa langue maternelle.
-**Santé:** Rendre l'information médicale accessible oralement dans les langues locales.
-**Agriculture:** Donner aux agriculteurs un accès direct aux connaissances.
-**Administration:** Faciliter l'accès aux services publics.
-**Économie:** Permettre à davantage d'entrepreneurs de participer à l'économie numérique.
-**Culture:** Préserver et transmettre le patrimoine oral africain.
+**Éducation :** Chaque enfant peut apprendre dans sa langue maternelle, même sans maîtrise de l'écrit
+**Santé :** Information médicale accessible oralement dans les langues locales
+**Agriculture :** Savoir technique accessible aux agriculteurs peu alphabétisés
+**Économie :** Chaque génie, même le moins alphabétisé, peut innover, entreprendre, accéder à l'IA frontière
+**Culture :** Les patrimoines oraux africains sont préservés, numérisés et valorisés
+**Technologie :** L'Afrique dispose de ses propres infrastructures d'IA — données, modèles, talents
 
-# 8. Notre Vision de KORA
+L'alphabétisation n'est pas un prérequis pour contribuer au monde de demain. KORA fait en sorte qu'elle ne le soit plus.
 
-À long terme, KORA aspire à devenir un laboratoire de recherche en IA, un constructeur d'infrastructures linguistiques, un acteur de référence pour les langues africaines, et un contributeur à l'avancement de l'IA mondiale.
+# 6. Vision du Fondateur
 
-Nous mesurons notre succès par notre capacité à accroître le nombre de personnes pouvant accéder à l'IA dans leur langue maternelle.
+KORA est portée par un fondateur unique — un entrepreneur africain qui construit KORA comme le vaisseau amiral d'un empire multi-ventures. KORA n'est pas une startup. C'est un laboratoire national de recherche en IA, construit depuis Lomé, compétitif au niveau mondial, et destiné à faire de son fondateur un leader technologique africain de stature internationale.
 
-# 9. Horizon de Réussite
+À terme, les fondations de KORA (données vocales africaines, modèles multilingues, talent formé) deviennent l'infrastructure sur laquelle d'autres ventures sont bâties. Chaque venture adresse un gap différent. KORA est la première.
 
-Nous considérerons que cette vision commence à se réaliser lorsque plusieurs langues africaines disposeront d'une représentation robuste dans les systèmes d'IA, que les interactions vocales deviendront naturelles dans ces langues, que les barrières linguistiques entre communautés diminueront, et que les populations africaines pourront utiliser l'IA sans devoir abandonner leur langue maternelle.
+# 7. Horizon de Réussite
+
+Nous considérerons que cette vision commence à se réaliser lorsque :
+- KORA publie des modèles compétitifs au niveau mondial sur des benchmarks multilingues et vocaux
+- Des chercheurs africains formés par KORA publient à la frontière
+- Les langues africaines sont représentées dans les systèmes d'IA utilisés quotidiennement
+- Un enfant éwé peut interagir avec l'IA dans sa langue maternelle aussi naturellement qu'un enfant américain en anglais
+- Le fondateur siège aux côtés des leaders mondiaux de l'IA comme représentant africain
 
 ## Vision Résumée
 
-**Construire un futur dans lequel chaque Africain peut accéder, contribuer et prospérer dans l'ère de l'intelligence artificielle sans être limité par sa langue.**
+**KORA existe pour que l'Afrique soit représentée à la frontière de l'IA — non pas en rattrapant, mais en construisant un chemin que personne d'autre ne peut prendre.**
 
 ## OODA Critique
 
-Cette vision est volontairement indépendante des produits (ASR, TTS, Omni), indépendante des financements, indépendante des technologies actuelles, et valable encore dans 20 ans même si Whisper, GPT ou Gemini disparaissent. Une bonne vision doit survivre à plusieurs générations technologiques.
+Cette vision est volontairement ambitieuse. Elle dépend des produits (ASR, TTS, Omni) comme moyens, pas comme fins. Elle survivra à plusieurs générations technologiques parce qu'elle ne parle pas de technologie — elle parle de représentation, de souveraineté et de fermeture des gaps. Les technologies changent. La mission reste.
 
 ## Footer
 | Field | Value |
 |---|---|
-| Document | KORA Vision V1 |
-| Horizon | 15–25 years |
+| Document | KORA Vision V2 |
+| Version | 2.0 — Frontier Edition |
+| Horizon | 10–20 ans |
 | OS Version | V4 |
 | Owner | Founder |
