@@ -70,6 +70,7 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 | Playbook, process documentation | PLAYBOOK | Load PLAYBOOK_ENGINE.md |
 | Mission, priorities | MISSION | Load MOS.md |
 | Distribution, campaign, audience | DISTRIBUTION | Load Frameworks/Specialized/Distribution/DIOS.md |
+| Venture creation, business plan, project structure | VENTURE | Load Frameworks/Specialized/Venture/VAOS.md |
 | Simple update, ambiguous, acknowledgment | DIRECT | SURVIVAL → load DAOS.md, propose 1 action module. Otherwise → respond directly |
 
 ## Pre-Response Gate (PRG)

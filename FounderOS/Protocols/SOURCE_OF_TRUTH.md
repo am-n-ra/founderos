@@ -64,6 +64,17 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Distribution: rhythm, cross-posting, campaign structure | Frameworks/Specialized/Distribution/DIOS/DISTRIBUTION_INTELLIGENCE.md |
 | Distribution: CTA design, objection handling, WhatsApp closing | Frameworks/Specialized/Distribution/DIOS/CONVERSION_INTELLIGENCE.md |
 | Distribution: campaign memory and learning loop | Frameworks/Specialized/Distribution/DIOS/DISTRIBUTION_MEMORY.md |
+| Venture architecture, venture creation and structuring | Frameworks/Specialized/Venture/VAOS.md |
+| Venture: vision definition and reality transformation | Frameworks/Specialized/Venture/VAOS/VISION_ENGINE.md |
+| Venture: mission definition and approach | Frameworks/Specialized/Venture/VAOS/MISSION_ENGINE.md |
+| Venture: theory of change and causal logic | Frameworks/Specialized/Venture/VAOS/THEORY_OF_CHANGE.md |
+| Venture: strategic asset inventory and gap analysis | Frameworks/Specialized/Venture/VAOS/ASSET_MAPPING.md |
+| Venture: strategic planning and bet sequencing | Frameworks/Specialized/Venture/VAOS/STRATEGIC_PLANNING.md |
+| Venture: roadmap with phase gates and milestones | Frameworks/Specialized/Venture/VAOS/ROADMAP_ENGINE.md |
+| Venture: capital strategy and funding sources | Frameworks/Specialized/Venture/VAOS/CAPITAL_STRATEGY.md |
+| Venture: business plan generation from VAOS cascade | Frameworks/Specialized/Venture/VAOS/BUSINESS_PLAN_ENGINE.md |
+| Venture: constraint analysis and bottleneck identification | Frameworks/Specialized/Venture/VAOS/CONSTRAINT_ANALYSIS.md |
+| Venture: repositioning and venture repair | Frameworks/Specialized/Venture/VAOS/VENTURE_REPOSITIONING.md |
 | Campaign performance data, hook/audience/language history | concepts/DISTRIBUTION_MEMORY.md |
 | First-time setup procedure | GENESIS.md |
 | Installation guide, troubleshooting | INSTALL.md |
