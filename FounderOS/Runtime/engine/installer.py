@@ -38,14 +38,19 @@ def get_platform_label() -> str:
     return sys.platform
 
 
-def get_venv_python(base_path: Path) -> str:
+def _venv_python_path(base_path: Path) -> Path:
+    """Return expected path to python executable inside .venv."""
     if IS_WINDOWS:
-        pip = base_path / ".venv" / "Scripts" / "python.exe"
-    else:
-        pip = base_path / ".venv" / "bin" / "python3"
-        if not pip.exists():
-            pip = base_path / ".venv" / "bin" / "python"
-    return str(pip) if pip.exists() else sys.executable
+        return base_path / ".venv" / "Scripts" / "python.exe"
+    p = base_path / ".venv" / "bin" / "python3"
+    if not p.exists():
+        p = base_path / ".venv" / "bin" / "python"
+    return p
+
+
+def get_venv_python(base_path: Path) -> str:
+    p = _venv_python_path(base_path)
+    return str(p) if p.exists() else ""
 
 
 def get_venv_pip(base_path: Path) -> str:
@@ -62,8 +67,7 @@ def get_venv_pip(base_path: Path) -> str:
 def create_venv(base_path: Path) -> bool:
     """Create .venv if it doesn't exist."""
     venv_path = base_path / ".venv"
-    marker = get_venv_python(base_path)
-    if marker and Path(marker).exists():
+    if venv_path.exists() and get_venv_python(base_path):
         print(".venv: already exists")
         return True
 
@@ -159,8 +163,14 @@ def _task_exists_schtasks(name: str) -> bool:
     return result.returncode == 0
 
 
+def _resolve_python(base_dir: str) -> str:
+    """Return venv python if available, else system python."""
+    venv = get_venv_python(Path(base_dir))
+    return venv if venv else sys.executable
+
+
 def _create_schtasks(name: str, script: str, base_dir: str, interval: int) -> bool:
-    python_exe = get_venv_python(Path(base_dir))
+    python_exe = _resolve_python(base_dir)
     cmd = [
         "schtasks", "/Create", "/SC", "MINUTE",
         "/MO", str(interval),
@@ -196,7 +206,7 @@ def _remove_cron(name: str) -> bool:
 
 
 def _create_cron(name: str, script: str, base_dir: str, interval: int) -> bool:
-    python_exe = get_venv_python(Path(base_dir))
+    python_exe = _resolve_python(base_dir)
     comment = f"# FounderHQ: {name}"
     cron_line = f"*/{interval} * * * * {python_exe} {script} --base-dir {base_dir}"
     try:
@@ -233,7 +243,7 @@ def _remove_launchd(name: str) -> bool:
 
 
 def _create_launchd(name: str, script: str, base_dir: str, interval: int) -> bool:
-    python_exe = get_venv_python(Path(base_dir))
+    python_exe = _resolve_python(base_dir)
     label = f"com.founderhq.{name.lower().replace(' ', '-')}"
     plist_dir = Path.home() / "Library" / "LaunchAgents"
     plist_dir.mkdir(parents=True, exist_ok=True)
