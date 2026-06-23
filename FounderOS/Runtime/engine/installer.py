@@ -3,7 +3,7 @@
 Creates:
 1. .venv Python virtual environment
 2. .env file (asks user for GitHub token)
-3. Installs dependencies (requests, python-dotenv)
+3. Installs dependencies (requests, python-dotenv, pysweph)
 4. Scheduler tasks for watchtower + timekeeper (schtasks / cron / launchd)
 5. .founderhq_installed marker
 
@@ -90,7 +90,7 @@ def install_deps(base_path: Path) -> bool:
         print("ERROR: pip not found in .venv")
         return False
 
-    deps = ["requests", "python-dotenv"]
+    deps = ["requests", "python-dotenv", "pysweph"]
     print(f"Installing dependencies: {', '.join(deps)}...")
     result = subprocess.run(
         [pip, "install"] + deps,
