@@ -48,7 +48,10 @@ Execute at session start (triggered by `boot` or first `fhq` of the day):
    - (d) **Private Gist pull**: run `python Runtime/engine/sync.py pull` to restore personal data
    - If pull succeeds (existing user on new device): State, projects, concepts restored → skip profile → go to (f)
    - If pull fails (new user, 404/no Gist): run `python Runtime/engine/sync.py create-private-gist` (creates empty private Gist, auto-writes URL to .env) → then **(e) Build Profile**
-   - (e) **Build Profile** (new users only): ask the user (in their language) about domain, role, tech stack, strategic needs, constraints, active projects, and geographic focus. Generate or update concepts/PROFILE.md from answers. Then run `python Runtime/engine/sync.py push` to upload profile + initial state to the new private Gist.
+    - (e) **Build Profile** (new users only): ask the user (in their language) about domain, role, tech stack, strategic needs, constraints, active projects, and geographic focus. Generate or update concepts/PROFILE.md from answers.
+       - **If ASTRA is available** (astra_core.py exists in Runtime/engine/): also ask for birth date, time (HH:MM UTC+0), and place. Run `python Runtime/engine/astra_birth.py --base-dir . --date YYYY-MM-DD --time HH:MM` to generate State/ASTRA_BIRTH.md.
+       - Then run `python Runtime/engine/astra_daily.py --base-dir .` to generate first daily.
+    - Then run `python Runtime/engine/sync.py push` to upload profile + initial state to the new private Gist.
    - (f) `python Runtime/engine/installer.py --skip-env` creates .venv, installs deps, configures scheduler (schtasks/cron/launchd for watchtower + timekeeper), and creates `.founderhq_installed` marker. The `--skip-env` flag prevents duplicate .env prompts (already handled in step c).
    After GENESIS completes, proceed to step 1.
 1. **Load Protocols + FRE** - SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
