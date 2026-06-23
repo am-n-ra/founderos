@@ -141,6 +141,11 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 def _get_public_gist_files(base_dir: Path) -> dict:
+    """Build the files dict for the public bootstrap Gist.
+
+    Returns a dict mapping filename -> {"content": str} for every file
+    that should be in the public Gist.
+    """
     engine_dir = base_dir / "Runtime" / "engine"
     seed_path = base_dir / "FOUNDER_SEED.md"
     opencode_path = base_dir / "opencode.json"
