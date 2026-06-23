@@ -42,14 +42,14 @@ See RUNTIME.md for operational reference: temporal awareness, quality standards,
 
 Execute at session start (triggered by `boot` or first `fhq` of the day):
 0. **First-Run Check** - Check if `.founderhq_installed` exists in FounderOS root. If absent, skip boot and execute **GENESIS**:
-   - (a) **Token**: Tell the user to create a GitHub fine-grained token at `https://github.com/settings/tokens?type=beta` with scope `gist:write` + `gist:read`, then paste it. Explain it's for multi-device sync (state, concepts, projects between machines). Only needed if they want sync — they can type `skip` to configure later.
-   - (b) **Venv**: create .venv, `pip install requests python-dotenv`
-   - (c) **.env**: write `FHQ_GIST_TOKEN=<token>` to .env (never read the value back, never expose it)
+   - (a) **Fetch Gist**: Download all files from the public bootstrap Gist. Move `installer.py` + `sync.py` + `watchtower.py` + `timekeeper.py` to `Runtime/engine/`. FOUNDER_SEED.md stays at root. opencode.json stays at root.
+   - (b) **Token**: Tell the user to create a GitHub fine-grained token at `https://github.com/settings/tokens?type=beta` with scope `gist:write` + `gist:read`, then paste it. Explain it's for multi-device sync (state, concepts, projects between machines). Only needed if they want sync — they can type `skip` to configure later.
+   - (c) **.env**: If token provided, write `FHQ_GIST_TOKEN=<token>` to .env (never read the value back, never expose it). If skipped, skip this step.
    - (d) **Private Gist pull**: run `python Runtime/engine/sync.py pull` to restore personal data
    - If pull succeeds (existing user on new device): State, projects, concepts restored → skip profile → go to (f)
    - If pull fails (new user, 404/no Gist): run `python Runtime/engine/sync.py create-private-gist` (creates empty private Gist, auto-writes URL to .env) → then **(e) Build Profile**
    - (e) **Build Profile** (new users only): ask the user (in their language) about domain, role, tech stack, strategic needs, constraints, active projects, and geographic focus. Generate or update concepts/PROFILE.md from answers. Then run `python Runtime/engine/sync.py push` to upload profile + initial state to the new private Gist.
-   - (f) `python Runtime/engine/installer.py` creates scheduler for current platform (schtasks/cron/launchd) + `.founderhq_installed` marker
+   - (f) `python Runtime/engine/installer.py --skip-env` creates .venv, installs deps, configures scheduler (schtasks/cron/launchd for watchtower + timekeeper), and creates `.founderhq_installed` marker. The `--skip-env` flag prevents duplicate .env prompts (already handled in step c).
    After GENESIS completes, proceed to step 1.
 1. **Load Protocols + FRE** - SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
 2. **Temporal Context** - Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md, CADENCE.md
