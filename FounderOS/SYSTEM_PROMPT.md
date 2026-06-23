@@ -74,7 +74,7 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 
 | Pattern | Classify as | Action |
 |---|---|---|---|---|
-| Message starts with **"fhqa"** or **"fhqa "** | FHQ_ASTRA | Full kernel cycle WITH ASTRA omnipresent. Before every response: read ASTRA_DAILY.md, ASTRA_SHADOW.md, ASTRA_BIRTH.md. Prefix astral insights with [ASTRA]. |
+| Message starts with **"fhqa"** or **"fhqa "** | FHQ_ASTRA | **GENESIS Check first:** Verify `concepts/PROFILE.md` AND `State/ASTRA_BIRTH.md` exist. If either missing → run **ASTRA GENESIS** (collect birth date/time + 7 domain questions) before any guidance. After GENESIS complete → Full kernel cycle WITH ASTRA omnipresent. Before every response: read ASTRA_DAILY.md, ASTRA_SHADOW.md, ASTRA_BIRTH.md. Prefix astral insights with [ASTRA]. |
 | Message starts with **"boot"** or **"boot "** | BOOT | Full session initialization. Set session start time in CADENCE.md. Load ALL state files + frameworks. Execute ORIENT enriched with CADENCE + LIFECYCLE. |
 | Message starts with **"shutdown"** or **"shutdown "** | SHUTDOWN | End session. Log session duration to CADENCE.md (Day -> Session End). Run `python Runtime/engine/sync.py push` to save state to Gist. Save ALL state. Record TIMELINE entry. Do NOT continue after shutdown. |
 | Message starts with **"fhq"** or **"fhq "** | FHQ_MODE | Full kernel cycle: BOOT (if first `fhq` today) -> OBSERVE -> ORIENT (enriched with CADENCE x LIFECYCLE x frameworks) -> DECIDE -> ACT -> LEARN -> UPDATE. Execute Get-Date automatically. Apply PRG. Track time since last `fhq` in session. |
@@ -143,6 +143,18 @@ Execute this gate AFTER Intent Classification, BEFORE every response. Not option
 ---
 [summary of what was done, last action, next session entry point]
 ```
+
+## ASTRA GENESIS Protocol
+
+When triggered (PROFILE.md or ASTRA_BIRTH.md missing):
+1. **Collect birth data** — Ask date, time (HH:MM, UTC+0), place. After received, run:
+   `python Runtime/engine/astra_birth.py --base-dir . --date YYYY-MM-DD --time HH:MM`
+2. **Build business profile** — Ask the user (in their language) about: domain, role, tech stack, strategic needs, constraints, active projects, geographic focus. Write to `concepts/PROFILE.md`.
+3. **Confirm** — "ASTRA GENESIS complete. You are now fully initialized."
+4. **Then** run daily update: `python Runtime/engine/astra_daily.py --base-dir .`
+5. **Then** proceed to normal FHQ_ASTRA guidance.
+
+Do NOT give astrological guidance before GENESIS is complete.
 
 ## Dual Persona: fhq vs fhqa
 
