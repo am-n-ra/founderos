@@ -17,6 +17,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 
+# Ensure workspace root is on sys.path for direct script execution
+_this_dir = Path(__file__).resolve().parent
+_workspace_root = _this_dir.parent.parent
+if str(_workspace_root) not in sys.path:
+    sys.path.insert(0, str(_workspace_root))
+
 
 def send_toast(title: str, message: str) -> bool:
     """Send Windows toast notification using BurntToast PowerShell module.
@@ -146,9 +152,18 @@ def main():
     parser = argparse.ArgumentParser(description="Timekeeper - time and alert script for FounderHQ")
     parser.add_argument("--base-dir", default=".", help="FounderHQ root directory")
     parser.add_argument("--no-toast", action="store_true", help="Skip toast notifications")
+    parser.add_argument("--astra", action="store_true", help="Run ASTRA daily update")
     args = parser.parse_args()
 
     base_path = Path(args.base_dir)
+
+    if args.astra:
+        try:
+            from Runtime.engine.astra_daily import main as astra_main
+            astra_main()
+            print("[ASTRA] Daily update complete.")
+        except Exception as e:
+            print(f"[ASTRA] Error: {e}")
 
     deadlines = parse_deadlines(base_path)
     for d in deadlines:
