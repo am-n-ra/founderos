@@ -24,6 +24,9 @@ IS_MAC = sys.platform == "darwin"
 
 ENV_PATH = ".env"
 
+WATCHTOWER_INTERVAL = 360
+TIMEKEEPER_INTERVAL = 30
+
 
 def get_platform_label() -> str:
     if IS_WINDOWS:
@@ -353,13 +356,13 @@ def main():
 
     watchtower_path = scripts_dir / "watchtower.py"
     if watchtower_path.exists():
-        watchtower_created = setup_scheduler("FounderHQ-Watchtower", str(watchtower_path), str(base_path), 360)
+        watchtower_created = setup_scheduler("FounderHQ-Watchtower", str(watchtower_path), str(base_path), WATCHTOWER_INTERVAL)
     else:
         print(f"WARNING: {watchtower_path} not found, skipping watchtower")
 
     timekeeper_path = scripts_dir / "timekeeper.py"
     if timekeeper_path.exists():
-        timekeeper_created = setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), 30)
+        timekeeper_created = setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), TIMEKEEPER_INTERVAL)
     else:
         print(f"WARNING: {timekeeper_path} not found, skipping timekeeper")
 
@@ -370,11 +373,11 @@ def main():
     print("  - .venv: ready")
     print("  - Dependencies: installed")
     if watchtower_created:
-        print("  - Watchtower scheduler: configured (every 360 min)")
+        print(f"  - Watchtower scheduler: configured (every {WATCHTOWER_INTERVAL} min)")
     else:
         print("  - Watchtower scheduler: NOT configured (script missing)")
     if timekeeper_created:
-        print("  - Timekeeper scheduler: configured (every 30 min)")
+        print(f"  - Timekeeper scheduler: configured (every {TIMEKEEPER_INTERVAL} min)")
     else:
         print("  - Timekeeper scheduler: NOT configured (script missing)")
     print("  - .founderhq_installed: created")

@@ -25,6 +25,10 @@ node_modules/
 # Logs
 *.log
 
+# Pytest
+.pytest_temp/
+.pytest_cache/
+
 # Temporary files
 *.tmp
 *.swp
