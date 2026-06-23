@@ -12,7 +12,7 @@
 
 KORA Lab is an African artificial intelligence laboratory building the infrastructure required for underrepresented languages to participate fully in the future of AI.
 
-While recent breakthroughs have dramatically improved speech recognition, speech generation and conversational AI, these advances have benefited only a fraction of the world's languages. Africa alone is home to more than 2,000 languages, yet the overwhelming majority remain absent from modern AI systems.
+While recent breakthroughs have dramatically improved speech recognition, speech generation and conversational AI, these advances have benefited only a fraction of the world's languages. Africa alone is home to more than 2,000 languages, yet in 2025-2026, even the best frontier models (GPT, Claude, Gemini, Whisper) cover only 42 — just 2%. The overwhelming majority remain absent from modern AI systems, and cross-lingual transfer remains highly limited for undocumented oral languages. AGI is not imminent; the window for building language infrastructure is long.
 
 KORA's long-term ambition is to build the Universal Speech Intelligence Layer: an infrastructure capable of understanding, representing and generating language across diverse linguistic communities, beginning with African languages.
 

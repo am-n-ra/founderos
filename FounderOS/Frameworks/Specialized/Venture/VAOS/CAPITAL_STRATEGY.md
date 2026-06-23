@@ -16,7 +16,7 @@ The best capital is the one that costs the least in control and freedom. Bootstr
 | Revenue | Variable | 0% | Growth |
 | Microfinance (FUCEC, ALIDé) | 50k-500k FCFA | 15-30% APR | Working capital |
 | Assilassimé Coup de Pouce | 5k-20k FCFA | 0% | Emergency |
-| Grants (Djanta Tech Hub, etc.) | 500k-5M FCFA | 0% + reporting | R&D, impact |
+| Grants (local tech hub, etc.) | 500k-5M FCFA | 0% + reporting | R&D, impact |
 | Angel investment | 1M-50M FCFA | 10-30% equity | Scaling |
 | Venture capital | 50M+ FCFA | 20-40% equity | Hypergrowth |
 

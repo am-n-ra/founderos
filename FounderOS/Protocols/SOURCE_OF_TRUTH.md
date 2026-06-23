@@ -1,15 +1,15 @@
 # SOURCE OF TRUTH
 
-## Regle 0
+## Rule 0
 
-Chaque verite du systeme a EXACTEMENT un proprietaire.
+Every system truth has EXACTLY one owner.
 
-Si deux documents contiennent la meme verite → violation.
-Si un document contient une verite qu'il ne possede pas → violation.
+If two documents contain the same truth → violation.
+If a document contains a truth it does not own → violation.
 
-## Carte des verites
+## Truth Map
 
-| Verite | Proprietaire |
+| Truth | Owner |
 |--------|-------------|
 | Mission, vision, principes strategiques | concepts/MISSION.md |
 | Projets actifs, statut, outcome attendu | concepts/PROJECT.md |
@@ -35,9 +35,9 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Detection de fraicheur des concepts | concepts/WORKFLOW.md (WF-007) |
 | Graphe de dependances entre concepts | Protocols/RELATIONSHIP_MODEL.md |
 | Priorisation : quoi faire MAINTENANT | Protocols/PRIORITIZATION_PROTOCOL.md |
-| Marketing, campagne (lentille) | Frameworks/Content/MAOS.md |
-| Automation, agents (lentille) | Frameworks/AI/AAOS.md |
-| Production video entites (lentille) | Frameworks/AI/AI_VIDEO_MASTER_DOMAIN.md |
+| Marketing, campaigns (lens) | Frameworks/Content/MAOS.md |
+| Automation, agents (lens) | Frameworks/AI/AAOS.md |
+| Video production entities (lens) | Frameworks/AI/AI_VIDEO_MASTER_DOMAIN.md |
 | Master entry point, identity, primary directive | SYSTEM_PROMPT.md |
 | Classification automatique des intentions, routage des modules | SYSTEM_PROMPT.md |
 | Session mode, permissions, constraints, integrity check | SYSTEM_PROMPT.md |
@@ -93,9 +93,9 @@ Si un document contient une verite qu'il ne possede pas → violation.
 | Single-file distribution of all core files | FOUNDER_SEED.md |
 | Ce fichier (carte des verites) | Protocols/SOURCE_OF_TRUTH.md |
 
-## Regle de maintenance
+## Maintenance Rule
 
-Si on ajoute une nouvelle verite au systeme, on doit :
-1. Determiner son proprietaire unique
-2. L'ajouter a cette carte
-3. Verifier qu'aucun autre document ne la possede deja
+If a new truth is added to the system, we must:
+1. Determine its unique owner
+2. Add it to this map
+3. Verify that no other document already owns it

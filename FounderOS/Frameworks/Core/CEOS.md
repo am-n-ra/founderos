@@ -1,33 +1,33 @@
 # CEOS — Content Execution Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Creation de contenu, distribution, conversion, hook analysis, strategie audience.
+Content creation, distribution, conversion, hook analysis, audience strategy.
 
-## Questions obligatoires
+## Required Questions
 
-1. A qui s'adresse ce contenu ? (froid / tiede / chaud)
-2. Quel est l'objectif ? (awareness / education / trust / lead / vente)
-3. Quelle est l'action suivante pour le spectateur ?
-4. Pourquoi ce contenu existe-t-il ?
+1. Who is this content for? (cold / warm / hot)
+2. What is the objective? (awareness / education / trust / lead / sale)
+3. What is the next action for the viewer?
+4. Why does this content exist?
 
-## Principes
+## Principles
 
-- Les gens n'achetent pas des features. Ils achetent des resultats.
-- L'attention est raree. Clarte > Complexite. Pertinence > Volume.
-- Les premieres secondes determinent tout. "Why should I care ?" immediat.
-- Distribution n'est pas optionnelle — elle fait partie du produit.
-- Le hook opere sur 3 couches : AUDIO > VISUEL > TEXTE.
+- People don't buy features. They buy results.
+- Attention is scarce. Clarity > Complexity. Relevance > Volume.
+- The first seconds determine everything. Immediate "Why should I care?"
+- Distribution is not optional — it is part of the product.
+- The hook operates on 3 layers: AUDIO > VISUAL > TEXT.
 
-## Couches audience
+## Audience Layers
 
-- **Froid** : ne vous connait pas → objectif Attention
-- **Tiede** : vous connait → objectif Trust
-- **Chaud** : vous fait confiance → objectif Action
+- **Cold**: doesn't know you → goal: Attention
+- **Warm**: knows you → goal: Trust
+- **Hot**: trusts you → goal: Action
 
 ## Anti-patterns
 
-- Creer du contenu sans objectif defini
-- Optimiser pour likes/vues au lieu de conversion
-- Publier sans CTA clair
-- Hook textuel sans disrupteur audio/visuel frame-1
+- Creating content without a defined objective
+- Optimizing for likes/views instead of conversion
+- Publishing without a clear CTA
+- Textual hook without audio/visual disruptor on frame 1

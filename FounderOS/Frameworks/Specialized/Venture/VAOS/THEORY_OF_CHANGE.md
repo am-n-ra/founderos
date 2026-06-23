@@ -1,4 +1,4 @@
-# VAOS ó THEORY_OF_CHANGE
+# VAOS -- THEORY_OF_CHANGE
 
 ## Mission
 
@@ -26,7 +26,7 @@ because [this reason].
 
 ## Example (SOJACO)
 
-1. If we find buyers at >1,000 FCFA/bol soja and >500 FCFA/bol maÔs, then we can secure first delivery because suppliers accept payment at delivery.
+1. If we find buyers at >1,000 FCFA/bol soja and >500 FCFA/bol ma√Øs, then we can secure first delivery because suppliers accept payment at delivery.
 
 2. If we execute 3 successful deliveries, then resellers trust us with larger orders because we've proven reliability.
 
@@ -46,4 +46,4 @@ A ToC passes if:
 | OS Version | V4 |
 | Last Verified | 2026-06-21 |
 | Owner | VAOS |
-| Dependencies | VISION_ENGINE.md, MISSION_ENGINE.md |
+| Dependencies | VISION_ENGINE.md, MISSION_ENGINE.md |

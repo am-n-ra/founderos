@@ -39,7 +39,7 @@ Le cercle vertueux : ASR/TTS couvrent les langues → Omni raisonne dedans → p
 
 KORA est dans la course à l'Intelligence Générale et à l'Intelligence Superhumaine. Pas en spectateur — en participant.
 
-**Hypothèse à vérifier :** il est possible que l'AGI rende triviale la tâche de couvrir des langues. Si c'est le cas, le travail de couverture linguistique de KORA a une fenêtre. Cette hypothèse n'est pas confirmée — elle guide la stratégie sans la définir. La collecte de données vocales réelles restera précieuse quoi qu'il arrive.
+**Un fait vérifié :** en 2025-2026, même les meilleurs modèles frontière (GPT, Claude, Gemini) ne couvrent que 42 langues africaines sur 2 000+ — soit 2%. Le fine-tuning spécifique améliore les performances de 54% sur une seule langue. Le cross-lingual transfer est très limité pour les langues orales peu documentées. L'AGI, si elle arrive un jour, reste spéculative (prédictions 2027-2032+). La fenêtre de KORA est longue. Le travail de collecte de données vocales africaines authentiques restera nécessaire et précieux quoi qu'il arrive.
 
 Notre avantage aujourd'hui : des données que personne d'autre ne collecte, des communautés que personne d'autre ne sert, un chemin que personne d'autre ne prend.
 
@@ -81,9 +81,9 @@ KORA réussit quand :
 Ces questions ne sont pas résolues. Elles seront tranchées par l'exécution :
 
 1. Le chemin voix-first est-il vraiment le plus efficace ? C'est notre pari — il sera testé sur l'Éwé.
-2. L'AGI rendra-t-elle la couverture linguistique triviale ? Hypothèse non vérifiée.
+2. L'AGI rendra-t-elle la couverture linguistique triviale ? Non — les modèles frontière 2025-2026 couvrent 2% des langues africaines. L'AGI n'est pas imminente. Le problème linguistique africain est structurel, pas technique.
 3. Comment financer la course à la frontière depuis une position pré-seed ? La capital roadmap existe, l'exécution est le défi.
-4. Le moat une fois l'AGI arrivée ? À construire.
+4. Le moat une fois l'AGI arrivée ? Les données vocales authentiques resteront le moat. On ne peut pas générer ce qui n'existe pas.
 
 Une bonne vision n'a pas toutes les réponses. Elle a la bonne question.
 

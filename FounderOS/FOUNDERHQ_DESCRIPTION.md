@@ -1,329 +1,329 @@
-# FounderHQ — Description Fondatrice
+# FounderHQ — Foundational Description
 
-## Définition
+## Definition
 
-FounderHQ est un système cognitif portable destiné à un entrepreneur.
+FounderHQ is a portable cognitive system designed for an entrepreneur.
 
-Son objectif est de préserver, organiser, accumuler et exploiter l'intelligence entrepreneuriale au fil du temps, indépendamment :
+Its purpose is to preserve, organize, accumulate, and exploit entrepreneurial intelligence over time, independently of:
 
-* du LLM utilisé,
-* du logiciel utilisé,
-* du runtime utilisé,
-* du système d'exploitation utilisé,
-* de la structure de fichiers utilisée.
+* the LLM used,
+* the software used,
+* the runtime used,
+* the operating system used,
+* the file structure used.
 
-FounderHQ n'est pas un assistant.
+FounderHQ is not an assistant.
 
-FounderHQ n'est pas un agent.
+FounderHQ is not an agent.
 
-FounderHQ n'est pas un logiciel.
+FounderHQ is not software.
 
-FounderHQ est un protocole d'organisation de l'intelligence entrepreneuriale.
+FounderHQ is a protocol for organizing entrepreneurial intelligence.
 
-Le LLM n'est qu'un processeur temporaire chargé d'interpréter FounderHQ.
+The LLM is merely a temporary processor tasked with interpreting FounderHQ.
 
-Le système doit survivre au remplacement du LLM.
+The system must survive the replacement of the LLM.
 
 ---
 
-# Objectif principal
+# Primary Objective
 
-Permettre à un entrepreneur d'accumuler de l'intelligence composée :
+Enable an entrepreneur to accumulate compound intelligence:
 
-* décisions,
-* expériences,
-* connaissances,
-* projets,
-* résultats,
-* erreurs,
+* decisions,
+* experiences,
+* knowledge,
+* projects,
+* results,
+* mistakes,
 * playbooks,
 
-sans perdre cette intelligence lorsqu'il change :
+without losing that intelligence when they change:
 
-* d'outil,
-* de modèle,
-* de plateforme,
-* de machine.
+* tools,
+* models,
+* platforms,
+* machines.
 
-FounderHQ doit devenir plus intelligent au fil des années.
+FounderHQ must become more intelligent over years.
 
 ---
 
-# Philosophie
+# Philosophy
 
-FounderHQ repose sur une séparation stricte entre :
+FounderHQ rests on a strict separation between:
 
-## Ce que l'on sait
+## What we know
 
-Connaissance.
+Knowledge.
 
-## Comment on opère
+## How we operate
 
-Protocoles.
+Protocols.
 
-## Comment on réfléchit
+## How we think
 
 Frameworks.
 
-## Ce que l'on fait maintenant
+## What we are doing now
 
-État opérationnel.
+Operational state.
 
-## Où cela s'exécute
+## Where it executes
 
 Runtime.
 
-Cette séparation est fondamentale.
+This separation is fundamental.
 
 ---
 
 # Architecture
 
-FounderHQ est composé de 6 couches.
+FounderHQ is composed of 6 layers.
 
 ---
 
-# Couche 1 — Concepts
+# Layer 1 — Concepts
 
-Les Concepts représentent la mémoire permanente de l'entreprise.
+Concepts represent the permanent memory of the enterprise.
 
-Ils décrivent la réalité.
+They describe reality.
 
-Ils ne contiennent aucune logique d'exécution.
+They contain no execution logic.
 
-Ils répondent à la question :
+They answer the question:
 
-> "Qu'est-ce qui est vrai ?"
+> "What is true?"
 
-Les Concepts sont divisés en deux groupes.
+Concepts are divided into two groups.
 
 ---
 
-## A1 — Identité
+## A1 — Identity
 
-Ces concepts définissent l'existence même de FounderHQ.
+These concepts define the very existence of FounderHQ.
 
-Sans eux, FounderHQ cesse d'exister.
+Without them, FounderHQ ceases to exist.
 
 ### Mission
 
-Décrit :
+Describes:
 
 * vision,
 * direction,
-* objectifs,
-* principes.
+* objectives,
+* principles.
 
-Question :
+Question:
 
-> Pourquoi faisons-nous ce que nous faisons ?
+> Why are we doing what we do?
 
 ---
 
 ### Memory
 
-Décrit :
+Describes:
 
-* contexte historique,
-* décisions importantes,
-* préférences,
-* contraintes durables.
+* historical context,
+* important decisions,
+* preferences,
+* durable constraints.
 
-Question :
+Question:
 
-> Que devons-nous nous rappeler ?
+> What must we remember?
 
 ---
 
 ### Knowledge
 
-Décrit :
+Describes:
 
-* vérités validées,
-* leçons apprises,
-* patterns confirmés.
+* validated truths,
+* lessons learned,
+* confirmed patterns.
 
-Question :
+Question:
 
-> Qu'avons-nous appris ?
+> What have we learned?
 
 ---
 
 ### Timeline
 
-Décrit :
+Describes:
 
-* événements,
-* décisions,
-* résultats.
+* events,
+* decisions,
+* outcomes.
 
-Format :
+Format:
 
 Event → Decision → Outcome
 
-Question :
+Question:
 
-> Que s'est-il passé ?
+> What happened?
 
 ---
 
-## A2 — Exécution
+## A2 — Execution
 
-Ces concepts permettent d'agir.
+These concepts enable action.
 
-Sans eux FounderHQ survit mais devient incapable d'exécuter efficacement.
+Without them FounderHQ survives but becomes unable to execute effectively.
 
 ### Project
 
-Travail en cours.
+Work in progress.
 
-Question :
+Question:
 
-> Que construisons-nous ?
+> What are we building?
 
 ---
 
 ### Workflow
 
-Processus reproductibles.
+Reproducible processes.
 
-Question :
+Question:
 
-> Comment exécuter une tâche ?
+> How to execute a task?
 
 ---
 
 ### Asset
 
-Actifs.
+Assets.
 
-Question :
+Question:
 
-> Que possédons-nous ?
+> What do we own?
 
-Exemples :
+Examples:
 
-* produits,
-* marques,
-* domaines,
-* bases de données,
+* products,
+* brands,
+* domains,
+* databases,
 * audiences.
 
 ---
 
 ### Playbook
 
-Méthodes validées.
+Validated methods.
 
-Condition :
+Condition:
 
-Doit être démontré plusieurs fois dans plusieurs contextes.
+Must be demonstrated multiple times across multiple contexts.
 
-Question :
+Question:
 
-> Qu'est-ce qui fonctionne de façon fiable ?
+> What works reliably?
 
 ---
 
 ### System
 
-Documentation du fonctionnement interne de FounderHQ.
+Documentation of FounderHQ's internal functioning.
 
-Question :
+Question:
 
-> Comment FounderHQ fonctionne-t-il ?
+> How does FounderHQ work?
 
 ---
 
-# Couche 2 — Protocols
+# Layer 2 — Protocols
 
-Les Protocols définissent le comportement attendu.
+Protocols define expected behavior.
 
-Ils répondent à la question :
+They answer the question:
 
-> Comment FounderHQ doit-il fonctionner ?
+> How should FounderHQ operate?
 
 ---
 
 ## FounderOS Protocol
 
-Séquence de démarrage.
+Startup sequence.
 
 Boot.
 
-Chargement.
+Loading.
 
-Ordre des opérations.
+Order of operations.
 
 ---
 
 ## Decision Gates
 
-Détermine :
+Determines:
 
-* quel type de décision est demandé,
-* quels concepts doivent être consultés,
-* quels frameworks doivent être chargés.
+* what type of decision is requested,
+* which concepts must be consulted,
+* which frameworks must be loaded.
 
 ---
 
 ## Temporal Awareness
 
-Gère :
+Manages:
 
-* temps,
-* fraîcheur,
-* âge des informations.
+* time,
+* freshness,
+* age of information.
 
-Chaque décision doit être consciente du temps.
+Every decision must be time-aware.
 
 ---
 
 ## Relationship Model
 
-Décrit :
+Describes:
 
-* dépendances,
-* relations,
-* liens.
+* dependencies,
+* relationships,
+* connections.
 
-Entre tous les concepts.
+Between all concepts.
 
 ---
 
 ## Source Of Truth
 
-Règle fondamentale.
+Fundamental rule.
 
-Chaque vérité possède un unique propriétaire.
+Every truth has a single owner.
 
-Aucune duplication.
+No duplication.
 
 ---
 
 ## Prioritization Protocol
 
-Détermine :
+Determines:
 
-> Quelle est la prochaine action la plus importante ?
+> What is the next most important action?
 
 ---
 
-# Couche 3 — Frameworks
+# Layer 3 — Frameworks
 
-Les Frameworks sont des lentilles de réflexion.
+Frameworks are lenses for thinking.
 
-Ils ne stockent aucune donnée.
+They store no data.
 
-Ils ne sont pas des concepts.
+They are not concepts.
 
-Ils ne sont pas des protocoles.
+They are not protocols.
 
-Ils répondent à la question :
+They answer the question:
 
-> Comment analyser ce problème ?
+> How to analyze this problem?
 
-Ils peuvent être remplacés sans détruire FounderHQ.
+They can be replaced without destroying FounderHQ.
 
 ---
 
@@ -331,19 +331,19 @@ Ils peuvent être remplacés sans détruire FounderHQ.
 
 ### CAOS
 
-Analyse financière.
+Financial analysis.
 
 Cash.
 
 Allocation.
 
-Survie.
+Survival.
 
 ---
 
 ### CEOS
 
-Analyse contenu.
+Content analysis.
 
 Conversion.
 
@@ -355,137 +355,137 @@ Distribution.
 
 ### PSOS
 
-Analyse produit.
+Product analysis.
 
-Offre.
+Offer.
 
-Positionnement.
+Positioning.
 
-Valeur.
+Value.
 
 ---
 
 ### FAOS
 
-Analyse acquisition.
+Acquisition analysis.
 
 Funnel.
 
-Croissance.
+Growth.
 
-Trafic.
+Traffic.
 
 ---
 
 ### SAOS
 
-Analyse systémique.
+Systemic analysis.
 
-Composants.
+Components.
 
-Frontières.
+Boundaries.
 
 Bottlenecks.
 
-Coût de suppression.
+Removal cost.
 
 Reconstruction.
 
 ---
 
-# Couche 4 — State
+# Layer 4 — State
 
-Le présent.
+The present.
 
-Photographie actuelle.
+Current snapshot.
 
-Contient :
+Contains:
 
-* priorité actuelle,
-* principal bottleneck,
-* contexte immédiat,
-* état opérationnel.
+* current priority,
+* main bottleneck,
+* immediate context,
+* operational status.
 
-Cette couche est temporaire.
+This layer is temporary.
 
-Elle peut être supprimée puis reconstruite.
+It can be deleted and reconstructed.
 
 ---
 
-# Couche 5 — Runtime
+# Layer 5 — Runtime
 
-Le moteur d'exécution.
+The execution engine.
 
-Exemples :
+Examples:
 
 * OpenCode,
 * Cursor,
 * Claude Code,
 * ChatGPT,
 * Gemini,
-* futur système.
+* future system.
 
-FounderHQ ne dépend d'aucun runtime particulier.
+FounderHQ depends on no particular runtime.
 
-Le runtime implémente simplement l'interface attendue.
-
----
-
-# Couche 6 — Archive
-
-Historique.
-
-Versions précédentes.
-
-Anciens frameworks.
-
-Décisions anciennes.
-
-Jamais source de vérité active.
+The runtime simply implements the expected interface.
 
 ---
 
-# Règle Fondamentale
+# Layer 6 — Archive
 
-Chaque information possède exactement un propriétaire.
+History.
 
-Exemple :
+Previous versions.
 
-Prix produit :
+Old frameworks.
+
+Past decisions.
+
+Never an active source of truth.
+
+---
+
+# Fundamental Rule
+
+Every piece of information has exactly one owner.
+
+Example:
+
+Product price:
 
 Asset.
 
-Pas ailleurs.
+Not elsewhere.
 
-Cash :
+Cash:
 
 State.
 
-Pas ailleurs.
+Not elsewhere.
 
-Leçon validée :
+Validated lesson:
 
 Knowledge.
 
-Pas ailleurs.
+Not elsewhere.
 
-Événement :
+Event:
 
 Timeline.
 
-Pas ailleurs.
+Not elsewhere.
 
-Toute duplication constitue une violation.
+Any duplication constitutes a violation.
 
 ---
 
 # Reconstruction
 
-Si tous les fichiers sont perdus :
+If all files are lost:
 
-Un LLM doit pouvoir reconstruire FounderHQ à partir de cette description.
+An LLM must be able to reconstruct FounderHQ from this description.
 
-Les éléments obligatoires à reconstruire sont :
+The mandatory elements to reconstruct are:
 
 * Concepts,
 * Protocols,
@@ -494,23 +494,23 @@ Les éléments obligatoires à reconstruire sont :
 * Runtime Interface,
 * Archive.
 
-Les noms exacts des fichiers peuvent changer.
+Exact file names may change.
 
-La structure exacte des dossiers peut changer.
+Exact folder structure may change.
 
-Les concepts ne doivent jamais changer.
+The concepts must never change.
 
 ---
 
-# Critère de réussite
+# Success Criterion
 
-FounderHQ est réussi lorsque :
+FounderHQ is successful when:
 
-* les connaissances s'accumulent,
-* les décisions s'améliorent,
-* les playbooks émergent,
-* les projets avancent,
-* les résultats sont traçables,
-* le système survit au remplacement du LLM.
+* knowledge accumulates,
+* decisions improve,
+* playbooks emerge,
+* projects advance,
+* results are traceable,
+* the system survives the replacement of the LLM.
 
-Le système doit devenir plus intelligent chaque année même si tous les outils changent.
+The system must become more intelligent every year even if all tools change.

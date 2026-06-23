@@ -5,7 +5,7 @@
 KORA LAB — Building the Language Infrastructure Layer for Artificial Intelligence. Lomé, Togo. Founder: Kheir Lissi. Pre-Seed Round $100k–250k.
 
 ### Slide 2: The Problem
-Most of the world's languages are invisible to AI. Africa alone: 2,000+ languages, most lack speech datasets, ASR, TSS, language infrastructure. Entire communities risk exclusion from the AI economy.
+Most of the world's languages are invisible to AI. Africa alone: 2,000+ languages. Frontier models (2025-2026) cover only 42 — **2%**. Most lack speech datasets, ASR, TSS, language infrastructure. Cross-lingual transfer fails for undocumented oral languages. Entire communities risk exclusion from the AI economy.
 
 ### Slide 3: Why This Matters
 Language is infrastructure. If a language cannot be understood by machines, knowledge remains inaccessible, cultural heritage remains unstructured, digital inclusion remains limited, AI adoption remains restricted.

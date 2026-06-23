@@ -12,6 +12,8 @@ Notre conviction est que le principal obstacle à l'inclusion des langues africa
 
 **The Core Problem:** L'IA moderne repose sur une hypothèse implicite: les langues les mieux représentées sur Internet reçoivent la majorité des investissements. L'anglais, le chinois, l'espagnol, le français sont extrêmement représentés. L'éwé, le kabyè, le wolof, le bambara, et des centaines d'autres restent largement sous-représentés.
 
+**Verified Fact (2025-2026):** Les meilleurs modèles frontière (GPT, Claude, Gemini, Whisper) ne couvrent que 42 langues africaines sur 2 000+ — 2%. Le fine-tuning spécifique améliore les performances de 54% sur une seule langue. Le cross-lingual transfer est très limité pour les langues orales peu documentées. L'AGI, si elle arrive un jour, n'est pas imminente. La fenêtre de KORA est longue.
+
 **Strategic Observation:** Le problème n'est pas seulement africain. Il est mondial. Mais l'Afrique représente le plus grand ensemble stratégique de langues sous-représentées.
 
 **Strategic Opportunity:** Si KORA parvient à résoudre ce problème pour les langues africaines, les méthodes pourront ensuite être appliquées aux autres langues sous-représentées du monde. La mission reste africaine. L'impact devient mondial.

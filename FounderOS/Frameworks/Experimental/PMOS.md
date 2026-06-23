@@ -1,13 +1,13 @@
 # PMOS — Project Management Operating System
 
-## Statut
-EXPERIMENTAL — en quarantaine jusqu'a preuve de valeur unique.
+## Status
+EXPERIMENTAL — in quarantine until proven uniquely valuable.
 
-## Raison de la quarantaine
-PROJECT, WORKFLOW et PLAYBOOK existent deja. PMOS risque de dupliquer.
+## Reason for Quarantine
+PROJECT, WORKFLOW and PLAYBOOK already exist. PMOS risks duplicating.
 
-## Test de validation
-Si dans 30 jours d'usage reel, un besoin de gestion de projet non couvert par les concepts existants emerge, PMOS sera promu.
+## Validation Test
+If within 30 days of real use, a project management need not covered by existing concepts emerges, PMOS will be promoted.
 
 ## Source archive
 ARCHIVE/v1/legacy_frameworks/PMOS v2.md

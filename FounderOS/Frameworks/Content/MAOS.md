@@ -1,29 +1,29 @@
 # MAOS — Marketing Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Campagne marketing, plan de contenu, acquisition audience, positionnement de marque.
+Marketing campaign, content plan, audience acquisition, brand positioning.
 
-## Questions obligatoires
+## Required Questions
 
-1. Quel est l'objectif de cette campagne ? (awareness / acquisition / conversion / retention)
-2. Quel canal atteint le mieux cette cible ?
-3. Quel est le message unique ? En une phrase.
-4. Comment mesurons-nous le succes ?
-5. Quel est le cout par acquisition attendu ?
-6. Le message est-il coherent sur tous les canaux ?
+1. What is the goal of this campaign? (awareness / acquisition / conversion / retention)
+2. Which channel best reaches this target?
+3. What is the unique message? In one sentence.
+4. How do we measure success?
+5. What is the expected cost per acquisition?
+6. Is the message consistent across all channels?
 
-## Principes
+## Principles
 
-- Distribution et creation sont egalement importantes.
-- Un canal maîtrise > 5 canaux survoles.
-- Le message doit changer selon l'etape du funnel (froid → chaud).
-- L'authenticite > la production polie pour les audiences locales.
-- Tester un canal a la fois. Ne pas diviser l'attention.
+- Distribution and creation are equally important.
+- One channel mastered > 5 channels skimmed.
+- The message must change according to the funnel stage (cold → warm).
+- Authenticity > polished production for local audiences.
+- Test one channel at a time. Do not divide attention.
 
 ## Antipatterns
 
-- Lancer sur 5 canaux en meme temps sans test
-- Message identique pour audience froide et chaude
-- Optimiser pour les vanity metrics (likes, vues) sans mesurer la conversion
-- Changer de strategie avant d'avoir collecte assez de donnees
+- Launching on 5 channels at the same time without testing
+- Same message for cold and warm audiences
+- Optimizing for vanity metrics (likes, views) without measuring conversion
+- Changing strategy before collecting enough data

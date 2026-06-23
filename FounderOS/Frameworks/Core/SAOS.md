@@ -1,43 +1,43 @@
 # SAOS — Systems Analysis Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Conception, audit ou debug d'un systeme (architecture, projet, workflow, organisation).
+Design, audit, or debug of a system (architecture, project, workflow, organization).
 
-## Questions obligatoires
+## Required Questions
 
-1. Quels sont les composants du systeme ?
-2. Quelles sont les dependances entre composants ?
-3. Quelle est la frontiere de chaque composant ?
-4. Quelle est la verite que chaque composant possede ?
-5. Quelle verite chaque composant ne possede-t-il PAS ?
-6. Quel est le bottleneck unique ?
-7. Qu'est-ce qui casse si on retire X ?
-8. Quelle est la source unique de verite pour chaque donnee ?
-9. Le composant peut-il etre reconstruit si perdu ?
-10. Quel est le cout de sa suppression ?
+1. What are the components of the system?
+2. What are the dependencies between components?
+3. What is the boundary of each component?
+4. What truth does each component own?
+5. What truth does each component NOT own?
+6. What is the single bottleneck?
+7. What breaks if you remove X?
+8. What is the single source of truth for each data?
+9. Can the component be rebuilt if lost?
+10. What is the cost of removing it?
 
-## Principes
+## Principles
 
-- Un systeme sain a des frontieres claires entre ses composants.
-- Chaque composant possede UNE verite et UNE seule.
-- Le bottleneck est la contrainte unique qui limite tout le systeme.
-- Un composant qui peut etre reconstruit facilement a moins de valeur qu'un composant qui ne peut pas l'etre.
-- La separation des responsabilites est le premier rempart contre l'entropie.
+- A healthy system has clear boundaries between its components.
+- Each component owns ONE truth and ONE only.
+- The bottleneck is the single constraint that limits the entire system.
+- A component that can be easily rebuilt has less value than one that cannot.
+- Separation of responsibilities is the first defense against entropy.
 
-## Etapes d'analyse
+## Analysis Steps
 
-1. Cartographier tous les composants et leurs frontieres
-2. Identifier les verites que chaque composant possede
-3. Tracer les dependances entre composants
-4. Trouver le bottleneck (le composant qui limite le debit du systeme)
-5. Tester la resilience : supprimer chaque composant mentalement et evaluer l'impact
-6. Verifier la Regle 0 : chaque verite a exactement un proprietaire
+1. Map all components and their boundaries
+2. Identify the truths each component owns
+3. Trace dependencies between components
+4. Find the bottleneck (the component that limits system throughput)
+5. Test resilience: mentally remove each component and evaluate the impact
+6. Verify Rule 0: each truth has exactly one owner
 
 ## Anti-patterns
 
-- Composants qui possedent la meme verite → duplication, contradiction
-- Composants sans frontiere claire → incoherence
-- Composants sans verite propre → morte, inutile
-- Systeme sans bottleneck identifie → priorisation impossible
-- Ajouter des composants sans verifier les frontieres avec les existants
+- Components that own the same truth → duplication, contradiction
+- Components without clear boundaries → inconsistency
+- Components without their own truth → dead, useless
+- System without an identified bottleneck → impossible to prioritize
+- Adding components without checking boundaries against existing ones

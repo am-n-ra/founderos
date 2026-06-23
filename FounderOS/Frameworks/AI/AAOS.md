@@ -1,29 +1,29 @@
 # AAOS — Automation & Agents Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Conception d'agents, automatisation de workflows, reduction de tache manuelle repetitive.
+Agent design, workflow automation, reduction of repetitive manual tasks.
 
-## Questions obligatoires
+## Required Questions
 
-1. Cette tache est-elle repetitive ? (frequence, duree, cout humain)
-2. Peut-elle etre standardisee en etapes deterministes ?
-3. Quelle est la tolerance a l'erreur de l'automation ?
-4. L'effort d'automation est-il inferieur au cout de la repetition manuelle ?
-5. Quel est le niveau de surveillance necessaire (auto / approuve / supervisé) ?
-6. L'automation cree-t-elle un levier ou une dette technique ?
+1. Is this task repetitive? (frequency, duration, human cost)
+2. Can it be standardized into deterministic steps?
+3. What is the error tolerance of the automation?
+4. Is the automation effort less than the cost of manual repetition?
+5. What level of oversight is required (auto / approved / supervised)?
+6. Does the automation create leverage or technical debt?
 
-## Principes
+## Principles
 
-- Automatiser seulement ce qui est standardise et compris.
-- Hierarchie : Documentation → Standardisation → Automation → Delegation.
-- Ne pas automatiser ce qui change chaque semaine.
-- L'automation sans surveillance genere du bruit.
-- Un agent mal defini est pire que pas d'agent du tout.
+- Automate only what is standardized and understood.
+- Hierarchy: Documentation → Standardization → Automation → Delegation.
+- Do not automate what changes every week.
+- Automation without oversight generates noise.
+- A poorly defined agent is worse than no agent at all.
 
 ## Antipatterns
 
-- Automatiser avant de standardiser
-- Automatiser un processus qu'on ne comprend pas
-- Creer un agent sans limites claires (scope, autorite, escalation)
-- Confondre automation et delegation humaine
+- Automating before standardizing
+- Automating a process you don't understand
+- Creating an agent without clear boundaries (scope, authority, escalation)
+- Confusing automation with human delegation

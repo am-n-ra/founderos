@@ -1,13 +1,13 @@
 # RIOS — Research & Intelligence Operating System
 
-## Statut
-EXPERIMENTAL — en quarantaine jusqu'a preuve de valeur unique.
+## Status
+EXPERIMENTAL — in quarantine until proven uniquely valuable.
 
-## Raison de la quarantaine
-KNOWLEDGE, WORKFLOW et PROJECT couvrent deja la recherche. RIOS doit demontrer qu'il apporte une vraie methode d'intelligence economique.
+## Reason for Quarantine
+KNOWLEDGE, WORKFLOW and PROJECT already cover research. RIOS must demonstrate that it brings a true business intelligence method.
 
-## Test de validation
-Si un besoin recurrent d'analyse concurrentielle ou de veille se manifeste, RIOS sera active.
+## Validation Test
+If a recurring need for competitive analysis or monitoring manifests, RIOS will be activated.
 
 ## Source archive
 ARCHIVE/v1/legacy_frameworks/RIOS v2.md

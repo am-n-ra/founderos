@@ -528,7 +528,7 @@ def main():
     elif args.command == "push":
         result = cmd_push(env)
     elif args.command == "merge":
-        result = cmd_merge(env)
+        result = cmd_merge()
     elif args.command == "create-public-gist":
         result = cmd_create_public_gist(env)
     elif args.command == "create-private-gist":

@@ -26,7 +26,7 @@ Ouvrir OpenCode dans FounderHQ/FounderOS/ → le boot sequence s'execute automat
 - `now` → action prioritaire
 
 ## Documentation principale
-- `FOUNDERHQ_DESCRIPTION.md` → description fondatrice de FounderHQ
+- `FOUNDERHQ_DESCRIPTION.md` → foundational description of FounderHQ
 
 ## Produits Pipeline
 - Pillule (2,900 FCFA) — fournisseur accepte

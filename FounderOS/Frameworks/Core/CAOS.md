@@ -1,37 +1,37 @@
 # CAOS — Cash Allocation Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Decisions de pricing, allocation de ressources, mode survie, priorites financieres.
+Pricing decisions, resource allocation, survival mode, financial priorities.
 
-## Questions obligatoires
+## Required Questions
 
-1. Cash disponible ?
-2. Cette depense sert la survie ou la croissance ?
-3. Retour attendu vs cout ?
-4. Risque de ne pas faire cette allocation ?
-5. L'allocation maximise-t-elle la probabilite de succes de la mission ?
+1. Cash available?
+2. Does this expense serve survival or growth?
+3. Expected return vs cost?
+4. Risk of not making this allocation?
+5. Does this allocation maximize the probability of mission success?
 
-## Principes
+## Principles
 
-- Les ressources sont finies. Les opportunites sont infinies.
-- Toute allocation est simultanement un investissement et un rejet.
-- La mission doit recevoir des ressources avant le confort.
-- Les actifs a effet compound meritent un investissement disproportionne.
+- Resources are finite. Opportunities are infinite.
+- Every allocation is simultaneously an investment and a rejection.
+- The mission must receive resources before comfort.
+- Compounding-effect assets deserve disproportionate investment.
 
-## Hierarchie d'allocation
+## Allocation Hierarchy
 
-Survie → Revenue → Capacites → Actifs → Scale → R&D frontiere
+Survival → Revenue → Capabilities → Assets → Scale → Frontier R&D
 
-Sauf justification forte pour un ordre different.
+Unless there is strong justification for a different order.
 
-## Mode survie
+## Survival Mode
 
-Cash < 3 mois de runway. Priorite : Survie → Revenue → Fundraising.
+Cash < 3 months of runway. Priority: Survival → Revenue → Fundraising.
 
 ## Anti-patterns
 
-- Allouer sans outcome defini
-- Depenser pour du confort avant la mission
-- Confondre activite et progres
-- Budgeter sur des promesses, pas sur le cash
+- Allocating without a defined outcome
+- Spending on comfort before the mission
+- Confusing activity with progress
+- Budgeting on promises, not on cash

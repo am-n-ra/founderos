@@ -52,7 +52,7 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-21 20:56 — Lomé (UTC+0)
+**Date:** 2026-06-23 06:33 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
@@ -89,6 +89,6 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 **Session Objective:** Boot — reprendre opérations.
 
-**Last Decision:** PRG Step 6 ajouté : SURVIVAL Auto-Drive verrouillé.
+**Last Decision:** Architecture 2 Gists déployée. Public Gist fhq-bootstrap créé. Token security rules ajoutées.
 
-**Last Updated:** 2026-06-21 20:56 — Lomé UTC+0
+**Last Updated:** 2026-06-23 07:48 — Lomé UTC+0

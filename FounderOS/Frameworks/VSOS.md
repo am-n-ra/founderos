@@ -1,46 +1,46 @@
 # FounderOS V4 — VSOS
 ## Venture Structuring Operating System
 
-### Transformer toute idée, projet ou opportunité en système exécutable
+### Transform any idea, project or opportunity into an executable system
 
 ---
 
-## 1. Qu'est-ce que VSOS ?
+## 1. What is VSOS?
 
-VSOS est la méthodologie de transformation stratégique de FounderHQ. Elle prend une entrée floue (idée, projet, opportunité, problème) et produit une sortie structurée : une cascade complète de documents, de la Vision au système d'exécution.
+VSOS is FounderHQ's strategic transformation methodology. It takes a fuzzy input (idea, project, opportunity, problem) and produces a structured output: a complete document cascade, from Vision to execution system.
 
-VSOS n'est pas un module quotidien. C'est une **lentille** chargée quand tu dois créer un nouveau projet, restructurer un projet existant, préparer une levée de fonds, ou transformer une vision en exécution.
+VSOS is not a daily module. It is a **lens** loaded when you need to create a new project, restructure an existing project, prepare a fundraising round, or transform a vision into execution.
 
-VSOS a déjà été utilisé sur KORA et Omni (sans être nommé). C'est maintenant un framework explicite.
+VSOS has already been used on KORA and Omni (without being named). It is now an explicit framework.
 
 ---
 
-## 2. Quand utiliser VSOS
+## 2. When to Use VSOS
 
 | Situation | Action |
 |-----------|--------|
-| Nouvelle idée / nouveau projet | VSOS complet (Phase 1 → 3) |
-| Projet existant sans structure | VSOS Audit + Phase 2 → 3 |
-| Restructuration / reframe | VSOS Audit + Mission Extraction |
-| Préparation levée de fonds | VSOS Phase 3 (Capital Roadmap + BP) |
-| Blocage stratégique | VSOS Gap Analysis |
+| New idea / new project | Full VSOS (Phase 1 → 3) |
+| Existing project without structure | VSOS Audit + Phase 2 → 3 |
+| Restructuring / reframe | VSOS Audit + Mission Extraction |
+| Fundraising preparation | VSOS Phase 3 (Capital Roadmap + BP) |
+| Strategic blockage | VSOS Gap Analysis |
 
-**Ne pas utiliser :** pour les opérations quotidiennes (DAOS), les décisions rapides (DECISION_ENGINE), le contenu (CEOS).
+**Do not use:** for daily operations (DAOS), quick decisions (DECISION_ENGINE), content (CEOS).
 
 ---
 
 ## 3. Architecture VSOS
 
-### Entrée
+### Input
 ```
-Idée
-Projet existant
-Entreprise
-Opportunité
-Problème
+Idea
+Existing project
+Company
+Opportunity
+Problem
 ```
 
-### Les 3 Phases
+### The 3 Phases
 
 ```
 PHASE 1: DIAGNOSTIC
@@ -62,7 +62,7 @@ PHASE 3: EXECUTION FRAMEWORK
 └── Execution System (KPIs, milestones)
 ```
 
-### Sortie
+### Output
 ```
 Data Room complète dans projects/<PROJECT>/
 ├── 01_VISION.md
@@ -82,60 +82,60 @@ Data Room complète dans projects/<PROJECT>/
 
 ## 4. Phase 1 — Diagnostic
 
-À faire avant toute cascade stratégique. Comprendre où on est avant de décider où on va.
+To do before any strategic cascade. Understand where you are before deciding where you're going.
 
 ### 4.1 Reality Assessment
 
-Questions à回答 :
-- Quel est l'état actuel du projet / de l'idée ?
-- Qu'est-ce qui existe déjà ? (MVP, équipe, traction, revenus, docs)
-- Quelles sont les contraintes ? (cash, temps, compétences, marché)
-- Quel est le problème fondamental résolu ?
+Questions to answer:
+- What is the current state of the project / idea?
+- What already exists? (MVP, team, traction, revenue, docs)
+- What are the constraints? (cash, time, skills, market)
+- What is the fundamental problem being solved?
 
-**Output :** Une section dans CURRENT_STATE.md ou un memo diagnostic.
+**Output:** A section in CURRENT_STATE.md or a diagnostic memo.
 
 ### 4.2 Mission Extraction
 
-Extraire la mission du projet, qu'elle soit explicite ou implicite :
-- Pourquoi ce projet existe ?
-- Pour qui ?
-- Quel est le changement désiré ?
-- Dans 5-10-20 ans, à quoi ressemble le succès ?
+Extract the project's mission, whether explicit or implicit:
+- Why does this project exist?
+- For whom?
+- What is the desired change?
+- In 5-10-20 years, what does success look like?
 
-**Output :** Une ébauche de mission (sera raffinée en Phase 2).
+**Output:** A mission draft (will be refined in Phase 2).
 
 ### 4.3 Gap Analysis
 
-Identifier l'écart entre l'état actuel et la mission :
-- Qu'est-ce qui manque ? (données, équipe, financement, traction)
-- Quels sont les blocages ?
-- Quel est le risque principal ?
-- Quelle est la prochaine action la plus importante ?
+Identify the gap between the current state and the mission:
+- What is missing? (data, team, funding, traction)
+- What are the blockages?
+- What is the main risk?
+- What is the next most important action?
 
-**Output :** Gap list + priorisation.
+**Output:** Gap list + prioritization.
 
-**Modules associés :** RIOS.md (recherche) peut être invoqué pour creuser les gaps.
+**Associated modules:** RIOS.md (research) can be invoked to dig into the gaps.
 
 ---
 
 ## 5. Phase 2 — Strategic Cascade
 
-Construire les 5 documents fondamentaux qui forment l'armature stratégique du projet.
+Build the 5 fundamental documents that form the strategic framework of the project.
 
 ### 5.1 Vision (projects/X/01_VISION.md)
 
-**Horizon :** 10-25 ans. Indépendante des produits, des technologies, des financements.
+**Horizon:** 10-25 years. Independent of products, technologies, funding.
 
-**Éléments :**
-- Vision Statement (1 paragraphe, le futur désiré)
-- Le futur que nous voulons créer (pourquoi le statu quo est inacceptable)
-- Notre conviction fondamentale (pourquoi notre approche est la bonne)
-- Notre vision de l'infrastructure (ce qu'on construit)
-- Notre vision de l'impact sociétal (éducation, santé, économie, culture)
-- Horizon de réussite (quand saurons-nous qu'on a réussi ?)
-- OODA Critique (pourquoi cette vision survivra aux changements technologiques)
+**Elements:**
+- Vision Statement (1 paragraph, the desired future)
+- The future we want to create (why the status quo is unacceptable)
+- Our core conviction (why our approach is the right one)
+- Our vision of infrastructure (what we are building)
+- Our vision of societal impact (education, health, economy, culture)
+- Success horizon (when will we know we have succeeded?)
+- Critical OODA (why this vision will survive technological changes)
 
-**Template section OODA Critique :**
+**Template section Critical OODA:**
 ```
 Cette vision est volontairement indépendante des [technologies/marchés] actuels.
 Elle reste valable même si [X, Y, Z] disparaissent.
@@ -144,159 +144,159 @@ Une bonne vision doit survivre à plusieurs générations technologiques.
 
 ### 5.2 Mission (projects/X/02_MISSION.md)
 
-**Ce que l'organisation fait chaque jour.**
+**What the organization does every day.**
 
-**Éléments :**
-- Déclaration de mission (1 phrase)
-- Pourquoi nous existons
-- Ce que nous faisons (5 capacités fondamentales)
-- Ce que nous NE SOMMES PAS (pour éviter le scope creep)
-- Nos principes d'exécution (5 max)
-- Comment nous mesurons le succès
-- Priorité actuelle
+**Elements:**
+- Mission statement (1 sentence)
+- Why we exist
+- What we do (5 core capabilities)
+- What we ARE NOT (to avoid scope creep)
+- Our execution principles (5 max)
+- How we measure success
+- Current priority
 
 ### 5.3 Theory of Change (projects/X/03_THEORY_OF_CHANGE.md)
 
-**La chaîne logique : comment la vision devient réalité.**
+**The logical chain: how vision becomes reality.**
 
-**Éléments :**
-- Les déficits structuraux (pourquoi le problème existe)
-- Hypothèse centrale (SI... ALORS...)
-- Les relations de causalité (chaîne : pas de X → pas de Y)
-- La chaîne de transformation (étape par étape)
-- Les résultats attendus (court, moyen, long terme)
-- L'hypothèse fondamentale (le vrai pari qu'on fait)
+**Elements:**
+- Structural deficits (why the problem exists)
+- Central hypothesis (IF... THEN...)
+- Causal relationships (chain: no X → no Y)
+- The transformation chain (step by step)
+- Expected results (short, medium, long term)
+- The fundamental hypothesis (the real bet we're making)
 
 ### 5.4 Strategic Assets Map (projects/X/04_STRATEGIC_ASSETS_MAP.md)
 
-**Ce qu'on accumule, pourquoi c'est difficile à reproduire.**
+**What we accumulate, why it's hard to replicate.**
 
-**Éléments :**
-- Liste des actifs par difficulté de réplication
-- Pour chaque actif : ce qu'il est, pourquoi il est dur à copier
-- Tableau : Actif / Difficulté / Temps / Avantage Concurrentiel
-- L'actif le plus important (le "château fort")
+**Elements:**
+- List of assets by replication difficulty
+- For each asset: what it is, why it's hard to copy
+- Table: Asset / Difficulty / Time / Competitive Advantage
+- The most important asset (the "castle")
 
 ### 5.5 Master Plan (projects/X/05_MASTER_PLAN.md)
 
-**Le cadre de développement global.**
+**The overall development framework.**
 
-**Éléments :**
-- Résumé exécutif
-- Thèse stratégique
-- Les 6 (ou X) couches stratégiques
-- Chronologie d'exécution par phase
-- Principes stratégiques (5 max)
+**Elements:**
+- Executive summary
+- Strategic thesis
+- The 6 (or X) strategic layers
+- Execution timeline by phase
+- Strategic principles (5 max)
 
 ---
 
 ## 6. Phase 3 — Execution Framework
 
-Transformer la stratégie en plans concrets, finançables et mesurables.
+Transform strategy into concrete, fundable, and measurable plans.
 
 ### 6.1 Strategic Roadmap (projects/X/06_STRATEGIC_ROADMAP.md)
 
-**Quand on fait quoi.**
+**When we do what.**
 
-**Éléments :**
-- North Star (la direction)
-- Phases avec pour chacune : période, objectif, livrables, budget
-- Jalons clés avec dates cibles et indicateurs
+**Elements:**
+- North Star (the direction)
+- Phases with: period, objective, deliverables, budget
+- Key milestones with target dates and indicators
 
 ### 6.2 Capital Roadmap (projects/X/07_CAPITAL_ROADMAP.md)
 
-**Comment on finance chaque phase.**
+**How we finance each phase.**
 
-**Éléments :**
-- Thèse de capital
-- Architecture de financement (5 couches : fondateur, non-dilutif, partenariats, revenus, equity)
-- Utilisation des fonds (tableau détaillé)
-- Règle de financement (ne pas lever tant que le palier précédent n'est pas prouvé)
+**Elements:**
+- Capital thesis
+- Funding architecture (5 layers: founder, non-dilutive, partnerships, revenue, equity)
+- Use of funds (detailed table)
+- Funding rule (don't raise until the previous milestone is proven)
 
 ### 6.3 Business Plan (projects/X/09_BUSINESS_PLAN.md)
 
-**Phase 1 : le plan pour le premier palier.**
+**Phase 1: the plan for the first milestone.**
 
-**Éléments :**
+**Elements:**
 - Executive Summary (1 page)
-- Le problème (détaillé)
-- L'opportunité
-- La solution
-- Les objectifs Phase 1
-- Le business model
-- La roadmap Phase 1
+- The problem (detailed)
+- The opportunity
+- The solution
+- Phase 1 objectives
+- The business model
+- Phase 1 roadmap
 - Use of Funds
-- Risques et mitigations
-- Demande d'investissement
+- Risks and mitigations
+- Investment request
 
 ### 6.4 Execution System (projects/X/annexes/A3_KPIS_MILESTONES.md)
 
-**Comment on mesure et on suit.**
+**How we measure and track.**
 
-**Éléments :**
-- Jalons avec mois cibles
-- KPIs avec objectifs chiffrés
-- Fréquence de revue
-- Qui est responsable
+**Elements:**
+- Milestones with target months
+- KPIs with quantified targets
+- Review frequency
+- Who is responsible
 
 ---
 
-## 7. VSOS dans l'Écosystème FounderHQ
+## 7. VSOS in the FounderHQ Ecosystem
 
-### Modules invoqués pendant VSOS
+### Modules invoked during VSOS
 
-| Module | Rôle pendant VSOS |
+| Module | Role during VSOS |
 |--------|------------------|
-| **VEAOS** | Raffinement vision/mission, scénarios stratégiques |
-| **RIOS** | Recherche de marché, concurrents, gaps |
-| **FAOS** | Stratégie fundraising (Phase 3) |
-| **DIOS** | Stratégie de distribution (après VSOS) |
-| **CEOS** | Stratégie de contenu (après VSOS) |
+| **VEAOS** | Vision/mission refinement, strategic scenarios |
+| **RIOS** | Market research, competitors, gaps |
+| **FAOS** | Fundraising strategy (Phase 3) |
+| **DIOS** | Distribution strategy (after VSOS) |
+| **CEOS** | Content strategy (after VSOS) |
 
 ### Post-VSOS
 
-Une fois VSOS terminé, le projet est enregistré via PROJECT_REGISTRATION_PROTOCOL.md :
-1. Créer `concepts/<PROJECT>.md`
-2. Ajouter à `State/CURRENT_STATE.md`
-3. Ajouter à `State/PRIORITY_MATRIX.md`
-4. Ajouter les relations dans les concepts pertinents
+Once VSOS is completed, the project is registered via PROJECT_REGISTRATION_PROTOCOL.md:
+1. Create `concepts/<PROJECT>.md`
+2. Add to `State/CURRENT_STATE.md`
+3. Add to `State/PRIORITY_MATRIX.md`
+4. Add the relationships in the relevant concepts
 
 ---
 
-## 8. Cas d'Usage (déjà exécutés)
+## 8. Use Cases (already executed)
 
 ### KORA — AI Lab (African languages)
-- Entrée : Idée d'infrastructure IA pour langues africaines
-- VSOS : Complet (Phase 1 → 3)
-- Sortie : 20 fichiers dans `projects/KORA/`
-- Statut : Pre-Seed ready
+- Input: AI infrastructure idea for African languages
+- VSOS: Complete (Phase 1 → 3)
+- Output: 20 files in `projects/KORA/`
+- Status: Pre-Seed ready
 
-### OMNI — Index du commerce de proximité
-- Entrée : MVP existant + pitch deck
-- VSOS : Phase 2 → 3 (Diagnostic sauté car projet déjà avancé)
-- Sortie : 20 fichiers dans `projects/Omni/`
-- Statut : Dossier Djanta Tech Hub prêt
+### OMNI — Local commerce index
+- Input: Existing MVP + pitch deck
+- VSOS: Phase 2 → 3 (Diagnostic skipped because project was already advanced)
+- Output: 20 files in `projects/Omni/`
+- Status: Hub outreach file ready
 
 ### Financial Literacy Program
-- Entrée : Cours générique à personnaliser
-- VSOS : Audit + Reframe (adapter au contexte FounderHQ)
-- Sortie : 28 concepts réécrits avec exemples réels
-- Statut : 2/28 complétés
+- Input: Generic course to customize
+- VSOS: Audit + Reframe (adapt to FounderHQ context)
+- Output: 28 concepts rewritten with real examples
+- Status: 2/28 completed
 
 ---
 
-## 9. Template : Quick VSOS (1 heure)
+## 9. Template: Quick VSOS (1 hour)
 
-Pour les projets rapides (ex: Pest Repeller, Solar Kit, chaîne TikTok) :
+For quick projects (e.g., Pest Repeller, Solar Kit, TikTok channel):
 
 ```
-1. Reality Assessment (5 min) — Où j'en suis ?
-2. Mission (5 min) — Pourquoi ce projet existe ?
-3. Assets (5 min) — Qu'est-ce que j'ai déjà ?
-4. Roadmap (10 min) — Les 3 prochaines actions
-5. BP 1-pager (15 min) — Modèle économique simple
-6. KPIs (5 min) — Comment je sais si ça marche ?
-7. Enregistrer (15 min) — Créer concept + entrée PRIORITY_MATRIX
+1. Reality Assessment (5 min) — Where am I?
+2. Mission (5 min) — Why does this project exist?
+3. Assets (5 min) — What do I already have?
+4. Roadmap (10 min) — The next 3 actions
+5. BP 1-pager (15 min) — Simple business model
+6. KPIs (5 min) — How do I know if it works?
+7. Register (15 min) — Create concept + PRIORITY_MATRIX entry
 ```
 
 ---

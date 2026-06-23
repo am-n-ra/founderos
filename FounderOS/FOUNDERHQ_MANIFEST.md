@@ -209,7 +209,7 @@ FounderHQ is structured in 4 frontiers, 4 levels of survivability:
 ```
 Connaitre  →  Concepts     (quoi)
 Operer     →  Protocols    (comment)
-Reflechir  →  Frameworks   (avec quelle lentille)
+Reflechir  →  Frameworks   (with which lens)
 Executer   →  Projects + Workflows + State  (maintenant)
 ```
 

@@ -1,4 +1,4 @@
-# VAOS — MISSION_ENGINE
+# VAOS -- MISSION_ENGINE
 
 ## Mission
 
@@ -36,4 +36,4 @@ A mission passes if:
 | OS Version | V4 |
 | Last Verified | 2026-06-21 |
 | Owner | VAOS |
-| Dependencies | VISION_ENGINE.md, THEORY_OF_CHANGE.md |
+| Dependencies | VISION_ENGINE.md, THEORY_OF_CHANGE.md |

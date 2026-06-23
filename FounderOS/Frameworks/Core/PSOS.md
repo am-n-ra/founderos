@@ -1,31 +1,31 @@
 # PSOS — Product Strategy Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Strategie produit, validation d'offre, positionnement, priorisation de features.
+Product strategy, offer validation, positioning, feature prioritization.
 
-## Questions obligatoires
+## Required Questions
 
-1. Quel probleme ce produit resout-il ?
-2. Pourquoi ce probleme maintenant ?
-3. Qui a ce probleme et combien sont-ils prets a payer ?
-4. Comment saurons-nous que le produit est valide ?
-5. Quelle est la proposition de valeur unique ?
+1. What problem does this product solve?
+2. Why this problem now?
+3. Who has this problem and how many are willing to pay?
+4. How will we know the product is valid?
+5. What is the unique value proposition?
 
-## Principes
+## Principles
 
-- Les produits peuvent changer. Les marches peuvent changer. La mission reste.
-- La realite a priorite sur les croyances, les plans et les recits.
-- Preferer les actions qui creent des actifs a effet compound.
-- Chercher le levier avant l'effort : automation > systemes > code > media > capital > equipe > travail personnel.
+- Products can change. Markets can change. The mission remains.
+- Reality takes priority over beliefs, plans, and narratives.
+- Prefer actions that create compounding assets.
+- Seek leverage before effort: automation > systems > code > media > capital > team > personal work.
 
 ## Validation
 
-Apprendre en executant. Ne pas attendre de devenir expert avant de construire.
+Learn by executing. Do not wait to become an expert before building.
 
 ## Anti-patterns
 
-- S'attacher a une implementation specifique (la mission est permanente, pas le produit)
-- Accumuler des connaissances sans application
-- Complexite inutile pour elegance
-- Attendre la perfection avant de lancer
+- Attaching to a specific implementation (the mission is permanent, not the product)
+- Accumulating knowledge without application
+- Unnecessary complexity for elegance
+- Waiting for perfection before launching

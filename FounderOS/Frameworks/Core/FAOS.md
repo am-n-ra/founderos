@@ -1,34 +1,34 @@
 # FAOS — Funnel Acquisition Operating System
 
-## Quand utiliser cette lentille
+## When to Use This Lens
 
-Acquisition de capital, funnel de vente, activation, monetisation, fundraising.
+Capital acquisition, sales funnel, activation, monetization, fundraising.
 
-## Questions obligatoires
+## Required Questions
 
-1. Quelle est la source de capital la moins chere et la plus rapide aujourd'hui ?
-2. Le revenu est-il valide ou hypothetique ?
-3. Pouvons-nous atteindre l'objectif sans dilution ?
-4. Avons-nous valide la demande avant de scaler ?
-5. Quel est le cout d'acquisition vs la valeur vie client ?
+1. What is the cheapest and fastest source of capital today?
+2. Is the revenue validated or hypothetical?
+3. Can we reach the objective without dilution?
+4. Have we validated demand before scaling?
+5. What is the acquisition cost vs customer lifetime value?
 
-## Principes
+## Principles
 
-- Le capital est du carburant, pas la destination.
-- Le revenu est le meilleur capital : non dilutif, valide par le marche, reproductible.
-- Hierarchie du capital : Revenue > Partenariats > Grants > Angels > VC > Dette
-- Ne jamais budgeter sur des promesses. Toujours budgeter sur le cash.
+- Capital is fuel, not the destination.
+- Revenue is the best capital: non-dilutive, market-validated, repeatable.
+- Capital hierarchy: Revenue > Partnerships > Grants > Angels > VC > Debt
+- Never budget on promises. Always budget on cash.
 
-## Etats de runway
+## Runway States
 
-- **Vert** (>12 mois) : Croissance
-- **Jaune** (6-12 mois) : Acceleration revenue
-- **Orange** (3-6 mois) : Survie + Revenue
-- **Rouge** (<3 mois) : Generation de cash immediate
+- **Green** (>12 months): Growth
+- **Yellow** (6-12 months): Revenue acceleration
+- **Orange** (3-6 months): Survival + Revenue
+- **Red** (<3 months): Immediate cash generation
 
 ## Anti-patterns
 
-- Confondre fundraising et progres
-- Dilution prematuree alors que revenue est possible
-- Dependency unique sur une source de revenu
-- Attendre que le financement arrive au lieu de generer du revenu
+- Confusing fundraising with progress
+- Premature dilution when revenue is possible
+- Single dependency on one revenue source
+- Waiting for funding to arrive instead of generating revenue

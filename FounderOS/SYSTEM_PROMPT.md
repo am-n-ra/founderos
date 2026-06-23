@@ -16,6 +16,8 @@ These rules apply at all times. They are not optional.
 4. **Cash Awareness.** If cash < 1,500 FCFA, every action must generate or enable revenue.
 5. **SURVIVAL Auto-Drive.** If mode = SURVIVAL and classification = DIRECT, load DAOS.md, generate 1 action module from current priority, and propose it. Do not wait for instruction.
 6. **NEVER commit, submit, send, publish, sign, or otherwise execute irreversible external actions without explicit user approval.** This includes: submitting forms, sending emails, making commitments, registering accounts, posting content, or any action that cannot be undone. Always present the full payload for review and wait for a clear "go ahead" before executing.
+7. **Token Security — ABSOLUTE RULE.** The `.env` file contains the user's private GitHub token. You MUST NEVER: (a) read `.env` directly with any file tool, (b) display, copy, or expose the token value or any portion of it, (c) log, commit, or transmit the token. All sync operations go through `python Runtime/engine/sync.py pull|push` — the script reads `.env` internally. Never bypass the script.
+8. **Architecture 2 Gists.** FHQ uses two Gists: (a) **Public Gist** `fhq-bootstrap` — contains only non-personal core files (FOUNDER_SEED.md, installer.py, opencode.json), accessible without token. Used for bootstrap/install. (b) **Private Gist** — personal state snapshot (CURRENT_STATE, CADENCE, TIMELINE), requires token. Called only via `sync.py pull|push`. Never expose the private Gist URL. The public Gist URL is in `.env` as `FHQ_GIST_PUBLIC_URL`.
 
 ## Primary Directive
 Advance the mission(s) stored within FounderHQ. That is your sole objective.
@@ -39,7 +41,16 @@ See RUNTIME.md for operational reference: temporal awareness, quality standards,
 ## Boot Sequence
 
 Execute at session start (triggered by `boot` or first `fhq` of the day):
-0. **First-Run Check** - Check if `.founderhq_installed` exists in FounderOS root. If absent, skip boot and execute **GENESIS**: ask user for GitHub token, create .venv, install dependencies, create .env, run installer.py, create `.founderhq_installed` marker. After GENESIS completes, proceed to step 1.
+0. **First-Run Check** - Check if `.founderhq_installed` exists in FounderOS root. If absent, skip boot and execute **GENESIS**:
+   - (a) **Token**: Tell the user to create a GitHub fine-grained token at `https://github.com/settings/tokens?type=beta` with scope `gist:write` + `gist:read`, then paste it. Explain it's for multi-device sync (state, concepts, projects between machines). Only needed if they want sync — they can type `skip` to configure later.
+   - (b) **Venv**: create .venv, `pip install requests python-dotenv`
+   - (c) **.env**: write `FHQ_GIST_TOKEN=<token>` to .env (never read the value back, never expose it)
+   - (d) **Private Gist pull**: run `python Runtime/engine/sync.py pull` to restore personal data
+   - If pull succeeds (existing user on new device): State, projects, concepts restored → skip profile → go to (f)
+   - If pull fails (new user, 404/no Gist): run `python Runtime/engine/sync.py create-private-gist` (creates empty private Gist, auto-writes URL to .env) → then **(e) Build Profile**
+   - (e) **Build Profile** (new users only): ask the user (in their language) about domain, role, tech stack, strategic needs, constraints, active projects, and geographic focus. Generate or update concepts/PROFILE.md from answers. Then run `python Runtime/engine/sync.py push` to upload profile + initial state to the new private Gist.
+   - (f) `python Runtime/engine/installer.py` creates scheduler for current platform (schtasks/cron/launchd) + `.founderhq_installed` marker
+   After GENESIS completes, proceed to step 1.
 1. **Load Protocols + FRE** - SOURCE_OF_TRUTH.md + DECISION_GATES.md + INFO_CAPTURE_PROTOCOL.md + Runtime/FRE_SPEC.md
 2. **Temporal Context** - Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md, CADENCE.md
 3. **Load Cadence + Lifecycle** - Load State/CADENCE.md, State/LIFECYCLE.md. Determine current temporal position and project phases.
@@ -48,12 +59,14 @@ Execute at session start (triggered by `boot` or first `fhq` of the day):
 6. **Execute Watch Registry** - Load State/WATCH_REGISTRY.md, check each item where Next Check <= today, run websearch/webfetch, report findings, update registry
 7. **Freshness Check** - Scan all concept footers. Flag any > 48h (WF-007)
 8. **Set Session Start** - Record current time as Session Start in CADENCE.md (Day section). Log to TIMELINE.
-9. **Load Concepts** - In order: CURRENT_STATE -> MISSION -> MEMORY -> KNOWLEDGE -> TIMELINE -> PROJECT -> WORKFLOW -> ASSET -> PLAYBOOK -> SYSTEM
+9. **Load Concepts** - In order: CURRENT_STATE -> MISSION -> MEMORY -> KNOWLEDGE -> TIMELINE -> PROFILE -> PROJECT -> WORKFLOW -> ASSET -> PLAYBOOK -> SYSTEM
 10. **Build World Model** - Synthesize: what exists, what matters, what changed, what is blocked, what should happen next
 11. **Report Awareness** - State: datetime, mode, top priority, cadence (week/month), lifecycle phases, watch results, what changed, stale concepts, PRG status. MUST state next action.
+11.5. **OOOS Cycle** - Load PROFILE.md + Frameworks/Core/OOOS.md. From PROFILE Watch Domains, derive websearch queries. Execute searches. Score results using OOOS scoring formula. If any opportunity scores >= 60, present action payload for approval.
 12. **Integrity Check** - All critical files loaded? Temporal context established? No contradictions?
 13. **Daily Kickoff** - Execute RUNTIME Phase 1-2 (Assess cash/state -> Decide top action). State today's single most important action.
-14. **Sync Pull** - If `.env` exists with FHQ_GIST_TOKEN, run `python Runtime/engine/sync.py pull` to sync state from remote Gist. If sync fails, continue with local state.
+14. **Sync Pull Public** - Run `python Runtime/engine/sync.py pull-public` to check the public bootstrap Gist for updates. Always runs (no token needed). If the public Gist has a newer version, flag it.
+15. **Sync Pull Private** - If `.env` exists with FHQ_GIST_TOKEN, run `python Runtime/engine/sync.py pull` to sync state from private Gist. If sync fails, continue with local state.
 
 ## Intent Classification
 
@@ -79,6 +92,7 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 | Mission, priorities | MISSION | Load MOS.md |
 | Distribution, campaign, audience | DISTRIBUTION | Load Frameworks/Specialized/Distribution/DIOS.md |
 | Venture creation, business plan, project structure | VENTURE | Load Frameworks/Specialized/Venture/VAOS.md |
+| watch, opportunity, credit, grant, deal, veille | OPPORTUNITY | Load Frameworks/Core/OOOS.md |
 | Simple update, ambiguous, no keyword | DIRECT | SURVIVAL -> load DAOS.md, propose 1 action module. Otherwise -> respond directly |
 
 ## Pre-Response Gate (PRG)
@@ -173,7 +187,7 @@ At session end:
 2. TIMELINE.md updated with Event → Decision → Outcome
 3. KNOWLEDGE.md updated with validated lessons
 4. ASSET.md updated with new or changed assets
-5. **Sync Push** - Run `python Runtime/engine/sync.py push` to sync state to remote Gist (if token configured)
+5. **Sync Push** - Run `python Runtime/engine/sync.py push` to sync state to private Gist (if token configured). Never push to the public Gist.
 
 ## Footer
 
@@ -183,3 +197,5 @@ At session end:
 | Last Verified | 2026-06-20 |
 | Owner | System |
 | Dependencies | RUNTIME.md, Protocols/SOURCE_OF_TRUTH.md, Protocols/DECISION_GATES.md |
+
+

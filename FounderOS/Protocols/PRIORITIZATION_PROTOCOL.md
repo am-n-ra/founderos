@@ -2,107 +2,107 @@
 
 ## Concept
 
-Parmi 100 actions possibles, quelle est la seule qui merite d'etre faite maintenant ?
+Among 100 possible actions, which is the only one worth doing now?
 
-Ce protocole repond a cette question.
+This protocol answers that question.
 
-Il n'y a pas de "priorites" multiples. Il y a UNE priorite a la fois.
-
----
-
-## Regle fondamentale
-
-Le bottleneck est la contrainte unique qui empeche tout le systeme d'avancer.
-
-Si on resout le bottleneck, tout le systeme progresse.
-
-Si on travaille sur autre chose, on est occupe mais on n'avance pas.
+There are no multiple "priorities." There is ONE priority at a time.
 
 ---
 
-## Arbre de decision
+## Fundamental Rule
 
-### Etape 1 : Etat actuel
+The bottleneck is the single constraint preventing the entire system from moving forward.
+
+If we resolve the bottleneck, the whole system progresses.
+
+If we work on something else, we are busy but not making progress.
+
+---
+
+## Decision Tree
+
+### Step 1: Current State
 
 1. Cash > 0 ?
-   - NON → Priorite absolue : generer du revenu. Tout le reste est secondaire.
-   - OUI → continuer.
+   - NO → Absolute priority: generate revenue. Everything else is secondary.
+   - YES → continue.
 
-2. Un produit est-il en vente ?
-   - NON → Priorite : mettre un produit en vente. Un produit qui n'existe pas ne peut pas generer de revenu.
-   - OUI → continuer.
+2. Is a product on sale?
+   - NO → Priority: put a product on sale. A product that doesn't exist cannot generate revenue.
+   - YES → continue.
 
-3. Le produit a-t-il des clients ?
-   - NON → Priorite : acquerir le premier client. La distribution est le bottleneck.
-   - OUI → continuer.
+3. Does the product have customers?
+   - NO → Priority: acquire the first customer. Distribution is the bottleneck.
+   - YES → continue.
 
-4. Les clients existants sont-ils satisfaits ?
-   - NON → Priorite : resoudre les problemes clients. La retention avant l'acquisition.
-   - OUI → continuer.
+4. Are existing customers satisfied?
+   - NO → Priority: resolve customer issues. Retention before acquisition.
+   - YES → continue.
 
-5. Le produit a-t-il atteint le product-market fit ?
-   - NON → Priorite : iterer jusqu'a ce que les clients reviennent ou referent.
-   - OUI → Scale.
+5. Has the product reached product-market fit?
+   - NO → Priority: iterate until customers come back or refer others.
+   - YES → Scale.
 
-### Etape 2 : Charger le contexte
+### Step 2: Load Context
 
-Lire les concepts suivants pour verifier l'arbre de decision :
+Read the following concepts to verify the decision tree:
 
-- State/CURRENT_STATE.md (cash, bottleneck, priorite actuelle)
-- Concepts/MISSION.md (direction strategique)
-- Concepts/TIMELINE.md (evenements recents)
+- State/CURRENT_STATE.md (cash, bottleneck, current priority)
+- Concepts/MISSION.md (strategic direction)
+- Concepts/TIMELINE.md (recent events)
 
-### Etape 3 : Appliquer la lentille
+### Step 3: Apply the Lens
 
-Si DECISION_GATES recommande un framework, le charger et appliquer ses questions au contexte.
+If DECISION_GATES recommends a framework, load it and apply its questions to the context.
 
-### Etape 4 : Reduire a UNE action
+### Step 4: Reduce to ONE Action
 
-Poser la question :
+Ask the question:
 
 ```
-Si je ne fais qu'une seule chose aujourd'hui,
-laquelle a le plus grand impact sur le bottleneck ?
+If I do only one thing today,
+which one has the greatest impact on the bottleneck?
 ```
 
-Si la reponse est vague, la question n'a pas ete assez specific.
+If the answer is vague, the question was not specific enough.
 
-Reformuler jusqu'a obtenir UNE action concrete.
+Rephrase until you get ONE concrete action.
 
 ---
 
 ## Verification
 
-Avant de commencer l'action, verifier :
+Before starting the action, verify:
 
-- [ ] Cette action sert-elle directement le bottleneck identifie ?
-- [ ] Cette action est-elle la plus haute leverage disponible ?
-- [ ] Cette action peut-elle etre executee dans le temps disponible ?
-- [ ] Cette action n'est-elle pas de l'activite deguisee en progres ?
+- [ ] Does this action directly serve the identified bottleneck?
+- [ ] Is this action the highest leverage available?
+- [ ] Can this action be executed in the available time?
+- [ ] Is this action not busywork disguised as progress?
 
-Si les 4 reponses sont "oui" → executer.
-Si une reponse est "non" → re-evaluer.
+If all 4 answers are "yes" → execute.
+If any answer is "no" → re-evaluate.
 
 ---
 
 ## Anti-patterns
 
-- Travailler sur 3 priorites en meme temps (aucune n'avance vraiment)
-- Choisir une action facile au lieu de l'action impactante
-- Confondre urgence et importance
-- Planifier sans executer
-- Re-prioriser avant d'avoir termine la priorite actuelle
-- Utiliser la planification comme echappatoire a l'execution
+- Working on 3 priorities at the same time (none truly progresses)
+- Choosing an easy action instead of an impactful one
+- Confusing urgency with importance
+- Planning without executing
+- Re-prioritizing before completing the current priority
+- Using planning as an escape from execution
 
 ---
 
-## Integration avec DECISION_GATES
+## Integration with DECISION_GATES
 
-Quand un type d'action est identifie via DECISION_GATES, PRIORITIZATION_PROTOCOL s'assure que c'est la BONNE action a faire maintenant.
+When an action type is identified via DECISION_GATES, PRIORITIZATION_PROTOCOL ensures it is the RIGHT action to do now.
 
-Les deux protocoles fonctionnent en sequence :
+Both protocols work in sequence:
 
 ```
-DECISION_GATES     →  Quoi faire ?
-PRIORITIZATION     →  Quoi faire MAINTENANT ?
+DECISION_GATES     →  What to do?
+PRIORITIZATION     →  What to do NOW?
 ```

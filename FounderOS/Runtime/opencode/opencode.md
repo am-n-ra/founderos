@@ -2,29 +2,29 @@
 
 ## Detection
 
-FounderHQ is auto-detected when the working directory contains `FounderOS/`. The protocol boots automatically via `Protocols/FOUNDEROS_PROTOCOL.md`.
+FounderHQ is auto-detected when the working directory contains FounderOS/. The protocol boots automatically via Protocols/FOUNDEROS_PROTOCOL.md.
 
-## Fichier de configuration
+## Configuration File
 
-`.opencode/instructions.md` contient les regles specifiques a l'environnement OpenCode.
+.opencode/instructions.md contains the rules specific to the OpenCode environment.
 
-## Particularites
+## Specificities
 
 - **Shell:** Windows PowerShell 5.1
-- **Fuseau horaire:** Systeme local (detecte automatiquement par `Get-Date`). Conversion vers Lome UTC+0 chaque session.
-- **Fichiers:** CRLF (Windows)
-- **DST:** `[System.TimeZoneInfo]::Local.GetUtcOffset((Get-Date))` pour detecter le decalage effectif.
+- **Timezone:** Local system (auto-detected by Get-Date). Conversion to Lome UTC+0 each session.
+- **Files:** CRLF (Windows)
+- **DST:** [System.TimeZoneInfo]::Local.GetUtcOffset((Get-Date)) to detect the actual offset.
 
-## Boot sequence (resume)
+## Boot sequence (summary)
 
-1. OpenCode charge `Protocols/FOUNDEROS_PROTOCOL.md` via instructions systeme
-2. Le protocole guide toutes les operations subsequentes
-3. `DECISION_GATES` est charge avant chaque action
-4. `TEMPORAL_AWARENESS` verifie le temps a chaque reponse
-5. Les frameworks sont charges a la demande via DECISION_GATES
+1. OpenCode loads Protocols/FOUNDEROS_PROTOCOL.md via system instructions
+2. The protocol guides all subsequent operations
+3. DECISION_GATES is loaded before each action
+4. TEMPORAL_AWARENESS checks the time with each response
+5. Frameworks are loaded on demand via DECISION_GATES
 
-## Limitations connues
+## Known limitations
 
-- Pas de detection d'evenements automatique (session-based uniquement)
-- Pas d'automation native (workflows executes manuellement par le LLM)
-- Pas de multi-session awareness au-dela des fichiers
+- No automatic event detection (session-based only)
+- No native automation (workflows executed manually by the LLM)
+- No multi-session awareness beyond files

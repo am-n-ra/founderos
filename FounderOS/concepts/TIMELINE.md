@@ -193,6 +193,25 @@ Analysis and lessons belong in KNOWLEDGE.
 - Questions ouvertes listées honnêtement
 - Ambition fondateur (milliardaire, Musk path, multi-ventures) intégrée
 
+**2026-06-22/23 (22:55-06:33 — Session FHQ, propagation KORA + protocole)**
+- VISION V3 consolidée, hypothèse AGI remplacée par faits vérifiés (42/2000 langues, 2%)
+- Propagation narrative KORA dans 05_MASTER_PLAN, 08_EXECUTIVE_SUMMARY, 09_BUSINESS_PLAN, 10_PITCH_DECK
+- INC-001: FHQ_MODE protocol not executed — root cause documentée, opencode.json renforcé
+- Profil fondateur clarifié : visionnaire/orateur/closer, pas CTO. Gaps identifiés.
+- Justine Adebiyi (ST Digital DG West Africa) identifiée — connexion clé pour ATD → Cina Lawson
+- Harvard Radcliffe Fellowship recherché : $78k stipend, deadline Sep/Oct 2026, à préparer
+- Watch Registry enrichi (9 watches actives)
+- DoodleMind : 1/jour identifié comme objectif vs 1/semaine actuel
+
+**2026-06-23 (07:24-07:48 — Boot + Architecture 2 Gists)**
+- Architecture 2 Gists déployée : public (am-n-ra/5b7b5c366) + privé
+- sync.py enrichi : create-public-gist, clean-private-gist, pull-public
+- Private Gist nettoyé (fhq_state.json supprimé)
+- Public Gist créé : FOUNDER_SEED.md + installer.py + opencode.json
+- .env mis à jour : FHQ_GIST_PUBLIC_URL ajouté
+- SYSTEM_PROMPT.md : règles sécurité token + boot sequence 2 Gists
+- opencode.json : règles sécurité token + architecture 2 Gists
+
 ## Pending Timeline Events
 - First sale (pending)
 - First customer feedback
@@ -207,3 +226,6 @@ Last updated: 2026-06-21 20:35 (added: PRG Step 6 fix session)
 Timeline is append-only.
 
 Do not edit past entries — add corrections as new entries if needed.
+
+| 2026-06-23 | OOOS + PROFILE created | Phase 1: Founder Opportunity Intelligence System deployed | PROFILE.md, OOOS.md, 4 watches, SYSTEM_PROMPT GENESIS + boot integration | FHQ autonomously detects and scores opportunities for the founder |
+| 2026-06-23 | Phase 2: English translation | 15 system files translated from French to English | CAOS, CEOS, FAOS, SAOS, PSOS, MAOS, AAOS, VSOS, AI_VIDEO_MASTER_DOMAIN, PMOS, LEOS, RIOS, PRIORITIZATION_PROTOCOL, INFO_CAPTURE_PROTOCOL, SOURCE_OF_TRUTH, opencode.md, DESCRIPTION.md | All system prompts now in English. User conversation remains language-agnostic. |
