@@ -41,3 +41,20 @@ class TestSnapshot:
         assert snap.cadence == {}
         assert snap.timeline == []
         assert snap.projects == {}
+
+    def test_gist_includes_engine_scripts(self):
+        from Runtime.engine.sync import _get_public_gist_files
+        from pathlib import Path
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "FOUNDER_SEED.md").write_text("# seed")
+            (root / "Runtime" / "engine").mkdir(parents=True)
+            for f in ["installer.py", "sync.py", "watchtower.py", "timekeeper.py"]:
+                (root / "Runtime" / "engine" / f).write_text(f"# {f}")
+            (root / "opencode.json").write_text("{}")
+            files = _get_public_gist_files(root)
+            required = {"FOUNDER_SEED.md", "installer.py", "opencode.json",
+                         "sync.py", "watchtower.py", "timekeeper.py"}
+            for name in required:
+                assert name in files, f"Missing {name} in public Gist files"
