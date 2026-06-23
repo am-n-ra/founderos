@@ -392,6 +392,32 @@ def main():
         print("  - Timekeeper scheduler: NOT configured (script missing)")
     print("  - .founderhq_installed: created")
 
+    has_astra = (scripts_dir / "astra_core.py").exists()
+    if has_astra:
+        print()
+        print("=" * 60)
+        print("  GENESIS CONTINUES — LLM INSTRUCTIONS")
+        print("=" * 60)
+        print("  1. Ask the user (in their language) about:")
+        print("     - Domain/industry, role, tech stack")
+        print("     - Strategic needs, constraints, active projects")
+        print("     - Geographic focus")
+        print("     Write answers to concepts/PROFILE.md")
+        print()
+        print("  2. Ask for birth date, time (HH:MM UTC+0), and place")
+        print("     Then run:")
+        print("     python Runtime/engine/astra_birth.py --base-dir .")
+        print("                    --date YYYY-MM-DD --time HH:MM")
+        print()
+        print("  3. Generate first daily:")
+        print("     python Runtime/engine/astra_daily.py --base-dir .")
+        print()
+        print("  4. Generate narrative reading:")
+        print("     python Runtime/engine/astra_reading.py --base-dir .")
+        print()
+        print("  5. Confirm: ASTRA GENESIS complete.")
+        print("=" * 60")
+
 
 if __name__ == "__main__":
     main()
