@@ -58,7 +58,8 @@ Execute at session start (triggered by `boot` or first `fhq` of the day):
 2. **Temporal Context** - Get-Date, compute Lome UTC+0. Load TIMELINE.md, CURRENT_STATE.md, CADENCE.md
 3. **Load Cadence + Lifecycle** - Load State/CADENCE.md, State/LIFECYCLE.md. Determine current temporal position and project phases.
 4. **Load Priority Matrix** - Load State/PRIORITY_MATRIX.md to establish unified view of ALL active projects/actions
-5. **Load Alerts + Watch Reports** - Load State/ALERTS.md, read and clear active alerts. Load State/WATCH_REPORT.md for any background script findings since last session. If `State/ASTRA_MODE.md` shows fhqa mode: load State/ASTRA_DAILY.md, State/ASTRA_SHADOW.md, State/ASTRA_BIRTH.md for astral context.
+5. **Load Alerts + Watch Reports** - Load State/ALERTS.md, read and clear active alerts. Load State/WATCH_REPORT.md for any background script findings since last session. If `State/ASTRA_MODE.md` shows fhqa mode: load State/ASTRA_DAILY.md, State/ASTRA_SHADOW.md, State/ASTRA_BIRTH.md, State/ASTRA_READING_RAW.md for astral context.
+5.5. **Personalize Reading (FHQ_ASTRA only)** — If State/ASTRA_READING_RAW.md exists and State/ASTRA_READING.md is missing or stale: read ASTRA_READING_RAW.md + concepts/PROFILE.md + concepts/TIMELINE.md. Synthesize a personalized narrative into State/ASTRA_READING.md — connecting chart patterns to the user's actual business, projects, and life context. Include specific examples from their timeline.
 6. **Execute Watch Registry** - Load State/WATCH_REGISTRY.md, check each item where Next Check <= today, run websearch/webfetch, report findings, update registry
 7. **Freshness Check** - Scan all concept footers. Flag any > 48h (WF-007)
 8. **Set Session Start** - Record current time as Session Start in CADENCE.md (Day section). Log to TIMELINE.
