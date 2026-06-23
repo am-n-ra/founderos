@@ -348,15 +348,18 @@ def main():
     if not args.skip_env:
         setup_env(base_path)
 
+    watchtower_created = False
+    timekeeper_created = False
+
     watchtower_path = scripts_dir / "watchtower.py"
     if watchtower_path.exists():
-        setup_scheduler("FounderHQ-Watchtower", str(watchtower_path), str(base_path), 360)
+        watchtower_created = setup_scheduler("FounderHQ-Watchtower", str(watchtower_path), str(base_path), 360)
     else:
         print(f"WARNING: {watchtower_path} not found, skipping watchtower")
 
     timekeeper_path = scripts_dir / "timekeeper.py"
     if timekeeper_path.exists():
-        setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), 30)
+        timekeeper_created = setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), 30)
     else:
         print(f"WARNING: {timekeeper_path} not found, skipping timekeeper")
 
@@ -366,7 +369,14 @@ def main():
     print(f"  Platform: {get_platform_label()}")
     print("  - .venv: ready")
     print("  - Dependencies: installed")
-    print("  - Scheduler: configured")
+    if watchtower_created:
+        print("  - Watchtower scheduler: configured (every 360 min)")
+    else:
+        print("  - Watchtower scheduler: NOT configured (script missing)")
+    if timekeeper_created:
+        print("  - Timekeeper scheduler: configured (every 30 min)")
+    else:
+        print("  - Timekeeper scheduler: NOT configured (script missing)")
     print("  - .founderhq_installed: created")
 
 
