@@ -26,6 +26,7 @@ If a document contains a truth it does not own → violation.
 | Pipeline Shorts viraux doodle | concepts/KNOWLEDGE.md (KnowledgeAssets/) |
 | Evenements, decisions, outcomes | concepts/TIMELINE.md |
 | Processus, etapes d'execution | concepts/WORKFLOW.md |
+| Innovation academy, incubator, illiterate-inclusive innovation | concepts/EDENVALLEY.md |
 | Methodes validees (3+ contextes differents) | concepts/PLAYBOOK.md |
 | Fonctionnement interne de FounderHQ | concepts/SYSTEM.md |
 | Historique des decisions (contexte, raison, resultat) | concepts/TIMELINE.md |

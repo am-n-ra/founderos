@@ -1,21 +1,20 @@
 # FounderOS V4 — KORA (Knowledge & Oral Representation for Africa)
 
-> ⚠️ **Stale** — No recent activity. ST Digital: verbal agreement, estimation sent, awaiting follow-up.
+## Core Vision (2026-06-27)
 
-## Purpose
+**KORA = Plus d'importation d'IA en Afrique.**
 
-KORA Lab is Africa's sovereign AI research and product lab, building the Language Acquisition Engine and Universal Speech Intelligence Layer that allows underrepresented languages to participate fully in the AI era.
+If KORA succeeds, Africa will no longer import the AI used within it. Simple, complete, complex.
 
-## Position in FounderHQ
+KORA must deliver frontier-class models across ALL domains — code, text, image, video, embedding, audio — matching or exceeding what international players offer. At that quality level, Africa naturally stops importing AI. And because KORA becomes the African reference with continental market presence, it is globally competitive by default.
 
-KORA is the founder's primary long-term venture — an AI lab focused on speech infrastructure for African languages. It is the technical execution arm of Africa's AI sovereignty movement, positioned to complete the institutions (Kigali Declaration, AU AI Strategy, AfDB AI 10B Initiative) that have declared commitments to African AI.
+Beyond AI: KORA establishes the pattern so that Africa stops importing technology during future revolutions. Starting with the AI revolution, Africa catches up on past delays and positions itself for every subsequent technological shift.
 
 ## Status
 
 | Field | Value |
 |---|---|
 | Phase | Pre-Seed / Validation |
-| Activity | Stale — awaiting ST Digital + DG WA follow-up |
 | Priority | High |
 | Key Partner | ST Digital (compute: verbal agreement, estimation sent, awaiting reply) |
 | First Language | Éwé |
@@ -27,7 +26,6 @@ KORA is the founder's primary long-term venture — an AI lab focused on speech 
 | Website | https://koralab.org |
 | GitHub | https://github.com/kellykheir/kora-lab-frontdoor |
 | Site Source | `C:\Users\junio\Desktop\Kora Lab\kora-lab-frontdoor` |
-| Kora Identity Assets | `C:\Users\junio\Desktop\Kora Lab\Kora Identity` |
 | Data Room Index | `projects/KORA/README.md` |
 | Vision | `projects/KORA/01_VISION.md` |
 | Mission | `projects/KORA/02_MISSION.md` |
@@ -35,16 +33,24 @@ KORA is the founder's primary long-term venture — an AI lab focused on speech 
 | Phase 1 Business Plan | `projects/KORA/09_BUSINESS_PLAN.md` |
 | Executive Summary | `projects/KORA/08_EXECUTIVE_SUMMARY.md` |
 | Pitch Deck | `projects/KORA/10_PITCH_DECK.md` |
-All Annexes (A–A8) in `projects/KORA/annexes/`
+
+## Two Tracks
+
+### Track 1: Develop Frontier AI Technologies
+Build models as capable as international frontier models (Claude, GPT, Gemini, etc.) across code, text, image, video, embedding, audio. Make imports obsolete by being better and local.
+
+### Track 2: Universal Accessibility
+- **2a (Power Users):** Serve the already-educated — tech bros, developers, professionals who read/write foreign languages and currently use imported AI.
+- **2b (The Rest — 2000+ Languages):** Adapt for the illiterate and non-English/non-French speaking majority. Make frontier AI power accessible in African languages and dialects. No need to read or write a foreign language. Develop solutions via KORA models to tackle the continent's deepest problems.
 
 ## Relations
 
+- **MISSION** — KORA is the AI pillar of the founder's life mission: end Africa's technology import dependency.
+- **OMNI** — Mapping/address coverage for Africa. Parallel venture in the same ecosystem.
+- **EDENVALLEY** — Innovation academy & incubator. Collects innovations enabled by KORA models and guides venture creation. Even the most disadvantaged can use frontier models, educated or not.
 - **LEOS** — Financial Literacy Program active; KORA business concepts tracked as learning
 - **FAOS** — KORA fundraising strategy, survival planning
-- **PROJECT** — KORA is the founder's primary venture
-- **OMNI** — Parallel venture (commerce proximity index); same execution lean, same Lomé anchor; KORA business models inform Omni strategy
-- **DAOS** — Soya actions fund KORA survival; KORA milestones drive daily priorities
-- **RAPHAEL** (`Frameworks/KORA/RAPHAEL_PDCA.md`) — operating system for KORA execution
+- **DAOS** — Daily execution aligned with KORA milestones
 - **SOJACO** — Cash flow project that could fund KORA development
 
 ## Footer
@@ -52,5 +58,5 @@ All Annexes (A–A8) in `projects/KORA/annexes/`
 | Field | Value |
 |---|---|
 | OS Version | V4 |
-| Last Updated | 2026-06-24 |
+| Last Updated | 2026-06-27 |
 | Owner | Founder |
