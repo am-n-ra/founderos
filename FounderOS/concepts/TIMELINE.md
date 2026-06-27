@@ -313,8 +313,8 @@ Analysis and lessons belong in KNOWLEDGE.
 - **Outcome:** KORA.md réécrit avec vision claire. MISSION.md restructuré avec Founder's Life Mission comme racine. EDENVALLEY.md créé. SOURCE_OF_TRUTH.md mis à jour.
 
 **2026-06-27 (10:11 — Deep Why ajouté)**
-- **Event:** Fondateur clarifie le moteur profond de la mission : intolérance à l'injustice et la discrimination envers l'Afrique depuis des décennies.
-- **Decision:** "Deep Why" ajouté dans MISSION.md comme fondation de toute l'entreprise.
+- **Event:** Fondateur clarifie le moteur profond de la mission : intolérance à l'injustice — universelle, pas limitée à l'Afrique.
+- **Decision:** "Deep Why" corrigé dans MISSION.md : l'injustice partout est inacceptable. L'Afrique est le point de départ, pas la limite.
 - **Outcome:** La souveraineté technologique est le moyen — mettre fin à l'injustice systémique est le but. Maintenant : polir, clarifier, professionnaliser, en commençant par KORA.
 
 ---

@@ -7,7 +7,7 @@ Describe desired transformations of reality.
 ## Founder's Life Mission (2026-06-27)
 
 ### Deep Why
-The driving force: **intolerance for injustice and discrimination.** Africa and its population have faced systemic injustice and discrimination for decades. This must end. Technology sovereignty is the means — ending injustice is the purpose.
+The driving force: **intolerance for injustice and discrimination — universally.** Not limited to Africa. Injustice anywhere is unacceptable. Africa is the starting point because that is the founder's context, but the mission is against injustice itself, wherever it exists. Technology sovereignty is the current means — ending injustice is the purpose.
 
 ### Statement
 To be remembered as the man who allowed Africa to catch up with other continents, reach the same level, and give its population the same standard of living and advantages as developed countries.
