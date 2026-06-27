@@ -6,6 +6,10 @@ Describe desired transformations of reality.
 
 ## Founder's Life Mission (2026-06-27)
 
+### Deep Why
+The driving force: **intolerance for injustice and discrimination.** Africa and its population have faced systemic injustice and discrimination for decades. This must end. Technology sovereignty is the means — ending injustice is the purpose.
+
+### Statement
 To be remembered as the man who allowed Africa to catch up with other continents, reach the same level, and give its population the same standard of living and advantages as developed countries.
 
 **Analogy:** Like Elon Musk's mission to make humanity interplanetary — SpaceX (rockets), Tesla (transport), Neuralink (human capability), Hyperloop (ultra-fast travel) — all separate but forming a coherent ecosystem serving one mission. In the same way, every venture serves the single mission.
