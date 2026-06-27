@@ -1,5 +1,7 @@
 # PLAYBOOK
 
+> **⚠️ STALE — Last updated: 2026-06-24.** This playbook was written before the current SURVIVAL mode. Content strategy and distribution priorities may not reflect the cash-constrained reality (8h+ sessions, cash < 1,000 FCFA). Needs full review.
+
 ## Concept
 
 Defined in CONCEPT_REGISTRY.md — Concept 7.
@@ -118,7 +120,7 @@ Each playbook must define:
 
 ## Footer
 
-Last updated: 2026-06-18 (added PB-001 Content Strategy, PB-002 Social Media Distribution)
+Last updated: 2026-06-24 (STALE — needs review)
 
 An empty PLAYBOOK is acceptable for a young system.
 

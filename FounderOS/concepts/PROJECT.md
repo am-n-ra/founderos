@@ -196,17 +196,17 @@ Each project entry must contain:
 
 **START_DATE:** 2026-06-19
 
-**TARGET_OUTCOME:** First Short published, channel established with consistent upload schedule, on track for monetization
+**TARGET_OUTCOME:** Shorts published consistently, channel on track for monetization
 
-**ACTUAL_OUTCOME:** Short #1 published. YouTube: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed, 40s avg duration. TikTok: 65 views, 10.43s avg, 2.8% full watch.
+**ACTUAL_OUTCOME:** Short #1 "Your Brain Has a Second Brain" publié YT+TK. Short #2 publié. Short #3 pending.
 
-**NEXT_ACTION:** Create Short #2 — capitalise on YouTube Shorts feed algorithm (72.6% retention is strong). Use same psycho/cerveau niche.
+**NEXT_ACTION:** Create Short #3 — maintain daily cadence, cash priority.
 
 **RELATED_MEMORY:** MEMORY — Current Priorities (item 3), Active Concerns (DoodleMind analytics)
 
 **RELATED_KNOWLEDGE:** KNOWLEDGE — Doodle Animation YouTube Pipeline, Shorts Viral Pipeline, Hook Layer Priority
 
-**RELATED_TIMELINE:** TIMELINE — 2026-06-19, 2026-06-20 entries
+**RELATED_TIMELINE:** TIMELINE — 2026-06-19, 2026-06-20, 2026-06-24 entries
 
 **RELATED_WORKFLOWS:** KnowledgeAssets/shorts_viral_master_prompt.txt
 
@@ -350,7 +350,7 @@ If the reference is too vague, the problem is not in PROJECT — the problem is 
 
 ## Footer
 
-Last updated: 2026-06-20 19:29 (updated: SS-001 — dame 2 consignation, plan redirigé vers acheteurs cash)
+Last updated: 2026-06-24 (refreshed stale marker; DM-001 Short #2 publié; SS-001 non viable à 750/bol; KORA github + koralab.org + site source local)
 
 A project's ACTIVE status means it has a NEXT_ACTION that can be executed.
 

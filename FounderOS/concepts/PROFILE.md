@@ -16,6 +16,10 @@ Define the founder's technology/compute profile for autonomous opportunity intel
 
 **Operating Mode:** SURVIVAL.
 
+**Life Framework:** Spirituality first (ultimate goal). Trading = independence tool (no clients, no dependency). KORA/OMNI = impact vehicle (Africa's AI sovereignty). Target: retire to full spiritual life at 30-33.
+
+**Trading:** Funded $2000 Next Instant account (uncle). Current: $1904.28. Strategy: EURUSD, London/NY session (0-1 pip spread), 5 rules, 1:2.25 RR, EA-ready. Bet with adoptive father: fund own university next year.
+
 ---
 
 ## Domain & Industry

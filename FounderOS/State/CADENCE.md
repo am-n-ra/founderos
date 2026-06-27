@@ -10,17 +10,17 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Life (Vie)
 
-> **Objectif:** [objectif de vie]
+> **Objectif:** Atteindre l'indépendance financière par l'entrepreneuriat solo — créer des actifs numériques et physiques qui génèrent un cashflow stable.
 
-**Evaluation:** [auto-evaluation: 0-10]
+**Evaluation:** 3/10
 
 ---
 
 ## Year (Annee) - 2026
 
-> **Objectif:** [objectif 2026]
+> **Objectif:** Générer un premier revenu récurrent (≥100k FCFA/mois) via DoodleMind + KORA.
 
-**Evaluation:** [auto-evaluation 0-10]
+**Evaluation:** 2/10
 
 **Trimestre en cours:** Q2 (Avril-Juin)
 
@@ -28,48 +28,40 @@ Lue en phase BOOT pour contextualiser ORIENT. Mise a jour par le LLM quand les o
 
 ## Month (Mois) - Juin 2026
 
-> **Objectif:** [objectif juin]
+> **Objectif:** Trouver 1 source de revenu fiable pour couvrir subsistance (~41k FCFA/mois).
 
-**Evaluation:** [auto-evaluation 0-10]
+**Evaluation:** 2/10
 
 **Semaines:**
-- S24 (Juin 9-15): [objectif / resultat]
-- S25 (Juin 16-22): [objectif / resultat]
-- S26 (Juin 23-29): [objectif / resultat]
+- S24 (Juin 9-15): Stop Nuisibles pest repeller stock arrivé (100 units). 0 ventes.
+- S25 (Juin 16-22): DoodleMind Short #1 + #2 publiés. SOJACO testé (non viable à 750/bol). Omni pitch day identifié.
+- S26 (Juin 23-29): Short #3 à produire. KORA watchtower actif (ddgs results). Cash ~900 FCFA.
 - S27 (Juin 30-Juil 6): [objectif / resultat]
 
 ---
 
-## Week (Semaine) - S26 (Juin 23-29)
+## Day (Jour) - 2026-06-25
 
-> **Objectif:** [objectif semaine]
+> **Objectif:** Poser les 5 règles de la stratégie trading + comprendre le pattern psychologique.
 
-**Deadlines cette semaine:**
-- [date] - [description]
-
----
-
-## Day (Jour) - 2026-06-23
-
-> **Objectif:** [À définir]
-
-**Session start:**  07:24
-**Session end:**  [HH:MM - filled at shutdown]
-**Duration:** [calculated]
-**Last fhq:** 06:25
+**Session start:** 08:44
+**Session end:** 08:44
+**Duration:** 23h03m
+**Last fhqa:** 09:51
+**Last fhq:** 16:36
 
 **Top 3 actions:**
-1. [À définir]
-2. [À définir]
-3. [À définir]
+1. Poser les 5 règles EURUSD 1:2.25 RR
+2. Capturer le pattern psychologique du trading
+3. Planifier le forward test
 
 ---
 
 ## Hour (Heure) - Now
 
-> **Lome (UTC+0):** 06:25
+> **Lome (UTC+0):** 06:26
 
-**Next actionable:** [what to do in the next 60 min]
+**Next actionable:** Forward-test visuel avec ReversalDetector.mq5 v2.0 sur MT5.
 
 ---
 

@@ -191,10 +191,35 @@ A founder who uses FounderHQ should:
 - Never forget a validated lesson
 - Never restart a project from zero
 - Never explain their reality more than once
+- Never have an aimless day — always know what to do next
+- Never lose data to LLM context loss or chat compaction
 
 FounderHQ should become more valuable every month.
 
 Not less.
+
+---
+
+## FounderHQ V2 Vision (2026-06-27)
+
+FounderHQ is an AI-powered mission workspace that guides any founder — experienced or novice — from idea to successful completion.
+
+### Core Principles
+
+**1. Centralized Multi-Project Management**
+From a single chat at FounderHQ root, manage ALL projects. Each project has its own folder containing: knowledge/work done with FounderHQ (persisted), code, assets, docs, GitHub repos, accounts. No scattered management.
+
+**2. Role-Flexible AI Partner**
+FounderHQ can act as mentor, co-founder, or any team role (CTO, dev, CFO, COO, etc.) — adapting to what the founder needs at each stage.
+
+**3. Persistence Beyond LLM Context**
+If the LLM loses context window or chat compacts, FounderHQ is untouched. All knowledge, decisions, and state persist in files, not conversation memory. The AI reasons — FounderHQ remembers.
+
+**4. Framework-Driven Execution**
+Frameworks (MOS, DAOS, CEOS, LEOS, SOS, PSOS, DIOS, VAOS, OOOS, etc.) ensure no founder ever has an aimless day. Every action serves a mission. Strategic planning is built-in, not optional.
+
+**5. Guided Autonomy**
+The founder decides — FounderHQ executes, tracks, and ensures continuity. From mission definition to daily execution, all guided by the system.
 
 ---
 

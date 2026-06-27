@@ -1,5 +1,7 @@
 # WORKFLOW
 
+> **⚠️ STALE — Last updated: 2026-06-24.** This document needs review for current SURVIVAL mode reality (8h+ sessions, cash < 1,000 FCFA). Workflows below assume resource availability that may not exist. Review and streamline for cash-constrained execution.
+
 ## Concept
 
 Defined in CONCEPT_REGISTRY.md — Concept 6.
@@ -412,7 +414,7 @@ Each workflow must define:
 
 ## Footer
 
-Last updated: 2026-06-20 (added: WF-007 Session Boot Freshness Check, WF-008 Cold Reboot Protocol)
+Last updated: 2026-06-24 (STALE — added stale notice, SURVIVAL mode context)
 
 Workflows are living documents.
 

@@ -137,7 +137,7 @@ Mission Control may recommend any of these actions for any project:
 
 ## Footer
 
-Last updated: 2026-06-18 (updated: mission hierarchy, alignment engine, drift detection, focus protection)
+Last updated: 2026-06-24 (updated: mission hierarchy, alignment engine, drift detection, focus protection)
 
 If a new mission is proposed, add it to Active or Paused.
 

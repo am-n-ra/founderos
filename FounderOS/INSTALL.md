@@ -6,56 +6,67 @@ INSTALL is the deployment guide for setting up FounderOS in a new environment (n
 
 ## Requirements
 
-- Any LLM that supports reading and writing files (ChatGPT, Claude, Gemini, DeepSeek, local models)
+- Any LLM that supports reading and writing files (ChatGPT, Claude, Gemini, DeepSeek, LM Arena, local models)
 - Any IDE or file system that supports markdown files
 - Git (optional — for version tracking and reboot delta detection)
+- Python 3.10+ (required for ASTRA engine)
 - Operating System: Windows, macOS, Linux (any)
 
-## Installation Steps
+## Quick Install (Gist-based GENESIS)
 
-### 1. Clone or Copy FounderHQ
+FounderOS is distributed via a public Gist. On a fresh machine, the LLM fetches and runs the installer.
 
+### What the LLM does
+
+1. **Fetch the Gist**
+   ```
+   https://api.github.com/gists/5b7b5c36610cc1076c798c716c7560e6
+   ```
+   The LLM downloads the ZIP and extracts it into a new `FounderOS` directory.
+
+2. **Verify files** — 12 bootstrap scripts should be present:
+   `BOOTSTRAP.md`, `FOUNDER_SEED.md`, `installer.py`, `opencode.json`, `sync.py`, `watchtower.py`, `timekeeper.py`, `astra_core.py`, `astra_daily.py`, `astra_birth.py`, `astra_forecast.py`, `astra_reading.py`
+
+3. **Run installer.py**
+   ```bash
+   python Runtime/engine/installer.py
+   ```
+   This creates a `.venv`, installs dependencies (requests, python-dotenv, pysweph), and sets up the directory structure.
+
+4. **GENESIS conversation** — The LLM asks the user for:
+   - **Business profile** (role, industry, tech stack, strategic needs, constraints)
+   - **Birth data** (date, time, location) — for ASTRA Jyotish engine
+
+5. **Build Profile** — The LLM writes:
+   - `concepts/PROFILE.md` (business profile from user answers)
+   - Runs `astra_birth.py` to generate `State/ASTRA_BIRTH.md` (birth chart, Dasha, Yogas)
+   - Runs `astra_daily.py` to generate `State/ASTRA_DAILY.md` (today's guidance)
+   - Runs `astra_reading.py` to generate `State/ASTRA_READING_RAW.md` (personalized narrative)
+   - Creates `State/ASTRA_MODE.md` (default: `fhqa` mode)
+
+6. **Boot** — The LLM loads `SYSTEM_PROMPT.md` and begins the session with full ASTRA awareness.
+
+### For the user
+
+If you're not an LLM, the manual steps are:
 ```bash
-git clone <repository> FounderHQ
-# OR
-# Copy the FounderHQ directory manually
+# Download and extract the Gist ZIP
+curl -L -o founderos.zip https://api.github.com/gists/5b7b5c36610cc1076c798c716c7560e6.zip
+# Extract into FounderOS/
+# Run installer
+python Runtime/engine/installer.py
+# Then open a session with any LLM and provide SYSTEM_PROMPT.md
 ```
 
-### 2. Verify Directory Structure
+## What the LLM Does in Each Session
 
-Ensure all OS files exist under FounderOS/. If any are missing, run GENESIS to recreate them.
+When you open `fhqa` mode:
+1. Read `SYSTEM_PROMPT.md` (boot sequence)
+2. Load all ASTRA state files (birth profile, daily, shadow, reading)
+3. Report current Panchanga, Muhurta scores, Red Zones
+4. Guide you proactively — "What should I do about this?"
 
-### 3. Set Up Protocols
-
-SYSTEM_PROMPT.md is the boot sequence. It must be loadable on first read. Ensure:
-- All Protocol files exist
-- SOURCE_OF_TRUTH.md has entries for all files
-- DECISION_GATES.md references the correct frameworks
-
-### 4. Configure State
-
-State/CURRENT_STATE.md must be updated with:
-- Current date
-- Cash position
-- Current bottleneck
-- Current priority
-- Session objective
-
-### 5. First Boot
-
-Open a new session with the LLM. Provide SYSTEM_PROMPT.md as context or instruct the LLM to read it. The LLM will then:
-1. Read SYSTEM_PROMPT.md
-2. Execute Boot Sequence from SYSTEM_PROMPT.md
-3. Load all concepts
-4. Report awareness
-
-### 6. Verify Installation
-
-The LLM should:
-- Report the correct date and time
-- Identify all loaded files
-- State the current top priority
-- Recommend a next action
+`fhq` mode runs without ASTRA (standard FounderHQ).
 
 ## Troubleshooting
 
@@ -66,6 +77,8 @@ The LLM should:
 | Freshness errors on first boot | Update concept footers. WF-007 threshold is 48h by default. |
 | Git not found | Reboot system will work without git but with reduced delta detection. |
 | LLM ignores protocol | Re-state SYSTEM_PROMPT.md. Emphasize "you are not an assistant." |
+| swisseph import fails | Run `pip install pysweph` in the `.venv` |
+| ASTRA scripts fail | Verify birth data was collected correctly in GENESIS step |
 
 ## Model Compatibility
 
@@ -74,6 +87,7 @@ FounderOS has been tested with:
 - ChatGPT (GPT-4, GPT-4o)
 - DeepSeek
 - Gemini
+- LM Arena
 
 It should work with any model that can:
 - Read and write files
@@ -84,6 +98,6 @@ It should work with any model that can:
 
 | Field | Value |
 |-------|-------|
-| Last Verified | 2026-06-20 |
+| Last Verified | 2026-06-23 |
 | Owner | System |
-| Dependencies | GENESIS.md, SYSTEM_PROMPT.md |
+| Dependencies | GENESIS.md, SYSTEM_PROMPT.md, public Gist 5b7b5c36610cc1076c798c716c7560e6 |

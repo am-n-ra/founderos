@@ -219,13 +219,96 @@ Analysis and lessons belong in KNOWLEDGE.
 
 ---
 
+**2026-06-23 (OOOS + PROFILE created)**
+- **Event:** FHQ autonomously detects and scores opportunities for the founder
+- **Decision:** Deploy Phase 1: Founder Opportunity Intelligence System
+- **Outcome:** PROFILE.md, OOOS.md, 4 watches, SYSTEM_PROMPT GENESIS + boot integration created
+
+**2026-06-23 (Phase 2: English translation)**
+- **Event:** 15 system files translated from French to English
+- **Decision:** Complete system translation for consistency
+- **Outcome:** All system prompts now in English. User conversation remains language-agnostic.
+
+**2026-06-24 (09:17 Lomé UTC+0 — Status: SOJACO arrêté, recalibrage priorités)**
+- SOJACO à l'arrêt: dame 1 accident (soja renversé + sable, puis soja caillé). Dame 2 modèle consignation impossible (pas de cash flow, pas de stock). Aucun acheteur soja/haricot intéressé.
+- Dame 1 relancée avec 2 bols (2,000 FCFA de maman, pas biz).
+- KORA: ST Digital accord verbal compute + estimation envoyée, pas de retour. DG West Africa relancée, accusé. Herlog contacté. Pas d'équipe/bureau/modèle/compute. Kaggle free tier.
+- DoodleMind + Stop Nuisibles: objectif 1 vidéo/jour minimum pour monétisation.
+- OMNI: seul projet en équipe (6 pers.), présentable en public, sans peur de vol. Relancer framework.
+- Besoin vital mensuel calculé: ~41,000 FCFA (15k nourriture + 8k cash power + 18k connexion).
+- Priorité #1: trouver 1 source de revenu fiable.
+- Tous les fichiers d'état mis à jour (CURRENT_STATE, PRIORITY_MATRIX, MEMORY).
+
+**2026-06-23 (18:32 Lomé UTC+0 — ASTRA Phase 2 + GENESIS flow fixes)**
+- ASTRA Phase 2 complete : Yogas (14), Ashtakavarga, Vargas D9/D10/D60, Shadbala, Muhurta 18 types
+- Installer bug fix : missing paren line 419
+- GRAHA_EXALTATION/DEBILITATION/MOOLATRIKONA corrected for all 7 grahas
+- installer.py no longer creates .founderhq_installed — LLM creates it after full GENESIS conversation
+- BOOTSTRAP.md created : 8-step GENESIS flow
+- Public Gist updated (rev 63b545b → a517432)
+- Private Gist updated (27 files, state files regenerated)
+- SYSTEM_PROMPT.md fix : fhqa handler now has explicit kernel cycle (BOOT → OBSERVE → ORIENT → DECIDE → ACT → LEARN → UPDATE) + Get-Date + tracking + ASTRA GENESIS delivers complete reading
+- Token security fix : LLM must never ask for raw .env, must guide token creation
+- All state files regenerated with real user data (2003-05-29 09:49 Lomé)
+
+**2026-06-24 (15:30 Lomé UTC+0 — DoodleMind Short #2 publié YT+TK)**
+- Short #2 "Your Body Has a Second Brain" publié sur YouTube + TikTok
+- Script 180 mots ~65s, 12 scènes doodle hand-drawn, 27 prompts image générés
+- Thumbnail: silhouette doodle avec second cerveau orange dans le ventre
+- Metadata optimisée (titre A/B, tags neuroscience, description bilingue)
+- Prochaine action: produire Short #3 (1/jour objectif)
+
+**2026-06-24 15:30-17:30 — Session audit + correctifs majeurs fhqa**
+- Audit complet 4 agents : modules ASTRA, state files, scripts Runtime, SYSTEM_PROMPT.md
+- 15+ problèmes critiques identifiés et corrigés
+- GENESIS order fixed : installer AVANT astra scripts
+- swe.calc_ut 2-value return fixed (cassait tous les modules ASTRA)
+- astra_forecast.py réécrit : écrit State/ASTRA_FORECAST.md
+- cycle.py enrichi : Shadbala, Yogas, Ashtakavarga, Vargas, Muhurta, Alerts, Watch Reports
+- SYSTEM_PROMPT.md restructuré : 13-step boot, <mode> défini, GENESIS paradox fixé
+- BOOTSTRAP.md syncé avec le nouveau GENESIS order
+- projects/ directory créé (10 dossiers avec README)
+- FOUNDER_SEED.md regénéré (95 fichiers, 402 KB)
+- 10 concepts STALE mis à jour (OMNI, KORA, SOJACO, DOODLEMIND_SHORTS_PLAN, WORKFLOW, PLAYBOOK, DISTRIBUTION_MEMORY, SYSTEM, KNOWLEDGE, PROJECT)
+- _HEARTBEAT.md bootstrappé (timekeeper + watchtower)
+- Gists publics (12 fichiers) + privés mis à jour
+
+---
+
+### Réalisation Méditation — 2026-06-24
+**Event:** Méditation profonde — prise de conscience complète du cadre de vie : Spiritualité → Trading (outil d'indépendance) → KORA/OMNI (impact) → Retraite spirituelle à 30-33.
+**Décision:** Trading = priorité immédiate. La stratégie EURUSD 1:2.25 RR (5 règles, rule-based, EA-ready) retrouvée après 1-2 ans d'oubli.
+**Outcome:** Compte funded $2000 (Next Instant) à $1904.28. Sade Sati calculé : fin exacte au 6 juin 2032 (29.5 ans). Aligné avec l'intuition de retraite à 30-33.
+
+### Debug Cycle — 2026-06-24
+**Event:** 3 bugs du cycle fhq/fhqa corrigés : (1) ALERTS.md regex trop large, (2) CADENCE.md placeholders, (3) stale concepts persistants.
+**Décision:** Cycle propre maintenant — 0 stale, alerts intactes, cadence réelle.
+
+### KORA Watchtower Actif — 2026-06-24
+**Event:** 5 nouvelles veilles KORA ajoutées. Résultats ddgs réels: dataset Éwé 5000h trouvé (HCI-LAB-UGSPEECHDATA/ewe-asr-model), AI4D Africa, Lacuna Fund leads.
+**Décision:** DG WA ST Digital (Justine Adebiyi) promet intros fonds + ATD. En attente.
+
+---
+
+**2026-06-25 to 2026-06-26 (Session ~23h — EA Design + Position Sizing + MT5 EA v2)**
+
+**Event:** Session de développement EA. Points vs pips clarifié. Position sizing redesigned (escalier sans reset, double à ×10 profit cumulé). Limite margin $4.00 identifiée sur compte $2000. Backtest recalculé avec SL=10/TP=34.1 (11 trades, 63.6% WR, net 19.87R, profit $14.96 avec sizing). strategy_rules.py créé avec 6 règles. ea_monitor.py créé (boucle M1 + SQLite). ReversalDetector.mq5 v2.0 créé pour MT5 (affichage setups historiques + temps réel).
+**Décision:** R6 directionnelle (bearish: vérifie high, bullish: vérifie low). Doji B1 accepté. R2 = range B2 > range B1 (pas de body extension).
+**Outcome:** EA MT5 prêt pour forward-test visuel. Module Python synchronisé.
+
+---
+
+**2026-06-27 (09:51 Lomé UTC+0 — Session FounderHQ Vision + OOOS)**
+- **Event:** VPS Oracle bloqué (vm.standard + a1 refusés). Solution locale OK. GCP $50 top-up bloque Google for Startups.
+- **Decision:** EA tourne en local le weekend. FounderHQ V2 Vision formalisée.
+- **Outcome:** OOOS exécuté — 8 opportunités scorées. Top 3: Google for Startups (84), AISCA Foundation (83), Deepgram (76). FounderHQ V2 vision capturée dans MANIFEST.md.
+
+---
+
 ## Footer
 
-Last updated: 2026-06-21 20:35 (added: PRG Step 6 fix session)
+Last updated: 2026-06-27 09:51 — Lomé UTC+0
 
 Timeline is append-only.
 
 Do not edit past entries — add corrections as new entries if needed.
-
-| 2026-06-23 | OOOS + PROFILE created | Phase 1: Founder Opportunity Intelligence System deployed | PROFILE.md, OOOS.md, 4 watches, SYSTEM_PROMPT GENESIS + boot integration | FHQ autonomously detects and scores opportunities for the founder |
-| 2026-06-23 | Phase 2: English translation | 15 system files translated from French to English | CAOS, CEOS, FAOS, SAOS, PSOS, MAOS, AAOS, VSOS, AI_VIDEO_MASTER_DOMAIN, PMOS, LEOS, RIOS, PRIORITIZATION_PROTOCOL, INFO_CAPTURE_PROTOCOL, SOURCE_OF_TRUTH, opencode.md, DESCRIPTION.md | All system prompts now in English. User conversation remains language-agnostic. |

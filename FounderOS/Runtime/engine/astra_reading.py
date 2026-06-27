@@ -18,7 +18,7 @@ _workspace_root = _this_dir.parent.parent
 if str(_workspace_root) not in sys.path:
     sys.path.insert(0, str(_workspace_root))
 
-from Runtime.engine.astra_core import AstraEngine
+from Runtime.engine.astra_core import AstraEngine, GRAHA_ORDER, RASHI_FR
 
 
 # ── Interpretation Dictionaries ──────────────────────────────────────────
@@ -107,10 +107,14 @@ SADE_SATI_GUIDE = {
     "declining": "Saturne s'eloigne. Reconstruction. Les fruits des efforts commencent a montrer.",
 }
 
-RASHI_LIST = [
-    "Belier", "Taureau", "Gemeaux", "Cancer", "Lion", "Vierge",
-    "Balance", "Scorpion", "Sagittaire", "Capricorne", "Verseau", "Poissons",
-]
+# ── Shadbala Interpretation ───────────────────────────────────────────
+SHADBALA_QUALITY = {
+    "tres fort": "Graha dominant dans le theme. Ses energies s'expriment pleinement.",
+    "fort": "Bon equilibre. Le graha peut soutenir ses domaines.",
+    "moyen": "Force moyenne. L'energie est presente mais doit etre cultivee.",
+    "faible": "Graha affaibli. Ses domaines peuvent poser defi ou rester sous-developpes.",
+    "tres faible": "Graha tres affaibli. Compenser par d'autres forces du theme.",
+}
 
 DASHA_NARRATIVE = {
     "Rahu": "Ambition, desirs materiels, percées, mais illusions.",
@@ -123,10 +127,6 @@ DASHA_NARRATIVE = {
     "Shukra": "Amour, beaute, confort, arts, relations.",
     "Ketu": "Spiritualite, detachement, karma passe, retrait.",
 }
-
-GRAHA_ORDER = [
-    "Surya", "Chandra", "Mangala", "Budha", "Guru", "Shukra", "Shani", "Rahu", "Ketu",
-]
 
 
 def parse_birth_md(path) -> dict:
@@ -149,6 +149,8 @@ def parse_birth_md(path) -> dict:
     if sign_m:
         lagna["rashi"] = sign_m.group(1)
         lagna["deg"] = float(sign_m.group(2))
+        rashi_i = RASHI_FR.index(lagna["rashi"]) if lagna["rashi"] in RASHI_FR else 0
+        lagna["lon"] = rashi_i * 30 + lagna["deg"]
     nak_m = re.search(r"\*\*Nakshatra:\*\*\s*(.+?)\s*[—\-]\s*Pada\s*(\d+)", text)
     if nak_m:
         lagna["nakshatra"] = nak_m.group(1).strip()
@@ -177,7 +179,7 @@ def parse_birth_md(path) -> dict:
                 nak_lord = parts[6]
                 house = int(parts[7])
                 retro = parts[8] == "R"
-                rashi_i = RASHI_LIST.index(rashi) if rashi in RASHI_LIST else 0
+                rashi_i = RASHI_FR.index(rashi) if rashi in RASHI_FR else 0
                 lon_approx = rashi_i * 30 + deg
                 grahas[name] = {
                     "rashi": rashi, "rashi_deg": deg, "lon": lon_approx,
@@ -250,8 +252,37 @@ def parse_birth_md(path) -> dict:
         r"## Yogas \(Auto-Detected\)\n(.+?)(?=\n##|\Z)", text, re.DOTALL
     )
     if yogas_section:
-        for ym in re.finditer(r"\*\*(.+?):\*\*\s*(.+)", yogas_section.group(1)):
-            yogas.append([ym.group(1), ym.group(2).strip()])
+        for line in yogas_section.group(1).splitlines():
+            ym = re.match(r"\-\s+\*\*(.+?)\*\*(?:\s+:\w+:)?\s*:\s*(.+)", line)
+            if ym:
+                name = ym.group(1).strip()
+                rest = ym.group(2).strip()
+                if ":star:" in line:
+                    strength = "strong"
+                    desc = rest.replace(":star::", "").replace(":star:", "").strip()
+                else:
+                    strength = "medium"
+                    desc = rest
+                yogas.append([name, desc, strength])
+
+    # Parse Shadbala table
+    shadbala = {}
+    shadbala_section = re.search(
+        r"## Shadbala \(Sixfold Strength\)\n(.+?)(?=\n##|\Z)", text, re.DOTALL
+    )
+    if shadbala_section:
+        for line in shadbala_section.group(1).splitlines():
+            parts = [p.strip() for p in line.strip().split("|")]
+            if len(parts) >= 5 and parts[1] in GRAHA_ORDER:
+                score_str = parts[2].replace("/100", "")
+                try:
+                    score = int(score_str)
+                except ValueError:
+                    continue
+                shadbala[parts[1]] = {
+                    "score": score,
+                    "quality": parts[3],
+                }
 
     return {
         "birth_data": birth_data,
@@ -261,6 +292,7 @@ def parse_birth_md(path) -> dict:
         "dasha": dasha,
         "sade_sati": sade_sati,
         "yogas": yogas,
+        "shadbala": shadbala,
     }
 
 
@@ -335,15 +367,30 @@ Il definit le filtre a travers lequel tu vis le monde — ton corps, ton approch
 
     # ── Section 3: Yogas ──────────────────────────────────────────────
     md += "## Section 3 : Yogas\n\n"
-    if yogas:
-        for yoga_name, yoga_brief in yogas:
-            interpretation = YOGA_INTERPRETATIONS.get(yoga_name, yoga_brief)
-            md += f"""**{yoga_name}**
-{interpretation}
+    
+    strength_order = {"strong": 0, "medium": 1, "weak": 2}
+    sorted_yogas = sorted(yogas, key=lambda y: strength_order.get(y[2] if len(y) >= 3 else "medium", 3))
+    
+    if sorted_yogas:
+        for yoga_entry in sorted_yogas:
+            yoga_name = yoga_entry[0]
+            yoga_desc = yoga_entry[1]
+            yoga_strength = yoga_entry[2] if len(yoga_entry) >= 3 else "medium"
+            strength_label = {"strong": "Puissant", "medium": "Modere", "weak": "Faible"}.get(yoga_strength, "Modere")
+            icon = { "strong": ":star:", "medium": "", "weak": "-"}.get(yoga_strength, "")
+            md += f"""**{yoga_name}** {icon} — {strength_label}
+{yoga_desc}
 
 """
+        strong_count = sum(1 for y in sorted_yogas if len(y) >= 3 and y[2] == "strong")
+        if strong_count >= 3:
+            md += f"**{strong_count} yogas puissants** — charte natale exceptionnellement favorable.\n\n"
+        elif strong_count >= 1:
+            md += f"**{strong_count} yoga(s) puissant(s)** — points d'appui solides dans le theme.\n\n"
+        else:
+            md += "Aucun yoga majeur — les energies sont distribuees sans combinaison exceptionnelle.\n\n"
     else:
-        md += "Aucun yoga majeur detecte dans le D1 (chart natal). Cela signifie que les energies sont relativement independantes — chaque graha opere sans combinaison exceptionnelle.\n\n"
+        md += "Aucun yoga majeur detecte dans le D1 (chart natal). Les energies sont relativement independantes.\n\n"
 
     # ── Section 4: Dasha Arc ──────────────────────────────────────────
     md += "## Section 4 : Arc Dasha\n\nLa Vimshottari Dasha est le cycle planetaire de 120 ans. Chaque Mahadasha (MD) est gouvernee par un graha qui imprime son theme sur une periode de ta vie.\n\n### Dashas passes\n"
@@ -427,9 +474,9 @@ L'Antar Dasha affine le theme du Mahadasha. {current_ad.get('lord', '?')} apport
         aspects = ""
         if natal_rashi == curr_rashi:
             aspects += " [CONJONCTION NATALE — energie natal activee]"
-        if natal_rashi in RASHI_LIST and curr_rashi in RASHI_LIST:
-            natal_i = RASHI_LIST.index(natal_rashi)
-            curr_i = RASHI_LIST.index(curr_rashi)
+        if natal_rashi in RASHI_FR and curr_rashi in RASHI_FR:
+            natal_i = RASHI_FR.index(natal_rashi)
+            curr_i = RASHI_FR.index(curr_rashi)
             dist = (curr_i - natal_i) % 12
             if dist == 6:
                 aspects += " [OPPOSITION — tension, prise de conscience]"
@@ -494,6 +541,115 @@ L'Antar Dasha affine le theme du Mahadasha. {current_ad.get('lord', '?')} apport
 ---
 *ASTRA Reading — Generated by astra_reading.py at {now.strftime('%Y-%m-%d %H:%M')} UTC*
 """
+
+    # ── Section 8: Ashtakavarga ────────────────────────────────────────
+    md += "## Section 8 : Ashtakavarga\n\nAshtakavarga est un systeme de points (bindus) qui mesure la force des 12 maisons. Plus une maison a de bindus, plus elle est favorable pour les initiatives.\n\n"
+    
+    ashta = chart.get("ashtakavarga", {})
+    if not ashta:
+        try:
+            bd = birth_data
+            if bd.get("date"):
+                parts = bd["date"].split("-")
+                y, mo, d = int(parts[0]), int(parts[1]), int(parts[2])
+                h, mi = 0, 0
+                if bd.get("time"):
+                    tp = bd["time"].split(":")
+                    h, mi = int(tp[0]), int(tp[1])
+                birth_jd = engine.jd_from_utc(y, mo, d, h, mi)
+                ashta = engine.compute_ashtakavarga(birth_jd)
+        except Exception as e:
+            print(f"[WARN] Ashtakavarga error: {e}")
+            ashta = {}
+    
+    if ashta:
+        sarva = ashta.get("sarvashtakavarga", [])
+        if sarva:
+            md += "### Sarvashtakavarga (total bindus par maison)\n| Maison | Bindus | Force |\n|--------|--------|-------|\n"
+            avg = sum(sarva) / len(sarva) if sarva else 0
+            for i, b in enumerate(sarva):
+                if b > avg:
+                    force = "Forte"
+                elif b < avg - 2:
+                    force = "Faible"
+                else:
+                    force = "Moyenne"
+                md += f"| {i+1} | {b} | {force} |\n"
+            md += f"\n**Total:** {sum(sarva)} bindus (moyenne: {avg:.1f})\n\n"
+            strong = ashta.get("strong_houses", [])
+            weak = ashta.get("weak_houses", [])
+            if strong:
+                md += f"**Maisons fortes:** {', '.join(str(h) for h in strong)} — opportunites naturelles dans ces domaines.\n"
+            if weak:
+                md += f"**Maisons faibles:** {', '.join(str(h) for h in weak)} — vigilance et effort supplementaire requis.\n"
+    else:
+        md += "Donnees Ashtakavarga non disponibles.\n\n"
+
+    # ── Section 9: Shadbala ───────────────────────────────────────────
+    md += "## Section 9 : Shadbala — Force des Grahas\n\nLe Shadbala mesure la force globale de chaque graha dans le theme. Score sur 100.\n\n"
+    
+    shadbala = chart.get("shadbala", {})
+    if shadbala:
+        md += "| Graha | Score | Qualite | Interpretation |\n"
+        md += "|-------|-------|---------|----------------|\n"
+        for g_name in GRAHA_ORDER:
+            s = shadbala.get(g_name)
+            if s:
+                quality = s.get("quality", "moyen")
+                interp = SHADBALA_QUALITY.get(quality, "")
+                notes = []
+                if s.get("exalted"):
+                    notes.append("Exalte")
+                if s.get("debilitated"):
+                    notes.append("Debile")
+                note_str = " — " + ", ".join(notes) if notes else ""
+                md += f"| {g_name} | {s['score']}/100 | {quality} | {interp}{note_str} |\n"
+        
+        valid = {k: v for k, v in shadbala.items() if v and v.get("score") is not None}
+        if valid:
+            strongest = max(valid, key=lambda k: valid[k]["score"])
+            weakest = min(valid, key=lambda k: valid[k]["score"])
+            md += f"\n**Graha le plus fort:** {strongest} ({valid[strongest]['score']}/100)\n"
+            md += f"**Graha le plus faible:** {weakest} ({valid[weakest]['score']}/100)\n"
+            md += f"*Conseil: Renforcer les energies du graha le plus faible par des rituels, couleurs, ou mantras associes.*\n\n"
+    else:
+        md += "Donnees Shadbala non disponibles. Regenerer ASTRA_BIRTH.md.\n\n"
+
+    # ── Section 10: Vargas ────────────────────────────────────────────
+    md += "## Section 10 : Analyse des Vargas\n\nLes divisionales (Vargas) revelent des couches plus profondes du destin. Chaque varga eclaire un domaine specifique de la vie.\n\n"
+    
+    vargas = chart.get("vargas", {})
+    if not vargas:
+        try:
+            bd = birth_data
+            if bd.get("date"):
+                parts = bd["date"].split("-")
+                y, mo, d = int(parts[0]), int(parts[1]), int(parts[2])
+                h, mi = 0, 0
+                if bd.get("time"):
+                    tp = bd["time"].split(":")
+                    h, mi = int(tp[0]), int(tp[1])
+                birth_jd = engine.jd_from_utc(y, mo, d, h, mi)
+                vargas = engine.compute_vargas(birth_jd)
+        except Exception as e:
+            print(f"[WARN] Vargas error: {e}")
+            vargas = {}
+    
+    if vargas:
+        for vkey in ["D9", "D10", "D60"]:
+            vdata = vargas.get(vkey, {})
+            if not vdata:
+                continue
+            positions = vdata.get("positions", {})
+            vlagna = engine.compute_varga_lagna(chart, {"D9": 9, "D10": 10, "D60": 60}[vkey])
+            md += f"### {vkey} — {vdata.get('name', '')}\n{vdata.get('description', '')}\n- **Lagna:** {vlagna['rashi']}\n\n"
+            for g_name in GRAHA_ORDER:
+                pg = positions.get(g_name)
+                if pg:
+                    md += f"- {g_name}: {pg.get('rashi', '')}\n"
+            md += "\n"
+    else:
+        md += "Donnees Vargas non disponibles.\n\n"
 
     return md
 

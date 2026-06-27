@@ -169,13 +169,16 @@ def _resolve_python(base_dir: str) -> str:
     return venv if venv else sys.executable
 
 
-def _create_schtasks(name: str, script: str, base_dir: str, interval: int) -> bool:
+def _create_schtasks(name: str, script: str, base_dir: str, interval: int, extra_args: str = "") -> bool:
     python_exe = _resolve_python(base_dir)
+    tr_arg = f'"{python_exe}" "{script}" --base-dir "{base_dir}"'
+    if extra_args:
+        tr_arg += f" {extra_args}"
     cmd = [
         "schtasks", "/Create", "/SC", "MINUTE",
         "/MO", str(interval),
         "/TN", name,
-        "/TR", f'"{python_exe}" "{script}" --base-dir "{base_dir}"',
+        "/TR", tr_arg,
         "/F",
     ]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
@@ -282,9 +285,9 @@ def _create_launchd(name: str, script: str, base_dir: str, interval: int) -> boo
     return True
 
 
-def setup_scheduler(name: str, script_path: str, base_dir: str, interval_minutes: int) -> bool:
+def setup_scheduler(name: str, script_path: str, base_dir: str, interval_minutes: int, extra_args: str = "") -> bool:
     if IS_WINDOWS:
-        return _create_schtasks(name, script_path, base_dir, interval_minutes)
+        return _create_schtasks(name, script_path, base_dir, interval_minutes, extra_args)
     if IS_LINUX:
         return _create_cron(name, script_path, base_dir, interval_minutes)
     if IS_MAC:
@@ -372,11 +375,9 @@ def main():
 
     timekeeper_path = scripts_dir / "timekeeper.py"
     if timekeeper_path.exists():
-        timekeeper_created = setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), TIMEKEEPER_INTERVAL)
+        timekeeper_created = setup_scheduler("FounderHQ-Timekeeper", str(timekeeper_path), str(base_path), TIMEKEEPER_INTERVAL, "--astra")
     else:
         print(f"WARNING: {timekeeper_path} not found, skipping timekeeper")
-
-    create_marker(base_path)
 
     print("\nInstallation complete.")
     print(f"  Platform: {get_platform_label()}")
@@ -390,33 +391,38 @@ def main():
         print(f"  - Timekeeper scheduler: configured (every {TIMEKEEPER_INTERVAL} min)")
     else:
         print("  - Timekeeper scheduler: NOT configured (script missing)")
-    print("  - .founderhq_installed: created")
+    print("  - .founderhq_installed: NOT YET created (LLM creates after GENESIS)")
 
     has_astra = (scripts_dir / "astra_core.py").exists()
     if has_astra:
         print()
         print("=" * 60)
-        print("  GENESIS CONTINUES — LLM INSTRUCTIONS")
+        print("  >>> NEXT STEP: GENESIS CONVERSATION <<<")
         print("=" * 60)
-        print("  1. Ask the user (in their language) about:")
+        print("  DO NOT STOP HERE. You must now:")
+        print()
+        print("  1. ASK the user (in their language):")
         print("     - Domain/industry, role, tech stack")
         print("     - Strategic needs, constraints, active projects")
         print("     - Geographic focus")
         print("     Write answers to concepts/PROFILE.md")
         print()
-        print("  2. Ask for birth date, time (HH:MM UTC+0), and place")
-        print("     Then run:")
+        print("  2. ASK for birth date, time (HH:MM UTC+0), and place")
+        print("     Then RUN:")
         print("     python Runtime/engine/astra_birth.py --base-dir .")
-        print("                    --date YYYY-MM-DD --time HH:MM")
+        print("         --date YYYY-MM-DD --time HH:MM")
         print()
-        print("  3. Generate first daily:")
-        print("     python Runtime/engine/astra_daily.py --base-dir .")
+        print("  3. RUN: python Runtime/engine/astra_daily.py --base-dir .")
         print()
-        print("  4. Generate narrative reading:")
-        print("     python Runtime/engine/astra_reading.py --base-dir .")
+        print("  4. RUN: python Runtime/engine/astra_reading.py --base-dir .")
         print()
-        print("  5. Confirm: ASTRA GENESIS complete.")
-        print("=" * 60")
+        print("  5. READ the state files and give the user")
+        print("     their personalized ASTRA guidance.")
+        print()
+        print("  6. FINAL: create .founderhq_installed marker:")
+        print('     open(".founderhq_installed","w").write("")')
+        print("     This marks GENESIS as complete.")
+        print("=" * 60)
 
 
 if __name__ == "__main__":

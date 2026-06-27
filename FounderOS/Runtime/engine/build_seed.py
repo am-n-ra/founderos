@@ -15,6 +15,7 @@ SEED_PATH = ROOT / "FOUNDER_SEED.md"
 ORDERED_FILES = [
     # ── System Core ──
     "SYSTEM_PROMPT.md",
+    "BOOTSTRAP.md",
     "FOUNDERHQ_MANIFEST.md",
     "CONCEPT_REGISTRY.md",
     "CONCEPT_AUDIT.md",
@@ -42,6 +43,8 @@ ORDERED_FILES = [
     "MOS.md",
     "DAOS.md",
     "AOS.md",
+    "CEOS.md",
+    "FAOS.md",
     "ASTRA.md",
     "KMOS.md",
     "LEOS.md",
@@ -115,8 +118,14 @@ ORDERED_FILES = [
 # These are extracted by the LLM but not needed as LLM context.
 RUNTIME_SCRIPTS = [
     "Runtime/engine/__init__.py",
+    "Runtime/engine/astra_birth.py",
+    "Runtime/engine/astra_core.py",
+    "Runtime/engine/astra_daily.py",
+    "Runtime/engine/astra_forecast.py",
+    "Runtime/engine/astra_reading.py",
     "Runtime/engine/bootstrap.py",
     "Runtime/engine/cadence_engine.py",
+    "Runtime/engine/cycle.py",
     "Runtime/engine/gate_checker.py",
     "Runtime/engine/installer.py",
     "Runtime/engine/snapshot.py",
@@ -157,9 +166,8 @@ FORBIDDEN_FILE_PATHS = [
     "FOUNDER_SEED.md",
     "DIOS.legacy.md",
     "README.md",
-    "AI_VIDEO_MASTER_DOMAIN.md",  # root-level duplicate
-    "CEOS.md",  # root-level duplicate
-    "FAOS.md",  # root-level duplicate
+    "AI_VIDEO_MASTER_DOMAIN.md",  # root-level duplicate (canonical: Frameworks/AI/)
+    "DIOS.legacy.md",
 ]
 
 # Personal project names that should never appear in seed (case-insensitive)

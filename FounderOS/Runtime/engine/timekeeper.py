@@ -10,18 +10,16 @@ Usage:
 """
 
 import argparse
+import importlib.util
 import re
 import subprocess
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
-# Ensure workspace root is on sys.path for direct script execution
 _this_dir = Path(__file__).resolve().parent
 _workspace_root = _this_dir.parent.parent
-if str(_workspace_root) not in sys.path:
-    sys.path.insert(0, str(_workspace_root))
 
 
 def send_toast(title: str, message: str) -> bool:
@@ -78,9 +76,9 @@ def parse_deadlines(base_path: Path) -> list[dict]:
 
         deadline = None
         if deadline_str.lower() == "today":
-            deadline = datetime.now().date()
+            deadline = datetime.now(timezone.utc).date()
         elif deadline_str.lower() == "tomorrow":
-            deadline = datetime.now().date() + timedelta(days=1)
+            deadline = datetime.now(timezone.utc).date() + timedelta(days=1)
         else:
             try:
                 deadline = datetime.strptime(deadline_str, "%Y-%m-%d").date()
@@ -88,7 +86,7 @@ def parse_deadlines(base_path: Path) -> list[dict]:
                 continue
 
         if deadline is not None:
-            days_until = (deadline - datetime.now().date()).days
+            days_until = (deadline - datetime.now(timezone.utc).date()).days
             if 0 <= days_until <= 2:
                 deadlines.append({
                     "project": project,
@@ -110,22 +108,24 @@ def check_sos_timer(base_path: Path) -> Optional[str]:
         return None
 
     text = cadence_path.read_text(encoding="utf-8")
-    match = re.search(r"\*\*Session start:\*\*\s*([\d:]+)", text, re.IGNORECASE)
+    match = re.search(r"\*\*Session start:\*\*\s*([\d:]+)", text)
     if not match:
         return None
 
     session_start_str = match.group(1)
     try:
-        now = datetime.now()
+        now = datetime.now(timezone.utc)
         session_start = datetime.strptime(session_start_str, "%H:%M").replace(
-            year=now.year, month=now.month, day=now.day
+            year=now.year, month=now.month, day=now.day, tzinfo=timezone.utc
         )
+        if session_start > now:
+            session_start -= timedelta(days=1)
     except ValueError:
         return None
 
     elapsed_minutes = (now - session_start).total_seconds() / 60
     if elapsed_minutes > 90:
-        return f"Session active depuis {elapsed_minutes:.0f} min. Pause recommandee (SOS)."
+        return f"Session active depuis {elapsed_minutes:.0f} min. Pause recommandée (SOS)."
 
     return None
 
@@ -141,16 +141,66 @@ def append_alert(base_path: Path, severity: str, message: str) -> None:
             encoding="utf-8",
         )
 
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M UTC+0")
+    now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC+0")
     entry = f"| {now_str} | timekeeper | {severity} | {message} |\n"
 
     with open(alerts_path, "a", encoding="utf-8") as f:
         f.write(entry)
 
 
+def write_heartbeat(base_path: Path, task_name: str, interval_minutes: int) -> None:
+    hb_path = base_path / "State" / "_HEARTBEAT.md"
+    now_utc = datetime.now(timezone.utc)
+    now_str = now_utc.strftime("%Y-%m-%d %H:%M")
+    next_str = (now_utc + timedelta(minutes=interval_minutes)).strftime("%Y-%m-%d %H:%M")
+    if not hb_path.exists():
+        hb_path.write_text(
+            "# HEARTBEAT\n\n"
+            "| Task | Last Run (UTC) | Status | Next Expected (UTC) |\n"
+            "|------|---------------|--------|---------------------|\n",
+            encoding="utf-8",
+        )
+    lines = hb_path.read_text(encoding="utf-8").splitlines()
+    new_lines = []
+    found = False
+    for line in lines:
+        if line.startswith(f"| {task_name} |"):
+            new_lines.append(f"| {task_name} | {now_str} | OK | {next_str} |")
+            found = True
+        else:
+            new_lines.append(line)
+    if not found:
+        new_lines.append(f"| {task_name} | {now_str} | OK | {next_str} |")
+    hb_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+
+
+def check_watchtower_heartbeat(base_path: Path) -> None:
+    hb_path = base_path / "State" / "_HEARTBEAT.md"
+    if not hb_path.exists():
+        append_alert(base_path, "HIGH", "No heartbeat file found - watchtower may not be running")
+        return
+    text = hb_path.read_text(encoding="utf-8")
+    for line in text.splitlines():
+        if line.startswith("| FounderHQ-Watchtower |"):
+            parts = [p.strip() for p in line.strip("|").split("|")]
+            if len(parts) >= 4:
+                last_str = parts[1]
+                status = parts[2]
+                try:
+                    last_dt = datetime.strptime(last_str, "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+                    elapsed = (datetime.now(timezone.utc) - last_dt).total_seconds() / 3600
+                    if status != "OK":
+                        append_alert(base_path, "HIGH", f"Watchtower status: {status} (last run {last_str})")
+                    elif elapsed > 7:
+                        append_alert(base_path, "HIGH", f"Watchtower heartbeat stale - {elapsed:.0f}h since last run")
+                except ValueError:
+                    pass
+            return
+
+
 def main():
     parser = argparse.ArgumentParser(description="Timekeeper - time and alert script for FounderHQ")
-    parser.add_argument("--base-dir", default=".", help="FounderHQ root directory")
+    parser.add_argument("--base-dir", default=str(_workspace_root), help="FounderOS root directory")
     parser.add_argument("--no-toast", action="store_true", help="Skip toast notifications")
     parser.add_argument("--astra", action="store_true", help="Run ASTRA daily update")
     args = parser.parse_args()
@@ -158,12 +208,27 @@ def main():
     base_path = Path(args.base_dir)
 
     if args.astra:
-        try:
-            from Runtime.engine.astra_daily import main as astra_main
-            astra_main()
-            print("[ASTRA] Daily update complete.")
-        except Exception as e:
-            print(f"[ASTRA] Error: {e}")
+        astra_daily_path = _workspace_root / "Runtime" / "engine" / "astra_daily.py"
+        if not astra_daily_path.exists():
+            msg = "astra_daily.py not found"
+            print(f"[ASTRA] {msg}")
+            append_alert(base_path, "HIGH", msg)
+        else:
+            daily_state = base_path / "State" / "ASTRA_DAILY.md"
+            today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            if daily_state.exists() and today_str in daily_state.read_text(encoding="utf-8"):
+                print(f"[ASTRA] Daily already up to date ({today_str}), skipping.")
+            else:
+                try:
+                    spec = importlib.util.spec_from_file_location("astra_daily", astra_daily_path)
+                    mod = importlib.util.module_from_spec(spec)
+                    spec.loader.exec_module(mod)
+                    mod.main()
+                    print(f"[ASTRA] Daily update complete ({today_str}).")
+                except Exception as e:
+                    msg = f"Astra daily failed: {e}"
+                    print(f"[ASTRA] Error: {msg}")
+                    append_alert(base_path, "HIGH", msg)
 
     deadlines = parse_deadlines(base_path)
     for d in deadlines:
@@ -183,6 +248,9 @@ def main():
             sent = send_toast("FounderHQ SOS", "Pause recommandee - session > 90 min")
             if sent:
                 print("  Toast sent.")
+
+    check_watchtower_heartbeat(base_path)
+    write_heartbeat(base_path, "FounderHQ-Timekeeper", interval_minutes=30)
 
     print("Timekeeper run complete.")
 

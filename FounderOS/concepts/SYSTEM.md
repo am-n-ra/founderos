@@ -10,6 +10,10 @@ Store the rules that govern FounderHQ itself.
 
 SYSTEM is the meta-layer. It does not contain operational data, mission definitions, project status, knowledge, or any business content.
 
+**Status:** ⚠️ Needs review — recent runtime changes not yet documented.
+
+**Last Updated:** 2026-06-24
+
 ---
 
 ## FounderHQ Documents
@@ -291,9 +295,35 @@ If a session is interrupted (crash, disconnect, timeout):
 
 ---
 
+## Recent Runtime Changes
+
+The following changes have been made to the runtime since the last SYSTEM.md update:
+
+### cycle.py — Kernel Orchestration (2026-06-22+)
+- `cycle.py` now orchestrates all kernel operations: BOOT → OBSERVE → ORIENT → DECIDE → ACT → LEARN → UPDATE
+- Integrated with PRG (Pre-Response Gate) for automatic execution
+- Auto-FHQ: triggers automatically after 30min of inactivity
+
+### Heartbeat Monitoring (2026-06-22)
+- `_HEARTBEAT.md` tracks session health and continuity
+- Used to detect stale sessions, missed cycles, and runtime anomalies
+- Integrated with BurntToast for Windows pop-up notifications on deadlines and SOS
+
+### astra_forecast.py — State File Writer (2026-06-23)
+- `astra_forecast.py` now writes state files directly (CURRENT_STATE, PRIORITY_MATRIX, MEMORY)
+- Eliminates manual state file editing during ASTRA operations
+- All state files regenerated with real user data
+
+### fhqa/fhq Mode Clarification (2026-06-22)
+- `fhqa` handler now executes explicit kernel cycle (BOOT → OBSERVE → ORIENT → DECIDE → ACT → LEARN → UPDATE)
+- `fhq` mode classification clarified in SYSTEM_PROMPT.md: Classification Rule #3 ensures "fhq" in first position always wins
+- Auto-FHQ Rule #8: triggers cycle if ≥ 30min since last `fhq`
+
+---
+
 ## Footer
 
-Last updated: 2026-06-18 (added: 7-phase boot sequence, runtime architecture, authority levels 0-5, escalation categories, silence rule)
+Last updated: 2026-06-24 (added: Recent Runtime Changes section — cycle.py, heartbeat, astra_forecast, fhqa/fhq clarification; marked for review)
 
 SYSTEM is the least frequently modified concept.
 

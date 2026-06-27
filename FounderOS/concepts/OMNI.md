@@ -1,5 +1,7 @@
 # FounderOS V4 — OMNI (L'index du commerce de proximité)
 
+> ⚠️ **Stale** — No recent activity. Pitch day July 23. Needs framework relaunch.
+
 ## Purpose
 
 Omni indexe l'économie de proximité africaine sur une carte interactive. L'acheteur trouve en un clic tout ce qui existe autour de lui. Le commerçant devient visible pour la première fois.
@@ -13,8 +15,8 @@ Omni est le projet d'indexation du commerce de proximité, en parallèle de KORA
 | Field | Value |
 |---|---|
 | Phase | Pre-Seed / Validation |
-| Activity | Active (MVP deployed) |
-| Priority | Critical (Djanta Tech Hub deadline June 22) |
+| Activity | Stale — no recent progress |
+| Priority | Medium (pitch day: July 23) |
 | Key Partner | Djanta Tech Hub (CcHUB) |
 | First City | Lomé |
 
@@ -44,5 +46,5 @@ Omni est le projet d'indexation du commerce de proximité, en parallèle de KORA
 | Field | Value |
 |---|---|
 | OS Version | V4 |
-| Last Updated | 2026-06-21 |
+| Last Updated | 2026-06-24 |
 | Owner | Founder |

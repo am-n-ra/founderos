@@ -1,6 +1,8 @@
 # DOODLEMIND — PLAN DE CONTENU SHORTS
 ## Version 1.0 — Calendrier Éditorial + Pipeline de Production
 
+**Last Updated: 2026-06-24**
+
 ### Canal DNA (du master prompt)
 - **Niche** : Histoire humaine, évolution, anthropologie, psychologie
 - **Format** : 30–60 secondes, narration 2e personne ("tu", "ton cerveau")
@@ -14,7 +16,7 @@
 | # | Titre (max 60 chars) | Hook (3 premiers mots) |
 |---|----------------------|------------------------|
 | 1 | Why Your Brain Forgets Dreams | "Your brain is" | ← **Short #1 publié** |
-| 2 | Your Body Has a Second Brain | "Your gut has" |
+| 2 | Your Body Has a Second Brain | "Your gut has" | ← **Short #2 publié 2026-06-24 (YT+TK)** |
 | 3 | Why You Get Random Itches | "You just felt" |
 | 4 | The Real Reason You Yawn | "You yawn when" |
 | 5 | Your Nose Can Smell Fear | "Your nose is" |
@@ -31,7 +33,7 @@
 | Short | Titre | Thème | Statut | Date cible | Production |
 |-------|-------|-------|--------|------------|------------|
 | #1 | Why Your Brain Forgets Dreams | Psychologie / Sommeil | ✅ Publié | - | - |
-| #2 | Your Body Has a Second Brain | Biologie / Nerf vague | 🔜 Planifié | S22 Juin | Master prompt → Stage 1 → 2 |
+| #2 | Your Body Has a Second Brain | Biologie / Nerf vague | ✅ Publié 2026-06-24 | YT+TK | YouTube + TikTok |
 | #3 | Why You Get Random Itches | Psychologie / Sensations | 📝 À planifier | S23 Juin | Master prompt → Stage 1 → 2 |
 | #4 | The Real Reason You Yawn | Biologie / Thermorégulation | 📝 À planifier | S24 Juin | Master prompt → Stage 1 → 2 |
 | #5 | Your Nose Can Smell Fear | Psychologie / Phéromones | 📝 À planifier | S25 Juin | Master prompt → Stage 1 → 2 |
@@ -63,4 +65,4 @@
 - Image prompts Short #1 : `KnowledgeAssets/prompts_why_your_brain_forgets_dreams.txt`
 
 ### Prochaine Action
-Lancer `shorts_viral_master_prompt.txt` → choisir Short #2 "Your Body Has a Second Brain" → exécuter Stage 1→4.
+Lancer `shorts_viral_master_prompt.txt` → choisir Short #3 "Why You Get Random Itches" → exécuter Stage 1→4.

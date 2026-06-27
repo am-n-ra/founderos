@@ -103,18 +103,43 @@ def render_daily_md(engine, jd, birth_chart=None) -> str:
             now_tag = " ⚠" if r.get("now") else ""
             md += f"| {r['severity']}{now_tag} | {r['window']} | {r['rule']} |\n"
 
+    muhurta_types = [
+        "general", "signature", "negotiation", "launch", "deep_work",
+        "fundraising", "content", "medical", "travel", "education",
+        "investment", "partnership", "legal", "renovation", "moving",
+        "vehicle", "interview", "networking",
+    ]
+    
     md += f"""
 ## Muhurta Scores
-| Type | Score |
-|------|-------|
-| General | {score}/100 |
-| Signature | {engine.score_muhurta(jd, 'signature')}/100 |
-| Negotiation | {engine.score_muhurta(jd, 'negotiation')}/100 |
-| Deep Work | {engine.score_muhurta(jd, 'deep_work')}/100 |
-| Content | {engine.score_muhurta(jd, 'content')}/100 |
-
-## Today's Guidance
+| Type | Score | Type | Score |
+|------|-------|------|-------|
 """
+    for i in range(0, len(muhurta_types), 2):
+        t1 = muhurta_types[i]
+        s1 = engine.score_muhurta(jd, t1)
+        if i + 1 < len(muhurta_types):
+            t2 = muhurta_types[i + 1]
+            s2 = engine.score_muhurta(jd, t2)
+            md += f"| {t1} | {s1}/100 | {t2} | {s2}/100 |\n"
+        else:
+            md += f"| {t1} | {s1}/100 | | |\n"
+
+    md += "\n## Today's Guidance\n"
+
+    # Ashtakavarga transit analysis
+    if birth_chart:
+        try:
+            ashta = engine.compute_ashtaka_transit(jd, birth_chart["jd"])
+            strong_transits = [t for t in ashta["transits"] if t.get("above_average")]
+            if strong_transits:
+                md += "\n## Ashtakavarga Transits\n"
+                md += "| Graha | Transit | Bindus |\n"
+                md += "|-------|---------|--------|\n"
+                for t in strong_transits:
+                    md += f"| {t['graha']} | {t['transit_rashi']} | {t['transit_bindu']} |\n"
+        except Exception as e:
+            print(f"[WARN] Ashtakavarga transit error: {e}")
 
     best_type = max([
         ("signature", engine.score_muhurta(jd, "signature")),

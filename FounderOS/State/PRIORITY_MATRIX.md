@@ -11,16 +11,15 @@ Ce fichier est la **vue unique** de tous les projets/objectifs actifs. Mis à jo
 
 | Projet | Objectif Prioritaire | Status | Next Action | Deadline | Dernière Action | Warning |
 |--------|---------------------|--------|-------------|----------|-----------------|---------|
-| OMNI | Djanta Tech Hub Innov'Action | ✅ Soumis (ID 272) | Vérifier confirmation + préparer pitch day 23 juillet | - | 2026-06-21 | 🟢 |
-| SOJACO | Vente céréales (soja, maïs) | Cascade créée (01-10+annexes) | Trouver client soja à prix viable OU client maïs | - | 2026-06-21 | 🟡 |
-| SOYA (Bolsoja) | Livraison dame 1 | Active (5 bols/jour) | Livraison 17h | **Today** | 2026-06-21 | 🟡 |
-| KORA | Pre-seed + ST Digital | Docs ok, ST pending | Relancer ST | - | 2026-06-21 | 🟢 |
-| DOODLEMIND | YouTube Shorts monetization | Short #1 publié | Planifier Short #2 | - | 2026-06-21 | 🟢 |
-| PEST REPELLER | TikTok sales | 100 units stock | Créer/contenu TikTok | - | 2026-06-21 | 🟡 |
-| SOLAR KIT | Nouveau produit + chaîne | Idée, pas encore lancé | Définir modèle + créer chaîne | - | 2026-06-21 | 🟢 |
-| FINANCE | Herlog, ST Digital | Envoyés, attente | Follow-up | - | 2026-06-21 | 🟡 |
-| LEARNING | Financial Literacy | 5/28 ✅ (1.1 → 1.5), en cours 1.6 | 1.6 Bilan Comptable Simplifié | - | 2026-06-21 | 🟢 |
-| FHQ SYSTEM | VSOS framework créé, gaps comblés | ✅ | Normal operation | - | 2026-06-21 | 🟢 |
+| OMNI | Djanta Tech Hub Innov'Action | ✅ Soumis (ID 272) | Relancer framework OMNI étape par étape | - | 2026-06-24 | 🟢 |
+| SOJACO | Vente céréales (soja, maïs) | ❌ Arrêté — aucun acheteur, dame 1 accident, dame 2 consignation impossible | Trouver nouvelle opportunité revenue | - | 2026-06-24 | 🔴 |
+| KORA | Pre-seed + ST Digital | Docs ok. ST: accord verbal + estimation envoyée, pas de retour. DG WA relancée, accusé. Herlog contacté. | Frapper d'autres portes financement (pas attendre) | - | 2026-06-24 | 🟡 |
+| DOODLEMIND | YouTube/TikTok monetization | Chaînes créées, Short #2 publié YT+TK | Produire Short #3 | - | 2026-06-24 | 🟡 |
+| PEST REPELLER | TikTok sales | 100 units, fournisseur logistique (4,000/unité → vente 5,900). Compte Meta ads bloqué. | Produire 1 vidéo/jour TikTok organique (pas de budget ads) | - | 2026-06-24 | 🔴 |
+| SOLAR KIT | Nouveau produit + chaîne | Idée, pas encore lancé | En attente — focus sur revenue immédiat | - | 2026-06-21 | 🟢 |
+| FINANCE | Herlog, ST Digital | Envoyés, attente | Frapper nouvelles portes (grants, programmes) | - | 2026-06-24 | 🟡 |
+| LEARNING | Financial Literacy | 5/28 ✅ (1.1 → 1.5) | Suspendu — focus revenue | - | 2026-06-21 | 🟢 |
+| FHQ SYSTEM | ASTRA Phase 2 + GENESIS flow | ✅ Déployé | Normal operation | - | 2026-06-24 | 🟢 |
 
 ---
 

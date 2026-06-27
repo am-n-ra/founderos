@@ -90,7 +90,7 @@ Each asset entry should include:
 
 **TYPE:** Content (documents)
 
-**LOCATION:** Projects/Stop Nuisibles/CONTENT/ (VIDEO1_PRODUCTION.md, VIDEO1_TIMING_MAP.md, SCRIPTS_J1.md, PRODUCT_SHEET.md, CONTENT_PROCESS.md)
+**LOCATION:** Sur appareil fondateur (images Nanobana 2, vidéo Veo 3.1, voix IA illimitée). Références fichiers Projects/Stop Nuisibles/CONTENT/ périmées — à reconstruire si nécessaire.
 
 **STATUS:** Available
 
@@ -110,7 +110,7 @@ Each asset entry should include:
 
 **LOCATION:** YouTube — DoodleMind channel (English, niche psycho/histoire/cerveau)
 
-**STATUS:** Available (0 subscribers, 0 videos published)
+**STATUS:** Available (0 subscribers, 1 video published, 366+ views)
 
 **PROJECT_ORIGIN:** DM-001 (DoodleMind Channel Launch)
 
@@ -310,7 +310,7 @@ For video production and creative assets, use these subtypes under the TYPE fiel
 
 ## Footer
 
-Last updated: 2026-06-20 16:15 (updated: A-009 and A-011 with Short #1 analytics)
+Last updated: 2026-06-24 12:30 — Lomé UTC+0 (updated: A-009 status to match Notes)
 
 Assets compound over time.
 

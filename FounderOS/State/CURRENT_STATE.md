@@ -52,43 +52,44 @@ No other file should contain "current X" — if it does, it creates divergence.
 
 ## Current State
 
-**Date:** 2026-06-23 06:33 — Lomé (UTC+0)
+**Date:** 2026-06-27 09:51 — Lomé (UTC+0)
 
 **Operating Mode:** SURVIVAL — cash under 3,000 FCFA
 
-**Cash (FCFA):** ~2,679 accessible. Aujourd'hui 17h: encaissement 4,875 FCFA de dame 1 (cash va au fournisseur, pas à toi).
+**Life Framework (2026-06-24 realization):**
+Spirituality (ultimate) → Trading (independence tool, no clients) → KORA/OMNI (impact) → Retire 30-33. Money is fuel, not the goal.
+**FounderHQ Vision (2026-06-27):** Centralized AI-powered mission workspace. Mentor/co-founder/team member role-flexible. All projects managed from single root chat. Persists beyond LLM context loss. No aimless days — guided by frameworks.
+
+**Trading Account:**
+- Funded: $2000 Next Instant (via uncle, late 2025)
+- Current: $1904.28
+- **Strategy optimisée:** EURUSD M1, 6 règles, SL=1pt TP=3pt (COMPO=7.6 | 210W/136L | WR=60.7% | PF=6.17)
+- **EA:** ReversalDetector.mq5 v5.1 — scan + live trading
+- **LiveTrading:** false (à activer sur VPS)
+- **RiskPerTrade:** $0.50, lot calculé automatiquement
+- **Spread guard:** max 1pt, trade skip si spread > 1
+
+**Cash (FCFA):**
+- YAS 1 (20% épargne): ~100 FCFA (700 envoyé à ami pour carte Meta Ads)
+- YAS 2 (80% subsistance): ~100 FCFA
+- Total utilisable: ~200 FCFA
+- Besoin vital mensuel: ~41,000 FCFA/mois (15k nourriture + 8k cash power + 18k connexion)
 
 **Active Products:**
-- Pest Repeller (Stop Nuisibles) — 100 units, 5,900 FCFA, TikTok
-- **SOJACO** — Vente de céréales (soja, maïs). Paiement à la livraison.
-  - Soja : fournisseur Atakpamé 350 FCFA/kg. Client revend à 850-900, veut acheter à 750. Quantité : 5-10 sacs.
-  - Maïs : ami fournisseur 160 FCFA/kg, 50 tonnes dispo. Minimum 1 tonne.
-- Soya (Bolsoja) — Dame 1 (5 bols × 975 FCFA, 17h). Fournisseur Lomé réduit à 5 bols sample lundi.
-- DoodleMind (YouTube Shorts) — Short #1 published
-- **KORA Lab** — AI lab, pré-seed, documents complets, Herlog envoyé, ST Digital en attente
-- **OMNI** — Index du commerce de proximité, MVP déployé (omni.sparkafrika.online). Djanta Tech Hub soumis (ID 272), email correction envoyé.
+- **SOJACO** — À L'ARRÊT.
+- **KORA Lab** — AI lab, pré-seed. En attente retours ST Digital / DG West Africa / Herlog.
+- **DoodleMind** — Chaînes YouTube/TikTok. Objectif: 1 vidéo/jour.
+- **Stop Nuisibles** — 100 units dispo. Objectif: 1 vidéo/jour TikTok.
+- **OMNI** — MVP déployé (omni.sparkafrika.online). Djanta Tech Hub soumis.
 
-**KORA Status:**
-- Data Room: ✅ Complete (Vision → BP → Annexes, 20+ docs)
-- Herlog: Envoyé, retour en attente
-- ST Digital: Estimation compute envoyée, suivi demain
-- Phase: Pre-Seed Validation (Éwé)
-- Prochaine action: Relancer ST Digital
+**VPS Oracle:** vm.standard indisponible, a1 refuse toujours. Solution locale OK tant que connecté. Bloqué.
 
-**OMNI Status:**
-- Strategic docs: ✅ Complete (Vision → Pitch Deck, 20 files)
-- MVP: ✅ Déployé (omni.sparkafrika.online)
-- Équipe: 6 personnes
-- Société: En cours de formalisation
-- Programme: Innov'Action — Djanta Tech Hub (soumis ID 272, email correction envoyé)
-- Prochaine action: Attendre réponse Djanta Tech Hub
+**Google for Startups:** Déjà appliqué. Bloqué: besoin top-up $50 pour valider compte GCP (koralab).
 
-**Current Bottleneck:** Cash insuffisant pour acheter stock soja/maïs en gros.
+**Current Bottleneck:** Aucune source de revenu active. Cash quasi nul. VPS Oracle indisponible.
 
-**Top Priority:** Valider modèle SOJACO — trouver l'avance pour 1er achat.
+**Top Priority:** Faire tourner l'EA 24/7 (local en attendant VPS) + débloquer GCP pour KORA compute.
 
-**Session Objective:** Boot — reprendre opérations.
+**Next Action:** Sessions London/NY (samedi) — run EA local. Préparer FounderHQ vision + KORA vision.
 
-**Last Decision:** Architecture 2 Gists déployée. Public Gist fhq-bootstrap créé. Token security rules ajoutées.
-
-**Last Updated:** 2026-06-23 07:48 — Lomé UTC+0
+**Last Updated:** 2026-06-27 09:51 — Lomé UTC+0

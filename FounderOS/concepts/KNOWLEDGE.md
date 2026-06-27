@@ -215,7 +215,7 @@ Every completed project triggers improvement review. The lessons are stored here
 
 ## Footer
 
-Last updated: 2026-06-20 (added: DIOS pipeline, language-market derivation, concept registration pattern)
+Last updated: 2026-06-24 (refreshed stale marker)
 
 Knowledge should be reviewed quarterly.
 

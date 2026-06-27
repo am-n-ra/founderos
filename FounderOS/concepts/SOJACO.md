@@ -1,5 +1,7 @@
 # SOJACO — Vente de Céréales
 
+> ⚠️ **Stale** — Project halted. No viable buyer found.
+
 ## Purpose
 Achat-revente de céréales (soja, maïs) au Togo pour générer du cash flow rapide via des marges de revente. Paiement à la livraison pour toutes les transactions.
 
@@ -9,9 +11,9 @@ Projet de cash flow opérationnel. Se distingue de SOYA (Bolsoja) qui est de la 
 ## Status
 | Field | Value |
 |---|---|
-| Phase | Launch |
-| Activity | Active |
-| Priority | High |
+| Phase | Halted |
+| Activity | Stopped — no viable path (consignment impossible, soja margin negative) |
+| Priority | Low |
 
 ## Produits & Marges
 | Produit | Fournisseur | Prix/kg | Prix/sac (100kg) | Client | Prix vente | Marge | Viable? |
@@ -35,3 +37,11 @@ Projet de cash flow opérationnel. Se distingue de SOYA (Bolsoja) qui est de la 
 ## Prochaine Action
 - Trouver client pour le maïs (ami 160 FCFA/kg, 50T dispo, min 1T)
 - Trouver soja à meilleur prix que 350/kg ou client à meilleur prix que 750/bol
+
+## Footer
+
+| Field | Value |
+|-------|-------|
+| OS Version | V4 |
+| Last Updated | 2026-06-24 |
+| Owner | Founder |

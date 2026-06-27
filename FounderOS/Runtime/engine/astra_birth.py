@@ -17,7 +17,7 @@ _workspace_root = _this_dir.parent.parent
 if str(_workspace_root) not in sys.path:
     sys.path.insert(0, str(_workspace_root))
 
-from Runtime.engine.astra_core import AstraEngine
+from Runtime.engine.astra_core import AstraEngine, GRAHA_ORDER
 
 
 def generate_birth_md(engine, year, month, day, hour, minute, place="Lome") -> str:
@@ -48,7 +48,7 @@ def generate_birth_md(engine, year, month, day, hour, minute, place="Lome") -> s
 | Graha | Rashi | Deg | Nakshatra | Pada | Lord | House | Retro |
 |-------|-------|-----|-----------|------|------|-------|-------|
 """
-    for name in ["Surya", "Chandra", "Mangala", "Budha", "Guru", "Shukra", "Shani", "Rahu", "Ketu"]:
+    for name in GRAHA_ORDER:
         g = chart["grahas"].get(name)
         if not g:
             continue
@@ -82,6 +82,42 @@ def generate_birth_md(engine, year, month, day, hour, minute, place="Lome") -> s
 - **Guidance:** {sade['guidance']}
 """
 
+    # Compute Vargas
+    vargas = engine.compute_vargas(chart["jd"])
+    
+    md += f"""
+## Vargas (Divisional Charts)
+"""
+    for vkey in ["D9", "D10", "D60"]:
+        vdata = vargas.get(vkey, {})
+        vpos = vdata.get("positions", {})
+        vlagna = engine.compute_varga_lagna(chart, {"D9": 9, "D10": 10, "D60": 60}[vkey])
+        
+        md += f"""
+### {vkey} — {vdata.get('name', '')}
+{vdata.get('description', '')}
+- **Lagna:** {vlagna['rashi']}
+- **Grahas:**
+| Graha | Rashi |
+|-------|-------|
+"""
+        for g_name in GRAHA_ORDER:
+            pg = vpos.get(g_name)
+            if pg:
+                retro = " R" if pg["retrograde"] else ""
+                md += f"| {g_name}{retro} | {pg['rashi']} |\n"
+    
+    md += f"""
+## Shadbala (Sixfold Strength)
+| Graha | Score | Qualite |
+|-------|-------|---------|
+"""
+    shadbala = engine.compute_shadbala(chart["jd"], chart)
+    for g_name in GRAHA_ORDER:
+        s = shadbala.get(g_name)
+        if s:
+            md += f"| {g_name} | {s['score']}/100 | {s['quality']} |\n"
+
     md += f"""
 ## Full Dasha Timeline
 | Lord | Level | Start | End | Years |
@@ -94,33 +130,18 @@ def generate_birth_md(engine, year, month, day, hour, minute, place="Lome") -> s
 ## Yogas (Auto-Detected)
 """
 
-    # Detect basic Yogas
-    grahas = chart["grahas"]
-    yogas = []
-
-    # Budha-Aditya Yoga: Sun + Mercury in same sign
-    if grahas.get("Surya", {}).get("rashi") == grahas.get("Budha", {}).get("rashi"):
-        yogas.append(("Budha-Aditya Yoga", "Intelligence, communication, eloquence"))
-
-    # Gaja-Kesari Yoga: Jupiter + Moon in Kendra from each other
-    chandra = grahas.get("Chandra", {})
-    guru = grahas.get("Guru", {})
-    if chandra and guru:
-        moon_sign = int(chandra.get("lon", 0) / 30)
-        jup_sign = int(guru.get("lon", 0) / 30)
-        dist = (jup_sign - moon_sign) % 12
-        if dist == 0 or dist == 4 or dist == 8:
-            yogas.append(("Gaja-Kesari Yoga", "Sagesse, autorite, respect"))
-
-    # Chandra-Mangala Yoga: Moon + Mars
-    if grahas.get("Chandra", {}).get("rashi") == grahas.get("Mangala", {}).get("rashi"):
-        yogas.append(("Chandra-Mangala Yoga", "Passion, courage, leadership"))
+    # Detect Yogas using core engine
+    yogas = engine.detect_d1_yogas(chart)
 
     if yogas:
-        for name, desc in yogas:
-            md += f"- **{name}:** {desc}\n"
+        strength_order = {"strong": 0, "medium": 1, "weak": 2}
+        yogas.sort(key=lambda y: strength_order.get(y[2], 3))
+        
+        for name, desc, strength in yogas:
+            icon = {"strong": ":star:", "medium": "", "weak": "-"}.get(strength, "")
+            md += f"- **{name}** {icon}: {desc}\n"
     else:
-        md += "- No major Yogas auto-detected in D1\n"
+        md += "- Aucun yoga majeur detecte\n"
 
     return md
 

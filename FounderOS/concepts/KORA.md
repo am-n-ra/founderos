@@ -1,5 +1,7 @@
 # FounderOS V4 — KORA (Knowledge & Oral Representation for Africa)
 
+> ⚠️ **Stale** — No recent activity. ST Digital: verbal agreement, estimation sent, awaiting follow-up.
+
 ## Purpose
 
 KORA Lab is Africa's sovereign AI research and product lab, building the Language Acquisition Engine and Universal Speech Intelligence Layer that allows underrepresented languages to participate fully in the AI era.
@@ -13,15 +15,19 @@ KORA is the founder's primary long-term venture — an AI lab focused on speech 
 | Field | Value |
 |---|---|
 | Phase | Pre-Seed / Validation |
-| Activity | Active |
+| Activity | Stale — awaiting ST Digital + DG WA follow-up |
 | Priority | High |
-| Key Partner | ST Digital (compute, formalizing) |
+| Key Partner | ST Digital (compute: verbal agreement, estimation sent, awaiting reply) |
 | First Language | Éwé |
 
 ## Quick Reference
 
 | Document | Location |
 |---|---|
+| Website | https://koralab.org |
+| GitHub | https://github.com/kellykheir/kora-lab-frontdoor |
+| Site Source | `C:\Users\junio\Desktop\Kora Lab\kora-lab-frontdoor` |
+| Kora Identity Assets | `C:\Users\junio\Desktop\Kora Lab\Kora Identity` |
 | Data Room Index | `projects/KORA/README.md` |
 | Vision | `projects/KORA/01_VISION.md` |
 | Mission | `projects/KORA/02_MISSION.md` |
@@ -46,5 +52,5 @@ All Annexes (A–A8) in `projects/KORA/annexes/`
 | Field | Value |
 |---|---|
 | OS Version | V4 |
-| Last Updated | 2026-06-21 |
+| Last Updated | 2026-06-24 |
 | Owner | Founder |

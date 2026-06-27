@@ -16,12 +16,11 @@ If something has been true for more than 30 days, it belongs in KNOWLEDGE.
 
 ## Current Priorities
 
-1. Soya: dame 2 fonctionne en consignation (prend, vend, paie après) — impossible sans cash flow. Seulement dame 1 confirmée (5 bols × 975 = 4,875 FCFA demain 17h). Trouver acheteurs cash supplémentaires ou réduire la commande.
-2. Renégocier Atakpamé (360 FCFA/kg) — meilleur levier pour marge future
-3. Find alternative to Meta ads (ad account restricted) for pest repeller promotion
-4. DoodleMind Short #2 — capitaliser sur les 72.6% rétention YouTube
-5. Design SN-003 with audio/visual frame-1 disruptor
-6. Update OS files after each session
+1. **Trouver 1 source de revenu fiable** — SOJACO arrêté (aucun acheteur, dame 1 accident, dame 2 consignation impossible). Cash ~900 FCFA (YAS 1: 800, YAS 2: 100). Besoin vital: ~41,000 FCFA/mois.
+2. **KORA** — ST Digital: accord verbal compute + estimation envoyée, pas de retour. DG West Africa (amie maman) relancée lundi passé — accusé. Herlog contacté. Pas d'équipe, pas de bureau, pas de modèle, pas de compute. Frapper d'autres portes en parallèle.
+3. **DoodleMind** — 1 vidéo/jour minimum pour monétisation. Chaînes créées.
+4. **Stop Nuisibles** — 100 units dispo. 1 vidéo/jour TikTok. Fournisseur local trouvé.
+5. **OMNI** — Seul projet en équipe (6 pers.), présentable en public. Relancer framework.
 
 ---
 
@@ -33,23 +32,13 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Recent Decisions
 
-- 2026-06-20: Dame 1 confirmée: 975 FCFA/bol, argent demain 17h (5 bols = 4,875 FCFA).
-- 2026-06-20: Dame 2: 950 FCFA jugé difficile (marché monté à 1,100-1,200 FCFA/bol). Va parler à sa seconde.
-- 2026-06-20: Envisage offre 900 FCFA/bol si dame 1 + dame 2 + seconde prennent 60 bols ensemble.
-- 2026-06-20: Renégocie fournisseur Atakpamé (360 FCFA/kg) pour meilleur prix.
-- 2026-06-20: Received 8,000 FCFA (5k uncle + 3k mom). Applied 50/30/20 rule.
-- 2026-06-20: Meta ad account found restricted — cannot run pest repeller campaign.
-- 2026-06-20: DoodleMind YouTube Short #1: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed.
-- 2026-06-20: DIOS module created — 8 domains, 12-step workflow, commercial nervous system of FounderHQ
-- 2026-06-20: DISTRIBUTION_MEMORY concept created (Concept 10) — campaign performance YAML schema
-- 2026-06-20: CEOS refactored — pure production only, ideation/distribution/analysis moved to DIOS
-- 2026-06-20: V4 consolidation completed — KERNEL, FOUNDEROS_PROTOCOL, TEMPORAL_AWARENESS fully absorbed into SYSTEM_PROMPT.md (368 lines, 16 sections)
-- 2026-06-19: Bancalisation concept formalized with founder
-- 2026-06-19: 7 soya suppliers found with phone numbers: Ste SODJA (96 68 43 65), SCOOPS AKPENE (91 58 84 56), SOYCAIN (91 73 66 83), CIFS (91 11 44 40), MAMAN SOJA (92 62 64 68), AGROKOM (90 01 44 41), SOCMEL (99 46 89 34)
-- 2026-06-19: DoodleMind channel created: niche psycho/histoire/cerveau, target US/AU, English content
-- 2026-06-19: First Short "Why Your Brain Forgets Your Dreams": script + 30 image prompts + metadata generated
-- 2026-06-19: YouTube Short #1 analytics: 335 views, 72.8% retention, 87.5% like rate, 28.6% CTR
-- 2026-06-18: Hook Layer Priority validated (audio > visual > text) across 2 videos with same 0:03 drop
+- 2026-06-24: SOJACO déclaré à l'arrêt — dame 1: soja renversé + sable, puis soja fournisseur caillé. Dame 2: consignation impossible (pas de stock, pas de cash flow). Aucun autre acheteur intéressé.
+- 2026-06-24: Dame 1 relancée avec 2 bols (2,000 FCFA de maman, pas biz) pour l'aider à se relever.
+- 2026-06-24: Priorité #1 absolue: trouver 1 source de revenu fiable avant tout.
+- 2026-06-24: KORA: frapper d'autres portes en parallèle de ST Digital/Herlog.
+- 2026-06-24: Besoin vital: ~41,000 FCFA/mois (15k nourriture + 8k cash power + 18k connexion).
+- 2026-06-24: DoodleMind + Stop Nuisibles: 1 vidéo/jour minimum chacun.
+- 2026-06-24: OMNI: seul projet en équipe, public, sans peur de vol. Relancer framework.
 
 ---
 
@@ -63,7 +52,7 @@ SURVIVAL — generate revenue before cash runs out.
 
 ## Active Concerns
 
-- Cash ~2,679 FCFA accessible + 1,800 connectivity allocated. Received 8,000 FCFA (5k uncle + 3k mom), spent on food supplies, connectivity. SURVIVAL mode — every action must generate revenue.
+- Cash ~900 FCFA accessible (YAS 1: 800, YAS 2: 100) + 1,800 connectivity allocated. SURVIVAL mode — every action must generate revenue.
 - Soya delivery tomorrow: 40 bols to dame 2. Only supplier at 875 FCFA/bol = zero margin if bought at that price. Dame 2 pays delivery (1,000-1,500 FCFA) — if delivery costs 500-1,000 FCFA, the difference is the only margin.
 - Meta ad account restricted — cannot run pest repeller ad campaign. Need alternative promotion strategy.
 - DoodleMind YouTube Short #1: 366 views, 72.6% retention, 87.5% likes, 97% Shorts feed — strong first video signal. TikTok: 65 views, drops at 0:02 — weaker.
@@ -77,7 +66,7 @@ SURVIVAL — generate revenue before cash runs out.
 - Dame 2: fonctionne en consignation — prend le soja, vend, puis paie. Impossible sans cash flow. Seule dame 1 confirmée (5 bols × 975 FCFA, argent demain 17h).
 - Soya: fournisseur Lomé max 875/bol. Atakpamé à 360/kg (900/bol) — renégociation en cours.
 - Meta ad account restricted — cannot run pest repeller ad campaign.
-- Cash: ~2,679 FCFA accessible. 1,800 allocated for connectivity until Tuesday.
+- Cash: ~900 FCFA accessible (YAS 1: 800, YAS 2: 100). 1,800 allocated for connectivity.
 - TikTok US distribution: distributes by local SIM/IP/language — US audience not reachable without US SIM or different strategy.
 
 ---
@@ -122,7 +111,7 @@ Metrics to track: Lessons Count, Patterns Count, Playbooks Count, Workflow Succe
 
 ## Footer
 
-Last updated: 2026-06-20 19:29 (added: dame 1 + dame 2 negotiation results, Atakpamé reneg)
+Last updated: 2026-06-24 12:30 — Lomé UTC+0
 
 Memory should be reviewed and pruned at the start of each session.
 

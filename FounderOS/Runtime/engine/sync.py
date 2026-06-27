@@ -148,14 +148,14 @@ def _get_public_gist_files(base_dir: Path) -> dict:
     """
     engine_dir = base_dir / "Runtime" / "engine"
     seed_path = base_dir / "FOUNDER_SEED.md"
-    opencode_path = base_dir / "opencode.json"
+    opencode_path = base_dir.parent / "opencode.json"
 
     files = {}
 
     if seed_path.exists():
         files["FOUNDER_SEED.md"] = {"content": seed_path.read_text(encoding="utf-8")}
 
-    engine_scripts = ["installer.py", "sync.py", "watchtower.py", "timekeeper.py"]
+    engine_scripts = ["installer.py", "sync.py", "watchtower.py", "timekeeper.py", "cycle.py", "astra_core.py", "astra_birth.py", "astra_daily.py", "astra_reading.py", "astra_forecast.py"]
     for name in engine_scripts:
         path = engine_dir / name
         if path.exists():
