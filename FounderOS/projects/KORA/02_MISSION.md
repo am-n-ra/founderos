@@ -1,59 +1,388 @@
-# KORA MISSION
-## Version 1.0
+# KORA LAB — 10. MISSION
 
-### Transformer la vision d'une IA accessible à tous les Africains en une réalité concrète
+**Version:** 1.0
 
-## 1. Déclaration de Mission
+---
 
-La mission de KORA est de construire les infrastructures linguistiques, les données, les modèles et les systèmes nécessaires pour permettre aux populations africaines d'interagir avec l'intelligence artificielle dans leurs langues maternelles.
+# Purpose
 
-Nous existons pour réduire les barrières linguistiques qui limitent aujourd'hui l'accès à la connaissance, aux services numériques et aux opportunités économiques. Nous poursuivons cette mission en développant des technologies vocales, multimodales et multilingues adaptées aux réalités linguistiques du continent africain.
+The Mission defines Kora Lab's permanent operational responsibility.
 
-## 2. Pourquoi KORA Existe
+Unlike the Vision,
 
-L'IA devient une couche fondamentale de l'économie mondiale. Mais la majorité des langues africaines restent sous-représentées dans les systèmes modernes. Cette situation crée des risques d'exclusion numérique, de perte du patrimoine linguistique, de dépendance technologique, et d'accès inégal aux bénéfices de l'IA.
+which describes the future,
 
-KORA existe pour contribuer à réduire cet écart.
+the Mission defines what Kora must continuously do to make that future inevitable.
 
-## 3. Ce Que Nous Faisons (5 capacités fondamentales)
+It guides daily decisions,
 
-**1. Construire les données:** Nous collectons, structurons, validons et enrichissons des ressources linguistiques africaines (vocales, textuelles, conversationnelles, dialectales).
+strategic priorities,
 
-**2. Construire les modèles:** Nous développons des systèmes capables de comprendre, transcrire, traduire, synthétiser et générer dans les langues africaines.
+resource allocation,
 
-**3. Construire les plateformes:** Nous développons des infrastructures permettant aux chercheurs, développeurs, institutions et entreprises d'utiliser ces technologies.
+research,
 
-**4. Construire les applications:** Nous facilitons le développement d'applications dans l'éducation, la santé, l'agriculture, l'administration et la communication.
+product development,
 
-**5. Construire un écosystème:** Nous travaillons avec universités, chercheurs, communautés linguistiques, gouvernements et entreprises.
+and partnerships.
 
-## 4. Ce Que Nous Ne Sommes Pas
+---
 
-KORA n'existe pas uniquement pour entraîner des modèles, publier des articles, construire des produits logiciels ou vendre des API. Ces activités peuvent faire partie de notre travail mais ne constituent pas notre mission.
+# Mission Statement
 
-## 5. Nos Principes d'Exécution
+**Kora Lab exists to design, train, deploy and continuously improve sovereign world-class artificial intelligence systems that eliminate Africa's dependence on imported AI while making frontier intelligence accessible to every African, regardless of language, literacy or socioeconomic condition.**
 
-**Principe 1:** Construire des actifs durables (données, expertise, communautés, infrastructures, PI)
-**Principe 2:** Construire avant de revendiquer — chaque affirmation soutenue par une démonstration
-**Principe 3:** Commencer localement, construire globalement
-**Principe 4:** Prioriser l'impact réel
-**Principe 5:** Construire avec les communautés
+---
 
-## 6. Comment Nous Mesurerons Notre Succès
+# The Two Fundamental Missions
 
-Pas par le nombre de modèles publiés ou lignes de code. Mais par le nombre de langues représentées, la qualité des infrastructures créées, le nombre de personnes pouvant utiliser l'IA dans leur langue maternelle, et l'impact économique, éducatif et culturel généré.
+Kora has two inseparable responsibilities.
 
-## 7. Priorité Actuelle
+Neither can succeed without the other.
 
-Construire les premières fondations d'une infrastructure linguistique africaine en commençant par une langue pilote (Éwé) et un ensemble limité de capacités permettant de démontrer la faisabilité du modèle.
+---
 
-## Mission Résumée
+# Mission One
 
-**Construire les infrastructures linguistiques qui permettront à chaque Africain d'accéder à l'IA dans sa langue maternelle, tout en préservant, valorisant et modernisant le patrimoine linguistique du continent.**
+## Build Sovereign Frontier Intelligence
 
-## Footer
-| Field | Value |
-|---|---|
-| Document | KORA Mission V1 |
-| OS Version | V4 |
-| Owner | Founder |
+Kora develops frontier AI systems that match or exceed international standards.
+
+The objective is not simply to participate in Artificial Intelligence.
+
+The objective is to master it.
+
+This includes developing sovereign capabilities across every foundational layer:
+
+* research;
+* datasets;
+* training pipelines;
+* foundation models;
+* evaluation systems;
+* deployment infrastructure.
+
+Success is achieved when African organizations naturally choose Kora because it is among the world's best.
+
+Not because it is African.
+
+---
+
+# Mission Two
+
+## Democratize Frontier Intelligence
+
+Building world-class AI is insufficient.
+
+Those capabilities must become usable by everyone.
+
+Kora therefore removes barriers including:
+
+* language;
+* literacy;
+* education;
+* affordability;
+* digital complexity;
+* infrastructure limitations.
+
+The objective is simple:
+
+Every African should be able to benefit from frontier intelligence,
+
+even without speaking English,
+
+writing French,
+
+or understanding technology.
+
+---
+
+# Mission Philosophy
+
+Performance and accessibility are inseparable.
+
+Without performance,
+
+Africa remains dependent.
+
+Without accessibility,
+
+only a small elite benefits.
+
+Therefore,
+
+every major initiative should strengthen at least one of these dimensions,
+
+and ideally both.
+
+---
+
+# Primary Responsibilities
+
+Kora commits to continuously:
+
+---
+
+## Research
+
+Advance frontier Artificial Intelligence through original scientific research.
+
+Produce knowledge,
+
+not merely applications.
+
+---
+
+## Engineering
+
+Transform research into reliable production systems.
+
+Engineering excellence is as important as scientific excellence.
+
+---
+
+## Infrastructure
+
+Develop the infrastructure required to train,
+
+deploy,
+
+and continuously improve sovereign AI systems.
+
+Infrastructure includes:
+
+compute,
+
+data,
+
+deployment,
+
+evaluation,
+
+security,
+
+and operations.
+
+---
+
+## Accessibility
+
+Design interfaces that remove technological barriers.
+
+Examples include:
+
+voice interaction,
+
+African languages,
+
+offline capabilities,
+
+low-cost deployment,
+
+and intuitive user experiences.
+
+---
+
+## Ecosystem Development
+
+Support researchers,
+
+builders,
+
+developers,
+
+startups,
+
+universities,
+
+and institutions that strengthen African AI capabilities.
+
+Kora succeeds faster when the ecosystem succeeds.
+
+---
+
+# What Kora Builds
+
+Over time,
+
+Kora develops capabilities across the complete AI stack.
+
+Including:
+
+* Language Models
+* Coding Models
+* Image Models
+* Video Models
+* Speech Recognition
+* Speech Generation
+* Embeddings
+* Multimodal Models
+* Reasoning Systems
+* Agentic Systems
+* Robotics Intelligence
+* Future AI architectures
+
+The objective is sovereignty across the stack.
+
+---
+
+# Target Beneficiaries
+
+Kora serves multiple populations.
+
+---
+
+## Researchers
+
+Need frontier research capabilities.
+
+---
+
+## Developers
+
+Need powerful AI building blocks.
+
+---
+
+## Businesses
+
+Need sovereign enterprise AI.
+
+---
+
+## Governments
+
+Need trusted strategic infrastructure.
+
+---
+
+## Students
+
+Need affordable intelligence.
+
+---
+
+## Entrepreneurs
+
+Need tools that multiply productivity.
+
+---
+
+## Citizens
+
+Need accessible AI in their own languages.
+
+---
+
+# Strategic Priorities
+
+Kora executes its mission through five permanent priorities.
+
+### Priority 1
+
+Build frontier capability.
+
+---
+
+### Priority 2
+
+Generate sustainable revenue.
+
+Research without sustainability cannot survive.
+
+Revenue extends runway.
+
+Runway enables research.
+
+---
+
+### Priority 3
+
+Expand accessibility.
+
+Every increase in accessibility expands long-term impact.
+
+---
+
+### Priority 4
+
+Strengthen the African AI ecosystem.
+
+Every capable builder accelerates the mission.
+
+---
+
+### Priority 5
+
+Prepare future technological revolutions.
+
+Artificial Intelligence is only the beginning.
+
+---
+
+# Success Indicators
+
+The mission advances when:
+
+* frontier capabilities improve;
+* African AI adoption increases;
+* accessibility barriers decrease;
+* sovereign infrastructure expands;
+* original research output grows;
+* new African AI companies emerge;
+* technological dependence declines.
+
+---
+
+# What Kora Will Not Do
+
+Kora will not:
+
+* optimize for hype;
+* build products solely because they are fashionable;
+* sacrifice long-term research for short-term publicity;
+* present fine-tuned foreign models as sovereign AI;
+* compromise scientific integrity for marketing.
+
+---
+
+# Decision Rules
+
+Every major initiative should answer:
+
+1. Does this strengthen frontier capability?
+2. Does this reduce technological dependence?
+3. Does this improve accessibility?
+4. Does this generate or preserve sustainable runway?
+5. Does this strengthen the African AI ecosystem?
+
+If an initiative satisfies none of these,
+
+it should not become a strategic priority.
+
+---
+
+# Relationship With Other Documents
+
+The Vision defines **the future Kora wants to create**.
+
+The Mission defines **what Kora must do continuously to create that future**.
+
+The next document,
+
+**Strategic Principles**,
+
+defines the permanent rules that govern every decision Kora will ever make.
+
+---
+
+# Metadata
+
+| Field            | Value                                                                     |
+| ---------------- | ------------------------------------------------------------------------- |
+| Document         | Kora Lab — Mission                                                        |
+| Version          | 1.0                                                                       |
+| Phase            | IV — Venture Architecture                                                 |
+| Venture          | Kora Lab                                                                  |
+| Depends On       | Vision                                                                    |
+| Followed By      | Strategic Principles                                                      |
+| Review Frequency | Rare (only if Kora's permanent operational purpose fundamentally changes) |

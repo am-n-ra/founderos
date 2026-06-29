@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "founderhq": {
+      "command": "python",
+      "args": [
+        "FounderOS/Runtime/engine/fhq_daemon.py",
+        "--mode", "stdio"
+      ]
+    }
+  }
+}

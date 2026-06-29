@@ -1,0 +1,3 @@
+﻿This project has been migrated.
+New location: FounderOS\projects\PEST_REPELLER\
+Migrated on: 2026-06-27

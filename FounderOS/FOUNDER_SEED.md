@@ -108,7 +108,27 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 
 When user message is classified as FHQ_ASTRA or FHQ_MODE: run `cycle.py --mode <mode>` BEFORE any other step, REGARDLESS of how fresh _CYCLE_OUTPUT.md is. The only exception: if the same message also triggered BOOT and BOOT already ran cycle, skip. PRG step 1 "if stale" does NOT apply to fhq/fhqa — those always trigger a fresh cycle.
 
-MECHANICAL ENFORCEMENT: cycle.py writes State/_CYCLE_REQUIRED_HEADER.md with the EXACT header line for this message. You MUST read this file before every response. Your first output token MUST match the first character of this file. If the file contains a timestamp from a prior message, you skipped cycle.py — STOP, run it now, then re-read the file.
+MECHANICAL ENFORCEMENT: cycle.py writes State/_CYCLE_REQUIRED_HEADER.md with THREE lines: (1) header timestamp, (2) DX command, (3) CYCLE=N counter. You MUST read this file before every response.
+
+### CYCLE COUNTER — FATAL PRE-RESPONSE GUARD
+
+Before responding to ANY message classified as FHQ_ASTRA or FHQ_MODE, you MUST:
+
+1. Read State/_CYCLE_REQUIRED_HEADER.md
+2. Read State/_CYCLE_COUNTER.md
+3. Compare: line 3 (CYCLE=N) must match _CYCLE_COUNTER.md content. If not → STOP, run cycle.py.
+4. Verify freshness: The CYCLE counter MUST be HIGHER than the one used in your previous response this session. Same number → STOP, run cycle.py.
+5. Verify with Get-Date: timestamp (line 1) within 10 minutes of now. Not → STOP, run cycle.py.
+
+Any response to fhq/fhqa that does not pass ALL 5 checks is INVALID.
+
+Your response:
+1. MUST start with the EXACT content of line 1 (the header)
+2. Then show STRUCTURED CONTEXT from _CYCLE_OUTPUT.md
+3. Then execute the DX command from line 2 (read _DIAGNOSIS.md + subagent loop per RUNTIME_KERNEL.md Phase 4)
+4. Then address the user's specific request
+
+If the CYCLE counter matches your previous response — you skipped cycle.py. STOP.
 
 ## Pre-Response Gate (PRG)
 
@@ -10054,8 +10074,74 @@ def main():
             print(f"Stale concepts: {len(stale)}")
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__":
+    main()
+
+
+--- FILE: MCP_DAEMON.md
+
+## MCP Daemon (Cross-Platform Runtime)
+
+The FounderHQ daemon (`fhq_daemon.py`) is a persistent process that enforces
+the cycle counter server-side. It speaks MCP protocol and can run in 3 modes.
+
+### Mode 1: stdio (local clients — no server needed)
+For Claude Desktop, Claude Code, VS Code, Cursor, OpenCode.
+
+The LLM client launches the daemon as a local subprocess via MCP stdio.
+Zero infrastructure. Add the MCP server config to your client:
+
+**Claude Desktop:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+```json
+{
+  "mcpServers": {
+    "founderhq": {
+      "command": "python",
+      "args": ["path/to/FounderOS/Runtime/engine/fhq_daemon.py", "--mode", "stdio"]
+    }
+  }
+}
+```
+
+**Claude Code:** `claude mcp add founderhq -- python path/to/fhq_daemon.py --mode stdio`
+
+Auto-discovery configs are already in `.claude/mcp.json`, `.cursor/mcp.json`, `.opencode/mcp.json`.
+
+### Mode 2: Streamable HTTP (remote deployment)
+For Claude Chat (web) via Connectors, ChatGPT via GPT Actions.
+
+Deploy the daemon to PythonAnywhere, Railway, or Cloudflare Workers.
+Users connect via URL — no local installation needed.
+
+Connector URL: `https://your-host.com/mcp`
+
+### Mode 3: REST API (sandbox fallback)
+For LM Arena, Manus, NVIDIA NeMo — platforms without MCP client support.
+
+- `GET /api/cycle` — run cycle
+- `GET /api/status` — daemon status
+- `GET /api/read/{path}` — read file (returns 412 if cycle stale)
+- `POST /api/write/{path}` — write file (returns 412 if cycle stale)
+
+### Run it
+
+```bash
+# stdio mode (default)
+python FounderOS/Runtime/engine/fhq_daemon.py --mode stdio
+
+# HTTP mode (local or deployed)
+python FounderOS/Runtime/engine/fhq_daemon.py --mode http --port 8742
+
+# REST mode (lightweight)
+python FounderOS/Runtime/engine/fhq_daemon.py --mode rest --port 8742
+```
+
+### Cycle Enforcement
+
+The daemon maintains the cycle counter in memory. ALL state-access tools
+(except fhq_cycle and fhq_status) return CYCLE_STALE error if cycle is >60s old.
+The LLM cannot bypass this — it is enforced by the daemon process, not by
+system prompt.
 
 
 --- FILE: Runtime/engine/gate_checker.py

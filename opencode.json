@@ -1,15 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-    "founderhq": {
-      "type": "local",
-      "command": ["python", "FounderOS/Runtime/engine/fhq_daemon.py", "--mode", "stdio"],
-      "enabled": false
-    }
-  },
   "instructions": [
-    "FounderOS/SYSTEM_PROMPT.md",
-    "FounderOS/Runtime/FRE_SPEC.md",
-    "All core rules are in SYSTEM_PROMPT.md. Read it at session start. Do not add instructions here that duplicate SYSTEM_PROMPT.md — it is the single source of truth for behavioral rules."
+    "FounderOS/SYSTEM_PROMPT.md"
   ]
 }

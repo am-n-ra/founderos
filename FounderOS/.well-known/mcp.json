@@ -1,0 +1,14 @@
+{
+  "name": "FounderHQ",
+  "description": "Personal OS for solo entrepreneurs — cycle enforcement, state management, Gist sync",
+  "transport": "streamable-http",
+  "tools": [
+    {"name": "fhq_cycle", "description": "Run cycle and refresh state"},
+    {"name": "fhq_status", "description": "Get daemon status"},
+    {"name": "fhq_read", "description": "Read state files"},
+    {"name": "fhq_write", "description": "Write state files"},
+    {"name": "fhq_sync_push", "description": "Push to Gist"},
+    {"name": "fhq_sync_pull", "description": "Pull from Gist"},
+    {"name": "fhq_run", "description": "Run a cycle mode"}
+  ]
+}

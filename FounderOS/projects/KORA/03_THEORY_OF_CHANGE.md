@@ -1,72 +1,88 @@
-# KORA THEORY OF CHANGE
-## Version 1.0
+# KORA THEORY OF CHANGE — V3.1
+## Mission-Driven Strategy (Step 3)
 
-### Comment KORA transforme sa vision en réalité
+---
 
-## Introduction
+## La Realite
 
-La Theory of Change de KORA décrit la chaîne logique reliant nos activités quotidiennes à notre vision long terme. Elle répond à: comment passe-t-on d'un continent sous-représenté dans l'IA à un futur où chaque Africain peut interagir avec l'IA dans sa langue maternelle ?
+Deux Africains distincts :
 
-## Le Problème Fondamental
+1. **Ceux qui utilisent deja l'IA** — instruits, lisent l'anglais/francais, ont un smartphone, une carte. Ils utilisent ChatGPT, Claude, GitHub Copilot. Ils ne "importent" pas par conviction — par necessite. Il n'y a pas d'alternative locale aussi bonne.
 
-Les langues africaines souffrent de 5 déficits structurels: déficit de données (corpus rares), déficit d'outils (technologies limitées), déficit de recherche (peu représentées), déficit d'écosystème (acteurs fragmentés), déficit de distribution (solutions n'atteignent pas les populations).
+2. **Ceux qui n'utilisent pas l'IA** — ne lisent ni n'ecrivent les langues etrangeres, parfois aucune langue. Pas d'education formelle. N'ont jamais ouvert ChatGPT. Non pas parce qu'ils ne veulent pas — parce que l'IA ne leur parle pas dans leur langue.
 
-## Notre Hypothèse Centrale
+La mission sert les deux. La vision (plus d'importation) est la consequence naturelle.
 
-Si nous construisons progressivement les infrastructures linguistiques nécessaires aux langues africaines, alors il deviendra possible de développer des systèmes d'IA capables de servir efficacement les populations africaines dans leurs langues maternelles.
+---
 
-## Les 5 Relations Causales
+## Les Liens Causaux
 
-**Relation 1:** Sans données → pas de modèles durables
-**Relation 2:** Sans modèles → pas d'applications
-**Relation 3:** Sans applications → pas d'adoption
-**Relation 4:** Sans adoption → pas d'écosystème durable
-**Relation 5:** Sans écosystème → pas de transformation durable
+### Lien 1: Capabilite → Bascule Naturelle
 
-## La Chaîne de Transformation Complète
+**POUR** les Africains qui utilisent deja l'IA
+**SI** KORA developpe des modeles aussi performants que les meilleurs mondiaux
+**ALORS** ils se tourneront naturellement vers le souverain
+**PARCE QUE** c'est aussi capable, mieux adapte, et potentiellement plus accessible
 
-Collecter les données → Construire les capacités fondamentales (ASR, TTS, traduction) → Construire les infrastructures (APIs, plateformes) → Construire les applications (éducation, santé, agriculture) → Construire la distribution (smartphones, partenaires) → Construire l'écosystème (universités, gouvernements, entreprises)
+**Falsifiable:** Si nos modeles sont au niveau mondial mais que les utilisateurs instruits continuent de preferer les modeles etrangers (pas de bascule mesurable a 12 mois), ce lien est faux.
 
-## Le Cercle Vertueux KORA
+---
 
-Données → Modèles → Applications → Utilisateurs → Revenus → Nouvelles données → Meilleurs modèles → Plus d'utilisateurs
+### Lien 2: Langue Materielle → Premier Acces
 
-Chaque cycle renforce le suivant.
+**POUR** les Africains qui n'utilisent pas l'IA
+**SI** KORA rend ses modeles utilisables dans la langue qu'ils parlent (pas necessairement ecrite)
+**ALORS** ils peuvent utiliser l'IA pour la premiere fois
+**PARCE QUE** la barriere n'est plus technologique — c'est la langue et l'education
 
-## Les Actifs Stratégiques Produits à Chaque Étape
+**Falsifiable:** Si les modeles sont disponibles en langues locales mais que l'adoption parmi les non-instruits reste < 5% apres 2 ans, ce lien est faux.
 
-- Phase Données: corpus, expertise linguistique, communautés
-- Phase Modèles: propriété intellectuelle, benchmarks, savoir-faire
-- Phase Infrastructure: plateformes, APIs, outils
-- Phase Distribution: utilisateurs, réseau, marque
-- Phase Écosystème: partenaires, institutions, influence
+---
 
-## Conditions Nécessaires
+### Lien 3: Distribution Massive → Couverture Universelle
 
-1. Accès durable au calcul (ST Digital)
-2. Capacité à collecter des données de qualité
-3. Capacité à attirer et former des talents
-4. Capacité à générer des revenus avant maturité technologique
-5. Capacité à construire une confiance durable avec les communautés
+**POUR** les deux groupes
+**SI** KORA distribue via smartphones + smart wearables (glasses, rings, bracelets) + dispositifs fixes (institutions reculees)
+**ALORS** chaque Africain peut acceder a l'IA dans son contexte
+**PARCE QUE** l'infrastructure suit l'utilisateur, pas l'inverse
 
-## Risques Stratégiques
+**Falsifiable:** Si la technologie existe mais n'atteint pas les populations reculees (couverture < 50% du continent a 5 ans), ce lien est faux.
 
-1. Grands laboratoires progressent plus vite → réponse: avantage données/communautés
-2. Coûts de collecte prohibitifs → réponse: collecte communautaire
-3. Revenus arrivent trop tard → réponse: produits monétisables dès phase 1
-4. Talents difficiles à recruter → réponse: réseau africain et diasporique
+---
 
-## Résumé
+## La Causalite Complete
 
-Collecter les données → Construire les modèles → Créer les infrastructures → Développer les applications → Distribuer à grande échelle → Créer un écosystème durable → Permettre à chaque Africain d'accéder à l'IA dans sa langue maternelle
+```
+Mission V3.0: Modeles aussi performants que les meilleurs mondiaux, naturels pour les instruits, accessibles pour les non-instruits
+    |
+    v
+[Lien 1] Instruits adoptent naturellement (aussi bon)
+    |
+    v
+[Lien 2] Non-instruits accedent pour la 1ere fois (langue)
+    |
+    v
+[Lien 3] Distribution massive via tous les canaux
+    |
+    v
+Vision: Plus d'importation — parce que le meilleur choix est local et que tout le monde y a acces
+```
 
-## OODA Critique
+---
 
-KORA n'est pas un projet de modèles. Les modèles sont un moyen. La théorie du changement montre que KORA est un projet de construction d'actifs: données, expertise, infrastructure, distribution, écosystème.
+## Ce Qui Change par Rapport a V2.0
+
+- **Supprime:** L'idee que l'Afrique "importe" de l'IA comme choix conscient. Les instruits utilisent ce qui existe. Les non-instruits n'ont pas le choix.
+- **Ajoute:** La bascule est naturelle, pas forcee. KORA ne "combat" pas l'importation — elle rend le local preferable.
+- **Ajoute:** Wearables et dispositifs fixes comme canaux de distribution pour les zones reculees.
+
+---
 
 ## Footer
+
 | Field | Value |
-|---|---|
-| Document | KORA Theory of Change V1 |
-| OS Version | V4 |
-| Owner | Founder |
+|-------|-------|
+| Document | KORA Theory of Change |
+| Version | 3.1 Mission-Driven |
+| Owner | Kheir Lissi |
+| Last Updated | 2026-06-28 |

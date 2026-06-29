@@ -1,0 +1,3 @@
+﻿This project has been migrated.
+New location: FounderOS\projects\SOLAR_KIT\
+Migrated on: 2026-06-27
