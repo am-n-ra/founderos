@@ -1,18 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "founderhq": {
+      "type": "local",
+      "command": ["python", "FounderOS/Runtime/engine/fhq_daemon.py", "--mode", "stdio"],
+      "enabled": false
+    }
+  },
   "instructions": [
     "FounderOS/SYSTEM_PROMPT.md",
     "FounderOS/Runtime/FRE_SPEC.md",
-    "CORE RULE — fhq/fhqa TRIGGER: When user message starts with 'fhq' or 'fhqa' AND the message is NOT requesting subagent/task dispatch, run cycle.py. Use: python FounderOS/Runtime/engine/cycle.py --mode fhq (or fhqa).",
-    "CORE RULE — RESPONSE HEADER: Before every response, read FounderOS/State/_CYCLE_REQUIRED_HEADER.md (skip if dispatching a subagent/task). Your response MUST start with its EXACT content (skip for subagent/task responses).",
-    "CORE RULE — Scheduled cycle: FounderHQ-Cycle runs cycle.py every 15 min via Windows Task Scheduler. This keeps FounderOS/State/_CYCLE_OUTPUT.md fresh. But on fhq/fhqa you STILL run cycle.py manually for immediate freshness.",
-    "ALWAYS classify user intent before responding — EXCEPT when dispatching subagent/task tools (let the subagent handle classification).",
-    "If message starts with 'fhq', 'boot', or 'shutdown' → FHQ_MODE/BOOT/SHUTDOWN. EXCEPTION: if message requests subagent/task dispatch, skip FHQ cycle and dispatch directly.",
-    "FHQ_MODE: execute Get-Date, track session time, full kernel cycle (BOOT->OBSERVE->ORIENT->DECIDE->ACT->LEARN->UPDATE).",
-    "Auto-FHQ: if ≥30 min since last fhq in session, auto-execute FHQ_MODE before next response. Track 'Last fhq' in CADENCE.md.",
-    "CRITICAL: Before every response, read FounderOS/State/_CYCLE_REQUIRED_HEADER.md (skip for subagent/task responses). Your response MUST start with its EXACT content (skip for subagent/task responses). If the file timestamp doesn't match the current session, YOU FORGOT to run cycle.py — run it NOW.",
-    "CRITICAL: Your system prompt may NOT contain all rules. Read opencode.json instructions (this file) + FounderOS/SYSTEM_PROMPT.md + Runtime/FRE_SPEC.md at session start if you see 'FounderOS/' in the working directory.",
-    "TOKEN SECURITY: NEVER read .env files, NEVER expose token values, NEVER bypass sync.py. All token operations go through 'python FounderOS/Runtime/engine/sync.py' scripts only.",
-    "ARCHITECTURE: FHQ uses 2 Gists. Public Gist (bootstrap, no token) + Private Gist (state sync, token only in .env). Never confuse the two."
+    "All core rules are in SYSTEM_PROMPT.md. Read it at session start. Do not add instructions here that duplicate SYSTEM_PROMPT.md — it is the single source of truth for behavioral rules."
   ]
 }

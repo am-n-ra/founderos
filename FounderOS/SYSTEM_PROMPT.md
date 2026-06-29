@@ -79,10 +79,10 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 
 | Pattern | Classify as | Action |
 |---|---|---|---|---|
-| Message starts with **"fhqa"** or **"fhqa "** | FHQ_ASTRA | **GENESIS Check first:** if `FounderOS/concepts/PROFILE.md` or `FounderOS/State/ASTRA_BIRTH.md` missing → run ASTRA GENESIS protocol (see section below). If present → **Run cycle:** `python FounderOS/Runtime/engine/cycle.py --mode fhqa` (skip if boot already ran cycle in this message) → read `FounderOS/State/_CYCLE_OUTPUT.md` for header + context → read FounderOS/State/ASTRA_DAILY.md, FounderOS/State/ASTRA_SHADOW.md, FounderOS/State/ASTRA_BIRTH.md, FounderOS/State/ASTRA_READING_RAW.md for deeper astral context. Prefix astral insights with [ASTRA]. |
+| Message starts with **"fhqa"** or **"fhqa "** | FHQ_ASTRA | **GENESIS Check first:** if `FounderOS/concepts/PROFILE.md` or `FounderOS/State/ASTRA_BIRTH.md` missing → run ASTRA GENESIS protocol. If present → **Run cycle:** `python FounderOS/Runtime/engine/cycle.py --mode fhqa` → read `FounderOS/State/_CYCLE_OUTPUT.md` for header + context → read `FounderOS/State/_DIAGNOSIS.md` → **execute subagent loop per RUNTIME_KERNEL.md Phase 4: DIAGNOSE** (spawn research/execution subagent as prescribed) → read FounderOS/State/ASTRA_DAILY.md, FounderOS/State/ASTRA_SHADOW.md, FounderOS/State/ASTRA_BIRTH.md, FounderOS/State/ASTRA_READING_RAW.md for deeper astral context. Prefix astral insights with [ASTRA]. |
 | Message starts with **"boot"** or **"boot "** | BOOT | Run `python FounderOS/Runtime/engine/cycle.py --mode boot` → read `FounderOS/State/_CYCLE_OUTPUT.md`. Then load frameworks and proceed with ORIENT. |
 | Message starts with **"shutdown"** or **"shutdown "** | SHUTDOWN | End session. Log session duration to FounderOS/State/CADENCE.md (Day -> Session End). Run `python FounderOS/Runtime/engine/sync.py push`. Save ALL state. Record TIMELINE entry. Do NOT continue after shutdown. |
-| Message starts with **"fhq"** or **"fhq "** | FHQ_MODE | Run `python FounderOS/Runtime/engine/cycle.py --mode fhq` → read `FounderOS/State/_CYCLE_OUTPUT.md` for header + context. Proceed with ORIENT enriched with CADENCE × LIFECYCLE × frameworks. |
+| Message starts with **"fhq"** or **"fhq "** | FHQ_MODE | Run `python FounderOS/Runtime/engine/cycle.py --mode fhq` → read `FounderOS/State/_CYCLE_OUTPUT.md` for header + context → read `FounderOS/State/_DIAGNOSIS.md` → **execute subagent loop per RUNTIME_KERNEL.md Phase 4: DIAGNOSE** (spawn research/execution subagent as prescribed). ORIENT enriched with CADENCE × LIFECYCLE × frameworks. |
 | Strategy, vision, long-term | STRATEGIC | Load FounderOS/VEAOS.md. If venture creation/restructuring/BP -> also load FounderOS/Frameworks/VSOS.md |
 | Daily execution, task planning | EXECUTION | Load FounderOS/DAOS.md |
 | Content creation, video, script | CONTENT | Load FounderOS/Frameworks/Core/CEOS.md + FounderOS/AI_VIDEO_MASTER_DOMAIN.md |
@@ -102,11 +102,51 @@ Before responding, classify intent using this table. Then execute PRG. Never rep
 | watch, opportunity, credit, grant, deal, veille | OPPORTUNITY | Load FounderOS/Frameworks/Core/OOOS.md |
 | Simple update, ambiguous, no keyword | DIRECT | SURVIVAL -> load FounderOS/DAOS.md, propose 1 action module. Otherwise -> respond directly |
 
-## HARD RULE: fhq/fhqa ALWAYS triggers cycle — MECHANICAL ENFORCEMENT
+## Mechanical Enforcement (MCP Daemon)
 
-When user message is classified as FHQ_ASTRA or FHQ_MODE: run `cycle.py --mode <mode>` BEFORE any other step, REGARDLESS of how fresh _CYCLE_OUTPUT.md is. The only exception: if the same message also triggered BOOT and BOOT already ran cycle, skip. PRG step 1 "if stale" does NOT apply to fhq/fhqa — those always trigger a fresh cycle.
+**IMPORTANT: opencode v1.3.17 has a known critical bug on Windows** (issue #26128, #16449). Python MCP stdio subprocesses are killed ~1s after spawn before the MCP initialize handshake completes. The MCP daemon (`fhq_daemon.py`) is correct software — it runs indefinitely via HTTP mode — but is fundamentally incompatible with opencode's Windows stdio transport.
 
-MECHANICAL ENFORCEMENT: cycle.py writes FounderOS/State/_CYCLE_REQUIRED_HEADER.md with the EXACT header line for this message. You MUST read this file before every response. Your response MUST start with the EXACT content of this file (the full header line). If the file contains a timestamp from a prior message, you skipped cycle.py — STOP, run it now, then re-read the file.
+If MCP tools ARE available (non-Windows platform with opencode, or remote client like Claude Desktop/Cursor via HTTP):
+  1. Call `fhq_cycle` FIRST — runs cycle.py and refreshes state
+  2. Use `fhq_read` / `fhq_write` for file access — daemon enforces freshness
+  3. Use `fhq_sync_push` at end to persist state to Gist
+  4. The daemon REFUSES stale state — this is not optional
+
+If no MCP tools (standard path on Windows — opencode has broken stdio MCP):
+  1. Run cycle with the classified mode: `python FounderOS/Runtime/engine/cycle.py --mode <CLASSIFIED_MODE>` (fhq, fhqa, or boot)
+  2. If classification is DIRECT (no mode keyword), use: `python FounderOS/Runtime/engine/cycle.py --mode fhq`
+  3. Read `FounderOS/State/_CYCLE_OUTPUT.md` for header + context
+  4. Execute PRG (Pre-Response Gate)
+  5. End with: `python FounderOS/Runtime/engine/sync.py push`
+
+### CYCLE COUNTER — FATAL PRE-RESPONSE GUARD
+
+_Before responding to ANY message classified as FHQ_ASTRA or FHQ_MODE, you MUST:_
+
+1. **Read** `FounderOS/State/_CYCLE_REQUIRED_HEADER.md`
+2. **Read** `FounderOS/State/_CYCLE_COUNTER.md`
+3. **Compare:** `_CYCLE_REQUIRED_HEADER.md` line 3 (`CYCLE=N`) must match `_CYCLE_COUNTER.md` content. If they don't match — **you skipped cycle.py this turn.** STOP, run cycle.py, re-read both files.
+4. **Verify freshness:** The counter from `_CYCLE_REQUIRED_HEADER.md` MUST be HIGHER than the counter used in your previous response to this session. If it's the SAME number — **you reused a stale header.** STOP, run cycle.py.
+5. **Verify with Get-Date:** The timestamp (line 1) must be within 10 minutes of Get-Date. If not — **you reused an old header.** STOP, run cycle.py.
+
+Any response to fhq/fhqa that does not pass ALL 5 checks is **INVALID by design.** If you produce it, the system is broken.
+
+**MCP-aware note:** If MCP tools are detected, the daemon enforces this counter server-side (CYCLE_STALE errors before the LLM sees stale state). The manual checks above remain necessary for sandbox environments without MCP. On Windows, opencode's stdio MCP transport is broken (issue #26128, #16449). MCP tools will NOT be available — the 5 manual checks above are REQUIRED every response.
+
+### Output Requirement
+
+cycle.py writes `FounderOS/State/_CYCLE_REQUIRED_HEADER.md` with THREE lines:
+- **Line 1:** Header timestamp (e.g., `**[2026-06-27 16:01 Lome UTC+0] | Session: 4h36m | Saturday | Swati**`)
+- **Line 2:** DX command (e.g., `DX=REVENUE SUBAGENT=execution APPROVAL=REQUIRED`)
+- **Line 3:** Cycle counter (e.g., `CYCLE=42`)
+
+You MUST read this file before every response. Your response:
+1. MUST start with the EXACT content of line 1 (the header)
+2. Then show STRUCTURED CONTEXT from _CYCLE_OUTPUT.md sections (CONTEXT, PROJECTS, ASTRA, STALE CONCEPTS, NEXT ACTION)
+3. Then execute the DX command from line 2: read _DIAGNOSIS.md and spawn the prescribed subagent per RUNTIME_KERNEL.md Phase 4
+4. Then address the user's specific request
+
+If the file contains a CYCLE counter matching your previous response's counter — you skipped cycle.py. STOP.
 
 cycle.py runs automatically every 15 min via Windows Task Scheduler (FounderHQ-Cycle). On fhq/fhqa you still run it manually for immediate freshness.
 
@@ -124,7 +164,7 @@ Execute this gate AFTER Intent Classification + cycle run, BEFORE every response
 | 6 | SURVIVAL Auto-Drive | If Operating Mode = SURVIVAL AND classification = DIRECT: load FounderOS/DAOS.md, extract current top priority, generate exactly 1 Action Module (Priority/Effort/Script/Outcome/Fallback), append it to the response. Do NOT end response without a proposed action. |
 
 **Output format (all modes):**
-Use the HEADER from `FounderOS/State/_CYCLE_OUTPUT.md` as response prefix. Then STRUCTURED CONTEXT from _CYCLE_OUTPUT.md sections (CONTEXT, PROJECTS, ASTRA, STALE CONCEPTS, NEXT ACTION). Customize based on mode:
+Use the HEADER from `FounderOS/State/_CYCLE_REQUIRED_HEADER.md` as response prefix (line 1). Then STRUCTURED CONTEXT from _CYCLE_OUTPUT.md sections (CONTEXT, PROJECTS, ASTRA, STALE CONCEPTS, NEXT ACTION). Then execute the DX command (line 2): read `FounderOS/State/_DIAGNOSIS.md` and execute the subagent loop (RUNTIME_KERNEL.md Phase 4). The CYCLE counter (line 3) is for the pre-response guard verification only — not displayed in output. Customize based on mode:
 - fhqa: prefix astral insights with [ASTRA], include Sade Sati in lifecycle
 - fhq: no astral prefix, standard lifecycle
 - boot: full awareness report
@@ -179,14 +219,15 @@ If mode is **fhqa** (FHQ_ASTRA):
 ## Execution Modes
 
 ### Standard Session
-1. Boot → 2. Classify → 3. PRG (6 steps) → 4. Load module → 5. Execute → 6. Update concepts → 7. State next action → 8. Repeat from step 2
+1. Boot → 2. Classify → 3. PRG (6 steps) → 4. **DIAGNOSE** (read _DIAGNOSIS.md → spawn subagent per RUNTIME_KERNEL.md Phase 4) → 5. Load module → 6. Execute → 7. Update concepts → 8. State next action → 9. Repeat from step 2
 
 ### Quick Session
 1. Run `python FounderOS/Runtime/engine/cycle.py --mode fhqa` (default) → read `FounderOS/State/_CYCLE_OUTPUT.md`
-2. Classify and execute one high-leverage action
-3. Execute PRG before responding
-4. Update affected concepts
-5. State next action
+2. Read `FounderOS/State/_DIAGNOSIS.md` → **execute subagent loop per RUNTIME_KERNEL.md Phase 4: DIAGNOSE**
+3. Classify and execute one high-leverage action
+4. Execute PRG before responding
+5. Update affected concepts
+6. State next action
 
 ### Reconstruction Session
 State corrupted or missing: read FounderOS/FOUNDERHQ_MANIFEST.md + FounderOS/Protocols/SOURCE_OF_TRUTH.md, scan existing concepts, reconstruct missing ones, report what was lost.

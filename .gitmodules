@@ -1,0 +1,6 @@
+[submodule "FounderOS/projects/KORA/CODE/kora-lab-frontdoor"]
+	path = FounderOS/projects/KORA/CODE/kora-lab-frontdoor
+	url = https://github.com/kellykheir/kora-lab-frontdoor.git
+[submodule "FounderOS/projects/EDENVALLEY/CODE/edenvalley"]
+	path = FounderOS/projects/EDENVALLEY/CODE/edenvalley
+	url = https://github.com/Eden-Valley/edenvalley.git
