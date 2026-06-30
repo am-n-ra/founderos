@@ -12,3 +12,4 @@ Last Updated: 2026-06-30 09:20 Lome UTC+0
 | 2026-06-30 00:31 | Bug fix: Complete KORA project restored — 34 knowledge docs, 9 annexes, 90 frontdoor code files |
 | 2026-06-30 08:36 | SHUTDOWN: Session ended. All V5 bugs fixed. System clean. |
 | 2026-06-30 09:20 | Maintenance: opencode upgraded from v1.3.17 to v1.17.11 (via npm install -g opencode-ai). Fixes "thinking stuck" UI bug. |
+| 2026-06-30 11:34 | Bug fix: ReversalDetector.mq5 CheckOutcome() — TP checké avant SL, classait WIN quand les deux niveaux touchés sur même bougie. Fix: check SL en premier (conservateur). Sauvegardé dans Projects/FINANCE/assets/. |
