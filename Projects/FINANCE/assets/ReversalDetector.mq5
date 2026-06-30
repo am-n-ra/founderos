@@ -452,8 +452,8 @@ void OptimizeSLTP()
          {
             double h = g_opt[s].fwdHigh[k];
             double l = g_opt[s].fwdLow[k];
-            if(bull) { if(h >= tp) { res = 1; break; } if(l <= sl) { res = -1; break; } }
-            else     { if(l <= tp) { res = 1; break; } if(h >= sl) { res = -1; break; } }
+            if(bull) { if(l <= sl) { res = -1; break; } if(h >= tp) { res = 1; break; } }
+            else     { if(h >= sl) { res = -1; break; } if(l <= tp) { res = 1; break; } }
          }
          if(res == 1) wins++; else if(res == -1) losses++; else pending++;
       }
