@@ -13,3 +13,7 @@ Last Updated: 2026-06-30 09:20 Lome UTC+0
 | 2026-06-30 08:36 | SHUTDOWN: Session ended. All V5 bugs fixed. System clean. |
 | 2026-06-30 09:20 | Maintenance: opencode upgraded from v1.3.17 to v1.17.11 (via npm install -g opencode-ai). Fixes "thinking stuck" UI bug. |
 | 2026-06-30 11:34 | Bug fix: ReversalDetector.mq5 CheckOutcome() — TP checké avant SL, classait WIN quand les deux niveaux touchés sur même bougie. Fix: check SL en premier (conservateur). Sauvegardé dans Projects/FINANCE/assets/. |
+| 2026-06-30 11:50 | Bug fix: Même bug dans OptimizeSLTP() — les résultats d'optimisation étaient aussi faussés. Fixé dans les deux fichiers. |
+| 2026-06-30 12:22 | Fix(v5): 8 bugs system — archivé 50 V4 orphans, supprimé .gitmodules stale, supprimé mcp.json V4, créé .env racine, rempli PROFILE/DEADLINES, plan Whop revenue, archivé Zoclo Livraison |
+| 2026-06-30 19:30 | Fix(v5): Intent Classification intégrée comme PRG Step 0 (code-block + first match wins) — résout le drift des mots-clés fhq/fhqa sur longues sessions. Gist + repo mis à jour. |
+| 2026-06-30 19:43 | SHUTDOWN: EA fix, 8 système fixes, Whop campaign planning, Classify fix, channel @justclipmastering |
